@@ -6,11 +6,11 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace DBapplication
+namespace Learning_DB
 {
     public class DBManager
     {
-        static string DB_Connection_String = @"Data Source=learningplat.database.windows.net;Initial Catalog=""Learning Platform"";Persist Security Info=True;User ID=MOA;Password=Password123";
+        static string DB_Connection_String = @"Data Source=dbms-project.database.windows.net;Initial Catalog=LearningPlatform;Persist Security Info=True;User ID=adminS;Password=Salah123";
         SqlConnection myConnection;
 
         public DBManager()

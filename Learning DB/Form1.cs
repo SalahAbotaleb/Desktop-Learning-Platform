@@ -15,6 +15,12 @@ namespace Learning_DB
         public Form1()
         {
             InitializeComponent();
+            Controller test = new Controller();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
