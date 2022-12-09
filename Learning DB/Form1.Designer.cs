@@ -288,6 +288,7 @@
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
