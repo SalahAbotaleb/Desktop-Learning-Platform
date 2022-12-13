@@ -34,5 +34,16 @@ namespace Learning_DB
         {
 
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            StudentInterface student = new StudentInterface();
+            student.Show();
+        }
     }
 }

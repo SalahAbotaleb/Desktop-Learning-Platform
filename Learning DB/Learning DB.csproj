@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentInterface.Designer.cs">
+      <DependentUpon>StudentInterface.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +73,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInterface.resx">
+      <DependentUpon>StudentInterface.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -86,7 +95,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Analyzer Include="E:\CMPN202\Krypton\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="images\Picture1.png" />
   </ItemGroup>
@@ -98,6 +109,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\Picture3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon-29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon-png-27_resized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon-png-25x25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event icon25x25.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
