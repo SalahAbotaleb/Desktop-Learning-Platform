@@ -126,16 +126,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user-login-icon-29.png" />
+    <None Include="images\login-icon-png-25x25.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login-icon-png-27_resized.png" />
+    <None Include="images\event icon25x25.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login-icon-png-25x25.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\event icon25x25.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
