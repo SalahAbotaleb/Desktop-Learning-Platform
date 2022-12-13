@@ -40,6 +40,8 @@
             this.view_grades_button = new System.Windows.Forms.Button();
             this.recent_submissions_button = new System.Windows.Forms.Button();
             this.enroll_in_new_classroom_button = new System.Windows.Forms.Button();
+            this.Student_view_calender_button = new System.Windows.Forms.Button();
+            this.take_an_exam_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.upcomingevents_gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,6 @@
             this.upcomingevents_label.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.upcomingevents_label.Size = new System.Drawing.Size(156, 27);
             this.upcomingevents_label.TabIndex = 3;
-            this.upcomingevents_label.Values.Image = global::Learning_DB.Properties.Resources.event_icon25x25;
             this.upcomingevents_label.Values.Text = "Upcoming Events";
             // 
             // upcomingevents_gridview
@@ -97,7 +98,6 @@
             this.backtologin_label.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.backtologin_label.Size = new System.Drawing.Size(165, 27);
             this.backtologin_label.TabIndex = 5;
-            this.backtologin_label.Values.Image = global::Learning_DB.Properties.Resources.login_icon_png_25x25;
             this.backtologin_label.Values.Text = "Back to login page";
             this.backtologin_label.LinkClicked += new System.EventHandler(this.backtologin_label_LinkClicked);
             // 
@@ -153,12 +153,38 @@
             this.enroll_in_new_classroom_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enroll_in_new_classroom_button.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enroll_in_new_classroom_button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.enroll_in_new_classroom_button.Location = new System.Drawing.Point(608, 373);
+            this.enroll_in_new_classroom_button.Location = new System.Drawing.Point(602, 302);
             this.enroll_in_new_classroom_button.Name = "enroll_in_new_classroom_button";
             this.enroll_in_new_classroom_button.Size = new System.Drawing.Size(218, 36);
             this.enroll_in_new_classroom_button.TabIndex = 10;
             this.enroll_in_new_classroom_button.Text = "Enroll in new classroom";
             this.enroll_in_new_classroom_button.UseVisualStyleBackColor = false;
+            // 
+            // Student_view_calender_button
+            // 
+            this.Student_view_calender_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Student_view_calender_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Student_view_calender_button.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Student_view_calender_button.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Student_view_calender_button.Location = new System.Drawing.Point(602, 358);
+            this.Student_view_calender_button.Name = "Student_view_calender_button";
+            this.Student_view_calender_button.Size = new System.Drawing.Size(218, 36);
+            this.Student_view_calender_button.TabIndex = 11;
+            this.Student_view_calender_button.Text = "View Calender";
+            this.Student_view_calender_button.UseVisualStyleBackColor = false;
+            // 
+            // take_an_exam_button
+            // 
+            this.take_an_exam_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.take_an_exam_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.take_an_exam_button.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.take_an_exam_button.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.take_an_exam_button.Location = new System.Drawing.Point(346, 383);
+            this.take_an_exam_button.Name = "take_an_exam_button";
+            this.take_an_exam_button.Size = new System.Drawing.Size(161, 36);
+            this.take_an_exam_button.TabIndex = 12;
+            this.take_an_exam_button.Text = "Take an exam";
+            this.take_an_exam_button.UseVisualStyleBackColor = false;
             // 
             // StudentInterface
             // 
@@ -166,6 +192,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(893, 478);
+            this.Controls.Add(this.take_an_exam_button);
+            this.Controls.Add(this.Student_view_calender_button);
             this.Controls.Add(this.enroll_in_new_classroom_button);
             this.Controls.Add(this.recent_submissions_button);
             this.Controls.Add(this.view_grades_button);
@@ -203,5 +231,7 @@
         private System.Windows.Forms.Button view_grades_button;
         private System.Windows.Forms.Button recent_submissions_button;
         private System.Windows.Forms.Button enroll_in_new_classroom_button;
+        private System.Windows.Forms.Button Student_view_calender_button;
+        private System.Windows.Forms.Button take_an_exam_button;
     }
 }
