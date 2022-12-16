@@ -148,7 +148,6 @@
             this.kryptonButton1.StateTracking.Border.Width = 1;
             this.kryptonButton1.TabIndex = 1;
             this.kryptonButton1.Values.Text = "Admin";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // kryptonButton2
             // 
@@ -267,7 +266,6 @@
             this.kryptonButton3.StateTracking.Border.Width = 1;
             this.kryptonButton3.TabIndex = 3;
             this.kryptonButton3.Values.Text = "Student";
-            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // pictureBox1
             // 
