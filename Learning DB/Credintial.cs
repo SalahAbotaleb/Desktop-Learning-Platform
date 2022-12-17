@@ -57,8 +57,8 @@ namespace Learning_DB
                 kryptonTextBox2.ForeColor = Color.Gray;
             }
         }
-        
-        bool valid = true;
+
+        bool valid = true; // for validation (will be changed in future validation in username and password)
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             if (valid)
