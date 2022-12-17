@@ -66,7 +66,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login_Form.resx">
+	<EmbeddedResource Include="Credintial.resx">
+	 <DependentUpon>Credintial.cs</DependentUpon>
+	</EmbeddedResource>
+	  <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -81,6 +84,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+	  <Compile Include="Properties\Resources.Designer.cs">
+		  <AutoGen>True</AutoGen>
+		  <DesignTime>True</DesignTime>
+		  <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
