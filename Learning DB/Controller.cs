@@ -54,7 +54,7 @@ namespace DbHandler
 
         //}
 
-        public DataTable LoginStudent(string username, string password)
+        public Tuple<DataTable,string> LoginStudent(string username, string password)
         {
             string StoredProcedureName = StoredProcedures.Loginstudent;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -62,7 +62,7 @@ namespace DbHandler
             Parameters.Add("@password", password);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-        public DataTable LoginAdmin(string username, string password)
+        public Tuple<DataTable, string> LoginAdmin(string username, string password)
         {
             string StoredProcedureName = StoredProcedures.Loginadmin;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -70,7 +70,7 @@ namespace DbHandler
             Parameters.Add("@password", password);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-        public DataTable LoginInstructor(string username, string password)
+        public Tuple<DataTable, string> LoginInstructor(string username, string password)
         {
             string StoredProcedureName = StoredProcedures.LoginInstructor;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();

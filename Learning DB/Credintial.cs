@@ -11,14 +11,15 @@ using DbHandler;
 using ComponentFactory.Krypton.Toolkit;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using MetroSet_UI.Enums;
+using System.Net;
 
 namespace Learning_DB
 {
     public partial class Credintial : KryptonForm
     {
-        Definitions.Usertype utype;
+        Usertype utype;
         Controller con;
-        public Credintial(Definitions.Usertype user)
+        public Credintial(Usertype user)
         {
             InitializeComponent();
             con = new Controller();
@@ -29,6 +30,7 @@ namespace Learning_DB
 
         private void Username_Enter(object sender, EventArgs e)
         {
+            Invalid_message.Hide();
             if (UsernameBox.Text == "Username/Email")
             {
                 UsernameBox.Text = "";
@@ -50,6 +52,7 @@ namespace Learning_DB
 
         private void Password_Enter(object sender, EventArgs e)
         {
+            Invalid_message.Hide();
             if (PasswordBox.Text == "Password")
             {
                 PasswordBox.Text = "";
@@ -83,21 +86,37 @@ namespace Learning_DB
         //bool valid = true; // for validation (will be changed in future validation in username and password)
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(utype == Definitions.Usertype.instructor)
+            if(utype == Usertype.instructor)
             {
-                con.LoginInstructor(UsernameBox.Text, PasswordBox.Text);
+                Tuple<DataTable, string> ins = con.LoginInstructor(UsernameBox.Text, PasswordBox.Text);
+                if(ins.Item1 == null)
+                {
+                    Invalid_message.Show();
+                    return;
+                }
+                //instructor interface
             }
-            else if (utype== Definitions.Usertype.student)
+            else if (utype== Usertype.student)
             {
-                con.LoginStudent(UsernameBox.Text, PasswordBox.Text);
-            }    
+                Tuple<DataTable,string> st = con.LoginStudent(UsernameBox.Text, PasswordBox.Text);
+                if (st.Item1 == null)
+                {
+                    Invalid_message.Show();
+                    return;
+                }
+                //studentinterface
+            }
             else
             {
-                con.LoginAdmin(UsernameBox.Text, PasswordBox.Text);
+                Tuple<DataTable, string> ad = con.LoginAdmin(UsernameBox.Text, PasswordBox.Text);
+                if (ad.Item1 == null)
+                {
+                    Invalid_message.Show();
+                    return;
+                }
+                AdminInterface A = new AdminInterface();
+                A.Show();
             }
-            
-            AdminInterface A = new AdminInterface();
-            A.Show();
         }
         
         private void Credintial_FormClosing(object sender, FormClosingEventArgs e)

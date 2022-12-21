@@ -10,7 +10,7 @@ namespace DbHandler
 {
     public class DBManager
     {
-        static string DB_Connection_String = @"Data Source=EMAN-PC\SQLEXPRESS;Initial Catalog=CompanyDBLab6;Integrated Security=True";
+        static string DB_Connection_String = @"Data Source=dbms-project.database.windows.net;Initial Catalog=Learning_Platform;Persist Security Info=True;User ID=adminS;Password=Salah123";
         SqlConnection myConnection;
 
     public DBManager()

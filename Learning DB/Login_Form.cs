@@ -21,7 +21,7 @@ namespace Learning_DB
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             //send 0 for admin
-            Credintial C = new Credintial(Definitions.Usertype.admin);
+            Credintial C = new Credintial(Usertype.admin);
             C.Show();
             this.Hide();
         }
@@ -29,14 +29,14 @@ namespace Learning_DB
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             //send 1 for instructor
-            Credintial C = new Credintial(Definitions.Usertype.instructor);
+            Credintial C = new Credintial(Usertype.instructor);
             C.Show();
             this.Hide();
         }
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
             //send 2 for student
-            Credintial C = new Credintial(Definitions.Usertype.student);
+            Credintial C = new Credintial(Usertype.student);
             C.Show();
             this.Hide();
         }
