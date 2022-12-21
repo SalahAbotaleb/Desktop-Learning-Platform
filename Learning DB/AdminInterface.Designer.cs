@@ -52,9 +52,12 @@
             this.metroSetSetTabPage6 = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetSetTabPage7 = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl2 = new MetroSet_UI.Controls.MetroSetTabControl();
+            this.metroSetSetTabPage8 = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.metroSetSetTabPage9 = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl1.SuspendLayout();
             this.metroSetSetTabPage1.SuspendLayout();
             this.metroSetSetTabPage4.SuspendLayout();
+            this.metroSetTabControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette2
@@ -169,7 +172,7 @@
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(399, 9);
+            this.kryptonButton3.Location = new System.Drawing.Point(590, 330);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -301,7 +304,7 @@
             this.metroSetTabControl1.Controls.Add(this.metroSetSetTabPage5);
             this.metroSetTabControl1.Controls.Add(this.metroSetSetTabPage6);
             this.metroSetTabControl1.Controls.Add(this.metroSetSetTabPage7);
-            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetTabControl1.IsDerivedStyle = true;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 60);
             this.metroSetTabControl1.Location = new System.Drawing.Point(12, 91);
@@ -324,6 +327,7 @@
             this.metroSetSetTabPage1.BaseColor = System.Drawing.Color.White;
             this.metroSetSetTabPage1.Controls.Add(this.kryptonTextBox4);
             this.metroSetSetTabPage1.Controls.Add(this.label4);
+            this.metroSetSetTabPage1.Controls.Add(this.kryptonButton3);
             this.metroSetSetTabPage1.Controls.Add(this.kryptonButton5);
             this.metroSetSetTabPage1.Controls.Add(this.kryptonTextBox3);
             this.metroSetSetTabPage1.Controls.Add(this.kryptonTextBox2);
@@ -641,12 +645,16 @@
             this.metroSetTabControl2.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl2.AnimateTime = 200;
             this.metroSetTabControl2.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl2.Controls.Add(this.metroSetSetTabPage8);
+            this.metroSetTabControl2.Controls.Add(this.metroSetSetTabPage9);
+            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl2.IsDerivedStyle = true;
             this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl2.Location = new System.Drawing.Point(110, 3);
             this.metroSetTabControl2.Name = "metroSetTabControl2";
+            this.metroSetTabControl2.SelectedIndex = 1;
             this.metroSetTabControl2.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl2.Size = new System.Drawing.Size(715, 395);
+            this.metroSetTabControl2.Size = new System.Drawing.Size(846, 466);
             this.metroSetTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl2.Speed = 100;
             this.metroSetTabControl2.Style = MetroSet_UI.Enums.Style.Light;
@@ -657,6 +665,42 @@
             this.metroSetTabControl2.UnselectedTextColor = System.Drawing.Color.Gray;
             this.metroSetTabControl2.UseAnimation = false;
             // 
+            // metroSetSetTabPage8
+            // 
+            this.metroSetSetTabPage8.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage8.Font = null;
+            this.metroSetSetTabPage8.ImageIndex = 0;
+            this.metroSetSetTabPage8.ImageKey = null;
+            this.metroSetSetTabPage8.IsDerivedStyle = true;
+            this.metroSetSetTabPage8.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage8.Name = "metroSetSetTabPage8";
+            this.metroSetSetTabPage8.Size = new System.Drawing.Size(838, 420);
+            this.metroSetSetTabPage8.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetSetTabPage8.StyleManager = null;
+            this.metroSetSetTabPage8.TabIndex = 0;
+            this.metroSetSetTabPage8.Text = "metroSetSetTabPage8";
+            this.metroSetSetTabPage8.ThemeAuthor = "Narwin";
+            this.metroSetSetTabPage8.ThemeName = "MetroLite";
+            this.metroSetSetTabPage8.ToolTipText = null;
+            // 
+            // metroSetSetTabPage9
+            // 
+            this.metroSetSetTabPage9.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage9.Font = null;
+            this.metroSetSetTabPage9.ImageIndex = 0;
+            this.metroSetSetTabPage9.ImageKey = null;
+            this.metroSetSetTabPage9.IsDerivedStyle = true;
+            this.metroSetSetTabPage9.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage9.Name = "metroSetSetTabPage9";
+            this.metroSetSetTabPage9.Size = new System.Drawing.Size(838, 420);
+            this.metroSetSetTabPage9.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetSetTabPage9.StyleManager = null;
+            this.metroSetSetTabPage9.TabIndex = 1;
+            this.metroSetSetTabPage9.Text = "metroSetSetTabPage9";
+            this.metroSetSetTabPage9.ThemeAuthor = "Narwin";
+            this.metroSetSetTabPage9.ThemeName = "MetroLite";
+            this.metroSetSetTabPage9.ToolTipText = null;
+            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -665,7 +709,6 @@
             this.ClientSize = new System.Drawing.Size(1030, 624);
             this.Controls.Add(this.metroSetTabControl1);
             this.Controls.Add(this.kryptonButton4);
-            this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.User_Name);
             this.Name = "AdminInterface";
@@ -678,6 +721,7 @@
             this.metroSetSetTabPage1.ResumeLayout(false);
             this.metroSetSetTabPage1.PerformLayout();
             this.metroSetSetTabPage4.ResumeLayout(false);
+            this.metroSetTabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -708,5 +752,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl2;
+        private MetroSet_UI.Child.MetroSetSetTabPage metroSetSetTabPage8;
+        private MetroSet_UI.Child.MetroSetSetTabPage metroSetSetTabPage9;
     }
 }

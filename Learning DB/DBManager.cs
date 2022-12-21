@@ -28,8 +28,10 @@ namespace DbHandler
             }
         }
 
-        public int ExecuteNonQuery(string storedProcedureName, Dictionary<string, object> parameters)
+        public Tuple<int,string> ExecuteNonQuery(string storedProcedureName, Dictionary<string, object> parameters)
         {
+            //if returned value is 0
+            //there are error, the message will be send in second parameter as string
             try
             {
                 SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
@@ -40,19 +42,21 @@ namespace DbHandler
                 {
                     myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
                 }
-
-                return myCommand.ExecuteNonQuery();
+                return Tuple.Create(myCommand.ExecuteNonQuery(),"");
                
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return 0;
+                return Tuple.Create(0,ex.Message);
             }
         }
 
-        public DataTable ExecuteReader(string storedProcedureName, Dictionary<string, object> parameters)
+        public Tuple<DataTable,string> ExecuteReader(string storedProcedureName, Dictionary<string, object> parameters)
         {
+            //if returned value is null (Datatable)
+            //the message will be send in second parameter as string
+            DataTable dt = null;
             try
             {
                 SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
@@ -70,27 +74,29 @@ namespace DbHandler
                 SqlDataReader reader = myCommand.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    DataTable dt = new DataTable();
+                    dt = new DataTable();
                     dt.Load(reader);
                     reader.Close();
-                    return dt;
+                    return Tuple.Create(dt,"");
                 }
                 else
                 {
                     reader.Close();
-                    return null;
+                    return Tuple.Create(dt, "");
                 }
                
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return null;
+                return Tuple.Create(dt, "");
             }
         }
 
-        public object ExecuteScalar(string storedProcedureName, Dictionary<string, object> parameters)
+        public Tuple<Object, string> ExecuteScalar(string storedProcedureName, Dictionary<string, object> parameters)
         {
+            //if returned value is null (Object)
+            //the message will be send in second parameter as string
             try
             {
                 SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
@@ -105,13 +111,14 @@ namespace DbHandler
                     }
                 }
 
-                return myCommand.ExecuteScalar();            
+                return Tuple.Create(myCommand.ExecuteScalar(),"");            
 
             }
             catch (Exception ex)
             {
+                Object ob = null;
                 Console.WriteLine(ex.Message);
-                return null;
+                return Tuple.Create(ob, ex.Message);
             }
         }
 

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Learning_DB
 {
-    public class Definitions
-    {
         public enum Usertype
         {
             admin,
             instructor,
             student
         }
-    }
+
 }
