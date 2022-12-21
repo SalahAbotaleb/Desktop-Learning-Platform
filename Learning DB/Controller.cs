@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 
-namespace DBapplication
+namespace DbHandler
 {
     public class Controller
     {
@@ -15,50 +15,42 @@ namespace DBapplication
             dbMan = new DBManager();
         }
 
-      
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
         }
-        public DataTable SelectAllEmp()
-        {
+        //public DataTable SelectAllEmp()
+        //{
+        //    string query = "SELECT * FROM Employee;";
+        //    return dbMan.ExecuteReader(query);
+        //}
 
-            string StoredProcedureName = StoredProcedures.SelectAllEmployees;
-            return dbMan.ExecuteReader(StoredProcedureName, null);
-        }
 
+        //public int InsertProject(string Pname, int pnumber, string Plocation, int Dnum)
+        //{
+        //    string query = "INSERT INTO Project (Pname, Pnumber, Plocation, Dnum)" +
+        //                    "Values ('" + Pname + "'," + pnumber + ",'" + Plocation + "'," + Dnum + ");";
+        //    return dbMan.ExecuteNonQuery(query);
+        //}
 
-        public int InsertProject(string Pname, int pnumber, string Plocation, int Dnum)
-        {
+        //public DataTable SelectDepNum()
+        //{
+        //    string query = "SELECT Dnumber FROM Department;";
+        //    return dbMan.ExecuteReader(query);
+        //}
+        //public DataTable SelectDepLoc()
+        //{
+        //    string query = "SELECT DISTINCT Dlocation FROM Dept_Locations;";
+        //    return dbMan.ExecuteReader(query);
+        //}
 
-            string StoredProcedureName = StoredProcedures.InsertProject;
-            Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@Pname", Pname);
-            Parameters.Add("@Pnumber", pnumber);
-            Parameters.Add("@Plocation", Plocation);
-            Parameters.Add("@Dnum", Dnum);
-            return dbMan.ExecuteNonQuery(StoredProcedureName,Parameters);
-        }
+        //public DataTable SelectProject(string location)
+        //{
+        //    string query = "SELECT Pname,Dname FROM Department D, Project P, Dept_Locations L"
+        //     + " where P.Dnum=D.Dnumber and L.Dnumber=D.Dnumber and L.Dlocation='" + location + "';";
 
-        public DataTable SelectDepNum()
-        {
-            string StoredProcedureName = StoredProcedures.SelectDepartmentNum;
-            return dbMan.ExecuteReader(StoredProcedureName, null);
-
-        }
-        public DataTable SelectDepLoc()
-        {
-            String StoredProcedureName = StoredProcedures.SelectDepartmentLocation;
-            return dbMan.ExecuteReader(StoredProcedureName, null);
-
-        }
-
-        public DataTable SelectProject(string location)
-        {
-            String StoredProcedureName = StoredProcedures.RetrieveProject;
-            Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@location", location);
-           return dbMan.ExecuteReader(StoredProcedureName,Parameters);
-        }
+        //    return dbMan.ExecuteReader(query);
+        //}
     }
 }
