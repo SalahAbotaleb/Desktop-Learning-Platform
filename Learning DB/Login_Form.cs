@@ -16,7 +16,7 @@ namespace Learning_DB
         public Login_Form()
         {
             InitializeComponent();
-            Controller test = new Controller();
+            //Controller test = new Controller();
         }
 
 

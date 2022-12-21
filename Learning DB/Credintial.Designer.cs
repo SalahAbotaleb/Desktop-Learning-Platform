@@ -90,7 +90,7 @@
             this.kryptonTextBox1.StateCommon.Border.Rounding = 20;
             this.kryptonTextBox1.StateCommon.Border.Width = 2;
             this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.kryptonTextBox1.TabIndex = 0;
             this.kryptonTextBox1.Text = "Enter your Username";
@@ -118,7 +118,7 @@
             this.kryptonButton1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-10);
             this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(172)))), ((int)(((byte)(244)))));
             this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.TabIndex = 1;
             this.kryptonButton1.Values.Text = "Log in";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
@@ -138,7 +138,7 @@
             this.kryptonTextBox2.StateCommon.Border.Rounding = 20;
             this.kryptonTextBox2.StateCommon.Border.Width = 2;
             this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.kryptonTextBox2.TabIndex = 2;
             this.kryptonTextBox2.Text = "Enter your Password";
@@ -149,8 +149,8 @@
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(188, 34);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(183, 53);
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.Size = new System.Drawing.Size(164, 44);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 3;
             this.kryptonLabel1.Values.Text = "Welcome";
             // 
@@ -158,10 +158,10 @@
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(130, 263);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(343, 33);
+            this.kryptonLabel2.Size = new System.Drawing.Size(310, 28);
             this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
             this.kryptonLabel2.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 4;
             this.kryptonLabel2.Values.Text = "Invalid! Username or Password";
             // 
