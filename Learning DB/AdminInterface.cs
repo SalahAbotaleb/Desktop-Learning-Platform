@@ -18,14 +18,19 @@ namespace Learning_DB
         public AdminInterface()
         {
             InitializeComponent();
-            label2.Text = "Admin";
+            User_Name.Text = "Admin";
+            MessageBox.Show("ssss");
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+   
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
         {
-            AddAdmin admin = new AddAdmin();
-            admin.Show();
+            MessageBox.Show("ssss");
+            User_Name.Text = "Admissssssssssn";
         }
+
+     
     }
     
 }
