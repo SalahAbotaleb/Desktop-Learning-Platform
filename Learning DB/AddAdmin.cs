@@ -8,41 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+
 
 namespace Learning_DB
 {
-    public partial class Credintial : KryptonForm
+    public partial class AddAdmin : KryptonForm
     {
-        public Credintial()
+        public AddAdmin()
         {
             InitializeComponent();
-            kryptonLabel2.Visible = false;
         }
-
 
         private void kryptonTextBox1_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox1.Text == "Enter your Username")
+            if (kryptonTextBox1.Text == "Enter Admin's First Name")
             {
                 kryptonTextBox1.Text = "";
                 kryptonTextBox1.ForeColor = Color.Black;
             }
-
+            
         }
 
         private void kryptonTextBox1_Leave(object sender, EventArgs e)
         {
             if (kryptonTextBox1.Text == "")
             {
-                kryptonTextBox1.Text = "Enter your Username";
+                kryptonTextBox1.Text = "Enter Admin's First Name";
                 kryptonTextBox1.ForeColor = Color.Gray;
+
             }
         }
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "Enter your Password")
+            if (kryptonTextBox2.Text == "Enter Admin's Last Name")
             {
                 kryptonTextBox2.Text = "";
                 kryptonTextBox2.ForeColor = Color.Black;
@@ -53,21 +52,29 @@ namespace Learning_DB
         {
             if (kryptonTextBox2.Text == "")
             {
-                kryptonTextBox2.Text = "Enter your Password";
+                kryptonTextBox2.Text = "Enter Admin's First Name";
                 kryptonTextBox2.ForeColor = Color.Gray;
+
             }
         }
 
-        bool valid = true; // for validation (will be changed in future validation in username and password)
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
         {
-            if (valid)
+            if (kryptonTextBox3.Text == "Enter Admin's Email")
             {
-                kryptonLabel2.Visible = true;
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.ForeColor = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Enter Admin's First Name";
+                kryptonTextBox3.ForeColor = Color.Gray;
 
             }
-            AdminInterface A = new AdminInterface();
-            A.Show();
         }
     }
 }

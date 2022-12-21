@@ -37,13 +37,21 @@ namespace Learning_DB
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-
+            Credintial C = new Credintial();
+            C.Show();
         }
-        
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            Credintial C = new Credintial();
+            C.Show();
+        }
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            StudentInterface student = new StudentInterface();
-            student.Show();
+            Credintial C = new Credintial();
+            C.Show();
+            /*StudentInterface student = new StudentInterface();
+            student.Show();*/
         }
     }
 }

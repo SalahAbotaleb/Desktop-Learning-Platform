@@ -92,7 +92,7 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(46, 116);
+            this.kryptonButton1.Location = new System.Drawing.Point(46, 120);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -208,6 +208,7 @@
             this.kryptonButton2.StateTracking.Border.Width = 1;
             this.kryptonButton2.TabIndex = 2;
             this.kryptonButton2.Values.Text = "Instructor";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton3
             // 
