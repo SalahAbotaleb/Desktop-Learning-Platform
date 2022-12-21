@@ -6,14 +6,14 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace Learning_DB
+namespace DBapplication
 {
     public class DBManager
     {
-        static string DB_Connection_String = @"Data Source=dbms-project.database.windows.net;Initial Catalog=LearningPlatform;Persist Security Info=True;User ID=adminS;Password=Salah123";
+        static string DB_Connection_String = @"Data Source=EMAN-PC\SQLEXPRESS;Initial Catalog=CompanyDBLab6;Integrated Security=True";
         SqlConnection myConnection;
 
-        public DBManager()
+    public DBManager()
         {
             myConnection = new SqlConnection(DB_Connection_String);
             try
@@ -28,12 +28,21 @@ namespace Learning_DB
             }
         }
 
-        public int ExecuteNonQuery(string query)
+        public int ExecuteNonQuery(string storedProcedureName, Dictionary<string, object> parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                foreach (KeyValuePair<string, object> Param in parameters)
+                {
+                    myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
+                }
+
                 return myCommand.ExecuteNonQuery();
+               
             }
             catch (Exception ex)
             {
@@ -42,11 +51,22 @@ namespace Learning_DB
             }
         }
 
-        public DataTable ExecuteReader(string query)
+        public DataTable ExecuteReader(string storedProcedureName, Dictionary<string, object> parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                if (parameters != null)
+                {
+                    foreach (KeyValuePair<string, object> Param in parameters)
+                    {
+                        myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
+                    }
+                }
+
                 SqlDataReader reader = myCommand.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -57,8 +77,10 @@ namespace Learning_DB
                 }
                 else
                 {
+                    reader.Close();
                     return null;
                 }
+               
             }
             catch (Exception ex)
             {
@@ -67,17 +89,29 @@ namespace Learning_DB
             }
         }
 
-        public object ExecuteScalar(string query)
+        public object ExecuteScalar(string storedProcedureName, Dictionary<string, object> parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
-                return myCommand.ExecuteScalar();
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                if (parameters != null)
+                {
+                    foreach (KeyValuePair<string, object> Param in parameters)
+                    {
+                        myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
+                    }
+                }
+
+                return myCommand.ExecuteScalar();            
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return 0;
+                return null;
             }
         }
 
@@ -92,8 +126,6 @@ namespace Learning_DB
                 Console.WriteLine(e.Message);
             }
         }
-
-        
     }
-}
-;
+    }
+
