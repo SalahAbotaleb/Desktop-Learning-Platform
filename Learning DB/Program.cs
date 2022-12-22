@@ -17,6 +17,7 @@ namespace Learning_DB
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login_Form());
+            Application.Run(new AdminInterface());
         }
     }
 }
