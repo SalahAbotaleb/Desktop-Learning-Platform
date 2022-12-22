@@ -18,40 +18,27 @@ namespace Learning_DB
             InitializeComponent();
             //Controller test = new Controller();
         }
-
-
-        private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Login_Form_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            Credintial C = new Credintial();
+            //send 0 for admin
+            Credintial C = new Credintial(Usertype.admin);
             C.Show();
+            this.Hide();
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            Credintial C = new Credintial();
+            //send 1 for instructor
+            Credintial C = new Credintial(Usertype.instructor);
             C.Show();
+            this.Hide();
         }
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            Credintial C = new Credintial();
+            //send 2 for student
+            Credintial C = new Credintial(Usertype.student);
             C.Show();
-            /*StudentInterface student = new StudentInterface();
-            student.Show();*/
+            this.Hide();
         }
     }
 }

@@ -10,65 +10,123 @@ using System.Windows.Forms;
 using DbHandler;
 using ComponentFactory.Krypton.Toolkit;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using MetroSet_UI.Enums;
+using System.Net;
 
 namespace Learning_DB
 {
     public partial class Credintial : KryptonForm
     {
-        public Credintial()
+        Usertype utype;
+        Controller con;
+        public Credintial(Usertype user)
         {
             InitializeComponent();
-            kryptonLabel2.Visible = false;
+            con = new Controller();
+            utype = user;
+            Invalid_message.Visible = false;
         }
 
 
-        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        private void Username_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox1.Text == "Enter your Username")
+            Invalid_message.Hide();
+            if (UsernameBox.Text == "Username/Email")
             {
-                kryptonTextBox1.Text = "";
-                kryptonTextBox1.ForeColor = Color.Black;
+                UsernameBox.Text = "";
+                UsernameBox.StateCommon.Content.Color1 = Color.Black;
+                UsernameBox.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 12, System.Drawing.FontStyle.Regular);
             }
 
         }
 
-        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        private void Username_Leave(object sender, EventArgs e)
         {
-            if (kryptonTextBox1.Text == "")
+            if (UsernameBox.Text == "")
             {
-                kryptonTextBox1.Text = "Enter your Username";
-                kryptonTextBox1.ForeColor = Color.Gray;
+                UsernameBox.Text = "Username/Email";
+                UsernameBox.StateCommon.Content.Color1 = Color.Gray;
+                UsernameBox.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 12, System.Drawing.FontStyle.Italic);
             }
         }
 
-        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        private void Password_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "Enter your Password")
+            Invalid_message.Hide();
+            if (PasswordBox.Text == "Password")
             {
-                kryptonTextBox2.Text = "";
-                kryptonTextBox2.ForeColor = Color.Black;
+                PasswordBox.Text = "";
+                PasswordBox.PasswordChar = '*';
+                PasswordBox.StateCommon.Content.Color1 = Color.Black;
+                PasswordBox.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 12, System.Drawing.FontStyle.Regular);
+
             }
         }
-
-        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        
+        private void Password_Leave(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "")
+            if (PasswordBox.Text == "")
             {
-                kryptonTextBox2.Text = "Enter your Password";
-                kryptonTextBox2.ForeColor = Color.Gray;
+                PasswordBox.PasswordChar = '\0';
+                PasswordBox.Text = "Password";
+                PasswordBox.StateCommon.Content.Color1 = Color.Gray;
+                PasswordBox.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 12, System.Drawing.FontStyle.Italic);
             }
         }
+        //private Boolean ValidateUsername()
+        //{ 
+        //    //validate text in usernamebox to see if in valid email format
+        //    if(UsernameBox.Text.Contains("@"))
+        //    {
 
-        bool valid = true; // for validation (will be changed in future validation in username and password)
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        //    }
+        //    return true;
+        //}
+        
+        //bool valid = true; // for validation (will be changed in future validation in username and password)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (valid)
+            if(utype == Usertype.instructor)
             {
-                kryptonLabel2.Visible = true;
-
+                Tuple<DataTable, string> ins = con.LoginInstructor(UsernameBox.Text, PasswordBox.Text);
+                if(ins.Item1 == null)
+                {
+                    Invalid_message.Show();
+                    return;
+                }
+                //instructor interface
             }
-            AdminInterface A = new AdminInterface();
-            A.Show();
+            else if (utype== Usertype.student)
+            {
+                Tuple<DataTable,string> st = con.LoginStudent(UsernameBox.Text, PasswordBox.Text);
+                if (st.Item1 == null)
+                {
+                    Invalid_message.Show();
+                    return;
+                }
+                //studentinterface
+            }
+            else
+            {
+                Tuple<DataTable, string> ad = con.LoginAdmin(UsernameBox.Text, PasswordBox.Text);
+                if (ad.Item1 == null)
+                {
+                    Invalid_message.Show();
+                    return;
+                }
+                AdminInterface A = new AdminInterface();
+                A.Show();
+            }
+        }
+        
+        private void Credintial_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Credintial_Load(object sender, EventArgs e)
+        {
+            kryptonLabel1.Select();
         }
     }
 }

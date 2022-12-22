@@ -1314,6 +1314,42 @@
             this.Admin_LogOutButton.Values.Text = "Log Out";
             this.Admin_LogOutButton.Click += new System.EventHandler(this.Admin_LogOutButton_Click);
             // 
+            // metroSetSetTabPage8
+            // 
+            this.metroSetSetTabPage8.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage8.Font = null;
+            this.metroSetSetTabPage8.ImageIndex = 0;
+            this.metroSetSetTabPage8.ImageKey = null;
+            this.metroSetSetTabPage8.IsDerivedStyle = true;
+            this.metroSetSetTabPage8.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage8.Name = "metroSetSetTabPage8";
+            this.metroSetSetTabPage8.Size = new System.Drawing.Size(838, 420);
+            this.metroSetSetTabPage8.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetSetTabPage8.StyleManager = null;
+            this.metroSetSetTabPage8.TabIndex = 0;
+            this.metroSetSetTabPage8.Text = "metroSetSetTabPage8";
+            this.metroSetSetTabPage8.ThemeAuthor = "Narwin";
+            this.metroSetSetTabPage8.ThemeName = "MetroLite";
+            this.metroSetSetTabPage8.ToolTipText = null;
+            // 
+            // metroSetSetTabPage9
+            // 
+            this.metroSetSetTabPage9.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage9.Font = null;
+            this.metroSetSetTabPage9.ImageIndex = 0;
+            this.metroSetSetTabPage9.ImageKey = null;
+            this.metroSetSetTabPage9.IsDerivedStyle = true;
+            this.metroSetSetTabPage9.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage9.Name = "metroSetSetTabPage9";
+            this.metroSetSetTabPage9.Size = new System.Drawing.Size(838, 420);
+            this.metroSetSetTabPage9.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetSetTabPage9.StyleManager = null;
+            this.metroSetSetTabPage9.TabIndex = 1;
+            this.metroSetSetTabPage9.Text = "metroSetSetTabPage9";
+            this.metroSetSetTabPage9.ThemeAuthor = "Narwin";
+            this.metroSetSetTabPage9.ThemeName = "MetroLite";
+            this.metroSetSetTabPage9.ToolTipText = null;
+            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
