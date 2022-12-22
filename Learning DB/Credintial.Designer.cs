@@ -120,6 +120,7 @@
             this.LoginButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(255)))));
             this.LoginButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.TabIndex = 1;
+            this.LoginButton.TabStop = false;
             this.LoginButton.Values.Text = "Log in";
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
