@@ -16,11 +16,13 @@ namespace Learning_DB
 {
     public partial class AdminInterface : KryptonForm
     {
-        Controller Controller=new Controller();
+        Controller Controller = new Controller();
         public AdminInterface()
         {
             InitializeComponent();
             User_Name.Text = "Admin";
+            Controller = new Controller();
+            
         }
 
 
