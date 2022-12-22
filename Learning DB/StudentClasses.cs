@@ -21,6 +21,13 @@ namespace Learning_DB
             InitializeComponent();
             cont = new Controller();
             StudentID = SID;
+
+            User_NameLabel.Text = cont.SelectStudentNameByID(StudentID).Rows[0][0].ToString();
+            ClassroomComboBox.DataSource = cont.SelectClassesForStudent(SID);
+            ClassroomComboBox.DisplayMember = "Title";
+            ClassroomComboBox.ValueMember = "Class_ID";
+
+
         }
         private void AccessCodeBox_Enter(object sender, EventArgs e)
         {
@@ -53,7 +60,7 @@ namespace Learning_DB
                 {
                     ClassroomTitleBox.Visible = false;
                     InstructorLabel.Visible = false;
-                    InstructorNameBox.Visible = false;
+                    InstructorComboBox.Visible = false;
                     ClassLabel.Visible = false;
                     ConfirmEnrollButton.Visible = false;
                     CourseNameBox.Visible = false;
@@ -66,7 +73,7 @@ namespace Learning_DB
                 {
                     ClassroomTitleBox.Visible = true;
                     InstructorLabel.Visible = true;
-                    InstructorNameBox.Visible = true;
+                    InstructorComboBox.Visible = true;
                     ClassLabel.Visible = true;
                     ConfirmEnrollButton.Visible = true;
                     CourseNameBox.Visible = true;
@@ -74,7 +81,9 @@ namespace Learning_DB
                     
                     CourseNameBox.Text = ClassroomData.Item1.Rows[0]["Course Name"].ToString();
                     ClassroomTitleBox.Text = ClassroomData.Item1.Rows[0]["Classroom Title"].ToString();
-                    InstructorNameBox.Text = ClassroomData.Item1.Rows[0]["Instructor Name"].ToString();
+                    InstructorComboBox.DataSource = cont.SelectInstructorsForClassByCode(AccessCodeBox.Text).Item1;
+                    InstructorComboBox.DisplayMember = "Instructor Name";
+
                 }
             }
             
@@ -88,7 +97,11 @@ namespace Learning_DB
                 MessageBox.Show(EnrollmentError.Item2);
             }
 
-
+        }
+        private void ClassroomComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //DataTable ClassData = cont.SelectClassDataForStudent(StudentID, ClassroomComboBox.SelectedValue.ToString());
+            
         }
     }
 }

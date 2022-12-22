@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace DbHandler
 {
@@ -51,6 +52,21 @@ namespace DbHandler
                 return Tuple.Create(0,ex.Message);
             }
         }
+        public int ExecuteNonQuery(string Query)
+        {
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(Query, myConnection);
+                
+                return myCommand.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+        }
 
         public Tuple<DataTable,string> ExecuteReader(string storedProcedureName, Dictionary<string, object> parameters)
         {
@@ -92,6 +108,34 @@ namespace DbHandler
                 return Tuple.Create(dt, ex.Message);
             }
         }
+        public DataTable ExecuteReader(string Query)
+        {
+            DataTable dt = null;
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(Query, myConnection);
+                
+                SqlDataReader reader = myCommand.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    dt = new DataTable();
+                    dt.Load(reader);
+                    reader.Close();
+                    return dt;
+                }
+                else
+                {
+                    reader.Close();
+                    return dt;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dt;
+            }
+        }
 
         public Tuple<Object, string> ExecuteScalar(string storedProcedureName, Dictionary<string, object> parameters)
         {
@@ -121,6 +165,24 @@ namespace DbHandler
                 return Tuple.Create(ob, ex.Message);
             }
         }
+        public Object ExecuteScalar(string Query)
+        {
+            //if returned value is null (Object)
+            //the message will be send in second parameter as string
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(Query, myConnection);
+                return myCommand.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                Object ob = null;
+                Console.WriteLine(ex.Message);
+                return ob;
+            }
+        }
+
 
         public void CloseConnection()
         {

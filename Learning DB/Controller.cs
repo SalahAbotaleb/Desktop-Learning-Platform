@@ -85,6 +85,13 @@ namespace DbHandler
             Parameters.Add("@AccessCode", code);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        public Tuple<DataTable, string> SelectInstructorsForClassByCode(string code)
+        {
+            string StoredProcedureName = StoredProcedures.SelectInstructorsForClassByCode;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AccessCode", code);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
         public Tuple<int, string> EnrollStudentByAccessCode(string code, int studentID)
         {
             string StoredProcedureName = StoredProcedures.EnrollStudentByAccessCode;
@@ -93,5 +100,21 @@ namespace DbHandler
             Parameters.Add("@StudentID", studentID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-    }
+        public DataTable SelectStudentNameByID(int SID)
+        {
+            string Query = "SELECT FName + \' \' + LName FROM Student WHERE StudentID = " + SID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectClassesForStudent(int SID)
+        {
+            string Query = "select Classroom.Class_ID,Title from Classroom, Student,Student_Enrolled_In where Classroom.Class_ID = Student_Enrolled_In.Class_ID AND Student_ID = StudentID AND StudentId = " + SID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectClassroomByID(int CID)
+        {
+            string Query = "SELECT * FROM Classroom WHERE Class_ID = " + CID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+
+    }   
 }

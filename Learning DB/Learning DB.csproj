@@ -164,9 +164,7 @@
   <ItemGroup>
     <None Include="images\event icon25x25.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="images\addadmin.png" />
   </ItemGroup>
@@ -175,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\addinstructor-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
