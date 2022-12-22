@@ -53,7 +53,20 @@ namespace DbHandler
         //    return dbMan.ExecuteReader(StoredProcedureName, null);
 
         //}
+        
+        public Tuple<int,string> InsertAdmin(string username ,string Fname,string Lname,string Email ,int added_by ,string password)
+        {
 
+            string StoredProcedureName = StoredProcedures.InsertAdmin;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Email", Email);
+            Parameters.Add("@added_by", added_by);
+            Parameters.Add("@password", password);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
         public Tuple<DataTable,string> LoginStudent(string username, string password)
         {
             string StoredProcedureName = StoredProcedures.Loginstudent;
