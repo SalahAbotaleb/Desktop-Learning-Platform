@@ -124,6 +124,9 @@ namespace Learning_DB
             Application.Exit();
         }
 
-        
+        private void Credintial_Load(object sender, EventArgs e)
+        {
+            kryptonLabel1.Select();
+        }
     }
 }

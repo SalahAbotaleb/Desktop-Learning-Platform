@@ -182,6 +182,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Credintial";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Credintial_FormClosing);
+            this.Load += new System.EventHandler(this.Credintial_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
