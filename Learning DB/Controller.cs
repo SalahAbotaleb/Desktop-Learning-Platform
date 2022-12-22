@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Windows.Forms;
+using Learning_DB;
 
 namespace DbHandler
 {
@@ -53,12 +54,29 @@ namespace DbHandler
 
         //}
 
-        //public DataTable SelectProject(string location)
-        //{
-        //    String StoredProcedureName = StoredProcedures.RetrieveProject;
-        //    Dictionary<string, object> Parameters = new Dictionary<string, object>();
-        //    Parameters.Add("@location", location);
-        //   return dbMan.ExecuteReader(StoredProcedureName,Parameters);
-        //}
+        public Tuple<DataTable,string> LoginStudent(string username, string password)
+        {
+            string StoredProcedureName = StoredProcedures.Loginstudent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@password", password);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<DataTable, string> LoginAdmin(string username, string password)
+        {
+            string StoredProcedureName = StoredProcedures.Loginadmin;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@password", password);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<DataTable, string> LoginInstructor(string username, string password)
+        {
+            string StoredProcedureName = StoredProcedures.LoginInstructor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@password", password);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
     }
 }
