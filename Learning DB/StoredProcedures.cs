@@ -15,5 +15,7 @@ namespace Learning_DB
         public static string SelectInstructorsForClassByCode = "SelectInstructorsForClassByCode";
         
         
+        public static string InsertAdmin = "spInsertAdmin";
+        public static string UpdateAdmin = "spUpdateAdmin";
     }
 }

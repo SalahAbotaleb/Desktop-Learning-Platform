@@ -49,7 +49,7 @@
             this.FirstName = new System.Windows.Forms.Label();
             this.styleManager1 = new MetroSet_UI.Components.StyleManager();
             this.EditAdmin = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.AdminEAdminComboBox_Nmae = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.AdminEAdminComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.AdminEAdminButton_Remove = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AdminLabel_SearchName = new System.Windows.Forms.Label();
             this.Admin_ID = new System.Windows.Forms.Label();
@@ -178,7 +178,7 @@
             this.AddAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.EditAdmin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminEAdminComboBox_Nmae)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminEAdminComboBox_Username)).BeginInit();
             this.Instructor.SuspendLayout();
             this.AdminInstructorPage.SuspendLayout();
             this.AddInstructor.SuspendLayout();
@@ -272,7 +272,7 @@
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(-6, 54);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 2;
+            this.Main.SelectedIndex = 0;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1210, 652);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -283,6 +283,7 @@
             this.Main.ThemeAuthor = null;
             this.Main.ThemeName = null;
             this.Main.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.Main.UseAnimation = false;
             // 
             // Admin
             // 
@@ -311,12 +312,12 @@
             this.AdminAdminPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminAdminPage.Controls.Add(this.AddAdmin);
             this.AdminAdminPage.Controls.Add(this.EditAdmin);
-            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminAdminPage.IsDerivedStyle = false;
             this.AdminAdminPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminAdminPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminAdminPage.Name = "AdminAdminPage";
-            this.AdminAdminPage.SelectedIndex = 0;
+            this.AdminAdminPage.SelectedIndex = 1;
             this.AdminAdminPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminAdminPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminAdminPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -472,7 +473,7 @@
             this.AddAdminButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
             this.AddAdminButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AddAdminButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AddAdminButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAdminButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddAdminButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AddAdminButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AddAdminButton.StatePressed.Back.ColorAngle = 135F;
@@ -499,13 +500,14 @@
             this.AddAdminButton.TabIndex = 27;
             this.AddAdminButton.TabStop = false;
             this.AddAdminButton.Values.Text = "Add";
+            this.AddAdminButton.Click += new System.EventHandler(this.AddAdminButton_Click);
             // 
             // AdminTextBox_Email
             // 
             this.AdminTextBox_Email.Location = new System.Drawing.Point(204, 187);
             this.AdminTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.AdminTextBox_Email.Name = "AdminTextBox_Email";
-            this.AdminTextBox_Email.Size = new System.Drawing.Size(481, 43);
+            this.AdminTextBox_Email.Size = new System.Drawing.Size(481, 42);
             this.AdminTextBox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminTextBox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminTextBox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -517,7 +519,7 @@
             this.AdminTextBox_Email.StateCommon.Border.Width = 2;
             this.AdminTextBox_Email.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.AdminTextBox_Email.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminTextBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminTextBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, -1);
             this.AdminTextBox_Email.TabIndex = 26;
             this.AdminTextBox_Email.Text = "Enter Admin\'s Email";
             this.AdminTextBox_Email.Enter += new System.EventHandler(this.AdminTextBox_Email_Enter);
@@ -613,7 +615,7 @@
             // EditAdmin
             // 
             this.EditAdmin.BaseColor = System.Drawing.SystemColors.Control;
-            this.EditAdmin.Controls.Add(this.AdminEAdminComboBox_Nmae);
+            this.EditAdmin.Controls.Add(this.AdminEAdminComboBox_Username);
             this.EditAdmin.Controls.Add(this.AdminEAdminButton_Remove);
             this.EditAdmin.Controls.Add(this.AdminLabel_SearchName);
             this.EditAdmin.Controls.Add(this.Admin_ID);
@@ -643,35 +645,35 @@
             this.EditAdmin.ThemeName = null;
             this.EditAdmin.ToolTipText = null;
             // 
-            // AdminEAdminComboBox_Nmae
+            // AdminEAdminComboBox_Username
             // 
-            this.AdminEAdminComboBox_Nmae.DropDownWidth = 264;
-            this.AdminEAdminComboBox_Nmae.Location = new System.Drawing.Point(735, 217);
-            this.AdminEAdminComboBox_Nmae.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminEAdminComboBox_Nmae.Name = "AdminEAdminComboBox_Nmae";
-            this.AdminEAdminComboBox_Nmae.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminEAdminComboBox_Nmae.Size = new System.Drawing.Size(396, 46);
-            this.AdminEAdminComboBox_Nmae.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.AdminEAdminComboBox_Username.DropDownWidth = 264;
+            this.AdminEAdminComboBox_Username.Location = new System.Drawing.Point(735, 217);
+            this.AdminEAdminComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminEAdminComboBox_Username.Name = "AdminEAdminComboBox_Username";
+            this.AdminEAdminComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminEAdminComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.AdminEAdminComboBox_Username.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.Rounding = 20;
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Border.Width = 2;
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.AdminEAdminComboBox_Nmae.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminEAdminComboBox_Nmae.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.Rounding = 20;
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Border.Width = 2;
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminEAdminComboBox_Username.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEAdminComboBox_Username.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminEAdminComboBox_Nmae.TabIndex = 48;
-            this.AdminEAdminComboBox_Nmae.Text = "Choose Admin\'s Name";
+            this.AdminEAdminComboBox_Username.TabIndex = 48;
+            this.AdminEAdminComboBox_Username.Text = "Choose Admin\'s Username";
             // 
             // AdminEAdminButton_Remove
             // 
@@ -707,7 +709,7 @@
             this.AdminEAdminButton_Remove.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEAdminButton_Remove.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEAdminButton_Remove.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEAdminButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEAdminButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEAdminButton_Remove.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEAdminButton_Remove.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEAdminButton_Remove.StatePressed.Back.ColorAngle = 135F;
@@ -814,7 +816,7 @@
             this.AdminEAdminButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEAdminButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEAdminButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEAdminButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEAdminButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEAdminButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEAdminButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEAdminButton_Search.StatePressed.Back.ColorAngle = 135F;
@@ -910,7 +912,7 @@
             this.AdminEAdminButton_Edit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEAdminButton_Edit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEAdminButton_Edit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEAdminButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEAdminButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEAdminButton_Edit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEAdminButton_Edit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEAdminButton_Edit.StatePressed.Back.ColorAngle = 135F;
@@ -1072,7 +1074,7 @@
             this.AdminInstructorPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminInstructorPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminInstructorPage.Name = "AdminInstructorPage";
-            this.AdminInstructorPage.SelectedIndex = 0;
+            this.AdminInstructorPage.SelectedIndex = 1;
             this.AdminInstructorPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminInstructorPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminInstructorPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1084,6 +1086,7 @@
             this.AdminInstructorPage.ThemeAuthor = null;
             this.AdminInstructorPage.ThemeName = null;
             this.AdminInstructorPage.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.AdminInstructorPage.UseAnimation = false;
             // 
             // AddInstructor
             // 
@@ -1273,7 +1276,7 @@
             this.kryptonButton4.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
             this.kryptonButton4.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton4.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton4.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.kryptonButton4.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.kryptonButton4.StatePressed.Back.ColorAngle = 135F;
@@ -1683,7 +1686,7 @@
             this.AdminEInstructorButton_Remove.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEInstructorButton_Remove.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorButton_Remove.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEInstructorButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEInstructorButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEInstructorButton_Remove.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEInstructorButton_Remove.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEInstructorButton_Remove.StatePressed.Back.ColorAngle = 135F;
@@ -1790,7 +1793,7 @@
             this.AdminEInstructorButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEInstructorButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEInstructorButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEInstructorButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEInstructorButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEInstructorButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEInstructorButton_Search.StatePressed.Back.ColorAngle = 135F;
@@ -1852,7 +1855,7 @@
             this.AdminEInstructorButton_Edit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEInstructorButton_Edit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorButton_Edit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEInstructorButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEInstructorButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEInstructorButton_Edit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEInstructorButton_Edit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEInstructorButton_Edit.StatePressed.Back.ColorAngle = 135F;
@@ -1912,7 +1915,7 @@
             this.AdminStudentPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminStudentPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminStudentPage.Name = "AdminStudentPage";
-            this.AdminStudentPage.SelectedIndex = 1;
+            this.AdminStudentPage.SelectedIndex = 0;
             this.AdminStudentPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminStudentPage.Size = new System.Drawing.Size(1212, 593);
             this.AdminStudentPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1924,6 +1927,7 @@
             this.AdminStudentPage.ThemeAuthor = null;
             this.AdminStudentPage.ThemeName = null;
             this.AdminStudentPage.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.AdminStudentPage.UseAnimation = false;
             // 
             // AdminAddStudent
             // 
@@ -1974,7 +1978,7 @@
             this.StudentTextbox_Level.StateCommon.Border.Rounding = 20;
             this.StudentTextbox_Level.StateCommon.Border.Width = 2;
             this.StudentTextbox_Level.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentTextbox_Level.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentTextbox_Level.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentTextbox_Level.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.StudentTextbox_Level.TabIndex = 74;
             this.StudentTextbox_Level.Text = "Enter Student\'s Level";
@@ -2008,7 +2012,7 @@
             this.StudentTextbox_BOD.StateCommon.Border.Rounding = 20;
             this.StudentTextbox_BOD.StateCommon.Border.Width = 2;
             this.StudentTextbox_BOD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentTextbox_BOD.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentTextbox_BOD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentTextbox_BOD.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.StudentTextbox_BOD.TabIndex = 72;
             this.StudentTextbox_BOD.Text = "Enter Student\'s Birth Date";
@@ -2042,7 +2046,7 @@
             this.StudentTextbox_Password.StateCommon.Border.Rounding = 20;
             this.StudentTextbox_Password.StateCommon.Border.Width = 2;
             this.StudentTextbox_Password.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentTextbox_Password.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentTextbox_Password.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentTextbox_Password.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.StudentTextbox_Password.TabIndex = 70;
             this.StudentTextbox_Password.Text = "Enter Student\'s Password";
@@ -2076,7 +2080,7 @@
             this.StudentTextbox_Username.StateCommon.Border.Rounding = 20;
             this.StudentTextbox_Username.StateCommon.Border.Width = 2;
             this.StudentTextbox_Username.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentTextbox_Username.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentTextbox_Username.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentTextbox_Username.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.StudentTextbox_Username.TabIndex = 68;
             this.StudentTextbox_Username.Text = "Enter Student\'s Username";
@@ -2128,7 +2132,7 @@
             this.kryptonButton1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
             this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.kryptonButton1.StatePressed.Back.ColorAngle = 135F;
@@ -2172,7 +2176,7 @@
             this.StudentTextbox_Email.StateCommon.Border.Rounding = 20;
             this.StudentTextbox_Email.StateCommon.Border.Width = 2;
             this.StudentTextbox_Email.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentTextbox_Email.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentTextbox_Email.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentTextbox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.StudentTextbox_Email.TabIndex = 65;
             this.StudentTextbox_Email.Text = "Enter Student\'s Email";
@@ -2195,7 +2199,7 @@
             this.StudentTextbox_LastName.StateCommon.Border.Rounding = 20;
             this.StudentTextbox_LastName.StateCommon.Border.Width = 2;
             this.StudentTextbox_LastName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentTextbox_LastName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentTextbox_LastName.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentTextbox_LastName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.StudentTextbox_LastName.TabIndex = 64;
             this.StudentTextbox_LastName.Text = "Enter Student\'s Last Name";
@@ -2218,7 +2222,7 @@
             this.StudentTextbox_FirstName.StateCommon.Border.Rounding = 20;
             this.StudentTextbox_FirstName.StateCommon.Border.Width = 2;
             this.StudentTextbox_FirstName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentTextbox_FirstName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentTextbox_FirstName.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentTextbox_FirstName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.StudentTextbox_FirstName.TabIndex = 63;
             this.StudentTextbox_FirstName.Text = "Enter Student\'s First Name";
@@ -2471,9 +2475,6 @@
             this.AdminEStudentTextBox_Name.Name = "AdminEStudentTextBox_Name";
             this.AdminEStudentTextBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.AdminEStudentTextBox_Name.Size = new System.Drawing.Size(396, 46);
-            this.AdminEStudentTextBox_Name.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AdminEStudentTextBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2528,7 +2529,7 @@
             this.AdminEStudentButton_Remove.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEStudentButton_Remove.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEStudentButton_Remove.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEStudentButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEStudentButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEStudentButton_Remove.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEStudentButton_Remove.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEStudentButton_Remove.StatePressed.Back.ColorAngle = 135F;
@@ -2635,7 +2636,7 @@
             this.AdminEStudentButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEStudentButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEStudentButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEStudentButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEStudentButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEStudentButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEStudentButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEStudentButton_Search.StatePressed.Back.ColorAngle = 135F;
@@ -2697,7 +2698,7 @@
             this.AdminEStudentButton_Edit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminEStudentButton_Edit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminEStudentButton_Edit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminEStudentButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminEStudentButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminEStudentButton_Edit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminEStudentButton_Edit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminEStudentButton_Edit.StatePressed.Back.ColorAngle = 135F;
@@ -2769,6 +2770,7 @@
             this.metroSetTabControl1.ThemeAuthor = null;
             this.metroSetTabControl1.ThemeName = null;
             this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl1.UseAnimation = false;
             // 
             // AdminAddCourse
             // 
@@ -2827,7 +2829,7 @@
             this.kryptonButton3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
             this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton3.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.kryptonButton3.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.kryptonButton3.StatePressed.Back.ColorAngle = 135F;
@@ -2871,7 +2873,7 @@
             this.CourseTextbox_Description.StateCommon.Border.Rounding = 20;
             this.CourseTextbox_Description.StateCommon.Border.Width = 2;
             this.CourseTextbox_Description.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.CourseTextbox_Description.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseTextbox_Description.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CourseTextbox_Description.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.CourseTextbox_Description.TabIndex = 70;
             this.CourseTextbox_Description.Text = "Enter Course\'s Description";
@@ -2892,7 +2894,7 @@
             this.CourseTextbox_Name.StateCommon.Border.Rounding = 20;
             this.CourseTextbox_Name.StateCommon.Border.Width = 2;
             this.CourseTextbox_Name.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.CourseTextbox_Name.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseTextbox_Name.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CourseTextbox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.CourseTextbox_Name.TabIndex = 69;
             this.CourseTextbox_Name.Text = "Enter Course Name";
@@ -2956,9 +2958,6 @@
             this.AdminECourseComboBox_Name.Name = "AdminECourseComboBox_Name";
             this.AdminECourseComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.AdminECourseComboBox_Name.Size = new System.Drawing.Size(396, 46);
-            this.AdminECourseComboBox_Name.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2972,9 +2971,6 @@
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Width = 2;
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseComboBox_Name.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AdminECourseComboBox_Name.TabIndex = 85;
             this.AdminECourseComboBox_Name.Text = "Choose Student\'s Name";
             this.AdminECourseComboBox_Name.Enter += new System.EventHandler(this.AdminECourseComboBox_Name_Enter);
@@ -3059,7 +3055,7 @@
             this.AdminECourseButton_Remove.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminECourseButton_Remove.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminECourseButton_Remove.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminECourseButton_Remove.StatePressed.Back.ColorAngle = 135F;
@@ -3121,7 +3117,7 @@
             this.AdminECourseButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminECourseButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminECourseButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminECourseButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminECourseButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminECourseButton_Search.StatePressed.Back.ColorAngle = 135F;
@@ -3183,7 +3179,7 @@
             this.AdminECourseButton_Edit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminECourseButton_Edit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AdminECourseButton_Edit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AdminECourseButton_Edit.StatePressed.Back.ColorAngle = 135F;
@@ -3571,7 +3567,7 @@
             this.kryptonButton2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton2.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.kryptonButton2.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.kryptonButton2.StatePressed.Back.ColorAngle = 135F;
@@ -3643,7 +3639,7 @@
             this.Admin_LogOutButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-7, -7, -8, -8);
             this.Admin_LogOutButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Admin_LogOutButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.Admin_LogOutButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin_LogOutButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin_LogOutButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.Admin_LogOutButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
             this.Admin_LogOutButton.StatePressed.Back.ColorAngle = 135F;
@@ -3698,7 +3694,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.EditAdmin.ResumeLayout(false);
             this.EditAdmin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminEAdminComboBox_Nmae)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminEAdminComboBox_Username)).EndInit();
             this.Instructor.ResumeLayout(false);
             this.AdminInstructorPage.ResumeLayout(false);
             this.AddInstructor.ResumeLayout(false);
@@ -3798,7 +3794,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminEInstructorTextbox_ID;
         private ComponentFactory.Krypton.Toolkit.KryptonButton AdminEInstructorButton_Search;
         private ComponentFactory.Krypton.Toolkit.KryptonButton AdminEInstructorButton_Edit;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox AdminEAdminComboBox_Nmae;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox AdminEAdminComboBox_Username;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminEInstructorTextbox_Username;
         private System.Windows.Forms.Label label7;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminEInstructorTextbox_Email;

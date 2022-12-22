@@ -5,6 +5,8 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using Learning_DB;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Xml.Linq;
 
 namespace DbHandler
 {
@@ -53,7 +55,31 @@ namespace DbHandler
         //    return dbMan.ExecuteReader(StoredProcedureName, null);
 
         //}
+        public Tuple <int,string> UpdateAdmin(int ID, string username, string Fname, string Lname, string Email)
+        {
+                
+            string StoredProcedureName = StoredProcedures.UpdateAdmin;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+            Parameters.Add("@username", username);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Email", Email);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public Tuple<int,string> InsertAdmin(string username ,string Fname,string Lname,string Email ,int added_by ,string password)
+        {
 
+            string StoredProcedureName = StoredProcedures.InsertAdmin;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Email", Email);
+            Parameters.Add("@added_by", added_by);
+            Parameters.Add("@password", password);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
         public Tuple<DataTable,string> LoginStudent(string username, string password)
         {
             string StoredProcedureName = StoredProcedures.Loginstudent;

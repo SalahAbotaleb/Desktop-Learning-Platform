@@ -16,10 +16,13 @@ namespace Learning_DB
 {
     public partial class AdminInterface : KryptonForm
     {
+        Controller Controller = new Controller();
         public AdminInterface()
         {
             InitializeComponent();
             User_Name.Text = "Admin";
+            Controller = new Controller();
+            
         }
 
 
@@ -995,7 +998,20 @@ namespace Learning_DB
 
         private void AdminEStudentTextBox_Name_Leave(object sender, EventArgs e)
         {
+            
+        }
 
+        private void AddAdminButton_Click(object sender, EventArgs e)
+        {
+            Tuple<int, string> result = Controller.InsertAdmin(AdminTextBox_Username.Text, AdminTextBox_FirstName.Text, AdminTextBox_LastName.Text, AdminTextBox_Email.Text, OpenedSession.ID, AdminTextBox_Password.Text);
+            if (result.Item1 == 0)
+            {
+                MessageBox.Show(result.Item2);
+            }
+            else
+            {
+                MessageBox.Show("Admin added successfuly");
+            }
         }
     }
     
