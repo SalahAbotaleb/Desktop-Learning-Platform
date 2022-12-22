@@ -10,6 +10,9 @@ namespace Learning_DB
         public static string Loginstudent = "SelectStudent";
         public static string LoginInstructor = "SelectInstructor";
         public static string Loginadmin = "Selectadmin";
+        public static string SelectClassroomByCode = "SearchClassroomForStudent";
+        public static string EnrollStudentByAccessCode = "EnrollStudentByAccessCode";
+        
         
     }
 }

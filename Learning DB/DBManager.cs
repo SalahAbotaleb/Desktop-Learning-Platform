@@ -89,7 +89,7 @@ namespace DbHandler
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return Tuple.Create(dt, "");
+                return Tuple.Create(dt, ex.Message);
             }
         }
 

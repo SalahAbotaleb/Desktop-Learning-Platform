@@ -78,5 +78,20 @@ namespace DbHandler
             Parameters.Add("@password", password);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        public Tuple<DataTable, string> SearchClassroomForStudent(string code)
+        {
+            string StoredProcedureName = StoredProcedures.SelectClassroomByCode;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AccessCode", code);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<int, string> EnrollStudentByAccessCode(string code, int studentID)
+        {
+            string StoredProcedureName = StoredProcedures.EnrollStudentByAccessCode;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AccessCode", code);
+            Parameters.Add("@StudentID", studentID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
     }
 }
