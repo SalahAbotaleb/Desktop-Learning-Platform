@@ -136,6 +136,25 @@
             this.AdminEStudentButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AdminEStudentButton_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.History2 = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.metroSetTabControl1 = new MetroSet_UI.Controls.MetroSetTabControl();
+            this.AdminAddCourse = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.CourseTextbox_Description = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.CourseTextbox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.CourseLabel_Description = new System.Windows.Forms.Label();
+            this.CourseLabel_Name = new System.Windows.Forms.Label();
+            this.AdminEditCourse = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.AdminECourseComboBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.AdminECourseTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.AdminECourseButton_Remove = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.AdminECourseButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.AdminECourseButton_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.AdminECourseTextBox_Description = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.AdminECourseTextBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.AdminHistoryPage = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.HistoryStudent_NameLabel = new System.Windows.Forms.Label();
@@ -153,25 +172,6 @@
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.User_NameLabel = new System.Windows.Forms.Label();
             this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.metroSetTabControl1 = new MetroSet_UI.Controls.MetroSetTabControl();
-            this.AdminAddCourse = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.AdminEditCourse = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.CourseTextbox_Description = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.CourseTextbox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.CourseLabel_Description = new System.Windows.Forms.Label();
-            this.CourseLabel_Name = new System.Windows.Forms.Label();
-            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.AdminECourseTextBox_Description = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.AdminECourseTextBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.AdminECourseButton_Remove = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.AdminECourseButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.AdminECourseButton_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.AdminECourseComboBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.AdminECourseTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Main.SuspendLayout();
             this.Admin.SuspendLayout();
             this.AdminAdminPage.SuspendLayout();
@@ -193,15 +193,15 @@
             this.AdminEditStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminEStudentTextBox_Name)).BeginInit();
             this.History2.SuspendLayout();
+            this.metroSetTabControl1.SuspendLayout();
+            this.AdminAddCourse.SuspendLayout();
+            this.AdminEditCourse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminECourseComboBox_Name)).BeginInit();
             this.AdminHistoryPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Name)).BeginInit();
-            this.metroSetTabControl1.SuspendLayout();
-            this.AdminAddCourse.SuspendLayout();
-            this.AdminEditCourse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminECourseComboBox_Name)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette2
@@ -259,7 +259,7 @@
             // 
             this.Main.AccessibleName = "";
             this.Main.AnimateEasingType = MetroSet_UI.Enums.EasingType.None;
-            this.Main.AnimateTime = 200;
+            this.Main.AnimateTime = 500;
             this.Main.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Main.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.Main.Controls.Add(this.Admin);
@@ -267,14 +267,14 @@
             this.Main.Controls.Add(this.Student);
             this.Main.Controls.Add(this.History2);
             this.Main.Controls.Add(this.AdminHistoryPage);
-            this.Main.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Main.Cursor = System.Windows.Forms.Cursors.Default;
             this.Main.IsDerivedStyle = false;
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
-            this.Main.Location = new System.Drawing.Point(-4, 54);
+            this.Main.Location = new System.Drawing.Point(-6, 54);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 0;
+            this.Main.SelectedIndex = 2;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
-            this.Main.Size = new System.Drawing.Size(1208, 652);
+            this.Main.Size = new System.Drawing.Size(1210, 652);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.Main.Speed = 100;
             this.Main.Style = MetroSet_UI.Enums.Style.Light;
@@ -283,7 +283,6 @@
             this.Main.ThemeAuthor = null;
             this.Main.ThemeName = null;
             this.Main.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.Main.UseAnimation = false;
             // 
             // Admin
             // 
@@ -295,7 +294,7 @@
             this.Admin.IsDerivedStyle = false;
             this.Admin.Location = new System.Drawing.Point(4, 64);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(1200, 584);
+            this.Admin.Size = new System.Drawing.Size(1202, 584);
             this.Admin.Style = MetroSet_UI.Enums.Style.Light;
             this.Admin.StyleManager = this.styleManager1;
             this.Admin.TabIndex = 0;
@@ -307,17 +306,17 @@
             // AdminAdminPage
             // 
             this.AdminAdminPage.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
-            this.AdminAdminPage.AnimateTime = 200;
+            this.AdminAdminPage.AnimateTime = 500;
             this.AdminAdminPage.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.AdminAdminPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminAdminPage.Controls.Add(this.AddAdmin);
             this.AdminAdminPage.Controls.Add(this.EditAdmin);
-            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Default;
             this.AdminAdminPage.IsDerivedStyle = false;
             this.AdminAdminPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminAdminPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminAdminPage.Name = "AdminAdminPage";
-            this.AdminAdminPage.SelectedIndex = 1;
+            this.AdminAdminPage.SelectedIndex = 0;
             this.AdminAdminPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminAdminPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminAdminPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -352,7 +351,7 @@
             this.AddAdmin.IsDerivedStyle = false;
             this.AddAdmin.Location = new System.Drawing.Point(4, 44);
             this.AddAdmin.Name = "AddAdmin";
-            this.AddAdmin.Size = new System.Drawing.Size(1199, 541);
+            this.AddAdmin.Size = new System.Drawing.Size(1200, 541);
             this.AddAdmin.Style = MetroSet_UI.Enums.Style.Light;
             this.AddAdmin.StyleManager = this.styleManager1;
             this.AddAdmin.TabIndex = 0;
@@ -1051,7 +1050,7 @@
             this.Instructor.IsDerivedStyle = false;
             this.Instructor.Location = new System.Drawing.Point(4, 64);
             this.Instructor.Name = "Instructor";
-            this.Instructor.Size = new System.Drawing.Size(1204, 584);
+            this.Instructor.Size = new System.Drawing.Size(1202, 584);
             this.Instructor.Style = MetroSet_UI.Enums.Style.Light;
             this.Instructor.StyleManager = this.styleManager1;
             this.Instructor.TabIndex = 1;
@@ -1063,7 +1062,7 @@
             // AdminInstructorPage
             // 
             this.AdminInstructorPage.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
-            this.AdminInstructorPage.AnimateTime = 1000;
+            this.AdminInstructorPage.AnimateTime = 500;
             this.AdminInstructorPage.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.AdminInstructorPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminInstructorPage.Controls.Add(this.AddInstructor);
@@ -1075,7 +1074,7 @@
             this.AdminInstructorPage.Name = "AdminInstructorPage";
             this.AdminInstructorPage.SelectedIndex = 0;
             this.AdminInstructorPage.SelectedTextColor = System.Drawing.Color.White;
-            this.AdminInstructorPage.Size = new System.Drawing.Size(1205, 589);
+            this.AdminInstructorPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminInstructorPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.AdminInstructorPage.Speed = 100;
             this.AdminInstructorPage.Style = MetroSet_UI.Enums.Style.Light;
@@ -1085,7 +1084,6 @@
             this.AdminInstructorPage.ThemeAuthor = null;
             this.AdminInstructorPage.ThemeName = null;
             this.AdminInstructorPage.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.AdminInstructorPage.UseAnimation = false;
             // 
             // AddInstructor
             // 
@@ -1110,7 +1108,7 @@
             this.AddInstructor.IsDerivedStyle = false;
             this.AddInstructor.Location = new System.Drawing.Point(4, 44);
             this.AddInstructor.Name = "AddInstructor";
-            this.AddInstructor.Size = new System.Drawing.Size(1197, 541);
+            this.AddInstructor.Size = new System.Drawing.Size(1200, 541);
             this.AddInstructor.Style = MetroSet_UI.Enums.Style.Light;
             this.AddInstructor.StyleManager = this.styleManager1;
             this.AddInstructor.TabIndex = 0;
@@ -1431,7 +1429,7 @@
             this.EditInstructor.IsDerivedStyle = false;
             this.EditInstructor.Location = new System.Drawing.Point(4, 44);
             this.EditInstructor.Name = "EditInstructor";
-            this.EditInstructor.Size = new System.Drawing.Size(1197, 541);
+            this.EditInstructor.Size = new System.Drawing.Size(1200, 541);
             this.EditInstructor.Style = MetroSet_UI.Enums.Style.Light;
             this.EditInstructor.StyleManager = this.styleManager1;
             this.EditInstructor.TabIndex = 1;
@@ -1892,7 +1890,7 @@
             this.Student.IsDerivedStyle = false;
             this.Student.Location = new System.Drawing.Point(4, 64);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(1204, 584);
+            this.Student.Size = new System.Drawing.Size(1202, 584);
             this.Student.Style = MetroSet_UI.Enums.Style.Light;
             this.Student.StyleManager = this.styleManager1;
             this.Student.TabIndex = 2;
@@ -1904,7 +1902,7 @@
             // AdminStudentPage
             // 
             this.AdminStudentPage.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
-            this.AdminStudentPage.AnimateTime = 200;
+            this.AdminStudentPage.AnimateTime = 500;
             this.AdminStudentPage.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.AdminStudentPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminStudentPage.Controls.Add(this.AdminAddStudent);
@@ -1926,7 +1924,6 @@
             this.AdminStudentPage.ThemeAuthor = null;
             this.AdminStudentPage.ThemeName = null;
             this.AdminStudentPage.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.AdminStudentPage.UseAnimation = false;
             // 
             // AdminAddStudent
             // 
@@ -1952,7 +1949,7 @@
             this.AdminAddStudent.IsDerivedStyle = false;
             this.AdminAddStudent.Location = new System.Drawing.Point(4, 44);
             this.AdminAddStudent.Name = "AdminAddStudent";
-            this.AdminAddStudent.Size = new System.Drawing.Size(1200, 526);
+            this.AdminAddStudent.Size = new System.Drawing.Size(1204, 545);
             this.AdminAddStudent.Style = MetroSet_UI.Enums.Style.Light;
             this.AdminAddStudent.StyleManager = this.styleManager1;
             this.AdminAddStudent.TabIndex = 0;
@@ -2738,7 +2735,7 @@
             this.History2.IsDerivedStyle = false;
             this.History2.Location = new System.Drawing.Point(4, 64);
             this.History2.Name = "History2";
-            this.History2.Size = new System.Drawing.Size(1206, 584);
+            this.History2.Size = new System.Drawing.Size(1202, 584);
             this.History2.Style = MetroSet_UI.Enums.Style.Light;
             this.History2.StyleManager = this.styleManager1;
             this.History2.TabIndex = 5;
@@ -2746,6 +2743,541 @@
             this.History2.ThemeAuthor = null;
             this.History2.ThemeName = null;
             this.History2.ToolTipText = null;
+            // 
+            // metroSetTabControl1
+            // 
+            this.metroSetTabControl1.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
+            this.metroSetTabControl1.AnimateTime = 500;
+            this.metroSetTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.metroSetTabControl1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.metroSetTabControl1.Controls.Add(this.AdminAddCourse);
+            this.metroSetTabControl1.Controls.Add(this.AdminEditCourse);
+            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl1.IsDerivedStyle = false;
+            this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
+            this.metroSetTabControl1.Location = new System.Drawing.Point(-4, 0);
+            this.metroSetTabControl1.Name = "metroSetTabControl1";
+            this.metroSetTabControl1.SelectedIndex = 1;
+            this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
+            this.metroSetTabControl1.Size = new System.Drawing.Size(1214, 589);
+            this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.metroSetTabControl1.Speed = 100;
+            this.metroSetTabControl1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTabControl1.StyleManager = this.styleManager1;
+            this.metroSetTabControl1.TabIndex = 0;
+            this.metroSetTabControl1.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
+            this.metroSetTabControl1.ThemeAuthor = null;
+            this.metroSetTabControl1.ThemeName = null;
+            this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
+            // 
+            // AdminAddCourse
+            // 
+            this.AdminAddCourse.BaseColor = System.Drawing.SystemColors.Control;
+            this.AdminAddCourse.Controls.Add(this.kryptonButton3);
+            this.AdminAddCourse.Controls.Add(this.CourseTextbox_Description);
+            this.AdminAddCourse.Controls.Add(this.CourseTextbox_Name);
+            this.AdminAddCourse.Controls.Add(this.CourseLabel_Description);
+            this.AdminAddCourse.Controls.Add(this.CourseLabel_Name);
+            this.AdminAddCourse.Font = null;
+            this.AdminAddCourse.ImageIndex = 0;
+            this.AdminAddCourse.ImageKey = null;
+            this.AdminAddCourse.IsDerivedStyle = false;
+            this.AdminAddCourse.Location = new System.Drawing.Point(4, 42);
+            this.AdminAddCourse.Name = "AdminAddCourse";
+            this.AdminAddCourse.Size = new System.Drawing.Size(1206, 543);
+            this.AdminAddCourse.Style = MetroSet_UI.Enums.Style.Light;
+            this.AdminAddCourse.StyleManager = this.styleManager1;
+            this.AdminAddCourse.TabIndex = 0;
+            this.AdminAddCourse.Text = "Add Course";
+            this.AdminAddCourse.ThemeAuthor = null;
+            this.AdminAddCourse.ThemeName = null;
+            this.AdminAddCourse.ToolTipText = null;
+            // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.Location = new System.Drawing.Point(290, 399);
+            this.kryptonButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton3.OverrideDefault.Back.ColorAngle = 45F;
+            this.kryptonButton3.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton3.OverrideDefault.Border.ColorAngle = 45F;
+            this.kryptonButton3.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton3.OverrideDefault.Border.Rounding = 20;
+            this.kryptonButton3.OverrideDefault.Border.Width = 1;
+            this.kryptonButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton3.Size = new System.Drawing.Size(213, 56);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton3.StateCommon.Border.Rounding = 20;
+            this.kryptonButton3.StateCommon.Border.Width = 1;
+            this.kryptonButton3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
+            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kryptonButton3.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kryptonButton3.StatePressed.Back.ColorAngle = 135F;
+            this.kryptonButton3.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.kryptonButton3.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kryptonButton3.StatePressed.Border.ColorAngle = 135F;
+            this.kryptonButton3.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StatePressed.Border.Rounding = 20;
+            this.kryptonButton3.StatePressed.Border.Width = 1;
+            this.kryptonButton3.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton3.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.StateTracking.Back.ColorAngle = 45F;
+            this.kryptonButton3.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton3.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton3.StateTracking.Border.ColorAngle = 45F;
+            this.kryptonButton3.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton3.StateTracking.Border.Rounding = 20;
+            this.kryptonButton3.StateTracking.Border.Width = 1;
+            this.kryptonButton3.TabIndex = 72;
+            this.kryptonButton3.TabStop = false;
+            this.kryptonButton3.Values.Text = "Add";
+            // 
+            // CourseTextbox_Description
+            // 
+            this.CourseTextbox_Description.Location = new System.Drawing.Point(212, 162);
+            this.CourseTextbox_Description.Margin = new System.Windows.Forms.Padding(4);
+            this.CourseTextbox_Description.Name = "CourseTextbox_Description";
+            this.CourseTextbox_Description.Size = new System.Drawing.Size(481, 43);
+            this.CourseTextbox_Description.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.CourseTextbox_Description.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CourseTextbox_Description.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CourseTextbox_Description.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.CourseTextbox_Description.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.CourseTextbox_Description.StateCommon.Border.Rounding = 20;
+            this.CourseTextbox_Description.StateCommon.Border.Width = 2;
+            this.CourseTextbox_Description.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.CourseTextbox_Description.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseTextbox_Description.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.CourseTextbox_Description.TabIndex = 70;
+            this.CourseTextbox_Description.Text = "Enter Course\'s Description";
+            // 
+            // CourseTextbox_Name
+            // 
+            this.CourseTextbox_Name.Location = new System.Drawing.Point(212, 48);
+            this.CourseTextbox_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.CourseTextbox_Name.Name = "CourseTextbox_Name";
+            this.CourseTextbox_Name.Size = new System.Drawing.Size(481, 43);
+            this.CourseTextbox_Name.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.CourseTextbox_Name.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CourseTextbox_Name.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CourseTextbox_Name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.CourseTextbox_Name.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.CourseTextbox_Name.StateCommon.Border.Rounding = 20;
+            this.CourseTextbox_Name.StateCommon.Border.Width = 2;
+            this.CourseTextbox_Name.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.CourseTextbox_Name.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseTextbox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.CourseTextbox_Name.TabIndex = 69;
+            this.CourseTextbox_Name.Text = "Enter Course Name";
+            // 
+            // CourseLabel_Description
+            // 
+            this.CourseLabel_Description.AutoSize = true;
+            this.CourseLabel_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseLabel_Description.Location = new System.Drawing.Point(37, 174);
+            this.CourseLabel_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CourseLabel_Description.Name = "CourseLabel_Description";
+            this.CourseLabel_Description.Size = new System.Drawing.Size(111, 22);
+            this.CourseLabel_Description.TabIndex = 67;
+            this.CourseLabel_Description.Text = "Description";
+            // 
+            // CourseLabel_Name
+            // 
+            this.CourseLabel_Name.AutoSize = true;
+            this.CourseLabel_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseLabel_Name.Location = new System.Drawing.Point(37, 60);
+            this.CourseLabel_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CourseLabel_Name.Name = "CourseLabel_Name";
+            this.CourseLabel_Name.Size = new System.Drawing.Size(131, 22);
+            this.CourseLabel_Name.TabIndex = 66;
+            this.CourseLabel_Name.Text = "Course Name";
+            // 
+            // AdminEditCourse
+            // 
+            this.AdminEditCourse.BaseColor = System.Drawing.SystemColors.Control;
+            this.AdminEditCourse.Controls.Add(this.AdminECourseComboBox_Name);
+            this.AdminEditCourse.Controls.Add(this.label19);
+            this.AdminEditCourse.Controls.Add(this.label20);
+            this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_ID);
+            this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Remove);
+            this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Search);
+            this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Edit);
+            this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_Description);
+            this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_Name);
+            this.AdminEditCourse.Controls.Add(this.label17);
+            this.AdminEditCourse.Controls.Add(this.label18);
+            this.AdminEditCourse.Font = null;
+            this.AdminEditCourse.ImageIndex = 0;
+            this.AdminEditCourse.ImageKey = null;
+            this.AdminEditCourse.IsDerivedStyle = false;
+            this.AdminEditCourse.Location = new System.Drawing.Point(4, 42);
+            this.AdminEditCourse.Name = "AdminEditCourse";
+            this.AdminEditCourse.Size = new System.Drawing.Size(1206, 543);
+            this.AdminEditCourse.Style = MetroSet_UI.Enums.Style.Light;
+            this.AdminEditCourse.StyleManager = this.styleManager1;
+            this.AdminEditCourse.TabIndex = 1;
+            this.AdminEditCourse.Text = "Edit Course";
+            this.AdminEditCourse.ThemeAuthor = null;
+            this.AdminEditCourse.ThemeName = null;
+            this.AdminEditCourse.ToolTipText = null;
+            // 
+            // AdminECourseComboBox_Name
+            // 
+            this.AdminECourseComboBox_Name.DropDownWidth = 264;
+            this.AdminECourseComboBox_Name.Location = new System.Drawing.Point(754, 220);
+            this.AdminECourseComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminECourseComboBox_Name.Name = "AdminECourseComboBox_Name";
+            this.AdminECourseComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminECourseComboBox_Name.Size = new System.Drawing.Size(396, 46);
+            this.AdminECourseComboBox_Name.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Rounding = 20;
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Width = 2;
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseComboBox_Name.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseComboBox_Name.TabIndex = 85;
+            this.AdminECourseComboBox_Name.Text = "Choose Student\'s Name";
+            this.AdminECourseComboBox_Name.Enter += new System.EventHandler(this.AdminECourseComboBox_Name_Enter);
+            this.AdminECourseComboBox_Name.Leave += new System.EventHandler(this.AdminECourseComboBox_Name_Leave);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(749, 171);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(131, 22);
+            this.label19.TabIndex = 84;
+            this.label19.Text = "Course Name";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(749, 37);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(99, 22);
+            this.label20.TabIndex = 83;
+            this.label20.Text = "Course ID";
+            // 
+            // AdminECourseTextBox_ID
+            // 
+            this.AdminECourseTextBox_ID.Location = new System.Drawing.Point(754, 83);
+            this.AdminECourseTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminECourseTextBox_ID.Name = "AdminECourseTextBox_ID";
+            this.AdminECourseTextBox_ID.Size = new System.Drawing.Size(396, 43);
+            this.AdminECourseTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.AdminECourseTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseTextBox_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseTextBox_ID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseTextBox_ID.StateCommon.Border.Rounding = 20;
+            this.AdminECourseTextBox_ID.StateCommon.Border.Width = 2;
+            this.AdminECourseTextBox_ID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminECourseTextBox_ID.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseTextBox_ID.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminECourseTextBox_ID.TabIndex = 82;
+            this.AdminECourseTextBox_ID.Text = "Search by Student\'s ID";
+            this.AdminECourseTextBox_ID.Enter += new System.EventHandler(this.AdminECourseTextBox_ID_Enter);
+            this.AdminECourseTextBox_ID.Leave += new System.EventHandler(this.AdminECourseTextBox_ID_Leave);
+            // 
+            // AdminECourseButton_Remove
+            // 
+            this.AdminECourseButton_Remove.Location = new System.Drawing.Point(489, 391);
+            this.AdminECourseButton_Remove.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminECourseButton_Remove.Name = "AdminECourseButton_Remove";
+            this.AdminECourseButton_Remove.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Remove.OverrideDefault.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Remove.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Remove.OverrideDefault.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Remove.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Remove.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Remove.OverrideDefault.Border.Rounding = 20;
+            this.AdminECourseButton_Remove.OverrideDefault.Border.Width = 1;
+            this.AdminECourseButton_Remove.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminECourseButton_Remove.Size = new System.Drawing.Size(200, 50);
+            this.AdminECourseButton_Remove.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.StateCommon.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Remove.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.StateCommon.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Remove.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Remove.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Remove.StateCommon.Border.Rounding = 20;
+            this.AdminECourseButton_Remove.StateCommon.Border.Width = 1;
+            this.AdminECourseButton_Remove.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseButton_Remove.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.AdminECourseButton_Remove.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminECourseButton_Remove.StatePressed.Back.ColorAngle = 135F;
+            this.AdminECourseButton_Remove.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.AdminECourseButton_Remove.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminECourseButton_Remove.StatePressed.Border.ColorAngle = 135F;
+            this.AdminECourseButton_Remove.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Remove.StatePressed.Border.Rounding = 20;
+            this.AdminECourseButton_Remove.StatePressed.Border.Width = 1;
+            this.AdminECourseButton_Remove.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Remove.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.StateTracking.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Remove.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Remove.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Remove.StateTracking.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Remove.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Remove.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Remove.StateTracking.Border.Rounding = 20;
+            this.AdminECourseButton_Remove.StateTracking.Border.Width = 1;
+            this.AdminECourseButton_Remove.TabIndex = 81;
+            this.AdminECourseButton_Remove.TabStop = false;
+            this.AdminECourseButton_Remove.Values.Text = "Remove";
+            // 
+            // AdminECourseButton_Search
+            // 
+            this.AdminECourseButton_Search.Location = new System.Drawing.Point(891, 391);
+            this.AdminECourseButton_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminECourseButton_Search.Name = "AdminECourseButton_Search";
+            this.AdminECourseButton_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Search.OverrideDefault.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Search.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Search.OverrideDefault.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Search.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Search.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Search.OverrideDefault.Border.Rounding = 20;
+            this.AdminECourseButton_Search.OverrideDefault.Border.Width = 1;
+            this.AdminECourseButton_Search.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminECourseButton_Search.Size = new System.Drawing.Size(200, 50);
+            this.AdminECourseButton_Search.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.StateCommon.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Search.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.StateCommon.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Search.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Search.StateCommon.Border.Rounding = 20;
+            this.AdminECourseButton_Search.StateCommon.Border.Width = 1;
+            this.AdminECourseButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.AdminECourseButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminECourseButton_Search.StatePressed.Back.ColorAngle = 135F;
+            this.AdminECourseButton_Search.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.AdminECourseButton_Search.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminECourseButton_Search.StatePressed.Border.ColorAngle = 135F;
+            this.AdminECourseButton_Search.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Search.StatePressed.Border.Rounding = 20;
+            this.AdminECourseButton_Search.StatePressed.Border.Width = 1;
+            this.AdminECourseButton_Search.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Search.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.StateTracking.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Search.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Search.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Search.StateTracking.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Search.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Search.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Search.StateTracking.Border.Rounding = 20;
+            this.AdminECourseButton_Search.StateTracking.Border.Width = 1;
+            this.AdminECourseButton_Search.TabIndex = 80;
+            this.AdminECourseButton_Search.TabStop = false;
+            this.AdminECourseButton_Search.Values.Text = "Search";
+            // 
+            // AdminECourseButton_Edit
+            // 
+            this.AdminECourseButton_Edit.Location = new System.Drawing.Point(125, 391);
+            this.AdminECourseButton_Edit.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminECourseButton_Edit.Name = "AdminECourseButton_Edit";
+            this.AdminECourseButton_Edit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Edit.OverrideDefault.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Edit.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Edit.OverrideDefault.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Edit.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Edit.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Edit.OverrideDefault.Border.Rounding = 20;
+            this.AdminECourseButton_Edit.OverrideDefault.Border.Width = 1;
+            this.AdminECourseButton_Edit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminECourseButton_Edit.Size = new System.Drawing.Size(200, 50);
+            this.AdminECourseButton_Edit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.StateCommon.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Edit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.StateCommon.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Edit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Edit.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Edit.StateCommon.Border.Rounding = 20;
+            this.AdminECourseButton_Edit.StateCommon.Border.Width = 1;
+            this.AdminECourseButton_Edit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseButton_Edit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.AdminECourseButton_Edit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminECourseButton_Edit.StatePressed.Back.ColorAngle = 135F;
+            this.AdminECourseButton_Edit.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.AdminECourseButton_Edit.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminECourseButton_Edit.StatePressed.Border.ColorAngle = 135F;
+            this.AdminECourseButton_Edit.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Edit.StatePressed.Border.Rounding = 20;
+            this.AdminECourseButton_Edit.StatePressed.Border.Width = 1;
+            this.AdminECourseButton_Edit.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Edit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.StateTracking.Back.ColorAngle = 45F;
+            this.AdminECourseButton_Edit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminECourseButton_Edit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminECourseButton_Edit.StateTracking.Border.ColorAngle = 45F;
+            this.AdminECourseButton_Edit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseButton_Edit.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseButton_Edit.StateTracking.Border.Rounding = 20;
+            this.AdminECourseButton_Edit.StateTracking.Border.Width = 1;
+            this.AdminECourseButton_Edit.TabIndex = 79;
+            this.AdminECourseButton_Edit.TabStop = false;
+            this.AdminECourseButton_Edit.Values.Text = "Edit";
+            // 
+            // AdminECourseTextBox_Description
+            // 
+            this.AdminECourseTextBox_Description.Location = new System.Drawing.Point(198, 223);
+            this.AdminECourseTextBox_Description.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminECourseTextBox_Description.Name = "AdminECourseTextBox_Description";
+            this.AdminECourseTextBox_Description.Size = new System.Drawing.Size(481, 43);
+            this.AdminECourseTextBox_Description.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.AdminECourseTextBox_Description.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseTextBox_Description.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseTextBox_Description.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseTextBox_Description.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseTextBox_Description.StateCommon.Border.Rounding = 20;
+            this.AdminECourseTextBox_Description.StateCommon.Border.Width = 2;
+            this.AdminECourseTextBox_Description.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminECourseTextBox_Description.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseTextBox_Description.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminECourseTextBox_Description.TabIndex = 74;
+            this.AdminECourseTextBox_Description.Text = "Enter Course\'s Description";
+            this.AdminECourseTextBox_Description.Enter += new System.EventHandler(this.AdminECourseTextBox_Description_Enter);
+            this.AdminECourseTextBox_Description.Leave += new System.EventHandler(this.AdminECourseTextBox_Description_Leave);
+            // 
+            // AdminECourseTextBox_Name
+            // 
+            this.AdminECourseTextBox_Name.Location = new System.Drawing.Point(198, 83);
+            this.AdminECourseTextBox_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminECourseTextBox_Name.Name = "AdminECourseTextBox_Name";
+            this.AdminECourseTextBox_Name.Size = new System.Drawing.Size(481, 43);
+            this.AdminECourseTextBox_Name.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.AdminECourseTextBox_Name.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseTextBox_Name.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminECourseTextBox_Name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminECourseTextBox_Name.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminECourseTextBox_Name.StateCommon.Border.Rounding = 20;
+            this.AdminECourseTextBox_Name.StateCommon.Border.Width = 2;
+            this.AdminECourseTextBox_Name.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminECourseTextBox_Name.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminECourseTextBox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminECourseTextBox_Name.TabIndex = 73;
+            this.AdminECourseTextBox_Name.Text = "Enter Course Name";
+            this.AdminECourseTextBox_Name.Enter += new System.EventHandler(this.AdminECourseTextBox_Name_Enter);
+            this.AdminECourseTextBox_Name.Leave += new System.EventHandler(this.AdminECourseTextBox_Name_Leave);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(41, 235);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(111, 22);
+            this.label17.TabIndex = 72;
+            this.label17.Text = "Description";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(41, 95);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(131, 22);
+            this.label18.TabIndex = 71;
+            this.label18.Text = "Course Name";
             // 
             // AdminHistoryPage
             // 
@@ -2770,7 +3302,7 @@
             this.AdminHistoryPage.IsDerivedStyle = false;
             this.AdminHistoryPage.Location = new System.Drawing.Point(4, 64);
             this.AdminHistoryPage.Name = "AdminHistoryPage";
-            this.AdminHistoryPage.Size = new System.Drawing.Size(1206, 584);
+            this.AdminHistoryPage.Size = new System.Drawing.Size(1202, 584);
             this.AdminHistoryPage.Style = MetroSet_UI.Enums.Style.Light;
             this.AdminHistoryPage.StyleManager = this.styleManager1;
             this.AdminHistoryPage.TabIndex = 4;
@@ -3140,542 +3672,6 @@
             this.Admin_LogOutButton.Values.Text = "Log Out";
             this.Admin_LogOutButton.Click += new System.EventHandler(this.Admin_LogOutButton_Click);
             // 
-            // metroSetTabControl1
-            // 
-            this.metroSetTabControl1.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
-            this.metroSetTabControl1.AnimateTime = 200;
-            this.metroSetTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.metroSetTabControl1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.metroSetTabControl1.Controls.Add(this.AdminAddCourse);
-            this.metroSetTabControl1.Controls.Add(this.AdminEditCourse);
-            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroSetTabControl1.IsDerivedStyle = false;
-            this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl1.Location = new System.Drawing.Point(-4, 0);
-            this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 1;
-            this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl1.Size = new System.Drawing.Size(1214, 589);
-            this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.metroSetTabControl1.Speed = 100;
-            this.metroSetTabControl1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetTabControl1.StyleManager = null;
-            this.metroSetTabControl1.TabIndex = 0;
-            this.metroSetTabControl1.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
-            this.metroSetTabControl1.ThemeAuthor = "Narwin";
-            this.metroSetTabControl1.ThemeName = "MetroLite";
-            this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl1.UseAnimation = false;
-            // 
-            // AdminAddCourse
-            // 
-            this.AdminAddCourse.BaseColor = System.Drawing.SystemColors.Control;
-            this.AdminAddCourse.Controls.Add(this.kryptonButton3);
-            this.AdminAddCourse.Controls.Add(this.CourseTextbox_Description);
-            this.AdminAddCourse.Controls.Add(this.CourseTextbox_Name);
-            this.AdminAddCourse.Controls.Add(this.CourseLabel_Description);
-            this.AdminAddCourse.Controls.Add(this.CourseLabel_Name);
-            this.AdminAddCourse.Font = null;
-            this.AdminAddCourse.ImageIndex = 0;
-            this.AdminAddCourse.ImageKey = null;
-            this.AdminAddCourse.IsDerivedStyle = false;
-            this.AdminAddCourse.Location = new System.Drawing.Point(4, 42);
-            this.AdminAddCourse.Name = "AdminAddCourse";
-            this.AdminAddCourse.Size = new System.Drawing.Size(1197, 543);
-            this.AdminAddCourse.Style = MetroSet_UI.Enums.Style.Light;
-            this.AdminAddCourse.StyleManager = null;
-            this.AdminAddCourse.TabIndex = 0;
-            this.AdminAddCourse.Text = "Add Course";
-            this.AdminAddCourse.ThemeAuthor = "Narwin";
-            this.AdminAddCourse.ThemeName = "MetroLite";
-            this.AdminAddCourse.ToolTipText = null;
-            // 
-            // AdminEditCourse
-            // 
-            this.AdminEditCourse.BaseColor = System.Drawing.SystemColors.Control;
-            this.AdminEditCourse.Controls.Add(this.AdminECourseComboBox_Name);
-            this.AdminEditCourse.Controls.Add(this.label19);
-            this.AdminEditCourse.Controls.Add(this.label20);
-            this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_ID);
-            this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Remove);
-            this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Search);
-            this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Edit);
-            this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_Description);
-            this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_Name);
-            this.AdminEditCourse.Controls.Add(this.label17);
-            this.AdminEditCourse.Controls.Add(this.label18);
-            this.AdminEditCourse.Font = null;
-            this.AdminEditCourse.ImageIndex = 0;
-            this.AdminEditCourse.ImageKey = null;
-            this.AdminEditCourse.IsDerivedStyle = false;
-            this.AdminEditCourse.Location = new System.Drawing.Point(4, 42);
-            this.AdminEditCourse.Name = "AdminEditCourse";
-            this.AdminEditCourse.Size = new System.Drawing.Size(1206, 543);
-            this.AdminEditCourse.Style = MetroSet_UI.Enums.Style.Light;
-            this.AdminEditCourse.StyleManager = null;
-            this.AdminEditCourse.TabIndex = 1;
-            this.AdminEditCourse.Text = "Edit Course";
-            this.AdminEditCourse.ThemeAuthor = "Narwin";
-            this.AdminEditCourse.ThemeName = "MetroLite";
-            this.AdminEditCourse.ToolTipText = null;
-            // 
-            // CourseTextbox_Description
-            // 
-            this.CourseTextbox_Description.Location = new System.Drawing.Point(212, 162);
-            this.CourseTextbox_Description.Margin = new System.Windows.Forms.Padding(4);
-            this.CourseTextbox_Description.Name = "CourseTextbox_Description";
-            this.CourseTextbox_Description.Size = new System.Drawing.Size(481, 43);
-            this.CourseTextbox_Description.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.CourseTextbox_Description.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CourseTextbox_Description.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CourseTextbox_Description.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.CourseTextbox_Description.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.CourseTextbox_Description.StateCommon.Border.Rounding = 20;
-            this.CourseTextbox_Description.StateCommon.Border.Width = 2;
-            this.CourseTextbox_Description.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.CourseTextbox_Description.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseTextbox_Description.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.CourseTextbox_Description.TabIndex = 70;
-            this.CourseTextbox_Description.Text = "Enter Course\'s Description";
-            // 
-            // CourseTextbox_Name
-            // 
-            this.CourseTextbox_Name.Location = new System.Drawing.Point(212, 48);
-            this.CourseTextbox_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.CourseTextbox_Name.Name = "CourseTextbox_Name";
-            this.CourseTextbox_Name.Size = new System.Drawing.Size(481, 43);
-            this.CourseTextbox_Name.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.CourseTextbox_Name.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CourseTextbox_Name.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CourseTextbox_Name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.CourseTextbox_Name.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.CourseTextbox_Name.StateCommon.Border.Rounding = 20;
-            this.CourseTextbox_Name.StateCommon.Border.Width = 2;
-            this.CourseTextbox_Name.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.CourseTextbox_Name.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseTextbox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.CourseTextbox_Name.TabIndex = 69;
-            this.CourseTextbox_Name.Text = "Enter Course Name";
-            // 
-            // CourseLabel_Description
-            // 
-            this.CourseLabel_Description.AutoSize = true;
-            this.CourseLabel_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseLabel_Description.Location = new System.Drawing.Point(37, 174);
-            this.CourseLabel_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.CourseLabel_Description.Name = "CourseLabel_Description";
-            this.CourseLabel_Description.Size = new System.Drawing.Size(111, 22);
-            this.CourseLabel_Description.TabIndex = 67;
-            this.CourseLabel_Description.Text = "Description";
-            // 
-            // CourseLabel_Name
-            // 
-            this.CourseLabel_Name.AutoSize = true;
-            this.CourseLabel_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseLabel_Name.Location = new System.Drawing.Point(37, 60);
-            this.CourseLabel_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.CourseLabel_Name.Name = "CourseLabel_Name";
-            this.CourseLabel_Name.Size = new System.Drawing.Size(131, 22);
-            this.CourseLabel_Name.TabIndex = 66;
-            this.CourseLabel_Name.Text = "Course Name";
-            // 
-            // kryptonButton3
-            // 
-            this.kryptonButton3.Location = new System.Drawing.Point(290, 399);
-            this.kryptonButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton3.OverrideDefault.Back.ColorAngle = 45F;
-            this.kryptonButton3.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton3.OverrideDefault.Border.ColorAngle = 45F;
-            this.kryptonButton3.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton3.OverrideDefault.Border.Rounding = 20;
-            this.kryptonButton3.OverrideDefault.Border.Width = 1;
-            this.kryptonButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton3.Size = new System.Drawing.Size(213, 56);
-            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.StateCommon.Border.ColorAngle = 45F;
-            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton3.StateCommon.Border.Rounding = 20;
-            this.kryptonButton3.StateCommon.Border.Width = 1;
-            this.kryptonButton3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
-            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton3.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.kryptonButton3.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.kryptonButton3.StatePressed.Back.ColorAngle = 135F;
-            this.kryptonButton3.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.kryptonButton3.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.kryptonButton3.StatePressed.Border.ColorAngle = 135F;
-            this.kryptonButton3.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StatePressed.Border.Rounding = 20;
-            this.kryptonButton3.StatePressed.Border.Width = 1;
-            this.kryptonButton3.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton3.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.StateTracking.Back.ColorAngle = 45F;
-            this.kryptonButton3.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton3.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton3.StateTracking.Border.ColorAngle = 45F;
-            this.kryptonButton3.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton3.StateTracking.Border.Rounding = 20;
-            this.kryptonButton3.StateTracking.Border.Width = 1;
-            this.kryptonButton3.TabIndex = 72;
-            this.kryptonButton3.TabStop = false;
-            this.kryptonButton3.Values.Text = "Add";
-            // 
-            // AdminECourseTextBox_Description
-            // 
-            this.AdminECourseTextBox_Description.Location = new System.Drawing.Point(198, 223);
-            this.AdminECourseTextBox_Description.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseTextBox_Description.Name = "AdminECourseTextBox_Description";
-            this.AdminECourseTextBox_Description.Size = new System.Drawing.Size(481, 43);
-            this.AdminECourseTextBox_Description.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.AdminECourseTextBox_Description.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseTextBox_Description.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseTextBox_Description.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseTextBox_Description.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseTextBox_Description.StateCommon.Border.Rounding = 20;
-            this.AdminECourseTextBox_Description.StateCommon.Border.Width = 2;
-            this.AdminECourseTextBox_Description.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.AdminECourseTextBox_Description.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseTextBox_Description.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.AdminECourseTextBox_Description.TabIndex = 74;
-            this.AdminECourseTextBox_Description.Text = "Enter Course\'s Description";
-            this.AdminECourseTextBox_Description.Enter += new System.EventHandler(this.AdminECourseTextBox_Description_Enter);
-            this.AdminECourseTextBox_Description.Leave += new System.EventHandler(this.AdminECourseTextBox_Description_Leave);
-            // 
-            // AdminECourseTextBox_Name
-            // 
-            this.AdminECourseTextBox_Name.Location = new System.Drawing.Point(198, 83);
-            this.AdminECourseTextBox_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseTextBox_Name.Name = "AdminECourseTextBox_Name";
-            this.AdminECourseTextBox_Name.Size = new System.Drawing.Size(481, 43);
-            this.AdminECourseTextBox_Name.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.AdminECourseTextBox_Name.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseTextBox_Name.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseTextBox_Name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseTextBox_Name.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseTextBox_Name.StateCommon.Border.Rounding = 20;
-            this.AdminECourseTextBox_Name.StateCommon.Border.Width = 2;
-            this.AdminECourseTextBox_Name.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.AdminECourseTextBox_Name.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseTextBox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.AdminECourseTextBox_Name.TabIndex = 73;
-            this.AdminECourseTextBox_Name.Text = "Enter Course Name";
-            this.AdminECourseTextBox_Name.Enter += new System.EventHandler(this.AdminECourseTextBox_Name_Enter);
-            this.AdminECourseTextBox_Name.Leave += new System.EventHandler(this.AdminECourseTextBox_Name_Leave);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(41, 235);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 22);
-            this.label17.TabIndex = 72;
-            this.label17.Text = "Description";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(41, 95);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(131, 22);
-            this.label18.TabIndex = 71;
-            this.label18.Text = "Course Name";
-            // 
-            // AdminECourseButton_Remove
-            // 
-            this.AdminECourseButton_Remove.Location = new System.Drawing.Point(489, 391);
-            this.AdminECourseButton_Remove.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseButton_Remove.Name = "AdminECourseButton_Remove";
-            this.AdminECourseButton_Remove.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Width = 1;
-            this.AdminECourseButton_Remove.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminECourseButton_Remove.Size = new System.Drawing.Size(200, 50);
-            this.AdminECourseButton_Remove.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Remove.StateCommon.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.StateCommon.Border.Width = 1;
-            this.AdminECourseButton_Remove.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
-            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseButton_Remove.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.AdminECourseButton_Remove.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Remove.StatePressed.Back.ColorAngle = 135F;
-            this.AdminECourseButton_Remove.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.AdminECourseButton_Remove.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Remove.StatePressed.Border.ColorAngle = 135F;
-            this.AdminECourseButton_Remove.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.StatePressed.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.StatePressed.Border.Width = 1;
-            this.AdminECourseButton_Remove.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateTracking.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.StateTracking.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Remove.StateTracking.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.StateTracking.Border.Width = 1;
-            this.AdminECourseButton_Remove.TabIndex = 81;
-            this.AdminECourseButton_Remove.TabStop = false;
-            this.AdminECourseButton_Remove.Values.Text = "Remove";
-            // 
-            // AdminECourseButton_Search
-            // 
-            this.AdminECourseButton_Search.Location = new System.Drawing.Point(891, 391);
-            this.AdminECourseButton_Search.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseButton_Search.Name = "AdminECourseButton_Search";
-            this.AdminECourseButton_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Search.OverrideDefault.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Search.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Search.OverrideDefault.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Search.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Search.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Search.OverrideDefault.Border.Rounding = 20;
-            this.AdminECourseButton_Search.OverrideDefault.Border.Width = 1;
-            this.AdminECourseButton_Search.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminECourseButton_Search.Size = new System.Drawing.Size(200, 50);
-            this.AdminECourseButton_Search.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.StateCommon.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Search.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.StateCommon.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Search.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Search.StateCommon.Border.Rounding = 20;
-            this.AdminECourseButton_Search.StateCommon.Border.Width = 1;
-            this.AdminECourseButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
-            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminECourseButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.AdminECourseButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Search.StatePressed.Back.ColorAngle = 135F;
-            this.AdminECourseButton_Search.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.AdminECourseButton_Search.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Search.StatePressed.Border.ColorAngle = 135F;
-            this.AdminECourseButton_Search.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Search.StatePressed.Border.Rounding = 20;
-            this.AdminECourseButton_Search.StatePressed.Border.Width = 1;
-            this.AdminECourseButton_Search.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Search.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.StateTracking.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Search.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Search.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Search.StateTracking.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Search.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Search.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Search.StateTracking.Border.Rounding = 20;
-            this.AdminECourseButton_Search.StateTracking.Border.Width = 1;
-            this.AdminECourseButton_Search.TabIndex = 80;
-            this.AdminECourseButton_Search.TabStop = false;
-            this.AdminECourseButton_Search.Values.Text = "Search";
-            // 
-            // AdminECourseButton_Edit
-            // 
-            this.AdminECourseButton_Edit.Location = new System.Drawing.Point(125, 391);
-            this.AdminECourseButton_Edit.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseButton_Edit.Name = "AdminECourseButton_Edit";
-            this.AdminECourseButton_Edit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Edit.OverrideDefault.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Edit.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Edit.OverrideDefault.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Edit.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Edit.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Edit.OverrideDefault.Border.Rounding = 20;
-            this.AdminECourseButton_Edit.OverrideDefault.Border.Width = 1;
-            this.AdminECourseButton_Edit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminECourseButton_Edit.Size = new System.Drawing.Size(200, 50);
-            this.AdminECourseButton_Edit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.StateCommon.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Edit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.StateCommon.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Edit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Edit.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Edit.StateCommon.Border.Rounding = 20;
-            this.AdminECourseButton_Edit.StateCommon.Border.Width = 1;
-            this.AdminECourseButton_Edit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
-            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminECourseButton_Edit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins ExtraBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseButton_Edit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.AdminECourseButton_Edit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Edit.StatePressed.Back.ColorAngle = 135F;
-            this.AdminECourseButton_Edit.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.AdminECourseButton_Edit.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Edit.StatePressed.Border.ColorAngle = 135F;
-            this.AdminECourseButton_Edit.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Edit.StatePressed.Border.Rounding = 20;
-            this.AdminECourseButton_Edit.StatePressed.Border.Width = 1;
-            this.AdminECourseButton_Edit.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Edit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.StateTracking.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Edit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Edit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Edit.StateTracking.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Edit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Edit.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Edit.StateTracking.Border.Rounding = 20;
-            this.AdminECourseButton_Edit.StateTracking.Border.Width = 1;
-            this.AdminECourseButton_Edit.TabIndex = 79;
-            this.AdminECourseButton_Edit.TabStop = false;
-            this.AdminECourseButton_Edit.Values.Text = "Edit";
-            // 
-            // AdminECourseComboBox_Name
-            // 
-            this.AdminECourseComboBox_Name.DropDownWidth = 264;
-            this.AdminECourseComboBox_Name.Location = new System.Drawing.Point(754, 220);
-            this.AdminECourseComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseComboBox_Name.Name = "AdminECourseComboBox_Name";
-            this.AdminECourseComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminECourseComboBox_Name.Size = new System.Drawing.Size(396, 46);
-            this.AdminECourseComboBox_Name.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Rounding = 20;
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Width = 2;
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseComboBox_Name.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseComboBox_Name.TabIndex = 85;
-            this.AdminECourseComboBox_Name.Text = "Choose Student\'s Name";
-            this.AdminECourseComboBox_Name.Enter += new System.EventHandler(this.AdminECourseComboBox_Name_Enter);
-            this.AdminECourseComboBox_Name.Leave += new System.EventHandler(this.AdminECourseComboBox_Name_Leave);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(749, 171);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(131, 22);
-            this.label19.TabIndex = 84;
-            this.label19.Text = "Course Name";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(749, 37);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(99, 22);
-            this.label20.TabIndex = 83;
-            this.label20.Text = "Course ID";
-            // 
-            // AdminECourseTextBox_ID
-            // 
-            this.AdminECourseTextBox_ID.Location = new System.Drawing.Point(754, 83);
-            this.AdminECourseTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseTextBox_ID.Name = "AdminECourseTextBox_ID";
-            this.AdminECourseTextBox_ID.Size = new System.Drawing.Size(396, 43);
-            this.AdminECourseTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.AdminECourseTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminECourseTextBox_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseTextBox_ID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseTextBox_ID.StateCommon.Border.Rounding = 20;
-            this.AdminECourseTextBox_ID.StateCommon.Border.Width = 2;
-            this.AdminECourseTextBox_ID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.AdminECourseTextBox_ID.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseTextBox_ID.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.AdminECourseTextBox_ID.TabIndex = 82;
-            this.AdminECourseTextBox_ID.Text = "Search by Student\'s ID";
-            this.AdminECourseTextBox_ID.Enter += new System.EventHandler(this.AdminECourseTextBox_ID_Enter);
-            this.AdminECourseTextBox_ID.Leave += new System.EventHandler(this.AdminECourseTextBox_ID_Leave);
-            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -3721,18 +3717,18 @@
             this.AdminEditStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminEStudentTextBox_Name)).EndInit();
             this.History2.ResumeLayout(false);
-            this.AdminHistoryPage.ResumeLayout(false);
-            this.AdminHistoryPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Name)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Name)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Name)).EndInit();
             this.metroSetTabControl1.ResumeLayout(false);
             this.AdminAddCourse.ResumeLayout(false);
             this.AdminAddCourse.PerformLayout();
             this.AdminEditCourse.ResumeLayout(false);
             this.AdminEditCourse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminECourseComboBox_Name)).EndInit();
+            this.AdminHistoryPage.ResumeLayout(false);
+            this.AdminHistoryPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Name)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
