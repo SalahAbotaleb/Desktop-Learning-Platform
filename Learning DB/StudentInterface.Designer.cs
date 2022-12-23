@@ -42,8 +42,13 @@
             this.enroll_in_new_classroom_button = new System.Windows.Forms.Button();
             this.Student_view_calender_button = new System.Windows.Forms.Button();
             this.take_an_exam_button = new System.Windows.Forms.Button();
+            this.metroSetDefaultButton1 = new MetroSet_UI.Controls.MetroSetDefaultButton();
             ((System.ComponentModel.ISupportInitialize)(this.upcomingevents_gridview)).BeginInit();
             this.SuspendLayout();
+            // 
+            // kryptonPalette1
+            // 
+            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             // 
             // label1
             // 
@@ -72,7 +77,7 @@
             this.upcomingevents_label.Location = new System.Drawing.Point(21, 86);
             this.upcomingevents_label.Name = "upcomingevents_label";
             this.upcomingevents_label.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.upcomingevents_label.Size = new System.Drawing.Size(156, 27);
+            this.upcomingevents_label.Size = new System.Drawing.Size(130, 24);
             this.upcomingevents_label.TabIndex = 3;
             this.upcomingevents_label.Values.Text = "Upcoming Events";
             // 
@@ -96,7 +101,7 @@
             this.backtologin_label.Name = "backtologin_label";
             this.backtologin_label.Palette = this.kryptonPalette1;
             this.backtologin_label.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.backtologin_label.Size = new System.Drawing.Size(165, 27);
+            this.backtologin_label.Size = new System.Drawing.Size(139, 24);
             this.backtologin_label.TabIndex = 5;
             this.backtologin_label.Values.Text = "Back to login page";
             this.backtologin_label.LinkClicked += new System.EventHandler(this.backtologin_label_LinkClicked);
@@ -186,12 +191,39 @@
             this.take_an_exam_button.Text = "Take an exam";
             this.take_an_exam_button.UseVisualStyleBackColor = false;
             // 
+            // metroSetDefaultButton1
+            // 
+            this.metroSetDefaultButton1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetDefaultButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetDefaultButton1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.metroSetDefaultButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetDefaultButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetDefaultButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetDefaultButton1.HoverTextColor = System.Drawing.Color.White;
+            this.metroSetDefaultButton1.IsDerivedStyle = true;
+            this.metroSetDefaultButton1.Location = new System.Drawing.Point(0, 0);
+            this.metroSetDefaultButton1.Name = "metroSetDefaultButton1";
+            this.metroSetDefaultButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetDefaultButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetDefaultButton1.NormalTextColor = System.Drawing.Color.Black;
+            this.metroSetDefaultButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.metroSetDefaultButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.metroSetDefaultButton1.PressTextColor = System.Drawing.Color.White;
+            this.metroSetDefaultButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroSetDefaultButton1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetDefaultButton1.StyleManager = null;
+            this.metroSetDefaultButton1.TabIndex = 13;
+            this.metroSetDefaultButton1.Text = "metroSetDefaultButton1";
+            this.metroSetDefaultButton1.ThemeAuthor = "Narwin";
+            this.metroSetDefaultButton1.ThemeName = "MetroLite";
+            // 
             // StudentInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(893, 478);
+            this.Controls.Add(this.metroSetDefaultButton1);
             this.Controls.Add(this.take_an_exam_button);
             this.Controls.Add(this.Student_view_calender_button);
             this.Controls.Add(this.enroll_in_new_classroom_button);
@@ -233,5 +265,6 @@
         private System.Windows.Forms.Button enroll_in_new_classroom_button;
         private System.Windows.Forms.Button Student_view_calender_button;
         private System.Windows.Forms.Button take_an_exam_button;
+        private MetroSet_UI.Controls.MetroSetDefaultButton metroSetDefaultButton1;
     }
 }
