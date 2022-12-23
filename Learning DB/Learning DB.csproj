@@ -175,6 +175,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentClassroom.resx">
       <DependentUpon>StudentClassroom.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentInterface.resx">
       <DependentUpon>StudentInterface.cs</DependentUpon>

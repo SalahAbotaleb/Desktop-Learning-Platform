@@ -28,7 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.SuspendLayout();
+            // 
+            // kryptonPalette2
+            // 
+            this.kryptonPalette2.ButtonSpecs.FormClose.Image = global::Learning_DB.Properties.Resources.Picture1;
+            this.kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::Learning_DB.Properties.Resources.Picture1;
+            this.kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::Learning_DB.Properties.Resources.Picture1;
+            this.kryptonPalette2.ButtonSpecs.FormMax.Image = global::Learning_DB.Properties.Resources.Picture3;
+            this.kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::Learning_DB.Properties.Resources.Picture3;
+            this.kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::Learning_DB.Properties.Resources.Picture3;
+            this.kryptonPalette2.ButtonSpecs.FormMin.Image = global::Learning_DB.Properties.Resources.Picture2;
+            this.kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImagePressed = global::Learning_DB.Properties.Resources.Picture2;
+            this.kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImageTracking = global::Learning_DB.Properties.Resources.Picture2;
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Back.Color1 = System.Drawing.SystemColors.Control;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Back.Color2 = System.Drawing.SystemColors.Control;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.Rounding = 15;
+            this.kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
             // StudentClassroom
             // 
@@ -36,6 +76,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "StudentClassroom";
+            this.Palette = this.kryptonPalette2;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "StudentClassroom";
             this.Load += new System.EventHandler(this.StudentClassroom_Load);
             this.ResumeLayout(false);
@@ -43,5 +85,7 @@
         }
 
         #endregion
+
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
     }
 }
