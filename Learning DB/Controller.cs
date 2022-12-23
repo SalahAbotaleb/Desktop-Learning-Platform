@@ -329,6 +329,11 @@ namespace DbHandler
             Parameters.Add("@Title", year);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        public DataTable SelectAssignmentForClass(int CID)
+        {
+            string Query = "SELECT * FROM Assignment WHERE Class_ID = " + CID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
 
     }   
 }

@@ -89,7 +89,6 @@ namespace Learning_DB
                     ClassroomTitleBox.Text = ClassroomData.Item1.Rows[0]["Classroom Title"].ToString();
                     InstructorComboBox.DataSource = cont.SelectInstructorsForClassByCode(AccessCodeBox.Text).Item1;
                     InstructorComboBox.DisplayMember = "Instructor Name";
-
                 }
             }
 
