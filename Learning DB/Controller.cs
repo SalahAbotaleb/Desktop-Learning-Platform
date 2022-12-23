@@ -183,6 +183,11 @@ namespace DbHandler
             string Query = "SELECT * FROM Student WHERE StudentID = " + SID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectInstructorByID(int In_ID)
+        {
+            string Query = "SELECT * FROM Instructor WHERE Instructor_ID = " + In_ID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
         public DataTable SelectClassesForStudent(int SID)
         {
             string Query = "select Classroom.Class_ID,Title from Classroom, Student,Student_Enrolled_In where Classroom.Class_ID = Student_Enrolled_In.Class_ID AND Student_ID = StudentID AND StudentId = " + SID + ";";
@@ -231,6 +236,14 @@ namespace DbHandler
             Parameters.Add("@ClassID", CID);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+
+        //public Tuple<DataTable, string> SelectClassforInstructorbyID(int Inst_ID)
+        //{
+        //    string StoredProcedureName = StoredProcedures.SelectClassforInstructorbyID;
+        //    Dictionary<string, object> Parameters = new Dictionary<string, object>();
+        //    Parameters.Add("@Ins_ID", Inst_ID);
+        //    return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        //}
         public Tuple<DataTable, string> SelectClassInfoForStudent(int CID)
         {
             string StoredProcedureName = StoredProcedures.SelectClassInfoForStudent;

@@ -1,6 +1,6 @@
 ﻿namespace Learning_DB
 {
-    partial class StudentClasses
+    partial class Instructor_Interface
     {
         /// <summary>
         /// Required designer variable.
@@ -86,7 +86,7 @@
             this.Main.Controls.Add(this.MyCalssesTab);
             this.Main.Controls.Add(this.EnrollmentTab);
             this.Main.Controls.Add(this.Profile);
-            this.Main.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Main.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Main.IsDerivedStyle = false;
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(1, 42);
@@ -673,6 +673,7 @@
             this.LevelBox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LevelBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.LevelBox.TabIndex = 108;
+            this.LevelBox.TextChanged += new System.EventHandler(this.LevelBox_TextChanged);
             // 
             // label14
             // 
@@ -681,9 +682,9 @@
             this.label14.Location = new System.Drawing.Point(715, 167);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 22);
+            this.label14.Size = new System.Drawing.Size(50, 22);
             this.label14.TabIndex = 107;
-            this.label14.Text = "Level";
+            this.label14.Text = "Title";
             // 
             // UsernameBox
             // 
@@ -816,9 +817,9 @@
             this.label16.Location = new System.Drawing.Point(714, 57);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 22);
+            this.label16.Size = new System.Drawing.Size(119, 22);
             this.label16.TabIndex = 95;
-            this.label16.Text = "Student ID";
+            this.label16.Text = "Instructor ID";
             // 
             // IDBox
             // 
@@ -1015,7 +1016,7 @@
             this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.Rounding = 15;
             this.kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // StudentClasses
+            // Instructor_Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1023,11 +1024,11 @@
             this.Controls.Add(this.User_NameLabel);
             this.Controls.Add(this.Admin_LogOutButton);
             this.Controls.Add(this.Main);
-            this.Name = "StudentClasses";
+            this.Name = "Instructor_Interface";
             this.Palette = this.kryptonPalette2;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
-            this.Text = "StudentClasses";
+            this.Text = "Instructor_Interface";
             this.Main.ResumeLayout(false);
             this.MyCalssesTab.ResumeLayout(false);
             this.MyCalssesTab.PerformLayout();

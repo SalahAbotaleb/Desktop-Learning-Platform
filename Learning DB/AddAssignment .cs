@@ -18,27 +18,13 @@ namespace Learning_DB
         public AddAssignment()
         {
             InitializeComponent();
+            ChooseCourse_ComboBox.DataSource = StoredProcedures.SelectClassforInstructorbyID;
         }
 
 
-        private void kryptonTextBox2_Enter(object sender, EventArgs e)
-        {
-            if (kryptonTextBox2.Text == "Enter Admin's Last Name")
-            {
-                kryptonTextBox2.Text = "";
-                kryptonTextBox2.ForeColor = Color.Black;
-            }
-        }
+  
 
-        private void kryptonTextBox2_Leave(object sender, EventArgs e)
-        {
-            if (kryptonTextBox2.Text == "")
-            {
-                kryptonTextBox2.Text = "Enter Admin's First Name";
-                kryptonTextBox2.ForeColor = Color.Gray;
-
-            }
-        }
+ 
 
         private void kryptonTextBox3_Enter(object sender, EventArgs e)
         {
@@ -65,6 +51,11 @@ namespace Learning_DB
         }
 
         private void ChooseCourse_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

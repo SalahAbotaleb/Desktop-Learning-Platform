@@ -7,37 +7,37 @@ using System.Windows.Forms;
 
 namespace Learning_DB
 {
-    public partial class StudentClasses : KryptonForm
+    public partial class Instructor_Interface : KryptonForm
     {
         Controller cont;
-        int StudentID;
-        public StudentClasses(int SID)
+        int InstructorID;
+        public Instructor_Interface(int In_ID)
         {
             InitializeComponent();
             cont = new Controller();
-            StudentID = SID;
+            InstructorID = In_ID;
 
-            DataTable StudentData = cont.SelectStudentByID(SID);
-            User_NameLabel.Text = StudentData.Rows[0]["Fname"].ToString() + " " + StudentData.Rows[0]["LName"].ToString();
-            ClassroomComboBox.DataSource = cont.SelectClassesForStudent(SID);
+            DataTable InstructorData = cont.SelectStudentByID(In_ID);
+            User_NameLabel.Text = InstructorData.Rows[0]["Fname"].ToString() + " " + InstructorData.Rows[0]["LName"].ToString();
+            ClassroomComboBox.DataSource = cont.SelectClassesForStudent(In_ID);
             ClassroomComboBox.DisplayMember = "Title";
             ClassroomComboBox.ValueMember = "Class_ID";
             InstructorInClassComboBox.DataSource = cont.SelectInstructorsForClassByID(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1;
             InstructorInClassComboBox.DisplayMember = "Instructor Name";
             CourseNameInClassBox.Text = cont.SelectClassInfoForStudent(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1.Rows[0]["Course Name"].ToString();
 
-            FNameBox.Text = StudentData.Rows[0]["FName"].ToString();
-            LNameBox.Text = StudentData.Rows[0]["LName"].ToString();
-            UsernameBox.Text = StudentData.Rows[0]["Username"].ToString();
-            LevelBox.Text = StudentData.Rows[0]["year"].ToString();
-            IDBox.Text = StudentData.Rows[0]["StudentID"].ToString();
-            EmailBox.Text = StudentData.Rows[0]["Email"].ToString();
+            FNameBox.Text = InstructorData.Rows[0]["FName"].ToString();
+            LNameBox.Text = InstructorData.Rows[0]["LName"].ToString();
+            UsernameBox.Text = InstructorData.Rows[0]["Username"].ToString();
+            LevelBox.Text = InstructorData.Rows[0]["year"].ToString();
+            IDBox.Text = InstructorData.Rows[0]["StudentID"].ToString();
+            EmailBox.Text = InstructorData.Rows[0]["Email"].ToString();
 
 
         }
         private void AccessCodeBox_Enter(object sender, EventArgs e)
         {
-            if (AccessCodeBox.Text == "Enter Classroom's Access Code")
+            if (AccessCodeBox.Text == "Set Classroom's Access Code")
             {
                 AccessCodeBox.Text = "";
                 AccessCodeBox.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Regular);
@@ -97,7 +97,7 @@ namespace Learning_DB
 
         private void ConfirmEnrollButton_Click(object sender, EventArgs e)
         {
-            Tuple<int, string> EnrollmentError = cont.EnrollStudentByAccessCode(AccessCodeBox.Text, StudentID);
+            Tuple<int, string> EnrollmentError = cont.EnrollStudentByAccessCode(AccessCodeBox.Text, InstructorID);
             if (EnrollmentError.Item1 == 0)
             {
                 MessageBox.Show(EnrollmentError.Item2);
@@ -105,7 +105,7 @@ namespace Learning_DB
             else
             {
                 MessageBox.Show("Enrolled Succefuly");
-                ClassroomComboBox.DataSource = cont.SelectClassesForStudent(StudentID);
+                ClassroomComboBox.DataSource = cont.SelectClassesForStudent(InstructorID);
                 ClassroomComboBox.DisplayMember = "Title";
                 ClassroomComboBox.ValueMember = "Class_ID";
 
@@ -145,7 +145,7 @@ namespace Learning_DB
                 MessageBox.Show("Enter Username");
                 return;
             }
-            Tuple<int, string> UpSt = cont.UpdateStudent(FNameBox.Text, LNameBox.Text, EmailBox.Text,Convert.ToInt32(LevelBox.Text), UsernameBox.Text, StudentID);
+            Tuple<int, string> UpSt = cont.UpdateStudent(FNameBox.Text, LNameBox.Text, EmailBox.Text,Convert.ToInt32(LevelBox.Text), UsernameBox.Text, InstructorID);
             if (UpSt.Item1 == 0)
             {
                 MessageBox.Show(UpSt.Item2);
@@ -160,7 +160,12 @@ namespace Learning_DB
         {
             Login_Form l = new Login_Form();
             l.Show();
-            this.Hide();
+            this.Hide(); // not sure if this is the right thing, but tis probably 
+        }
+
+        private void LevelBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
