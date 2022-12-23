@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Learning_DB;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DbHandler
 {
@@ -55,6 +56,57 @@ namespace DbHandler
         //    return dbMan.ExecuteReader(StoredProcedureName, null);
 
         //}
+        public Tuple<int, string> UpdateInstructor(int ID, string username, string Fname, string Lname, string Email, string Title, string Password , int Done_By)
+        {
+
+            string StoredProcedureName = StoredProcedures.UpdateInstructor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+            Parameters.Add("@username", username);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Email", Email);
+            Parameters.Add("@Title", Title);
+            Parameters.Add("@Password", Password);
+            Parameters.Add("@Done_By", Done_By);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public Tuple<int, string> InsertInstructor(string username, string Fname, string Lname, string Email, int added_by, string password, string Title)
+        {
+
+            string StoredProcedureName = StoredProcedures.InsertInstructor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Email", Email);
+            Parameters.Add("@added_by", added_by);
+            Parameters.Add("@password", password);
+            Parameters.Add("@Title", Title);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public Tuple<int, string> ActivateAdmin(int ID, bool Status)
+        {
+            string StoredProcedureName = StoredProcedures.ActivateAdmin;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+            Parameters.Add("@Status", Status);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public Tuple<int, string> ActivateInstructor(int ID, bool Status, int Done_By)
+        {
+            string StoredProcedureName = StoredProcedures.ActivateInstructor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+            Parameters.Add("@Status", Status);
+            Parameters.Add("@Done_By", Done_By);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
         public Tuple <int,string> UpdateAdmin(int ID, string username, string Fname, string Lname, string Email)
         {
                 
@@ -141,6 +193,36 @@ namespace DbHandler
             string Query = "SELECT * FROM Classroom WHERE Class_ID = " + CID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectAdminByID(int AID)
+        {
+            string Query = "SELECT FName + \' \' + LName, Fname,Lname,Email,Username FROM Admin WHERE Admin_ID = " + AID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectAdminByID_SuperID(int SSID ,int AID)
+        {
+            string Query = "SELECT Fname,Lname,Email,Username FROM Admin WHERE Super_ID = " + SSID + " AND Admin_ID = " + AID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectAdminBySuper_ID(int AID)
+        {
+            string Query = "SELECT FName, LName, Email, Username FROM Admin WHERE Super_ID = " + AID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
 
+        public DataTable SelectAdminUsernameByID(int AID)
+        {
+            string Query = "SELECT Username,Admin_ID FROM Admin WHERE Super_ID = " + AID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectAllInstructor_Username()
+        {
+            string Query = "SELECT * FROM Instructor";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectInstructorByID(int IID)
+        {
+            string Query = "SELECT Fname,Lname,Email,Username,Title FROM Instructor WHERE Instructor_ID = " + IID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
     }   
 }

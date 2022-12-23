@@ -16,7 +16,9 @@ namespace Learning_DB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentClasses(50002));
+            //Application.Run(new StudentClasses(50002));
+            OpenedSession.ID = 1;
+            Application.Run(new AdminInterface());
         }
     }
 }
