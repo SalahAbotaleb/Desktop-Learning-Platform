@@ -386,7 +386,7 @@
             this.AdminTextBox_Password.Location = new System.Drawing.Point(204, 332);
             this.AdminTextBox_Password.Margin = new System.Windows.Forms.Padding(4);
             this.AdminTextBox_Password.Name = "AdminTextBox_Password";
-            this.AdminTextBox_Password.Size = new System.Drawing.Size(481, 43);
+            this.AdminTextBox_Password.Size = new System.Drawing.Size(481, 45);
             this.AdminTextBox_Password.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminTextBox_Password.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminTextBox_Password.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -420,7 +420,7 @@
             this.AdminTextBox_Username.Location = new System.Drawing.Point(204, 259);
             this.AdminTextBox_Username.Margin = new System.Windows.Forms.Padding(4);
             this.AdminTextBox_Username.Name = "AdminTextBox_Username";
-            this.AdminTextBox_Username.Size = new System.Drawing.Size(481, 43);
+            this.AdminTextBox_Username.Size = new System.Drawing.Size(481, 45);
             this.AdminTextBox_Username.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminTextBox_Username.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminTextBox_Username.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -517,7 +517,7 @@
             this.AdminTextBox_Email.Location = new System.Drawing.Point(204, 187);
             this.AdminTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.AdminTextBox_Email.Name = "AdminTextBox_Email";
-            this.AdminTextBox_Email.Size = new System.Drawing.Size(481, 42);
+            this.AdminTextBox_Email.Size = new System.Drawing.Size(481, 44);
             this.AdminTextBox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminTextBox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminTextBox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -540,7 +540,7 @@
             this.AdminTextBox_LastName.Location = new System.Drawing.Point(204, 110);
             this.AdminTextBox_LastName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminTextBox_LastName.Name = "AdminTextBox_LastName";
-            this.AdminTextBox_LastName.Size = new System.Drawing.Size(481, 43);
+            this.AdminTextBox_LastName.Size = new System.Drawing.Size(481, 45);
             this.AdminTextBox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminTextBox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminTextBox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -563,7 +563,7 @@
             this.AdminTextBox_FirstName.Location = new System.Drawing.Point(204, 37);
             this.AdminTextBox_FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminTextBox_FirstName.Name = "AdminTextBox_FirstName";
-            this.AdminTextBox_FirstName.Size = new System.Drawing.Size(481, 43);
+            this.AdminTextBox_FirstName.Size = new System.Drawing.Size(481, 45);
             this.AdminTextBox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminTextBox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminTextBox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -705,7 +705,7 @@
             this.AdminEAdminComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEAdminComboBox_Username.Name = "AdminEAdminComboBox_Username";
             this.AdminEAdminComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminEAdminComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.AdminEAdminComboBox_Username.Size = new System.Drawing.Size(396, 48);
             this.AdminEAdminComboBox_Username.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -817,7 +817,7 @@
             this.AdminEAdminTextBox_ID.Location = new System.Drawing.Point(735, 81);
             this.AdminEAdminTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEAdminTextBox_ID.Name = "AdminEAdminTextBox_ID";
-            this.AdminEAdminTextBox_ID.Size = new System.Drawing.Size(396, 43);
+            this.AdminEAdminTextBox_ID.Size = new System.Drawing.Size(396, 45);
             this.AdminEAdminTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEAdminTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEAdminTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -904,7 +904,7 @@
             this.AdminEAdminTextBox_Username.Location = new System.Drawing.Point(176, 256);
             this.AdminEAdminTextBox_Username.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEAdminTextBox_Username.Name = "AdminEAdminTextBox_Username";
-            this.AdminEAdminTextBox_Username.Size = new System.Drawing.Size(471, 43);
+            this.AdminEAdminTextBox_Username.Size = new System.Drawing.Size(471, 45);
             this.AdminEAdminTextBox_Username.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEAdminTextBox_Username.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEAdminTextBox_Username.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1001,7 +1001,7 @@
             this.AdminEAdminTextBox_Email.Location = new System.Drawing.Point(176, 185);
             this.AdminEAdminTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEAdminTextBox_Email.Name = "AdminEAdminTextBox_Email";
-            this.AdminEAdminTextBox_Email.Size = new System.Drawing.Size(471, 43);
+            this.AdminEAdminTextBox_Email.Size = new System.Drawing.Size(471, 45);
             this.AdminEAdminTextBox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEAdminTextBox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEAdminTextBox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1024,7 +1024,7 @@
             this.AdminEAdminTextBox_LastName.Location = new System.Drawing.Point(176, 108);
             this.AdminEAdminTextBox_LastName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEAdminTextBox_LastName.Name = "AdminEAdminTextBox_LastName";
-            this.AdminEAdminTextBox_LastName.Size = new System.Drawing.Size(471, 43);
+            this.AdminEAdminTextBox_LastName.Size = new System.Drawing.Size(471, 45);
             this.AdminEAdminTextBox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEAdminTextBox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEAdminTextBox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1047,7 +1047,7 @@
             this.AdminEAdminTextBox_FirstName.Location = new System.Drawing.Point(176, 35);
             this.AdminEAdminTextBox_FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEAdminTextBox_FirstName.Name = "AdminEAdminTextBox_FirstName";
-            this.AdminEAdminTextBox_FirstName.Size = new System.Drawing.Size(471, 43);
+            this.AdminEAdminTextBox_FirstName.Size = new System.Drawing.Size(471, 45);
             this.AdminEAdminTextBox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEAdminTextBox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEAdminTextBox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1207,7 +1207,7 @@
             this.Instructor_Title_ComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.Instructor_Title_ComboBox.Name = "Instructor_Title_ComboBox";
             this.Instructor_Title_ComboBox.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Instructor_Title_ComboBox.Size = new System.Drawing.Size(396, 46);
+            this.Instructor_Title_ComboBox.Size = new System.Drawing.Size(396, 48);
             this.Instructor_Title_ComboBox.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -1245,7 +1245,7 @@
             this.InstructorTextbox_Password.Location = new System.Drawing.Point(203, 323);
             this.InstructorTextbox_Password.Margin = new System.Windows.Forms.Padding(4);
             this.InstructorTextbox_Password.Name = "InstructorTextbox_Password";
-            this.InstructorTextbox_Password.Size = new System.Drawing.Size(481, 43);
+            this.InstructorTextbox_Password.Size = new System.Drawing.Size(481, 45);
             this.InstructorTextbox_Password.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.InstructorTextbox_Password.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.InstructorTextbox_Password.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1279,7 +1279,7 @@
             this.InstructorTextbox_Username.Location = new System.Drawing.Point(203, 250);
             this.InstructorTextbox_Username.Margin = new System.Windows.Forms.Padding(4);
             this.InstructorTextbox_Username.Name = "InstructorTextbox_Username";
-            this.InstructorTextbox_Username.Size = new System.Drawing.Size(481, 43);
+            this.InstructorTextbox_Username.Size = new System.Drawing.Size(481, 45);
             this.InstructorTextbox_Username.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.InstructorTextbox_Username.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.InstructorTextbox_Username.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1376,7 +1376,7 @@
             this.InstructorTextbox_Email.Location = new System.Drawing.Point(203, 178);
             this.InstructorTextbox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.InstructorTextbox_Email.Name = "InstructorTextbox_Email";
-            this.InstructorTextbox_Email.Size = new System.Drawing.Size(481, 43);
+            this.InstructorTextbox_Email.Size = new System.Drawing.Size(481, 45);
             this.InstructorTextbox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.InstructorTextbox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.InstructorTextbox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1399,7 +1399,7 @@
             this.InstructorTextbox_LastName.Location = new System.Drawing.Point(203, 105);
             this.InstructorTextbox_LastName.Margin = new System.Windows.Forms.Padding(4);
             this.InstructorTextbox_LastName.Name = "InstructorTextbox_LastName";
-            this.InstructorTextbox_LastName.Size = new System.Drawing.Size(481, 43);
+            this.InstructorTextbox_LastName.Size = new System.Drawing.Size(481, 45);
             this.InstructorTextbox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.InstructorTextbox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.InstructorTextbox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1422,7 +1422,7 @@
             this.InstructorTextbox_FirstName.Location = new System.Drawing.Point(203, 32);
             this.InstructorTextbox_FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.InstructorTextbox_FirstName.Name = "InstructorTextbox_FirstName";
-            this.InstructorTextbox_FirstName.Size = new System.Drawing.Size(481, 43);
+            this.InstructorTextbox_FirstName.Size = new System.Drawing.Size(481, 45);
             this.InstructorTextbox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.InstructorTextbox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.InstructorTextbox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1568,7 +1568,7 @@
             this.AdminEInstructorTextbox_Username.Location = new System.Drawing.Point(201, 248);
             this.AdminEInstructorTextbox_Username.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEInstructorTextbox_Username.Name = "AdminEInstructorTextbox_Username";
-            this.AdminEInstructorTextbox_Username.Size = new System.Drawing.Size(447, 43);
+            this.AdminEInstructorTextbox_Username.Size = new System.Drawing.Size(447, 45);
             this.AdminEInstructorTextbox_Username.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorTextbox_Username.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEInstructorTextbox_Username.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1602,7 +1602,7 @@
             this.AdminEInstructorTextbox_Email.Location = new System.Drawing.Point(201, 176);
             this.AdminEInstructorTextbox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEInstructorTextbox_Email.Name = "AdminEInstructorTextbox_Email";
-            this.AdminEInstructorTextbox_Email.Size = new System.Drawing.Size(447, 43);
+            this.AdminEInstructorTextbox_Email.Size = new System.Drawing.Size(447, 45);
             this.AdminEInstructorTextbox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorTextbox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEInstructorTextbox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1625,7 +1625,7 @@
             this.AdminEInstructorTextbox_LastName.Location = new System.Drawing.Point(201, 103);
             this.AdminEInstructorTextbox_LastName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEInstructorTextbox_LastName.Name = "AdminEInstructorTextbox_LastName";
-            this.AdminEInstructorTextbox_LastName.Size = new System.Drawing.Size(447, 43);
+            this.AdminEInstructorTextbox_LastName.Size = new System.Drawing.Size(447, 45);
             this.AdminEInstructorTextbox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorTextbox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEInstructorTextbox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1648,7 +1648,7 @@
             this.AdminEInstructorTextbox_FirstName.Location = new System.Drawing.Point(201, 30);
             this.AdminEInstructorTextbox_FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEInstructorTextbox_FirstName.Name = "AdminEInstructorTextbox_FirstName";
-            this.AdminEInstructorTextbox_FirstName.Size = new System.Drawing.Size(447, 43);
+            this.AdminEInstructorTextbox_FirstName.Size = new System.Drawing.Size(447, 45);
             this.AdminEInstructorTextbox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorTextbox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEInstructorTextbox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1860,7 +1860,7 @@
             this.AdminEInstructorTextbox_ID.Location = new System.Drawing.Point(726, 86);
             this.AdminEInstructorTextbox_ID.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEInstructorTextbox_ID.Name = "AdminEInstructorTextbox_ID";
-            this.AdminEInstructorTextbox_ID.Size = new System.Drawing.Size(396, 43);
+            this.AdminEInstructorTextbox_ID.Size = new System.Drawing.Size(396, 45);
             this.AdminEInstructorTextbox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEInstructorTextbox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEInstructorTextbox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2037,7 +2037,7 @@
             this.AdminStudentPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminStudentPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminStudentPage.Name = "AdminStudentPage";
-            this.AdminStudentPage.SelectedIndex = 0;
+            this.AdminStudentPage.SelectedIndex = 1;
             this.AdminStudentPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminStudentPage.Size = new System.Drawing.Size(1212, 593);
             this.AdminStudentPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -2424,7 +2424,7 @@
             this.AdminEStudentTextBox_Level.Location = new System.Drawing.Point(157, 325);
             this.AdminEStudentTextBox_Level.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEStudentTextBox_Level.Name = "AdminEStudentTextBox_Level";
-            this.AdminEStudentTextBox_Level.Size = new System.Drawing.Size(447, 43);
+            this.AdminEStudentTextBox_Level.Size = new System.Drawing.Size(447, 45);
             this.AdminEStudentTextBox_Level.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_Level.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_Level.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2458,7 +2458,7 @@
             this.AdminEStudentTextBox_Username.Location = new System.Drawing.Point(157, 245);
             this.AdminEStudentTextBox_Username.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEStudentTextBox_Username.Name = "AdminEStudentTextBox_Username";
-            this.AdminEStudentTextBox_Username.Size = new System.Drawing.Size(447, 43);
+            this.AdminEStudentTextBox_Username.Size = new System.Drawing.Size(447, 45);
             this.AdminEStudentTextBox_Username.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_Username.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_Username.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2492,7 +2492,7 @@
             this.AdminEStudentTextBox_Email.Location = new System.Drawing.Point(157, 173);
             this.AdminEStudentTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEStudentTextBox_Email.Name = "AdminEStudentTextBox_Email";
-            this.AdminEStudentTextBox_Email.Size = new System.Drawing.Size(447, 43);
+            this.AdminEStudentTextBox_Email.Size = new System.Drawing.Size(447, 45);
             this.AdminEStudentTextBox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2515,7 +2515,7 @@
             this.AdminEStudentTextBox_LastName.Location = new System.Drawing.Point(157, 100);
             this.AdminEStudentTextBox_LastName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEStudentTextBox_LastName.Name = "AdminEStudentTextBox_LastName";
-            this.AdminEStudentTextBox_LastName.Size = new System.Drawing.Size(447, 43);
+            this.AdminEStudentTextBox_LastName.Size = new System.Drawing.Size(447, 45);
             this.AdminEStudentTextBox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2538,7 +2538,7 @@
             this.AdminEStudentTextBox_FirstName.Location = new System.Drawing.Point(157, 27);
             this.AdminEStudentTextBox_FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEStudentTextBox_FirstName.Name = "AdminEStudentTextBox_FirstName";
-            this.AdminEStudentTextBox_FirstName.Size = new System.Drawing.Size(447, 43);
+            this.AdminEStudentTextBox_FirstName.Size = new System.Drawing.Size(447, 45);
             this.AdminEStudentTextBox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2596,7 +2596,7 @@
             this.AdminEStudentTextBox_Name.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEStudentTextBox_Name.Name = "AdminEStudentTextBox_Name";
             this.AdminEStudentTextBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminEStudentTextBox_Name.Size = new System.Drawing.Size(396, 46);
+            this.AdminEStudentTextBox_Name.Size = new System.Drawing.Size(396, 48);
             this.AdminEStudentTextBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2706,7 +2706,7 @@
             this.AdminEStudentTextBox_ID.Location = new System.Drawing.Point(709, 83);
             this.AdminEStudentTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
             this.AdminEStudentTextBox_ID.Name = "AdminEStudentTextBox_ID";
-            this.AdminEStudentTextBox_ID.Size = new System.Drawing.Size(396, 43);
+            this.AdminEStudentTextBox_ID.Size = new System.Drawing.Size(396, 45);
             this.AdminEStudentTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminEStudentTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminEStudentTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3080,7 +3080,7 @@
             this.AdminECourseComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
             this.AdminECourseComboBox_Name.Name = "AdminECourseComboBox_Name";
             this.AdminECourseComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminECourseComboBox_Name.Size = new System.Drawing.Size(396, 46);
+            this.AdminECourseComboBox_Name.Size = new System.Drawing.Size(396, 48);
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminECourseComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3126,7 +3126,7 @@
             this.AdminECourseTextBox_ID.Location = new System.Drawing.Point(754, 83);
             this.AdminECourseTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
             this.AdminECourseTextBox_ID.Name = "AdminECourseTextBox_ID";
-            this.AdminECourseTextBox_ID.Size = new System.Drawing.Size(396, 43);
+            this.AdminECourseTextBox_ID.Size = new System.Drawing.Size(396, 45);
             this.AdminECourseTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminECourseTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminECourseTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3335,7 +3335,7 @@
             this.AdminECourseTextBox_Description.Location = new System.Drawing.Point(198, 223);
             this.AdminECourseTextBox_Description.Margin = new System.Windows.Forms.Padding(4);
             this.AdminECourseTextBox_Description.Name = "AdminECourseTextBox_Description";
-            this.AdminECourseTextBox_Description.Size = new System.Drawing.Size(481, 43);
+            this.AdminECourseTextBox_Description.Size = new System.Drawing.Size(481, 45);
             this.AdminECourseTextBox_Description.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminECourseTextBox_Description.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminECourseTextBox_Description.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3358,7 +3358,7 @@
             this.AdminECourseTextBox_Name.Location = new System.Drawing.Point(198, 83);
             this.AdminECourseTextBox_Name.Margin = new System.Windows.Forms.Padding(4);
             this.AdminECourseTextBox_Name.Name = "AdminECourseTextBox_Name";
-            this.AdminECourseTextBox_Name.Size = new System.Drawing.Size(481, 43);
+            this.AdminECourseTextBox_Name.Size = new System.Drawing.Size(481, 45);
             this.AdminECourseTextBox_Name.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminECourseTextBox_Name.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminECourseTextBox_Name.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3461,7 +3461,7 @@
             this.StudentHComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
             this.StudentHComboBox_Name.Name = "StudentHComboBox_Name";
             this.StudentHComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.StudentHComboBox_Name.Size = new System.Drawing.Size(396, 46);
+            this.StudentHComboBox_Name.Size = new System.Drawing.Size(396, 48);
             this.StudentHComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.StudentHComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StudentHComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3496,7 +3496,7 @@
             this.StudentHTextBox_ID.Location = new System.Drawing.Point(48, 412);
             this.StudentHTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
             this.StudentHTextBox_ID.Name = "StudentHTextBox_ID";
-            this.StudentHTextBox_ID.Size = new System.Drawing.Size(396, 43);
+            this.StudentHTextBox_ID.Size = new System.Drawing.Size(396, 45);
             this.StudentHTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.StudentHTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StudentHTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3532,7 +3532,7 @@
             this.InstructorHComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
             this.InstructorHComboBox_Name.Name = "InstructorHComboBox_Name";
             this.InstructorHComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.InstructorHComboBox_Name.Size = new System.Drawing.Size(396, 46);
+            this.InstructorHComboBox_Name.Size = new System.Drawing.Size(396, 48);
             this.InstructorHComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3567,7 +3567,7 @@
             this.InstructorHTextBox_ID.Location = new System.Drawing.Point(48, 241);
             this.InstructorHTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
             this.InstructorHTextBox_ID.Name = "InstructorHTextBox_ID";
-            this.InstructorHTextBox_ID.Size = new System.Drawing.Size(396, 43);
+            this.InstructorHTextBox_ID.Size = new System.Drawing.Size(396, 45);
             this.InstructorHTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.InstructorHTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.InstructorHTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3603,7 +3603,7 @@
             this.AdminHComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
             this.AdminHComboBox_Name.Name = "AdminHComboBox_Name";
             this.AdminHComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminHComboBox_Name.Size = new System.Drawing.Size(396, 46);
+            this.AdminHComboBox_Name.Size = new System.Drawing.Size(396, 48);
             this.AdminHComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.AdminHComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminHComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3638,7 +3638,7 @@
             this.AdminHTextBox_ID.Location = new System.Drawing.Point(44, 71);
             this.AdminHTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
             this.AdminHTextBox_ID.Name = "AdminHTextBox_ID";
-            this.AdminHTextBox_ID.Size = new System.Drawing.Size(396, 43);
+            this.AdminHTextBox_ID.Size = new System.Drawing.Size(396, 45);
             this.AdminHTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.AdminHTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdminHTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
