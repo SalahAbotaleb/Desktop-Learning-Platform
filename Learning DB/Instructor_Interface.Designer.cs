@@ -88,12 +88,12 @@
             this.Main.Controls.Add(this.EnrollmentTab);
             this.Main.Controls.Add(this.Profile);
             this.Main.Controls.Add(this.metroSetSetTabPage1);
-            this.Main.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Main.Cursor = System.Windows.Forms.Cursors.Default;
             this.Main.IsDerivedStyle = false;
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(1, 42);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 3;
+            this.Main.SelectedIndex = 1;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1205, 660);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -384,6 +384,7 @@
             this.InstructorComboBox.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InstructorComboBox.TabIndex = 87;
             this.InstructorComboBox.Visible = false;
+            this.InstructorComboBox.SelectedIndexChanged += new System.EventHandler(this.InstructorComboBox_SelectedIndexChanged);
             // 
             // CourseNameBox
             // 

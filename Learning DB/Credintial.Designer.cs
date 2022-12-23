@@ -35,6 +35,7 @@
             this.PasswordBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.Invalid_message = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.gobackbutton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // kryptonPalette2
@@ -166,11 +167,39 @@
             this.Invalid_message.TabIndex = 4;
             this.Invalid_message.Values.Text = "Invalid! Username or Password";
             // 
+            // gobackbutton
+            // 
+            this.gobackbutton.Location = new System.Drawing.Point(188, 378);
+            this.gobackbutton.Name = "gobackbutton";
+            this.gobackbutton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.gobackbutton.Size = new System.Drawing.Size(183, 50);
+            this.gobackbutton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.gobackbutton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.gobackbutton.StateCommon.Back.ColorAngle = 45F;
+            this.gobackbutton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.gobackbutton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(255)))));
+            this.gobackbutton.StateCommon.Border.ColorAngle = 45F;
+            this.gobackbutton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.gobackbutton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.gobackbutton.StateCommon.Border.Rounding = 40;
+            this.gobackbutton.StateCommon.Border.Width = 1;
+            this.gobackbutton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-10);
+            this.gobackbutton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(172)))), ((int)(((byte)(244)))));
+            this.gobackbutton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(255)))));
+            this.gobackbutton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gobackbutton.TabIndex = 5;
+            this.gobackbutton.TabStop = false;
+            this.gobackbutton.Values.Text = "Go Back";
+            this.gobackbutton.Click += new System.EventHandler(this.gobackbutton_Click);
+            // 
             // Credintial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 413);
+            this.ClientSize = new System.Drawing.Size(582, 435);
+            this.Controls.Add(this.gobackbutton);
             this.Controls.Add(this.Invalid_message);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.PasswordBox);
@@ -196,5 +225,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox PasswordBox;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel Invalid_message;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton gobackbutton;
     }
 }

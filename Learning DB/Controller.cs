@@ -226,6 +226,14 @@ namespace DbHandler
             string Query = "SELECT Course_Name FROM Course";
             return dbMan.ExecuteReader(Query);
         }
+
+        public DataTable SelectClassrooms()
+        {
+            string Query = "SELECT * FROM Classroom";
+            return dbMan.ExecuteReader(Query);
+        }
+
+
         public DataTable SelectClassesForStudent(int SID)
         {
             string Query = "select Classroom.Class_ID,Title from Classroom, Student,Student_Enrolled_In where Classroom.Class_ID = Student_Enrolled_In.Class_ID AND Student_ID = StudentID AND StudentId = " + SID + ";";

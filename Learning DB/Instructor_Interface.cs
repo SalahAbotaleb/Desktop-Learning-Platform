@@ -167,5 +167,10 @@ namespace Learning_DB
         {
 
         }
+
+        private void InstructorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

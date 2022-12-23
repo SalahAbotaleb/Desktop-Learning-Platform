@@ -63,9 +63,6 @@
             this.metroSetSetTabPage2 = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl3 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.metroSetSetTabPage5 = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.classroomname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accesscode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroSetSetTabPage6 = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.addclassroombutton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonTextBox14 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -76,6 +73,12 @@
             this.Courseid = new System.Windows.Forms.Label();
             this.coursescombobox = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetSetTabPage7 = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.GoToClassroom = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Classroom = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.classroomcombobox = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.accesscodetextbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.metroSetTabControl1.SuspendLayout();
             this.metroSetSetTabPage1.SuspendLayout();
             this.metroSetTabControl2.SuspendLayout();
@@ -84,7 +87,6 @@
             this.metroSetSetTabPage2.SuspendLayout();
             this.metroSetTabControl3.SuspendLayout();
             this.metroSetSetTabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.metroSetSetTabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -219,6 +221,7 @@
             this.User_NameLabel.Size = new System.Drawing.Size(61, 22);
             this.User_NameLabel.TabIndex = 36;
             this.User_NameLabel.Text = "Name";
+            this.User_NameLabel.Click += new System.EventHandler(this.User_NameLabel_Click);
             // 
             // metroSetTabControl1
             // 
@@ -233,7 +236,7 @@
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl1.Location = new System.Drawing.Point(12, 60);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 2;
+            this.metroSetTabControl1.SelectedIndex = 1;
             this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl1.Size = new System.Drawing.Size(1180, 564);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -272,12 +275,12 @@
             this.metroSetTabControl2.BackgroundColor = System.Drawing.Color.White;
             this.metroSetTabControl2.Controls.Add(this.metroSetSetTabPage3);
             this.metroSetTabControl2.Controls.Add(this.metroSetSetTabPage4);
-            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl2.IsDerivedStyle = true;
             this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl2.Location = new System.Drawing.Point(3, 3);
             this.metroSetTabControl2.Name = "metroSetTabControl2";
-            this.metroSetTabControl2.SelectedIndex = 1;
+            this.metroSetTabControl2.SelectedIndex = 0;
             this.metroSetTabControl2.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl2.Size = new System.Drawing.Size(1166, 503);
             this.metroSetTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -324,7 +327,7 @@
             this.titletextbox.Margin = new System.Windows.Forms.Padding(4);
             this.titletextbox.Name = "titletextbox";
             this.titletextbox.ReadOnly = true;
-            this.titletextbox.Size = new System.Drawing.Size(468, 41);
+            this.titletextbox.Size = new System.Drawing.Size(447, 41);
             this.titletextbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.titletextbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.titletextbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -344,7 +347,7 @@
             // 
             this.Instructor_Title_Label.AutoSize = true;
             this.Instructor_Title_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Instructor_Title_Label.Location = new System.Drawing.Point(51, 260);
+            this.Instructor_Title_Label.Location = new System.Drawing.Point(18, 260);
             this.Instructor_Title_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Instructor_Title_Label.Name = "Instructor_Title_Label";
             this.Instructor_Title_Label.Size = new System.Drawing.Size(55, 22);
@@ -353,7 +356,7 @@
             // 
             // UsernameBox
             // 
-            this.UsernameBox.Location = new System.Drawing.Point(206, 187);
+            this.UsernameBox.Location = new System.Drawing.Point(197, 187);
             this.UsernameBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.ReadOnly = true;
@@ -377,7 +380,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 167);
+            this.label3.Location = new System.Drawing.Point(16, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 22);
@@ -386,7 +389,7 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(206, 114);
+            this.EmailBox.Location = new System.Drawing.Point(197, 133);
             this.EmailBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.ReadOnly = true;
@@ -410,7 +413,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(47, 124);
+            this.label6.Location = new System.Drawing.Point(18, 133);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 22);
@@ -419,7 +422,7 @@
             // 
             // LNameBox
             // 
-            this.LNameBox.Location = new System.Drawing.Point(206, 65);
+            this.LNameBox.Location = new System.Drawing.Point(197, 65);
             this.LNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.LNameBox.Name = "LNameBox";
             this.LNameBox.ReadOnly = true;
@@ -451,7 +454,7 @@
             // 
             // FNameBox
             // 
-            this.FNameBox.Location = new System.Drawing.Point(206, 16);
+            this.FNameBox.Location = new System.Drawing.Point(197, 16);
             this.FNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.FNameBox.Name = "FNameBox";
             this.FNameBox.ReadOnly = true;
@@ -755,12 +758,13 @@
             this.metroSetTabControl3.BackgroundColor = System.Drawing.Color.White;
             this.metroSetTabControl3.Controls.Add(this.metroSetSetTabPage5);
             this.metroSetTabControl3.Controls.Add(this.metroSetSetTabPage6);
-            this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl3.Controls.Add(this.Classroom);
+            this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl3.IsDerivedStyle = true;
             this.metroSetTabControl3.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl3.Location = new System.Drawing.Point(3, 8);
             this.metroSetTabControl3.Name = "metroSetTabControl3";
-            this.metroSetTabControl3.SelectedIndex = 1;
+            this.metroSetTabControl3.SelectedIndex = 0;
             this.metroSetTabControl3.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl3.Size = new System.Drawing.Size(1166, 503);
             this.metroSetTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -776,7 +780,11 @@
             // metroSetSetTabPage5
             // 
             this.metroSetSetTabPage5.BaseColor = System.Drawing.Color.White;
-            this.metroSetSetTabPage5.Controls.Add(this.dataGridView1);
+            this.metroSetSetTabPage5.Controls.Add(this.label9);
+            this.metroSetSetTabPage5.Controls.Add(this.accesscodetextbox);
+            this.metroSetSetTabPage5.Controls.Add(this.label8);
+            this.metroSetSetTabPage5.Controls.Add(this.classroomcombobox);
+            this.metroSetSetTabPage5.Controls.Add(this.GoToClassroom);
             this.metroSetSetTabPage5.Font = null;
             this.metroSetSetTabPage5.ImageIndex = 0;
             this.metroSetSetTabPage5.ImageKey = null;
@@ -791,36 +799,6 @@
             this.metroSetSetTabPage5.ThemeAuthor = null;
             this.metroSetSetTabPage5.ThemeName = null;
             this.metroSetSetTabPage5.ToolTipText = null;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.classroomname,
-            this.accesscode});
-            this.dataGridView1.Location = new System.Drawing.Point(82, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(673, 275);
-            this.dataGridView1.TabIndex = 110;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // classroomname
-            // 
-            this.classroomname.HeaderText = "Classroom";
-            this.classroomname.MinimumWidth = 6;
-            this.classroomname.Name = "classroomname";
-            this.classroomname.ReadOnly = true;
-            this.classroomname.Width = 125;
-            // 
-            // accesscode
-            // 
-            this.accesscode.HeaderText = "Access Code";
-            this.accesscode.MinimumWidth = 6;
-            this.accesscode.Name = "accesscode";
-            this.accesscode.ReadOnly = true;
-            this.accesscode.Width = 125;
             // 
             // metroSetSetTabPage6
             // 
@@ -982,6 +960,7 @@
             this.kryptonTextBox6.Location = new System.Drawing.Point(274, 159);
             this.kryptonTextBox6.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonTextBox6.Name = "kryptonTextBox6";
+            this.kryptonTextBox6.ReadOnly = true;
             this.kryptonTextBox6.Size = new System.Drawing.Size(447, 41);
             this.kryptonTextBox6.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox6.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1032,10 +1011,10 @@
             this.coursescombobox.SelectedItemForeColor = System.Drawing.Color.White;
             this.coursescombobox.Size = new System.Drawing.Size(121, 26);
             this.coursescombobox.Style = MetroSet_UI.Enums.Style.Light;
-            this.coursescombobox.StyleManager = null;
+            this.coursescombobox.StyleManager = this.styleManager1;
             this.coursescombobox.TabIndex = 125;
-            this.coursescombobox.ThemeAuthor = "Narwin";
-            this.coursescombobox.ThemeName = "MetroLite";
+            this.coursescombobox.ThemeAuthor = null;
+            this.coursescombobox.ThemeName = null;
             this.coursescombobox.SelectedIndexChanged += new System.EventHandler(this.coursescombobox_SelectedIndexChanged);
             // 
             // metroSetSetTabPage7
@@ -1049,11 +1028,166 @@
             this.metroSetSetTabPage7.Name = "metroSetSetTabPage7";
             this.metroSetSetTabPage7.Size = new System.Drawing.Size(1172, 518);
             this.metroSetSetTabPage7.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetSetTabPage7.StyleManager = null;
+            this.metroSetSetTabPage7.StyleManager = this.styleManager1;
             this.metroSetSetTabPage7.TabIndex = 2;
-            this.metroSetSetTabPage7.ThemeAuthor = "Narwin";
-            this.metroSetSetTabPage7.ThemeName = "MetroLite";
+            this.metroSetSetTabPage7.ThemeAuthor = null;
+            this.metroSetSetTabPage7.ThemeName = null;
             this.metroSetSetTabPage7.ToolTipText = null;
+            // 
+            // GoToClassroom
+            // 
+            this.GoToClassroom.Location = new System.Drawing.Point(771, 46);
+            this.GoToClassroom.Margin = new System.Windows.Forms.Padding(4);
+            this.GoToClassroom.Name = "GoToClassroom";
+            this.GoToClassroom.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.GoToClassroom.OverrideDefault.Back.ColorAngle = 45F;
+            this.GoToClassroom.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.GoToClassroom.OverrideDefault.Border.ColorAngle = 45F;
+            this.GoToClassroom.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.GoToClassroom.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.GoToClassroom.OverrideDefault.Border.Rounding = 20;
+            this.GoToClassroom.OverrideDefault.Border.Width = 1;
+            this.GoToClassroom.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.GoToClassroom.Size = new System.Drawing.Size(230, 50);
+            this.GoToClassroom.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.StateCommon.Back.ColorAngle = 45F;
+            this.GoToClassroom.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.StateCommon.Border.ColorAngle = 45F;
+            this.GoToClassroom.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.GoToClassroom.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.GoToClassroom.StateCommon.Border.Rounding = 20;
+            this.GoToClassroom.StateCommon.Border.Width = 1;
+            this.GoToClassroom.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.GoToClassroom.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.GoToClassroom.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.GoToClassroom.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoToClassroom.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.GoToClassroom.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.GoToClassroom.StatePressed.Back.ColorAngle = 135F;
+            this.GoToClassroom.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.GoToClassroom.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.GoToClassroom.StatePressed.Border.ColorAngle = 135F;
+            this.GoToClassroom.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.GoToClassroom.StatePressed.Border.Rounding = 20;
+            this.GoToClassroom.StatePressed.Border.Width = 1;
+            this.GoToClassroom.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.GoToClassroom.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.StateTracking.Back.ColorAngle = 45F;
+            this.GoToClassroom.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.GoToClassroom.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.GoToClassroom.StateTracking.Border.ColorAngle = 45F;
+            this.GoToClassroom.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.GoToClassroom.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.GoToClassroom.StateTracking.Border.Rounding = 20;
+            this.GoToClassroom.StateTracking.Border.Width = 1;
+            this.GoToClassroom.TabIndex = 123;
+            this.GoToClassroom.TabStop = false;
+            this.GoToClassroom.Values.Text = "Go to classroom";
+            this.GoToClassroom.Click += new System.EventHandler(this.GoToClassroom_Click);
+            // 
+            // Classroom
+            // 
+            this.Classroom.BaseColor = System.Drawing.Color.White;
+            this.Classroom.Font = null;
+            this.Classroom.ImageIndex = 0;
+            this.Classroom.ImageKey = null;
+            this.Classroom.IsDerivedStyle = true;
+            this.Classroom.Location = new System.Drawing.Point(4, 42);
+            this.Classroom.Name = "Classroom";
+            this.Classroom.Size = new System.Drawing.Size(1158, 457);
+            this.Classroom.Style = MetroSet_UI.Enums.Style.Light;
+            this.Classroom.StyleManager = this.styleManager1;
+            this.Classroom.TabIndex = 2;
+            this.Classroom.Text = "Classroom";
+            this.Classroom.ThemeAuthor = null;
+            this.Classroom.ThemeName = null;
+            this.Classroom.ToolTipText = null;
+            // 
+            // classroomcombobox
+            // 
+            this.classroomcombobox.AllowDrop = true;
+            this.classroomcombobox.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.classroomcombobox.BackColor = System.Drawing.Color.Transparent;
+            this.classroomcombobox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.classroomcombobox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.classroomcombobox.CausesValidation = false;
+            this.classroomcombobox.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.classroomcombobox.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.classroomcombobox.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.classroomcombobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.classroomcombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.classroomcombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.classroomcombobox.FormattingEnabled = true;
+            this.classroomcombobox.IsDerivedStyle = true;
+            this.classroomcombobox.ItemHeight = 20;
+            this.classroomcombobox.Location = new System.Drawing.Point(223, 50);
+            this.classroomcombobox.Name = "classroomcombobox";
+            this.classroomcombobox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.classroomcombobox.SelectedItemForeColor = System.Drawing.Color.White;
+            this.classroomcombobox.Size = new System.Drawing.Size(292, 26);
+            this.classroomcombobox.Style = MetroSet_UI.Enums.Style.Light;
+            this.classroomcombobox.StyleManager = this.styleManager1;
+            this.classroomcombobox.TabIndex = 124;
+            this.classroomcombobox.ThemeAuthor = null;
+            this.classroomcombobox.ThemeName = null;
+            this.classroomcombobox.SelectedIndexChanged += new System.EventHandler(this.classroomcombobox_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 53);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 22);
+            this.label8.TabIndex = 125;
+            this.label8.Text = "Classroom Name";
+            // 
+            // accesscodetextbox
+            // 
+            this.accesscodetextbox.Location = new System.Drawing.Point(223, 139);
+            this.accesscodetextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.accesscodetextbox.Name = "accesscodetextbox";
+            this.accesscodetextbox.Size = new System.Drawing.Size(447, 41);
+            this.accesscodetextbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.accesscodetextbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.accesscodetextbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.accesscodetextbox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.accesscodetextbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.accesscodetextbox.StateCommon.Border.Rounding = 20;
+            this.accesscodetextbox.StateCommon.Border.Width = 2;
+            this.accesscodetextbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.accesscodetextbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.accesscodetextbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.accesscodetextbox.TabIndex = 126;
+            this.accesscodetextbox.TextChanged += new System.EventHandler(this.accesscodetextbox_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 139);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 22);
+            this.label9.TabIndex = 128;
+            this.label9.Text = "Access Code";
             // 
             // Inst1
             // 
@@ -1084,7 +1218,7 @@
             this.metroSetSetTabPage2.ResumeLayout(false);
             this.metroSetTabControl3.ResumeLayout(false);
             this.metroSetSetTabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.metroSetSetTabPage5.PerformLayout();
             this.metroSetSetTabPage6.ResumeLayout(false);
             this.metroSetSetTabPage6.PerformLayout();
             this.ResumeLayout(false);
@@ -1134,12 +1268,15 @@
         private System.Windows.Forms.Label label17;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox15;
         private System.Windows.Forms.Label classroomtitle;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn classroomname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accesscode;
         private System.Windows.Forms.Label Courseid;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
         private MetroSet_UI.Controls.MetroSetComboBox coursescombobox;
         private MetroSet_UI.Child.MetroSetSetTabPage metroSetSetTabPage7;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton GoToClassroom;
+        private MetroSet_UI.Child.MetroSetSetTabPage Classroom;
+        private System.Windows.Forms.Label label9;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox accesscodetextbox;
+        private System.Windows.Forms.Label label8;
+        private MetroSet_UI.Controls.MetroSetComboBox classroomcombobox;
     }
 }

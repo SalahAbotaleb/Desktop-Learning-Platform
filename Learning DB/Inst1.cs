@@ -19,6 +19,7 @@ namespace Learning_DB
     {
         Controller cont=new Controller();
         int InstructorID;
+        DataTable d1;
         public Inst1(int IID)
         {
             cont = new Controller();
@@ -33,12 +34,21 @@ namespace Learning_DB
             UsernameBox.Text = InstructorData.Rows[0]["Username"].ToString();
             EmailBox.Text = InstructorData.Rows[0]["Email"].ToString();
             titletextbox.Text = InstructorData.Rows[0]["Title"].ToString();
-            DataTable d1 = cont.SelectClassroomForInstructorbyIn_ID(InstructorID);
-            dataGridView1.DataSource = d1;
-            DataTable d2 = cont.SelectCourses(0);
+            //DataTable
+            d1= new DataTable();
+                d1 = cont.SelectClassroomForInstructorbyIn_ID(InstructorID);
+            //dataGridView1.DataSource = d1;
+
+            DataTable d2 = new DataTable();
+                d2=cont.SelectClassrooms();
+            coursescombobox.ValueMember = "Course_Name";
             coursescombobox.DataSource=d2;
             //coursescombobox.DisplayMember = "Course_Name";
             coursescombobox.ValueMember = "Course_Name";
+            //Classroom.Hide();
+            classroomcombobox.DataSource = d2;//cont.SelectClassroomForInstructorbyIn_ID(IID);        
+            
+            accesscodetextbox.Text = d2.Rows[0]["Access_code"].ToString();
         }
 
 
@@ -207,6 +217,28 @@ namespace Learning_DB
         private void coursescombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void User_NameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoToClassroom_Click(object sender, EventArgs e)
+        {
+            Classroom c = new Classroom(7);
+            c.Show();
+
+        }
+
+        private void classroomcombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accesscodetextbox_TextChanged(object sender, EventArgs e)
+        {
+            accesscodetextbox.Text = d1.Rows[0]["Access_Code"].ToString();
         }
     }
 }

@@ -135,7 +135,7 @@
             // 
             // AddAssignment_Button
             // 
-            this.AddAssignment_Button.Location = new System.Drawing.Point(217, 348);
+            this.AddAssignment_Button.Location = new System.Drawing.Point(210, 334);
             this.AddAssignment_Button.Name = "AddAssignment_Button";
             this.AddAssignment_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));

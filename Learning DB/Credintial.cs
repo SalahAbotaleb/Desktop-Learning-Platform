@@ -95,7 +95,7 @@ namespace Learning_DB
                     return;
                 }
                 //instructor interface
-                Inst1 i = new Inst1(10004);
+                Inst1 i = new Inst1(10004);//hardcoded
                 i.Show();
             }
             else if (utype== Usertype.student)
@@ -129,6 +129,13 @@ namespace Learning_DB
         private void Credintial_Load(object sender, EventArgs e)
         {
             kryptonLabel1.Select();
+        }
+        
+        private void gobackbutton_Click(object sender, EventArgs e)
+        {
+            Login_Form l = new Login_Form();
+            l.Show();
+            this.Hide();
         }
     }
 }
