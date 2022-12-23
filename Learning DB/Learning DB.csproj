@@ -71,6 +71,12 @@
     <Compile Include="AddAdmin.Designer.cs">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorInterface.Designer.cs">
+      <DependentUpon>InstructorInterface.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorInterface.resx">
+      <DependentUpon>InstructorInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminInterface.resx">
       <DependentUpon>AdminInterface.cs</DependentUpon>
@@ -206,4 +215,8 @@
     <None Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

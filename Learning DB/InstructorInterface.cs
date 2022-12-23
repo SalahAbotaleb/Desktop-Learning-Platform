@@ -14,16 +14,15 @@ using MetroSet_UI.Forms;
 
 namespace Learning_DB
 {
-    public partial class AdminInterface : KryptonForm
+    public partial class InstructorInterface : KryptonForm
     {
         Controller Controller = new Controller();
-        int checkA = 0;
-        int checkI = 0;
-        public AdminInterface()
+        public InstructorInterface()
         {
             InitializeComponent();
-            AdminName_Label.Text = Controller.SelectAdminByID(OpenedSession.ID).Rows[0][0].ToString();
-            Instructor_Title_ComboBox.DataSource = new List<string> { "Prof.", "Dr.", "Eng.", "Mr.", "Mrs." };
+            User_Name.Text = "Instructor";
+            Controller = new Controller();
+            
         }
 
 
@@ -50,7 +49,7 @@ namespace Learning_DB
 
         private void AdminTextBox_FirstName_Leave(object sender, EventArgs e)
         {
-            if (AdminTextBox_FirstName.Text == "")
+            if(AdminTextBox_FirstName.Text == "")
             {
                 AdminTextBox_FirstName.Text = "Enter Admin's First Name";
                 AdminTextBox_FirstName.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
@@ -123,7 +122,6 @@ namespace Learning_DB
         {
             if (AdminTextBox_Password.Text == "Enter Admin's Password")
             {
-                AdminTextBox_Password.PasswordChar = '*';
                 AdminTextBox_Password.Text = "";
                 AdminTextBox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                 AdminTextBox_Password.StateCommon.Content.Color1 = Color.Black;
@@ -134,7 +132,6 @@ namespace Learning_DB
         {
             if (AdminTextBox_Password.Text == "")
             {
-                AdminTextBox_Password.PasswordChar = '\0';
                 AdminTextBox_Password.Text = "Enter Admin's Password";
                 AdminTextBox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                 AdminTextBox_Password.StateCommon.Content.Color1 = Color.Gray;
@@ -386,7 +383,7 @@ namespace Learning_DB
             this.Visible = false;
             Login_Form login = new Login_Form();
             login.Show();
-
+            
         }
 
         private void InstructorTextbox_FirstName_Enter(object sender, EventArgs e)
@@ -473,7 +470,6 @@ namespace Learning_DB
         {
             if (InstructorTextbox_Password.Text == "Enter Instructor's Password")
             {
-                InstructorTextbox_Password.PasswordChar = '*';
                 InstructorTextbox_Password.Text = "";
                 InstructorTextbox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                 InstructorTextbox_Password.StateCommon.Content.Color1 = Color.Black;
@@ -484,12 +480,32 @@ namespace Learning_DB
         {
             if (InstructorTextbox_Password.Text == "")
             {
-                InstructorTextbox_Password.PasswordChar = '\0';
                 InstructorTextbox_Password.Text = "Enter Instructor's Password";
                 InstructorTextbox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                 InstructorTextbox_Password.StateCommon.Content.Color1 = Color.Gray;
             }
         }
+
+        private void Instructor_Title_ComboBox_Enter(object sender, EventArgs e)
+        {
+            if (Instructor_Title_ComboBox.Text == "Select Instructor's Title")
+            {
+                Instructor_Title_ComboBox.Text = "";
+                Instructor_Title_ComboBox.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                Instructor_Title_ComboBox.StateCommon.ComboBox.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void Instructor_Title_ComboBox_Leave(object sender, EventArgs e)
+        {
+            if (Instructor_Title_ComboBox.Text == "")
+            {
+                Instructor_Title_ComboBox.Text = "Select Instructor's Title";
+                Instructor_Title_ComboBox.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                Instructor_Title_ComboBox.StateCommon.ComboBox.Content.Color1 = Color.Gray;
+            }
+        }
+
         private void AdminEInstructorTextbox_FirstName_Enter(object sender, EventArgs e)
         {
             if (AdminEInstructorTextbox_FirstName.Text == "Enter Instructor's First Name")
@@ -569,6 +585,27 @@ namespace Learning_DB
                 AdminEInstructorTextbox_Username.StateCommon.Content.Color1 = Color.Gray;
             }
         }
+
+        private void AdminEInstructorTextbox_Title_Enter(object sender, EventArgs e)
+        {
+            if (AdminEInstructorTextbox_Title.Text == "Enter Instructor's Title")
+            {
+                AdminEInstructorTextbox_Title.Text = "";
+                AdminEInstructorTextbox_Title.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                AdminEInstructorTextbox_Title.StateCommon.ComboBox.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void AdminEInstructorTextbox_Title_Leave(object sender, EventArgs e)
+        {
+            if (AdminEInstructorTextbox_Title.Text == "")
+            {
+                AdminEInstructorTextbox_Title.Text = "Enter Instructor's Title";
+                AdminEInstructorTextbox_Title.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                AdminEInstructorTextbox_Title.StateCommon.ComboBox.Content.Color1 = Color.Gray;
+            }
+        }
+
         private void AdminEInstructorTextbox_ID_Enter(object sender, EventArgs e)
         {
             if (AdminEInstructorTextbox_ID.Text == "Search by Instructor's ID")
@@ -591,12 +628,22 @@ namespace Learning_DB
 
         private void AdminEInstructorCombobox_Name_Enter(object sender, EventArgs e)
         {
-
+            if (AdminEInstructorCombobox_Name.Text == "Choose Instructor's Title")
+            {
+                AdminEInstructorCombobox_Name.Text = "";
+                AdminEInstructorCombobox_Name.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                AdminEInstructorCombobox_Name.StateCommon.ComboBox.Content.Color1 = Color.Black;
+            }
         }
 
         private void AdminEInstructorCombobox_Name_Leave(object sender, EventArgs e)
         {
-
+            if (AdminEInstructorCombobox_Name.Text == "")
+            {
+                AdminEInstructorCombobox_Name.Text = "Choose Instructor's Title";
+                AdminEInstructorCombobox_Name.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                AdminEInstructorCombobox_Name.StateCommon.ComboBox.Content.Color1 = Color.Gray;
+            }
         }
 
         private void AdminEStudentTextBox_FirstName_Enter(object sender, EventArgs e)
@@ -893,7 +940,6 @@ namespace Learning_DB
         {
             if (StudentTextbox_Password.Text == "Enter Student's Password")
             {
-                StudentTextbox_Password.PasswordChar = '*';
                 StudentTextbox_Password.Text = "";
                 StudentTextbox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                 StudentTextbox_Password.StateCommon.Content.Color1 = Color.Black;
@@ -904,7 +950,6 @@ namespace Learning_DB
         {
             if (StudentTextbox_Password.Text == "")
             {
-                StudentTextbox_Password.PasswordChar = '\0';
                 StudentTextbox_Password.Text = "Enter Student's Password";
                 StudentTextbox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                 StudentTextbox_Password.StateCommon.Content.Color1 = Color.Gray;
@@ -953,7 +998,7 @@ namespace Learning_DB
 
         private void AdminEStudentTextBox_Name_Leave(object sender, EventArgs e)
         {
-
+            
         }
 
         private void AddAdminButton_Click(object sender, EventArgs e)
@@ -965,574 +1010,7 @@ namespace Learning_DB
             }
             else
             {
-                MessageBox.Show("Admin Added Successfuly");
-            }
-        }
-
-        private void AdminEAdminButton_Edit_Click(object sender, EventArgs e)
-        {
-            if (checkA == 1)
-            {
-                if (AdminEAdminTextBox_ID.Text == "Search by Admin's ID")
-                {
-                    MessageBox.Show("Please Enter Admin's ID");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.UpdateAdmin(Convert.ToInt32(AdminEAdminTextBox_ID.Text), AdminEAdminTextBox_Username.Text, AdminEAdminTextBox_FirstName.Text, AdminEAdminTextBox_LastName.Text, AdminEAdminTextBox_Email.Text);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Admin Updated Successfuly");
-                }
-            }
-            else if (checkA == 2)
-            {
-                if (AdminEAdminTextBox_FirstName.Text == "Enter Admin's First Name")
-                {
-                    MessageBox.Show("Please Enter Admin's First Name");
-                    return;
-                }
-                if (AdminEAdminTextBox_LastName.Text == "Enter Admin's Last Name")
-                {
-                    MessageBox.Show("Please Enter Admin's Last Name");
-                    return;
-                }
-                if (AdminEAdminTextBox_Email.Text == "Enter Admin's Email")
-                {
-                    MessageBox.Show("Please Enter Admin's Email");
-                    return;
-                }
-                if (AdminEAdminTextBox_Username.Text == "Enter Admin's Username")
-                {
-                    MessageBox.Show("Please Enter Admin's Username");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.UpdateAdmin(Convert.ToInt32(AdminEAdminComboBox_Username.SelectedValue), AdminEAdminTextBox_Username.Text, AdminEAdminTextBox_FirstName.Text, AdminEAdminTextBox_LastName.Text, AdminEAdminTextBox_Email.Text);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Admin Updated Successfuly");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Choose a Searching Method");
-                return;
-            }
-        }
-
-        private void AdminEAdminButton_Search_Click(object sender, EventArgs e)
-        {
-
-            if (checkA == 1)
-            {
-                if (AdminEAdminTextBox_ID.Text == "Search by Admin's ID")
-                {
-                    MessageBox.Show("Please Enter Admin's ID");
-                    return;
-                }
-                DataTable dt = Controller.SelectAdminByID_SuperID(OpenedSession.ID, Convert.ToInt32(AdminEAdminTextBox_ID.Text));
-                if (dt != null)
-                {
-                    AdminEAdminTextBox_FirstName.Text = dt.Rows[0]["FName"].ToString();
-                    AdminEAdminTextBox_LastName.Text = dt.Rows[0]["LName"].ToString();
-                    AdminEAdminTextBox_Email.Text = dt.Rows[0]["Email"].ToString();
-                    AdminEAdminTextBox_Username.Text = dt.Rows[0]["Username"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("No Available Admin");
-                    return;
-                }
-
-            }
-            else if (checkA == 2)
-            {
-                DataTable dt = Controller.SelectAdminBySuper_ID(OpenedSession.ID);
-                if (dt != null)
-                {
-
-
-                    AdminEAdminTextBox_FirstName.Text = Controller.SelectAdminBySuper_ID(OpenedSession.ID).Rows[AdminEAdminComboBox_Username.SelectedIndex][0].ToString();
-                    AdminEAdminTextBox_LastName.Text = Controller.SelectAdminBySuper_ID(OpenedSession.ID).Rows[AdminEAdminComboBox_Username.SelectedIndex][1].ToString();
-                    AdminEAdminTextBox_Email.Text = Controller.SelectAdminBySuper_ID(OpenedSession.ID).Rows[AdminEAdminComboBox_Username.SelectedIndex][2].ToString();
-                    AdminEAdminTextBox_Username.Text = Controller.SelectAdminBySuper_ID(OpenedSession.ID).Rows[AdminEAdminComboBox_Username.SelectedIndex][3].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("No Available Admin");
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Choose a Searching Method");
-                return;
-            }
-            AdminEAdminTextBox_FirstName.StateCommon.Content.Color1 = Color.Black;
-            AdminEAdminTextBox_LastName.StateCommon.Content.Color1 = Color.Black;
-            AdminEAdminTextBox_Email.StateCommon.Content.Color1 = Color.Black;
-            AdminEAdminTextBox_Username.StateCommon.Content.Color1 = Color.Black;
-        }
-
-        private void AdminRadioButton_SearchID_Click(object sender, EventArgs e)
-        {
-            checkA = 1;
-        }
-
-        private void AdminRadioButton_SearchUsername_Click(object sender, EventArgs e)
-        {
-            checkA = 2;
-            DataTable dt = Controller.SelectAdminBySuper_ID(OpenedSession.ID);
-            if (dt != null)
-            {
-                AdminEAdminComboBox_Username.DataSource = Controller.SelectAdminUsernameByID(OpenedSession.ID);
-                AdminEAdminComboBox_Username.DisplayMember = "Username";
-                AdminEAdminComboBox_Username.ValueMember = "Admin_ID";
-                AdminEAdminTextBox_ID.Text = "Search by Admin's ID";
-                AdminEAdminTextBox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                AdminEAdminTextBox_ID.StateCommon.Content.Color1 = Color.Gray;
-            }
-            else
-            {
-                MessageBox.Show("No Available Admin");
-                return;
-            }
-        }
-
-        private void AddInstructorButton_Click(object sender, EventArgs e)
-        {
-            Tuple<int, string> result = Controller.InsertInstructor(InstructorTextbox_Username.Text, InstructorTextbox_FirstName.Text, InstructorTextbox_LastName.Text, InstructorTextbox_Email.Text, OpenedSession.ID, InstructorTextbox_Password.Text, Instructor_Title_ComboBox.Text);
-            if (result.Item1 == 0)
-            {
-                MessageBox.Show(result.Item2);
-            }
-            else
-            {
-                MessageBox.Show("Instructor Added Successfuly");
-            }
-        }
-
-        private void InstructorRadioButton_SearchID_Click(object sender, EventArgs e)
-        {
-            checkI = 1;
-        }
-
-        private void InstructorRadioButton_SearchUsername_Click(object sender, EventArgs e)
-        {
-            checkI = 2;
-            AdminEInstructorTextbox_ID.Text = "Search by Instructor's ID";
-            AdminEInstructorTextbox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-            AdminEInstructorTextbox_ID.StateCommon.Content.Color1 = Color.Gray;
-            DataTable dt = Controller.SelectAllInstructor_Username();
-            if (dt != null)
-            {
-                AdminEInstructorCombobox_Username.DataSource = Controller.SelectAllInstructor_Username();
-                AdminEInstructorCombobox_Username.DisplayMember = "Username";
-                AdminEInstructorCombobox_Username.ValueMember = "Instructor_ID";
-                AdminEInstructorTextbox_ID.Text = "Search by Instructor's ID";
-                AdminEInstructorTextbox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                AdminEInstructorTextbox_ID.StateCommon.Content.Color1 = Color.Gray;
-            }
-            else
-            {
-                MessageBox.Show("No Available Instructor");
-                return;
-            }
-        }
-
-        private void AdminEInstructorButton_Search_Click(object sender, EventArgs e)
-        {
-            if (checkI == 1)
-            {
-                if (AdminEInstructorTextbox_ID.Text == "Search by Instructor's ID")
-                {
-                    MessageBox.Show("Please Enter an Instructor's ID");
-                    return;
-                }
-                AdminEInstructorComboBox_Title.DataSource = new List<string> { "Prof.", "Dr.", "Eng.", "Mr.", "Mrs." };
-
-                DataTable dt = Controller.SelectInstructorByID(Convert.ToInt32(AdminEInstructorTextbox_ID.Text));
-                if (dt != null)
-                {
-                    AdminEInstructorTextbox_FirstName.Text = dt.Rows[0][0].ToString();
-                    AdminEInstructorTextbox_LastName.Text = dt.Rows[0][1].ToString();
-                    AdminEInstructorTextbox_Email.Text = dt.Rows[0][2].ToString();
-                    AdminEInstructorTextbox_Username.Text = dt.Rows[0][3].ToString();
-                    AdminEInstructorComboBox_Title.Text = dt.Rows[0][4].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("No Available Instructor");
-                    return;
-                }
-
-            }
-            else if (checkI == 2)
-            {
-                AdminEInstructorComboBox_Title.DataSource = new List<string> { "Prof.", "Dr.", "Eng.", "Mr.", "Mrs." };
-
-                DataTable dt = Controller.SelectAllInstructor_Username();
-                if (dt != null)
-                {
-                    AdminEInstructorTextbox_FirstName.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][2].ToString();
-                    AdminEInstructorTextbox_LastName.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][3].ToString();
-                    AdminEInstructorTextbox_Email.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][5].ToString();
-                    AdminEInstructorTextbox_Username.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][0].ToString();
-                    AdminEInstructorComboBox_Title.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][6].ToString();
-
-                }
-                else
-                {
-                    MessageBox.Show("No Available Instructor");
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Choose a Searching Method");
-                return;
-            }
-
-            AdminEInstructorTextbox_FirstName.StateCommon.Content.Color1 = Color.Black;
-            AdminEInstructorTextbox_LastName.StateCommon.Content.Color1 = Color.Black;
-            AdminEInstructorTextbox_Email.StateCommon.Content.Color1 = Color.Black;
-            AdminEInstructorTextbox_Username.StateCommon.Content.Color1 = Color.Black;
-        }
-
-        private void AdminEAdminTextBox_ID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
-        }
-
-        private void AdminEInstructorTextbox_ID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
-        }
-
-        private void AdminEStudentTextBox_ID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
-        }
-
-        private void AdminEInstructorButton_Edit_Click(object sender, EventArgs e)
-        {
-            if (checkI == 1)
-            {
-                if (AdminEInstructorTextbox_ID.Text == "Search by Instructor's ID")
-                {
-                    MessageBox.Show("Please Enter an Instructor's ID");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.UpdateInstructor(Convert.ToInt32(AdminEInstructorTextbox_ID.Text), AdminEInstructorTextbox_Username.Text, AdminEInstructorTextbox_FirstName.Text, AdminEInstructorTextbox_LastName.Text, AdminEInstructorTextbox_Email.Text, AdminEInstructorComboBox_Title.Text, null, OpenedSession.ID);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Instructor Updated Successfuly");
-                }
-            }
-            else if (checkI == 2)
-            {
-                if(AdminEInstructorTextbox_FirstName.Text == "Enter Instructor's First Name")
-                {
-                    MessageBox.Show("Please Enter an Instructor's First Name");
-                    return;
-                }
-                if (AdminEInstructorTextbox_LastName.Text == "Enter Instructor's Last Name")
-                {
-                    MessageBox.Show("Please Enter an Instructor's Last Name");
-                    return;
-                }
-                if (AdminEInstructorTextbox_Email.Text == "Enter Instructor's Email")
-                {
-                    MessageBox.Show("Please Enter an Instructor's Email");
-                    return;
-                }
-                if(AdminEInstructorTextbox_Username.Text == "Enter Instructor's Username")
-                {
-                    MessageBox.Show("Please Enter an Instructor's Username");
-                    return;
-                }
-                
-                Tuple<int, string> edit = Controller.UpdateInstructor(Convert.ToInt32(AdminEInstructorCombobox_Username.SelectedValue), AdminEInstructorTextbox_Username.Text, AdminEInstructorTextbox_FirstName.Text, AdminEInstructorTextbox_LastName.Text, AdminEInstructorTextbox_Email.Text, AdminEInstructorComboBox_Title.Text, null, OpenedSession.ID);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Instructor Updated Successfuly");
-                }
-            }
-        }
-
-        private void InstructorRadioButton_SearchUsername_CheckedChanged(object sender, EventArgs e)
-        {
-            AdminEInstructorCombobox_Username.Enabled = true;
-            AdminEInstructorTextbox_ID.Enabled = false;
-        }
-
-        private void InstructorRadioButton_SearchID_CheckedChanged(object sender, EventArgs e)
-        {
-            AdminEInstructorCombobox_Username.Enabled = false;
-            AdminEInstructorTextbox_ID.Enabled = true;
-
-        }
-
-        private void AdminRadioButton_SearchID_CheckedChanged(object sender, EventArgs e)
-        {
-            AdminEAdminTextBox_ID.Enabled = true;
-            AdminEAdminComboBox_Username.Enabled = false;
-        }
-
-        private void AdminRadioButton_SearchUsername_CheckedChanged(object sender, EventArgs e)
-        {
-            AdminEAdminTextBox_ID.Enabled = false;
-            AdminEAdminComboBox_Username.Enabled = true;
-        }
-
-        private void AdminEAdminButton_Activate_Click(object sender, EventArgs e)
-        {
-            if (checkA == 1)
-            {
-                if (AdminEAdminTextBox_ID.Text == "Search by Admin's ID")
-                {
-                    MessageBox.Show("Please Enter Admin's ID");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateAdmin(Convert.ToInt32(AdminEAdminTextBox_ID.Text), true);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Admin Activated Successfuly");
-                }
-            }
-            else if (checkA == 2)
-            {
-                if (AdminEAdminTextBox_FirstName.Text == "Enter Admin's First Name")
-                {
-                    MessageBox.Show("Please Enter Admin's First Name");
-                    return;
-                }
-                if (AdminEAdminTextBox_LastName.Text == "Enter Admin's Last Name")
-                {
-                    MessageBox.Show("Please Enter Admin's Last Name");
-                    return;
-                }
-                if (AdminEAdminTextBox_Email.Text == "Enter Admin's Email")
-                {
-                    MessageBox.Show("Please Enter Admin's Email");
-                    return;
-                }
-                if (AdminEAdminTextBox_Username.Text == "Enter Admin's Username")
-                {
-                    MessageBox.Show("Please Enter Admin's Username");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateAdmin(Convert.ToInt32(AdminEAdminComboBox_Username.SelectedValue), true);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Admin Activated Successfuly");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Choose a Searching Method");
-                return;
-            }
-        }
-
-        private void AdminEAdminButton_DeActivate_Click(object sender, EventArgs e)
-        {
-            if (checkA == 1)
-            {
-                if (AdminEAdminTextBox_ID.Text == "Search by Admin's ID")
-                {
-                    MessageBox.Show("Please Enter Admin's ID");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateAdmin(Convert.ToInt32(AdminEAdminTextBox_ID.Text), false);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Admin Deactivated Successfuly");
-                }
-            }
-            else if (checkA == 2)
-            {
-                if (AdminEAdminTextBox_FirstName.Text == "Enter Admin's First Name")
-                {
-                    MessageBox.Show("Please Enter Admin's First Name");
-                    return;
-                }
-                if (AdminEAdminTextBox_LastName.Text == "Enter Admin's Last Name")
-                {
-                    MessageBox.Show("Please Enter Admin's Last Name");
-                    return;
-                }
-                if (AdminEAdminTextBox_Email.Text == "Enter Admin's Email")
-                {
-                    MessageBox.Show("Please Enter Admin's Email");
-                    return;
-                }
-                if (AdminEAdminTextBox_Username.Text == "Enter Admin's Username")
-                {
-                    MessageBox.Show("Please Enter Admin's Username");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateAdmin(Convert.ToInt32(AdminEAdminComboBox_Username.SelectedValue), false);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Admin Deactivated Successfuly");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Choose a Searching Method");
-                return;
-            }
-
-        }
-
-        private void AdminEInstructorButton_Activate_Click(object sender, EventArgs e)
-        {
-            if (checkI == 1)
-            {
-                if (AdminEInstructorTextbox_ID.Text == "Search by Instructor's ID")
-                {
-                    MessageBox.Show("Please Enter Instructor's ID");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateInstructor(Convert.ToInt32(AdminEInstructorTextbox_ID.Text), true, OpenedSession.ID);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Instructor Activated Successfuly");
-                }
-            }
-            else if (checkI == 2)
-            {
-                if (AdminEInstructorTextbox_FirstName.Text == "Enter Instructor's First Name")
-                {
-                    MessageBox.Show("Please Enter Instructor's First Name");
-                    return;
-                }
-                if (AdminEInstructorTextbox_LastName.Text == "Enter Instructor's Last Name")
-                {
-                    MessageBox.Show("Please Enter Instructor's Last Name");
-                    return;
-                }
-                if (AdminEInstructorTextbox_Email.Text == "Enter Instructor's Email")
-                {
-                    MessageBox.Show("Please Enter Instructor's Email");
-                    return;
-                }
-                if (AdminEInstructorTextbox_Username.Text == "Enter Instructor's Username")
-                {
-                    MessageBox.Show("Please Enter Instructor's Username");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateInstructor(Convert.ToInt32(AdminEInstructorCombobox_Username.SelectedValue), true, OpenedSession.ID);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Instructor Activated Successfuly");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Choose a Searching Method");
-                return;
-            }
-        }
-
-        private void AdminEInstructorButton_DeActivate_Click(object sender, EventArgs e)
-        {
-            if (checkI == 1)
-            {
-                if (AdminEInstructorTextbox_ID.Text == "Search by Instructor's ID")
-                {
-                    MessageBox.Show("Please Enter Instructor's ID");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateInstructor(Convert.ToInt32(AdminEInstructorTextbox_ID.Text), false, OpenedSession.ID);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Instructor Deactivated Successfuly");
-                }
-            }
-            else if (checkI == 2)
-            {
-                if (AdminEInstructorTextbox_FirstName.Text == "Enter Instructor's First Name")
-                {
-                    MessageBox.Show("Please Enter Instructor's First Name");
-                    return;
-                }
-                if (AdminEInstructorTextbox_LastName.Text == "Enter Instructor's Last Name")
-                {
-                    MessageBox.Show("Please Enter Instructor's Last Name");
-                    return;
-                }
-                if (AdminEInstructorTextbox_Email.Text == "Enter Instructor's Email")
-                {
-                    MessageBox.Show("Please Enter Instructor's Email");
-                    return;
-                }
-                if (AdminEInstructorTextbox_Username.Text == "Enter Instructor's Username")
-                {
-                    MessageBox.Show("Please Enter Instructor's Username");
-                    return;
-                }
-                Tuple<int, string> edit = Controller.ActivateInstructor(Convert.ToInt32(AdminEInstructorCombobox_Username.SelectedValue), false, OpenedSession.ID);
-                if (edit.Item1 == 0)
-                {
-                    MessageBox.Show(edit.Item2);
-                }
-                else
-                {
-                    MessageBox.Show("Instructor Deactivated Successfuly");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Choose a Searching Method");
-                return;
+                MessageBox.Show("Admin added successfuly");
             }
         }
 
@@ -1553,5 +1031,16 @@ namespace Learning_DB
         {
 
         }
+
+        private void InstructorInterface_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void User_NameLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
+    
 }
