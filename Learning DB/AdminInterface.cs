@@ -1553,5 +1553,25 @@ namespace Learning_DB
         {
 
         }
+
+        private void AdminInterface_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminEInstructorButton_Edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminEInstructorTextbox_FirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminEAdminTextBox_FirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

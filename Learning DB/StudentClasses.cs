@@ -162,5 +162,10 @@ namespace Learning_DB
             l.Show();
             this.Hide();
         }
+
+        private void FNameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -71,11 +71,11 @@
     <Compile Include="AddAdmin.Designer.cs">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="InstructorInterface.cs">
+    <Compile Include="Inst1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InstructorInterface.Designer.cs">
-      <DependentUpon>InstructorInterface.cs</DependentUpon>
+    <Compile Include="Inst1.Designer.cs">
+      <DependentUpon>Inst1.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminInterface.cs">
       <SubType>Form</SubType>
@@ -92,6 +92,12 @@
     </Compile>
     <Compile Include="DBManager.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="InstructorInterface2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorInterface2.Designer.cs">
+      <DependentUpon>InstructorInterface2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,14 +138,17 @@
     <EmbeddedResource Include="AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructorInterface.resx">
-      <DependentUpon>InstructorInterface.cs</DependentUpon>
+    <EmbeddedResource Include="Inst1.resx">
+      <DependentUpon>Inst1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminInterface.resx">
       <DependentUpon>AdminInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Credintial.resx">
       <DependentUpon>Credintial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorInterface2.resx">
+      <DependentUpon>InstructorInterface2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>

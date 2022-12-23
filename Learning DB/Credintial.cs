@@ -95,6 +95,8 @@ namespace Learning_DB
                     return;
                 }
                 //instructor interface
+                Inst1 i = new Inst1(10004);
+                i.Show();
             }
             else if (utype== Usertype.student)
             {

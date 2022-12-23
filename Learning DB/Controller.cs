@@ -132,6 +132,17 @@ namespace DbHandler
             Parameters.Add("@password", password);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        public Tuple<int, string> InsertClassroom(string title, string accesscode, int added_by)
+        {
+
+            string StoredProcedureName = StoredProcedures.AddClassroom;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Title", title);
+            Parameters.Add("@Course_ID", accesscode);
+            Parameters.Add("@Created_By", added_by);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+
+        }
 
         public Tuple<int, string> InsertInstructor(string username, string Fname, string Lname, string Email, int added_by, string password, string title)
         {
@@ -204,6 +215,17 @@ namespace DbHandler
             string Query = "SELECT * FROM Instructor WHERE Instructor_ID = " + In_ID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectCoursesbyID(int CId)
+        {
+            string Query = "SELECT Course_Name FROM Course WHERE Course_ID = " + CId + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+
+        public DataTable SelectCourses(int CId)
+        {
+            string Query = "SELECT Course_Name FROM Course";
+            return dbMan.ExecuteReader(Query);
+        }
         public DataTable SelectClassesForStudent(int SID)
         {
             string Query = "select Classroom.Class_ID,Title from Classroom, Student,Student_Enrolled_In where Classroom.Class_ID = Student_Enrolled_In.Class_ID AND Student_ID = StudentID AND StudentId = " + SID + ";";
@@ -245,6 +267,13 @@ namespace DbHandler
             string Query = "SELECT Fname,Lname,Email,Username,Title FROM Instructor WHERE Instructor_ID = " + IID + ";";
             return dbMan.ExecuteReader(Query);
         }
+
+        public DataTable SelectClassroomForInstructorbyIn_ID(int CID)
+        {
+            string Query = "SELECT Title, Class_ID, Access_code FROM Classroom, Instructor WHERE Classroom.= " + CID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+
         public Tuple<DataTable, string> SelectInstructorsForClassByID(int CID)
         {
             string StoredProcedureName = StoredProcedures.SelectInstructorsForClassByID;
@@ -279,5 +308,19 @@ namespace DbHandler
             Parameters.Add("@year", year);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        public Tuple<int, string> UpdateInstructor(string Fname, String Lname, String Email, int year, string Username, int IID)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateStudent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Email", Email);
+            Parameters.Add("@username", Username);
+            Parameters.Add("@ID", IID);
+            Parameters.Add("@Title", year);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
     }   
 }

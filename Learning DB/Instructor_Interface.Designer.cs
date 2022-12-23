@@ -67,6 +67,7 @@
             this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.User_NameLabel = new System.Windows.Forms.Label();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.metroSetSetTabPage1 = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.Main.SuspendLayout();
             this.MyCalssesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InstructorInClassComboBox)).BeginInit();
@@ -86,12 +87,13 @@
             this.Main.Controls.Add(this.MyCalssesTab);
             this.Main.Controls.Add(this.EnrollmentTab);
             this.Main.Controls.Add(this.Profile);
+            this.Main.Controls.Add(this.metroSetSetTabPage1);
             this.Main.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Main.IsDerivedStyle = false;
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(1, 42);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 2;
+            this.Main.SelectedIndex = 3;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1205, 660);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1016,6 +1018,24 @@
             this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.Rounding = 15;
             this.kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
+            // metroSetSetTabPage1
+            // 
+            this.metroSetSetTabPage1.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage1.Font = null;
+            this.metroSetSetTabPage1.ImageIndex = 0;
+            this.metroSetSetTabPage1.ImageKey = null;
+            this.metroSetSetTabPage1.IsDerivedStyle = true;
+            this.metroSetSetTabPage1.Location = new System.Drawing.Point(4, 64);
+            this.metroSetSetTabPage1.Name = "metroSetSetTabPage1";
+            this.metroSetSetTabPage1.Size = new System.Drawing.Size(1197, 592);
+            this.metroSetSetTabPage1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetSetTabPage1.StyleManager = null;
+            this.metroSetSetTabPage1.TabIndex = 3;
+            this.metroSetSetTabPage1.Text = "metroSetSetTabPage1";
+            this.metroSetSetTabPage1.ThemeAuthor = "Narwin";
+            this.metroSetSetTabPage1.ThemeName = "MetroLite";
+            this.metroSetSetTabPage1.ToolTipText = null;
+            // 
             // Instructor_Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1084,5 +1104,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox IDBox;
         private ComponentFactory.Krypton.Toolkit.KryptonButton AdminEStudentButton_Edit;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
+        private MetroSet_UI.Child.MetroSetSetTabPage metroSetSetTabPage1;
     }
 }
