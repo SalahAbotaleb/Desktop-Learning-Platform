@@ -72,21 +72,21 @@ namespace DbHandler
 
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        public Tuple<int, string> InsertInstructor(string username, string Fname, string Lname, string Email, int added_by, string password, string Title)
-        {
+        //public Tuple<int, string> InsertInstructor(string username, string Fname, string Lname, string Email, int added_by, string password, string Title)
+        //{
 
-            string StoredProcedureName = StoredProcedures.InsertInstructor;
-            Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@username", username);
-            Parameters.Add("@Fname", Fname);
-            Parameters.Add("@Lname", Lname);
-            Parameters.Add("@Email", Email);
-            Parameters.Add("@added_by", added_by);
-            Parameters.Add("@password", password);
-            Parameters.Add("@Title", Title);
+        //    string StoredProcedureName = StoredProcedures.InsertInstructor;
+        //    Dictionary<string, object> Parameters = new Dictionary<string, object>();
+        //    Parameters.Add("@username", username);
+        //    Parameters.Add("@Fname", Fname);
+        //    Parameters.Add("@Lname", Lname);
+        //    Parameters.Add("@Email", Email);
+        //    Parameters.Add("@added_by", added_by);
+        //    Parameters.Add("@password", password);
+        //    Parameters.Add("@Title", Title);
 
-            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
-        }
+        //    return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        //}
         public Tuple<int, string> ActivateAdmin(int ID, bool Status)
         {
             string StoredProcedureName = StoredProcedures.ActivateAdmin;
@@ -210,11 +210,11 @@ namespace DbHandler
             string Query = "SELECT * FROM Student WHERE StudentID = " + SID + ";";
             return dbMan.ExecuteReader(Query);
         }
-        public DataTable SelectInstructorByID(int In_ID)
-        {
-            string Query = "SELECT * FROM Instructor WHERE Instructor_ID = " + In_ID + ";";
-            return dbMan.ExecuteReader(Query);
-        }
+        //public DataTable SelectInstructorByID(int In_ID)
+        //{
+        //    string Query = "SELECT * FROM Instructor WHERE Instructor_ID = " + In_ID + ";";
+        //    return dbMan.ExecuteReader(Query);
+        //}
         public DataTable SelectCoursesbyID(int CId)
         {
             string Query = "SELECT Course_Name FROM Course WHERE Course_ID = " + CId + ";";

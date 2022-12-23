@@ -1535,43 +1535,5 @@ namespace Learning_DB
                 return;
             }
         }
-
-        private void kryptonButton4_Click_1(object sender, EventArgs e)
-        {
-            Tuple<int, string> result = Controller.InsertInstructor(InstructorTextbox_Username.Text,InstructorTextbox_FirstName.Text,InstructorTextbox_LastName.Text, InstructorTextbox_Email.Text, OpenedSession.ID,InstructorTextbox_Password.Text, AdminEInstructorTextbox_Title.Text);
-            if (result.Item1 == 0)
-            {
-                MessageBox.Show(result.Item2);
-            }
-            else
-            {
-                MessageBox.Show("Instructor added successfuly");
-            }
-        }
-
-        private void InstructorTextbox_FirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminInterface_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminEInstructorButton_Edit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminEInstructorTextbox_FirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminEAdminTextBox_FirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
