@@ -34,6 +34,8 @@ namespace Learning_DB
         public static string UpdateCourse = "spUpdateCourse";
         
         public static string AddClassroom = "spCreateClassroom";
+        public static string InsertSumbission = "spSubmitAssignment";
 
+        public static string CheckExamAvailability = "spCheckExamAvailability";
     }
 }
