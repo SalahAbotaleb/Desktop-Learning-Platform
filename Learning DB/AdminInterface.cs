@@ -830,19 +830,19 @@ namespace Learning_DB
 
         private void AddAdminButton_Click(object sender, EventArgs e)
         {
-            if (AdminTextBox_FirstName.Text == "Enter Admin's First Name" || AdminEStudentComboBox_Username.Text == "")
+            if (AdminTextBox_FirstName.Text == "Enter Admin's First Name" || AdminTextBox_FirstName.Text == "")
             {
                 MessageBox.Show("Please Enter Admin's Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (AdminTextBox_LastName.Text == "Enter Admin's Last Name" || AdminEStudentTextBox_LastName.Text == "")
+            else if (AdminTextBox_LastName.Text == "Enter Admin's Last Name" || AdminTextBox_LastName.Text == "")
             {
                 MessageBox.Show("Please Enter Admin's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (AdminTextBox_Email.Text == "Enter Admin's Email" || AdminEStudentTextBox_Email.Text == "")
+            else if (AdminTextBox_Email.Text == "Enter Admin's Email" || AdminTextBox_Email.Text == "")
             {
                 MessageBox.Show("Please Enter Admin's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (AdminTextBox_Username.Text == "Enter Admin's Username" || AdminEStudentTextBox_Username.Text == "")
+            else if (AdminTextBox_Username.Text == "Enter Admin's Username" || AdminTextBox_Username.Text == "")
             {
                 MessageBox.Show("Please Enter Admin's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -1004,23 +1004,23 @@ namespace Learning_DB
 
         private void AddInstructorButton_Click(object sender, EventArgs e)
         {
-            if (InstructorTextbox_FirstName.Text == "Enter Instructor's First Name" || AdminEStudentComboBox_Username.Text == "")
+            if (InstructorTextbox_FirstName.Text == "Enter Instructor's First Name" || InstructorTextbox_FirstName.Text == "")
             {
                 MessageBox.Show("Please Enter Instructor's First Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (InstructorTextbox_LastName.Text == "Enter Instructor's Last Name" || AdminEStudentTextBox_LastName.Text == "")
+            else if (InstructorTextbox_LastName.Text == "Enter Instructor's Last Name" || InstructorTextbox_LastName.Text == "")
             {
                 MessageBox.Show("Please Enter Instructor's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (InstructorTextbox_Email.Text == "Enter Instructor's Email" || AdminEStudentTextBox_Email.Text == "")
+            else if (InstructorTextbox_Email.Text == "Enter Instructor's Email" || InstructorTextbox_Email.Text == "")
             {
                 MessageBox.Show("Please Enter Instructor's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (InstructorTextbox_Username.Text == "Enter Instructor's Username" || AdminEStudentTextBox_Username.Text == "")
+            else if (InstructorTextbox_Username.Text == "Enter Instructor's Username" || InstructorTextbox_Username.Text == "")
             {
                 MessageBox.Show("Please Enter Instructor's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (InstructorTextbox_Password.Text == "Enter Instructor's Password" || AdminTextBox_Password.Text == "")
+            else if (InstructorTextbox_Password.Text == "Enter Instructor's Password" || InstructorTextbox_Password.Text == "")
             {
                 MessageBox.Show("Please Enter Instructor's Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
