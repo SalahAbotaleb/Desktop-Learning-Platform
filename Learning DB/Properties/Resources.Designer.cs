@@ -73,6 +73,16 @@ namespace Learning_DB.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addcourse_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("addcourse-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addinstructor {
             get {
                 object obj = ResourceManager.GetObject("addinstructor", resourceCulture);
@@ -86,6 +96,16 @@ namespace Learning_DB.Properties {
         internal static System.Drawing.Bitmap addinstructor_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("addinstructor-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addstuddent2 {
+            get {
+                object obj = ResourceManager.GetObject("addstuddent2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
