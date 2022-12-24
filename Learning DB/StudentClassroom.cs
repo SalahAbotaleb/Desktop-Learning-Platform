@@ -136,9 +136,9 @@ namespace Learning_DB
                 Time_Remaining.Elapsed += OnTimedEvent;
                 Time_Remaining.Start();
             }
-            else
+            //else
             {
-                MessageBox.Show("This Exam isn't running now, Can't enter exam");
+               // MessageBox.Show("This Exam isn't running now, Can't enter exam");
             }
         }
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)

@@ -865,13 +865,13 @@
             // 
             // metroSetProgressBar1
             // 
-            this.metroSetProgressBar1.BackgroundColor = System.Drawing.Color.Silver;
+            this.metroSetProgressBar1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetProgressBar1.BorderColor = System.Drawing.Color.Black;
-            this.metroSetProgressBar1.DisabledBackColor = System.Drawing.Color.Black;
-            this.metroSetProgressBar1.DisabledBorderColor = System.Drawing.Color.Black;
+            this.metroSetProgressBar1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetProgressBar1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetProgressBar1.DisabledProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetProgressBar1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroSetProgressBar1.IsDerivedStyle = true;
+            this.metroSetProgressBar1.IsDerivedStyle = false;
             this.metroSetProgressBar1.Location = new System.Drawing.Point(700, 18);
             this.metroSetProgressBar1.Maximum = 100;
             this.metroSetProgressBar1.Minimum = 0;
