@@ -39,7 +39,7 @@ namespace DbHandler
 
         internal DataTable SelectExamsForClass(int classID)
         {
-            String sql = @"Select * from Exam where Class_ID" + classID;
+            String sql = @"Select *,dbo.fnSecondsFromTime(Duration) as DurationCount from Exam where Class_ID=" + classID;
             return dbMan.ExecuteReader(sql);
         }
 
