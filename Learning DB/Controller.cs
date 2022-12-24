@@ -8,6 +8,7 @@ using Learning_DB;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DbHandler
 {
@@ -19,7 +20,7 @@ namespace DbHandler
             dbMan = new DBManager();
         }
 
-      
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
@@ -102,7 +103,7 @@ namespace DbHandler
         //    return dbMan.ExecuteReader(StoredProcedureName, null);
 
         //}
-        public Tuple<int, string> UpdateInstructor(int ID, string username, string Fname, string Lname, string Email, string Title, string Password , int Done_By)
+        public Tuple<int, string> UpdateInstructor(int ID, string username, string Fname, string Lname, string Email, string Title, string Password, int Done_By)
         {
 
             string StoredProcedureName = StoredProcedures.UpdateInstructor;
@@ -142,7 +143,41 @@ namespace DbHandler
         //    Parameters.Add("@Title", Title);
 
         //    return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
-        //}
+        //
+        public Tuple<DataTable, string> ManageDoneOnStudent(int ID)
+        {
+            string StoredProcedureName = StoredProcedures.ManageDoneOnStudent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<DataTable, string> ManageDoneOnInstructor(int ID)
+        {
+            string StoredProcedureName = StoredProcedures.ManageDoneOnInstructor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<DataTable,string> ManageByAdmin(int ID)
+        {
+            string StoredProcedureName = StoredProcedures.ManageByAdmin;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<int, string> ActivateStudent(int ID, bool Status, int Done_By)
+        {
+            string StoredProcedureName = StoredProcedures.ActivateStudent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+            Parameters.Add("@Status", Status);
+            Parameters.Add("@Done_By", Done_By);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
         public Tuple<int, string> ActivateAdmin(int ID, bool Status)
         {
             string StoredProcedureName = StoredProcedures.ActivateAdmin;
@@ -162,10 +197,21 @@ namespace DbHandler
 
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-
-        public Tuple <int,string> UpdateAdmin(int ID, string username, string Fname, string Lname, string Email)
+        public Tuple<int, string> UpdateCourse(int ID, string Course_Name, string Description, int Done_By)
         {
-                
+            string StoredProcedureName = StoredProcedures.UpdateCourse;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+            Parameters.Add("@Course_Name", Course_Name);
+            Parameters.Add("@Description", Description);
+            Parameters.Add("@Done_By", Done_By);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public Tuple<int, string> UpdateAdmin(int ID, string username, string Fname, string Lname, string Email)
+        {
+
             string StoredProcedureName = StoredProcedures.UpdateAdmin;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@ID", ID);
@@ -175,7 +221,18 @@ namespace DbHandler
             Parameters.Add("@Email", Email);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        public Tuple<int,string> InsertAdmin(string username ,string Fname,string Lname,string Email ,int added_by ,string password)
+        public Tuple<int, string> InsertCourse(string @Course_Name, string @Course_Description, int @Added_By)
+        {
+
+            string StoredProcedureName = StoredProcedures.InsertCourse;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Course_Name", @Course_Name);
+            Parameters.Add("@Course_Description", @Course_Description);
+            Parameters.Add("@Added_By", @Added_By);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public Tuple<int, string> InsertAdmin(string username, string Fname, string Lname, string Email, int added_by, string password)
         {
 
             string StoredProcedureName = StoredProcedures.InsertAdmin;
@@ -199,7 +256,20 @@ namespace DbHandler
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 
         }
-
+        public Tuple<int, string> InsertStudent(string username, string Fname, string Lname, string Email, int added_by, string password, string Birth_Date, int Year)
+        {
+            string StoredProcedureName = StoredProcedures.InsertStudent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Email", Email);
+            Parameters.Add("@added_by", added_by);
+            Parameters.Add("@password", password);
+            Parameters.Add("@Birth_Date", Birth_Date);
+            Parameters.Add("@Year", Year);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
         public Tuple<int, string> InsertInstructor(string username, string Fname, string Lname, string Email, int added_by, string password, string title)
         {
 
@@ -215,7 +285,7 @@ namespace DbHandler
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        public Tuple<DataTable,string> LoginStudent(string username, string password)
+        public Tuple<DataTable, string> LoginStudent(string username, string password)
         {
             string StoredProcedureName = StoredProcedures.Loginstudent;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -273,7 +343,7 @@ namespace DbHandler
         //}
         public DataTable SelectCoursesbyID(int CId)
         {
-            string Query = "SELECT Course_Name FROM Course WHERE Course_ID = " + CId + ";";
+            string Query = "SELECT * FROM Course WHERE Course_ID = " + CId + ";";
             return dbMan.ExecuteReader(Query);
         }
 
@@ -300,12 +370,18 @@ namespace DbHandler
             string Query = "SELECT * FROM Classroom WHERE Class_ID = " + CID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectAllAdmin()
+        {
+            string Query = "SELECT * FROM Admin ";
+            return dbMan.ExecuteReader(Query);
+        }
+        
         public DataTable SelectAdminByID(int AID)
         {
             string Query = "SELECT FName + \' \' + LName, Fname,Lname,Email,Username FROM Admin WHERE Admin_ID = " + AID + ";";
             return dbMan.ExecuteReader(Query);
         }
-        public DataTable SelectAdminByID_SuperID(int SSID ,int AID)
+        public DataTable SelectAdminByID_SuperID(int SSID, int AID)
         {
             string Query = "SELECT Fname,Lname,Email,Username FROM Admin WHERE Super_ID = " + SSID + " AND Admin_ID = " + AID + ";";
             return dbMan.ExecuteReader(Query);
@@ -324,6 +400,21 @@ namespace DbHandler
         public DataTable SelectAllInstructor_Username()
         {
             string Query = "SELECT * FROM Instructor";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectCourseByID(int CID)
+        {
+            string Query = "SELECT * FROM Course WHERE Course_ID = " + CID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectAllCourse_Name()
+        {
+            string Query = "SELECT * FROM Course";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectAllStudent_Username()
+        {
+            string Query = "SELECT * FROM Student";
             return dbMan.ExecuteReader(Query);
         }
         public DataTable SelectInstructorByID(int IID)
@@ -360,7 +451,7 @@ namespace DbHandler
             Parameters.Add("@ID", CID);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-        public Tuple<int, string> UpdateStudent(string Fname, String Lname, String Email,int year,string Username, int SID )
+        public Tuple<int, string> UpdateStudent(string Fname, String Lname, String Email, int year, string Username, int SID)
         {
             string StoredProcedureName = StoredProcedures.UpdateStudent;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -391,5 +482,5 @@ namespace DbHandler
             return dbMan.ExecuteReader(Query);
         }
 
-    }   
+    }
 }
