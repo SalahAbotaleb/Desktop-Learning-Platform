@@ -36,10 +36,37 @@ namespace DbHandler
 
             return dbMan.ExecuteNonQuery(StoredProcedures.InsertSumbission, Parameters);
         }
+        internal int SubmitAnswerForQuestion(int Question_ID,int Exam_ID,int Student_ID,bool isCorrect)
+        {
+            string sql= @"insert into Exams_Submission_Answers(Question_ID, Exam_ID, Student_ID, Is_Correct)
+                         values("+Question_ID+", "+Exam_ID+","+Student_ID+" ,"+isCorrect+")";
+            return dbMan.ExecuteNonQuery(sql);
+        }
+        internal int SubmitExam( int Student_ID, int Exam_ID,int Grade)
+        {
+            string sql = @"insert into Exam_Taken(student_id, exam_id, grade)
+                         values(" + Student_ID + ", " + Exam_ID + "," + Grade + ")";
+            return dbMan.ExecuteNonQuery(sql);
+        }
 
+        internal DataTable SelectQuestionsForExam(int Exam_ID)
+        {
+            String sql = @"select * from Exam_Questions where Exam_ID=" + Exam_ID;
+            return dbMan.ExecuteReader(sql);
+        }
         internal DataTable SelectExamsForClass(int classID)
         {
             String sql = @"Select *,dbo.fnSecondsFromTime(Duration) as DurationCount from Exam where Class_ID=" + classID;
+            return dbMan.ExecuteReader(sql);
+        }
+        internal DataTable GetQuestionOptions(int Question_ID)
+        {
+            String sql = @"select * from Question_Options where Question_ID=" + Question_ID+ " order by newid()";
+            return dbMan.ExecuteReader(sql);
+        }
+        internal DataTable GetQuestion(int Question_ID)
+        {
+            String sql = @"select * from Question where Question_ID="+Question_ID;
             return dbMan.ExecuteReader(sql);
         }
 

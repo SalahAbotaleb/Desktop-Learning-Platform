@@ -78,6 +78,7 @@
     <Compile Include="Classroom.Designer.cs">
       <DependentUpon>Classroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exam.cs" />
     <Compile Include="Inst1.cs">
       <SubType>Form</SubType>
     </Compile>
