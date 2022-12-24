@@ -17,16 +17,18 @@ namespace Learning_DB
 {
     public partial class Inst1 : KryptonForm
     {
-        Controller cont=new Controller();
+        Controller cont = new Controller();
         int InstructorID;
+        int GoToClassroomID;
         DataTable d1;
+        DataTable d2;
         public Inst1(int IID)
         {
             cont = new Controller();
             InstructorID = IID;
             InitializeComponent();
             User_Name.Text = "Instructor";
-            
+
             DataTable InstructorData = cont.SelectInstructorByID(IID);
             User_NameLabel.Text = InstructorData.Rows[0]["Fname"].ToString() + " " + InstructorData.Rows[0]["LName"].ToString();
             FNameBox.Text = InstructorData.Rows[0]["FName"].ToString();
@@ -35,20 +37,20 @@ namespace Learning_DB
             EmailBox.Text = InstructorData.Rows[0]["Email"].ToString();
             titletextbox.Text = InstructorData.Rows[0]["Title"].ToString();
             //DataTable
-            d1= new DataTable();
-                d1 = cont.SelectClassroomForInstructorbyIn_ID(InstructorID);
-            //dataGridView1.DataSource = d1;
+            d1 = new DataTable();
+            d1 = cont.SelectCourses();
 
-            DataTable d2 = new DataTable();
-                d2=cont.SelectClassrooms();
-            coursescombobox.ValueMember = "Course_Name";
-            coursescombobox.DataSource=d2;
-            //coursescombobox.DisplayMember = "Course_Name";
-            coursescombobox.ValueMember = "Course_Name";
-            //Classroom.Hide();
-            classroomcombobox.DataSource = d2;//cont.SelectClassroomForInstructorbyIn_ID(IID);        
-            
-            accesscodetextbox.Text = d2.Rows[0]["Access_code"].ToString();
+            d2 = new DataTable();
+            d2 = cont.SelectClassrooms();
+
+            coursescombobox.DataSource = d1;
+            coursescombobox.DisplayMember = "Course_Name";
+            //coursescombobox.ValueMember = "Course_ID";
+
+            classroomcombobox.DataSource = d2;
+            classroomcombobox.DisplayMember = "Title";
+            classroomcombobox.ValueMember = "Class_ID";
+            accesscodetextbox_TextChanged(null, new EventArgs());
         }
 
 
@@ -114,7 +116,7 @@ namespace Learning_DB
 
         private void AdminEStudentButton_Edit_Click(object sender, EventArgs e)
         {
-          
+
 
         }
 
@@ -130,42 +132,49 @@ namespace Learning_DB
 
         private void AdminEInstructorButton_Edit_Click_1(object sender, EventArgs e)
         {
-            if (kryptonTextBox5.Text == "")
+            if (fnametextbox.Text == "")
             {
                 MessageBox.Show("Enter First Name");
                 return;
 
             }
-            if (kryptonTextBox4.Text == "")
+            if (lnametextbox.Text == "")
             {
                 MessageBox.Show("Enter Last Name");
                 return;
             }
-            if (kryptonTextBox3.Text == "")
+            if (emailtextbox.Text == "")
             {
                 MessageBox.Show("Enter Email");
                 return;
             }
-            if (kryptonTextBox2.Text == "")
+            if (usernametextbox.Text == "")
             {
                 MessageBox.Show("Enter Username");
                 return;
             }
-            if (kryptonTextBox1.Text == "")
+            if (Title_textbox.Text == "")
             {
                 MessageBox.Show("Enter Title");
                 return;
 
             }
 
-            Tuple<int, string> UpSt = cont.UpdateInstructor(kryptonTextBox5.Text, kryptonTextBox4.Text, kryptonTextBox3.Text, Convert.ToInt32(kryptonTextBox2.Text), kryptonTextBox1.Text, InstructorID);
+            Tuple<int, string> UpSt = cont.UpdateInstructor(fnametextbox.Text, lnametextbox.Text, emailtextbox.Text, usernametextbox.Text, OpenedSession.ID, passwordtextbox.Text, Title_textbox.Text);
             if (UpSt.Item1 == 0)
             {
-                MessageBox.Show(UpSt.Item2);
+                MessageBox.Show("Not Updated!");
             }
             else
             {
-                MessageBox.Show("Instructor  Updated succefully");
+                MessageBox.Show("Instructor Updated succefully");
+
+                fnametextbox.Text = "";
+                lnametextbox.Text = "";
+                emailtextbox.Text = "";
+                passwordtextbox.Text = "";
+                Title_textbox.Text = "";
+                usernametextbox.Text = "";
             }
         }
 
@@ -181,7 +190,12 @@ namespace Learning_DB
 
         private void addclassroombutton_Click(object sender, EventArgs e)
         {
-            Tuple<int, string> result = cont.InsertClassroom(kryptonTextBox15.Text, kryptonTextBox14.Text,Convert.ToInt16(coursescombobox.Text));
+            if (kryptonTextBox14.Text == "" || kryptonTextBox15.Text == "")
+            {
+                MessageBox.Show("Fill all fields.");
+                return;
+            }
+            Tuple<int, string> result = cont.InsertClassroom(kryptonTextBox15.Text, Int16.Parse(kryptonTextBox6.Text), InstructorID);
             if (result.Item1 == 0)
             {
                 MessageBox.Show(result.Item2);
@@ -217,6 +231,8 @@ namespace Learning_DB
         private void coursescombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            kryptonTextBox6.Text = d1.Rows[coursescombobox.SelectedIndex]["Course_ID"].ToString();
+
         }
 
         private void User_NameLabel_Click(object sender, EventArgs e)
@@ -226,19 +242,22 @@ namespace Learning_DB
 
         private void GoToClassroom_Click(object sender, EventArgs e)
         {
-            Classroom c = new Classroom(7);
+
+            Classroom c = new Classroom(GoToClassroomID);
             c.Show();
 
         }
 
         private void classroomcombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            accesscodetextbox_TextChanged(null, new EventArgs());
         }
 
         private void accesscodetextbox_TextChanged(object sender, EventArgs e)
         {
-            accesscodetextbox.Text = d1.Rows[0]["Access_Code"].ToString();
+            accesscodetextbox.Text = d2.Rows[classroomcombobox.SelectedIndex]["Access_code"].ToString();
+            string storeID = d2.Rows[classroomcombobox.SelectedIndex]["Class_ID"].ToString();
+            GoToClassroomID = Int32.Parse(storeID);
         }
     }
 }

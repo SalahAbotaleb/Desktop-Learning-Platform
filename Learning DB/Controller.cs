@@ -245,13 +245,13 @@ namespace DbHandler
             Parameters.Add("@password", password);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        public Tuple<int, string> InsertClassroom(string title, string accesscode, int added_by)
+        public Tuple<int, string> InsertClassroom(string title,int COURSEID, int added_by)
         {
-
+            
             string StoredProcedureName = StoredProcedures.AddClassroom;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Title", title);
-            Parameters.Add("@Course_ID", accesscode);
+            Parameters.Add("@Course_ID", COURSEID);
             Parameters.Add("@Created_By", added_by);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 
@@ -347,11 +347,16 @@ namespace DbHandler
             return dbMan.ExecuteReader(Query);
         }
 
-        public DataTable SelectCourses(int CId)
+        public DataTable SelectCourses()
         {
-            string Query = "SELECT Course_Name FROM Course";
+            string Query = "SELECT * FROM Course";
             return dbMan.ExecuteReader(Query);
         }
+        //public DataTable SelectCourses(int )
+        //{
+        //    string Query = "SELECT Course_Name FROM Course";
+        //    return dbMan.ExecuteReader(Query);
+        //}
 
         public DataTable SelectClassrooms()
         {
@@ -494,16 +499,17 @@ namespace DbHandler
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        public Tuple<int, string> UpdateInstructor(string Fname, String Lname, String Email, int year, string Username, int IID)
+        public Tuple<int, string> UpdateInstructor(string Fname, String Lname, String Email, string Username, int IID, string password, string title)
         {
-            string StoredProcedureName = StoredProcedures.UpdateStudent;
+            string StoredProcedureName = StoredProcedures.UpdateInstructor;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Fname", Fname);
             Parameters.Add("@Lname", Lname);
             Parameters.Add("@Email", Email);
             Parameters.Add("@username", Username);
             Parameters.Add("@ID", IID);
-            Parameters.Add("@Title", year);
+            Parameters.Add("@Title", title);
+            Parameters.Add("@Password", password);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         public DataTable SelectAssignmentForClass(int CID)
@@ -541,6 +547,77 @@ namespace DbHandler
                             ORDER BY Date DESC;";
             return dbMan.ExecuteReader(Query);
         }
+
+        //added by Mohamed Gamal
+        // functions for AddQuestiontoExam and AddQuestion
+        public DataTable SelectQuestions()
+        {
+            string Query = "SELECT * FROM Question ;";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectTopics()
+        {
+            string Query = "SELECT * FROM Course_Topics ;";
+            return dbMan.ExecuteReader(Query);
+        }
+
+        public DataTable SelectQuestionsbyTopic(string topicName)
+        {
+            string Query = "SELECT * FROM Question WHERE Topic='" + topicName + "';";
+            return dbMan.ExecuteReader(Query);
+        }
+
+        public DataTable SelectTopicName(string topicName)
+        {
+
+            //it should be selecting only topics related to the course that's related to
+            //my classroom
+
+            string Query = "SELECT * FROM Question WHERE Topic='" + topicName + "';";
+            return dbMan.ExecuteReader(Query);
+        }
+
+
+        public Tuple<int, string> AddQuestion(string topic, int classroomID, int points, int difficulty, string description)
+        {
+            string StoredProcedureName = StoredProcedures.AddQuestion;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Topic", topic);
+            Parameters.Add("@Classroom_ID", classroomID);
+            Parameters.Add("@Points", points);
+            Parameters.Add("@Difficulty_level", difficulty);
+            Parameters.Add("@Description", description);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+
+        public Tuple<int, string> AddQuestionToExam(int examid, int questionid)
+        {
+            string StoredProcedureName = StoredProcedures.AddQuestionToExam;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Exam_ID", examid);
+            Parameters.Add("@Question_ID", questionid);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public DataTable DeleteQuestionbyID(int Q_ID)
+        {
+            string Query = "DELETE FROM QUESTION WHERE QUESTION.Question_ID=" + Q_ID + ";";
+            return dbMan.ExecuteReader(Query);
+        }
+
+        public Tuple<int, string> AddNewMaterial(int Classroom_id, string link, string title)
+        {
+            string StoredProcedureName = StoredProcedures.AddNewMaterial;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Class_ID",Classroom_id);
+            Parameters.Add("@Link",link);
+            Parameters.Add("@Title",title);
+          
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+       
 
         internal Tuple<int, string> AddComment(string CID, string TS, int iD, string Comm)
         {
