@@ -18,14 +18,26 @@ namespace Learning_DB
         int ClassID;
         int StudentID;
         Controller cont = new Controller();
-        int counter = 0;
+        int Assignment_Page_Counter = 0;
+        int Exam_Page_Count = 0;
+        DataTable Assignment_dt;
+        DataTable Exam_dt;
         public StudentClassroom(int classID,int StudentID)
         {
             InitializeComponent();
             this.ClassID = classID;
             this.StudentID = StudentID;
+            Assignment_dt = cont.SelectAssignmentForClass(ClassID);
+            Exam_dt = cont.SelectExamsForClass(ClassID);
+            ComboBoxSelectExam.DisplayMember = "Title";
+            ComboBoxSelectExam.ValueMember = "Exam_ID";
+            UpdateAssignmentPage();
+        }
 
-            updateall();
+        private void UpdateExamPage()
+        {
+            
+            
         }
 
         private void StudentClassroom_Load(object sender, EventArgs e)
@@ -35,30 +47,69 @@ namespace Learning_DB
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            counter++;
-            updateall();
+            if (Assignment_Page_Counter == Assignment_dt.Rows.Count-1)
+                return;
+            Assignment_Page_Counter++;
+            UpdateAssignmentPage();
         }
-        public void updateall()
+        public void UpdateAssignmentPage()
         {
-            DataTable dt = cont.SelectAssignmentForClass(ClassID);
-            AssignmentTitlelabel.Text = dt.Rows[counter]["Title"].ToString();
-            DescriptionBox.Text = dt.Rows[counter]["Description"].ToString();
-            DeadlineDateLabel.Text = dt.Rows[counter]["Deadline"].ToString();
-            HisGradeLabel.Text = "/" + dt.Rows[counter]["Total_Grade"].ToString();
+           
+            AssignmentTitlelabel.Text = Assignment_dt.Rows[Assignment_Page_Counter]["Title"].ToString();
+            DescriptionBox.Text = Assignment_dt.Rows[Assignment_Page_Counter]["Description"].ToString();
+            DeadlineDateLabel.Text = Assignment_dt.Rows[Assignment_Page_Counter]["Deadline"].ToString();
+            HisGradeLabel.Text = "/" + Assignment_dt.Rows[Assignment_Page_Counter]["Total_Grade"].ToString();
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            counter--;
-            updateall();
+            if (Assignment_Page_Counter == 0)
+                return;
+            Assignment_Page_Counter--;
+            UpdateAssignmentPage();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             if(SubmissionLinkBox.Text != null)
             {
-                cont.InsertSubmission(StudentID, ClassID, SubmissionLinkBox.Text);
+                Tuple<int, string> tp = cont.InsertSubmission(StudentID, Convert.ToInt32(Assignment_dt.Rows[Assignment_Page_Counter]["Assignment_ID"]), SubmissionLinkBox.Text);
+                if (tp.Item1==1)
+                    MessageBox.Show("Submission Successfuly");
+                else
+                    
+                    MessageBox.Show(tp.Item2);
             }
+        }
+
+        private void ButtonEnterExam_Click(object sender, EventArgs e)
+        {
+            if (Exam_dt != null&&cont.CheckExamAvailability(Convert.ToInt32(ComboBoxSelectExam.SelectedValue)) =="Enter")
+            {
+                ComboBoxSelectExam.Hide();
+                TextboxExamDate.Hide();
+                TextBoxExamID.Hide();
+                TextBoxExmDuration.Hide();
+                label3.Hide();
+                label7.Hide();
+                label4.Hide();
+                label6.Hide();
+            }
+            else
+            {
+                MessageBox.Show("This Exam isn't running now, Can't enter exam");
+            }
+        }
+
+        private void ComboBoxSelectExam_DropDownClosed(object sender, EventArgs e)
+        {
+            if (Exam_dt == null)
+                return;
+            ComboBoxSelectExam.DataSource = Exam_dt;
+            ComboBoxSelectExam.DisplayMember = "Title";
+            TextboxExamDate.Text = Exam_dt.Rows[Exam_Page_Count]["Date"].ToString();
+            TextBoxExmDuration.Text = Exam_dt.Rows[Exam_Page_Count]["Duration"].ToString();
+            TextBoxExamID.Text = Exam_dt.Rows[Exam_Page_Count]["Exam_ID"].ToString();
         }
     }
 }

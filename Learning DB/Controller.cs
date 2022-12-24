@@ -24,6 +24,25 @@ namespace DbHandler
         {
             dbMan.CloseConnection();
         }
+
+        internal Tuple<int,String> InsertSubmission(int studentID, int classID, string text)
+        {
+            //@Submission_Link varchar(200),@Student_ID int,@Assignment_ID int
+            string StoredProcedureName = StoredProcedures.UpdateInstructor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Assignment_ID", classID);
+            Parameters.Add("@Student_ID", studentID);
+            Parameters.Add("@Submission_Link", text);
+
+            return dbMan.ExecuteNonQuery(StoredProcedures.InsertSumbission, Parameters);
+        }
+
+        internal DataTable SelectExamsForClass(int classID)
+        {
+            String sql = @"Select * from Exam where Class_ID" + classID;
+            return dbMan.ExecuteReader(sql);
+        }
+
         //public DataTable SelectAllEmp()
         //{
 
@@ -72,6 +91,16 @@ namespace DbHandler
 
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        internal String CheckExamAvailability(int Exam_ID)
+        {
+            string StoredProcedureName = StoredProcedures.CheckExamAvailability;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Exam_ID", Exam_ID);
+
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters).Item2;
+        }
+
         //public Tuple<int, string> InsertInstructor(string username, string Fname, string Lname, string Email, int added_by, string password, string Title)
         //{
 
