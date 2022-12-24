@@ -66,6 +66,7 @@ namespace Learning_DB
         int Exam_ID;
         int CurrQuestion;
         int marks;
+        int count;
         Controller Controller;
         List<Question> questions= new List<Question>();
         List<Tuple<int, int>> ls= new List<Tuple<int, int>>();
@@ -83,6 +84,7 @@ namespace Learning_DB
                 
                 questions.Add(new Question(Convert.ToInt32(question["Question_ID"]), Student_ID, Controller, Exam_ID));
             }
+            count = questions.Count;
         }
         public void CurrentQuestionIncr()
         {
@@ -128,6 +130,10 @@ namespace Learning_DB
         {
             return ls;
             
+        }
+        public int QuestionsCount()
+        {
+            return count;
         }
 
 

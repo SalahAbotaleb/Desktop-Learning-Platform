@@ -17,21 +17,22 @@ namespace Learning_DB
     {
         int ClassID;
         int StudentID;
-        Controller cont = new Controller();
+        Controller controller = new Controller();
         int Assignment_Page_Counter = 0;
         int Exam_Page_Count = 0;
         DataTable Assignment_dt;
         DataTable Exam_dt;
         int h, m, s;
         int duration;
+        Exam exam;
         System.Timers.Timer Time_Remaining;
         public StudentClassroom(int classID,int StudentID)
         {
             InitializeComponent();
             this.ClassID = classID;
             this.StudentID = StudentID;
-            Assignment_dt = cont.SelectAssignmentForClass(ClassID);
-            Exam_dt = cont.SelectExamsForClass(ClassID);
+            Assignment_dt = controller.SelectAssignmentForClass(ClassID);
+            Exam_dt = controller.SelectExamsForClass(ClassID);
             ComboBoxSelectExam.DisplayMember = "Title";
             ComboBoxSelectExam.ValueMember = "Exam_ID";
             ComboBoxSelectExam.DataSource = Exam_dt;
@@ -55,8 +56,8 @@ namespace Learning_DB
 
         private void UpdateExamPage()
         {
-            
-            
+            //kryptonLabelQuestionNumber.Values = "Exam";
+
         }
 
         private void StudentClassroom_Load(object sender, EventArgs e)
@@ -73,7 +74,9 @@ namespace Learning_DB
         }
         public void UpdateAssignmentPage()
         {
-           
+
+            if (Assignment_dt == null)
+                return;
             AssignmentTitlelabel.Text = Assignment_dt.Rows[Assignment_Page_Counter]["Title"].ToString();
             DescriptionBox.Text = Assignment_dt.Rows[Assignment_Page_Counter]["Description"].ToString();
             DeadlineDateLabel.Text = Assignment_dt.Rows[Assignment_Page_Counter]["Deadline"].ToString();
@@ -92,7 +95,7 @@ namespace Learning_DB
         {
             if(SubmissionLinkBox.Text != null)
             {
-                Tuple<int, string> tp = cont.InsertSubmission(StudentID, Convert.ToInt32(Assignment_dt.Rows[Assignment_Page_Counter]["Assignment_ID"]), SubmissionLinkBox.Text);
+                Tuple<int, string> tp = controller.InsertSubmission(StudentID, Convert.ToInt32(Assignment_dt.Rows[Assignment_Page_Counter]["Assignment_ID"]), SubmissionLinkBox.Text);
                 if (tp.Item1==1)
                     MessageBox.Show("Submission Successfuly");
                 else
@@ -103,8 +106,9 @@ namespace Learning_DB
 
         private void ButtonEnterExam_Click(object sender, EventArgs e)
         {
-            //if (Exam_dt != null&&cont.CheckExamAvailability(Convert.ToInt32(ComboBoxSelectExam.SelectedValue)) =="Enter")
+            if (true)
             {
+                //Exam_dt != null&&cont.CheckExamAvailability(Convert.ToInt32(ComboBoxSelectExam.SelectedValue)) =="Enter"
                 ComboBoxSelectExam.Hide();
                 TextboxExamDate.Hide();
                 TextBoxExamID.Hide();
@@ -135,10 +139,14 @@ namespace Learning_DB
                 Time_Remaining.Interval = 1000; //1000 second
                 Time_Remaining.Elapsed += OnTimedEvent;
                 Time_Remaining.Start();
+                /********/
+                exam = new Exam(StudentID, Convert.ToInt32(ComboBoxSelectExam.SelectedValue),controller);
+                UpdateExamPage();
+                /********/
             }
-            //else
+            else
             {
-               // MessageBox.Show("This Exam isn't running now, Can't enter exam");
+               MessageBox.Show("This Exam isn't running now, Can't enter exam");
             }
         }
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)

@@ -15,13 +15,7 @@ namespace Learning_DB
         [STAThread]
         static void Main()
         {
-            Controller c=new Controller();
-            Exam ex = new Exam(50002, 3, c);
-            string st =ex.getCurrQuesDescription();
-            string[] list = ex.getCurrQuesOptions();
-            ex.InsertAnswer(0);
-            ex.InsertAnswer(1);
-            ex.submitExam();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             OpenedSession.ID = 8;
