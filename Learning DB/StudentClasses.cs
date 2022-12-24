@@ -10,28 +10,25 @@ namespace Learning_DB
     public partial class StudentClasses : KryptonForm
     {
         Controller cont;
-        int StudentID;
-        public StudentClasses(int SID)
+        public StudentClasses()
         {
             InitializeComponent();
             cont = new Controller();
-            StudentID = SID;
-
-            DataTable StudentData = cont.SelectStudentByID(SID);
-            User_NameLabel.Text = StudentData.Rows[0]["Fname"].ToString() + " " + StudentData.Rows[0]["LName"].ToString();
-            ClassroomComboBox.DataSource = cont.SelectClassesForStudent(SID);
+            
+            User_NameLabel.Text = OpenedSession.UserData.Rows[0]["Fname"].ToString() + " " + OpenedSession.UserData.Rows[0]["LName"].ToString();
+            ClassroomComboBox.DataSource = cont.SelectClassesForStudent(OpenedSession.ID);
             ClassroomComboBox.DisplayMember = "Title";
             ClassroomComboBox.ValueMember = "Class_ID";
             InstructorInClassComboBox.DataSource = cont.SelectInstructorsForClassByID(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1;
             InstructorInClassComboBox.DisplayMember = "Instructor Name";
             CourseNameInClassBox.Text = cont.SelectClassInfoForStudent(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1.Rows[0]["Course Name"].ToString();
 
-            FNameBox.Text = StudentData.Rows[0]["FName"].ToString();
-            LNameBox.Text = StudentData.Rows[0]["LName"].ToString();
-            UsernameBox.Text = StudentData.Rows[0]["Username"].ToString();
-            LevelBox.Text = StudentData.Rows[0]["year"].ToString();
-            IDBox.Text = StudentData.Rows[0]["StudentID"].ToString();
-            EmailBox.Text = StudentData.Rows[0]["Email"].ToString();
+            FNameBox.Text = OpenedSession.UserData.Rows[0]["FName"].ToString();
+            LNameBox.Text = OpenedSession.UserData.Rows[0]["LName"].ToString();
+            UsernameBox.Text = OpenedSession.UserData.Rows[0]["Username"].ToString();
+            LevelBox.Text = OpenedSession.UserData.Rows[0]["year"].ToString();
+            IDBox.Text = OpenedSession.UserData.Rows[0]["StudentID"].ToString();
+            EmailBox.Text = OpenedSession.UserData.Rows[0]["Email"].ToString();
 
 
         }
@@ -96,7 +93,7 @@ namespace Learning_DB
 
         private void ConfirmEnrollButton_Click(object sender, EventArgs e)
         {
-            Tuple<int, string> EnrollmentError = cont.EnrollStudentByAccessCode(AccessCodeBox.Text, StudentID);
+            Tuple<int, string> EnrollmentError = cont.EnrollStudentByAccessCode(AccessCodeBox.Text, OpenedSession.ID);
             if (EnrollmentError.Item1 == 0)
             {
                 MessageBox.Show(EnrollmentError.Item2);
@@ -104,7 +101,7 @@ namespace Learning_DB
             else
             {
                 MessageBox.Show("Enrolled Succefuly");
-                ClassroomComboBox.DataSource = cont.SelectClassesForStudent(StudentID);
+                ClassroomComboBox.DataSource = cont.SelectClassesForStudent(OpenedSession.ID);
                 ClassroomComboBox.DisplayMember = "Title";
                 ClassroomComboBox.ValueMember = "Class_ID";
 
@@ -144,7 +141,7 @@ namespace Learning_DB
                 MessageBox.Show("Enter Username");
                 return;
             }
-            Tuple<int, string> UpSt = cont.UpdateStudent(FNameBox.Text, LNameBox.Text, EmailBox.Text,Convert.ToInt32(LevelBox.Text), UsernameBox.Text, StudentID);
+            Tuple<int, string> UpSt = cont.UpdateStudent(FNameBox.Text, LNameBox.Text, EmailBox.Text,Convert.ToInt32(LevelBox.Text), UsernameBox.Text, OpenedSession.ID);
             if (UpSt.Item1 == 0)
             {
                 MessageBox.Show(UpSt.Item2);
@@ -162,9 +159,9 @@ namespace Learning_DB
             this.Hide();
         }
 
-        private void FNameBox_TextChanged(object sender, EventArgs e)
+        private void StudentClasses_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
