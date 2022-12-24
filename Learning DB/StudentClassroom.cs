@@ -57,7 +57,7 @@ namespace Learning_DB
         {
             if(SubmissionLinkBox.Text != null)
             {
-                cont.InsertSubmission(StudentID, ClassID, SubmissionLinkBox.Text);
+                //cont.InsertSubmission(StudentID, ClassID, SubmissionLinkBox.Text);
             }
         }
     }

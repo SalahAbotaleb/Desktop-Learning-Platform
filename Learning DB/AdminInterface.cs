@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DbHandler;
 using ComponentFactory.Krypton.Toolkit;
 using MetroSet_UI.Forms;
-
+using System.Runtime.Remoting.Messaging;
 
 namespace Learning_DB
 {
@@ -19,6 +19,8 @@ namespace Learning_DB
         Controller Controller = new Controller();
         int checkA = 0;
         int checkI = 0;
+        int checkS = 0;
+        int checkC = 0;
         public AdminInterface()
         {
             InitializeComponent();
@@ -721,11 +723,11 @@ namespace Learning_DB
 
         private void AdminEStudentTextBox_Name_Enter(object sender, EventArgs e)
         {
-            if (AdminEStudentTextBox_Name.Text == "Choose Student's Name")
+            if (AdminEStudentComboBox_Username.Text == "Choose Student's Name")
             {
-                AdminEStudentTextBox_Name.Text = "";
-                AdminEStudentTextBox_Name.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                AdminEStudentTextBox_Name.StateCommon.ComboBox.Content.Color1 = Color.Black;
+                AdminEStudentComboBox_Username.Text = "";
+                AdminEStudentComboBox_Username.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                AdminEStudentComboBox_Username.StateCommon.ComboBox.Content.Color1 = Color.Black;
             }
         }
 
@@ -771,7 +773,7 @@ namespace Learning_DB
 
         private void AdminECourseTextBox_ID_Enter(object sender, EventArgs e)
         {
-            if (AdminECourseTextBox_ID.Text == "Enter Course's ID")
+            if (AdminECourseTextBox_ID.Text == "Search by Course's ID")
             {
                 AdminECourseTextBox_ID.Text = "";
                 AdminECourseTextBox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
@@ -783,29 +785,9 @@ namespace Learning_DB
         {
             if (AdminECourseTextBox_ID.Text == "")
             {
-                AdminECourseTextBox_ID.Text = "Enter Course's ID";
+                AdminECourseTextBox_ID.Text = "Search by's ID";
                 AdminECourseTextBox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                 AdminECourseTextBox_ID.StateCommon.Content.Color1 = Color.Gray;
-            }
-        }
-
-        private void AdminECourseComboBox_Name_Enter(object sender, EventArgs e)
-        {
-            if (AdminECourseComboBox_Name.Text == "Choose Course's Name")
-            {
-                AdminECourseComboBox_Name.Text = "";
-                AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Color1 = Color.Black;
-            }
-        }
-
-        private void AdminECourseComboBox_Name_Leave(object sender, EventArgs e)
-        {
-            if (AdminECourseComboBox_Name.Text == "")
-            {
-                AdminECourseComboBox_Name.Text = "Choose Course's Name";
-                AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                AdminECourseComboBox_Name.StateCommon.ComboBox.Content.Color1 = Color.Gray;
             }
         }
 
@@ -931,41 +913,39 @@ namespace Learning_DB
             }
         }
 
-        private void StudentTextbox_BOD_Enter(object sender, EventArgs e)
-        {
-            if (StudentTextbox_BOD.Text == "Enter Student's Birth Date")
-            {
-                StudentTextbox_BOD.Text = "";
-                StudentTextbox_BOD.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                StudentTextbox_BOD.StateCommon.Content.Color1 = Color.Black;
-            }
-        }
-
-        private void StudentTextbox_BOD_Leave(object sender, EventArgs e)
-        {
-            if (StudentTextbox_BOD.Text == "")
-            {
-                StudentTextbox_BOD.Text = "Enter Student's Birth Date";
-                StudentTextbox_BOD.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                StudentTextbox_BOD.StateCommon.Content.Color1 = Color.Gray;
-            }
-        }
-
-        private void AdminEStudentTextBox_Name_Leave(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddAdminButton_Click(object sender, EventArgs e)
         {
-            Tuple<int, string> result = Controller.InsertAdmin(AdminTextBox_Username.Text, AdminTextBox_FirstName.Text, AdminTextBox_LastName.Text, AdminTextBox_Email.Text, OpenedSession.ID, AdminTextBox_Password.Text);
-            if (result.Item1 == 0)
+            if (AdminTextBox_FirstName.Text == "Enter Admin's First Name" || AdminEStudentComboBox_Username.Text == "")
             {
-                MessageBox.Show(result.Item2);
+                MessageBox.Show("Please Enter Admin's Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (AdminTextBox_LastName.Text == "Enter Admin's Last Name" || AdminEStudentTextBox_LastName.Text == "")
+            {
+                MessageBox.Show("Please Enter Admin's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (AdminTextBox_Email.Text == "Enter Admin's Email" || AdminEStudentTextBox_Email.Text == "")
+            {
+                MessageBox.Show("Please Enter Admin's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (AdminTextBox_Username.Text == "Enter Admin's Username" || AdminEStudentTextBox_Username.Text == "")
+            {
+                MessageBox.Show("Please Enter Admin's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (AdminTextBox_Password.Text == "Enter Admin's Password" || AdminTextBox_Password.Text == "")
+            {
+                MessageBox.Show("Please Enter Admin's Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Admin Added Successfuly");
+                Tuple<int, string> result = Controller.InsertAdmin(AdminTextBox_Username.Text, AdminTextBox_FirstName.Text, AdminTextBox_LastName.Text, AdminTextBox_Email.Text, OpenedSession.ID, AdminTextBox_Password.Text);
+                if (result.Item1 == 0)
+                {
+                    MessageBox.Show(result.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Admin Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -975,39 +955,39 @@ namespace Learning_DB
             {
                 if (AdminEAdminTextBox_ID.Text == "Search by Admin's ID")
                 {
-                    MessageBox.Show("Please Enter Admin's ID");
+                    MessageBox.Show("Please Enter Admin's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 Tuple<int, string> edit = Controller.UpdateAdmin(Convert.ToInt32(AdminEAdminTextBox_ID.Text), AdminEAdminTextBox_Username.Text, AdminEAdminTextBox_FirstName.Text, AdminEAdminTextBox_LastName.Text, AdminEAdminTextBox_Email.Text);
                 if (edit.Item1 == 0)
                 {
-                    MessageBox.Show(edit.Item2);
+                    MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Admin Updated Successfuly");
+                    MessageBox.Show("Admin Updated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else if (checkA == 2)
             {
                 if (AdminEAdminTextBox_FirstName.Text == "Enter Admin's First Name")
                 {
-                    MessageBox.Show("Please Enter Admin's First Name");
+                    MessageBox.Show("Please Enter Admin's First Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (AdminEAdminTextBox_LastName.Text == "Enter Admin's Last Name")
                 {
-                    MessageBox.Show("Please Enter Admin's Last Name");
+                    MessageBox.Show("Please Enter Admin's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (AdminEAdminTextBox_Email.Text == "Enter Admin's Email")
                 {
-                    MessageBox.Show("Please Enter Admin's Email");
+                    MessageBox.Show("Please Enter Admin's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (AdminEAdminTextBox_Username.Text == "Enter Admin's Username")
                 {
-                    MessageBox.Show("Please Enter Admin's Username");
+                    MessageBox.Show("Please Enter Admin's Username","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     return;
                 }
                 Tuple<int, string> edit = Controller.UpdateAdmin(Convert.ToInt32(AdminEAdminComboBox_Username.SelectedValue), AdminEAdminTextBox_Username.Text, AdminEAdminTextBox_FirstName.Text, AdminEAdminTextBox_LastName.Text, AdminEAdminTextBox_Email.Text);
@@ -1017,12 +997,12 @@ namespace Learning_DB
                 }
                 else
                 {
-                    MessageBox.Show("Admin Updated Successfuly");
+                    MessageBox.Show("Admin Updated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Please Choose a Searching Method");
+                MessageBox.Show("Please Choose a Searching Method", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -1034,7 +1014,7 @@ namespace Learning_DB
             {
                 if (AdminEAdminTextBox_ID.Text == "Search by Admin's ID")
                 {
-                    MessageBox.Show("Please Enter Admin's ID");
+                    MessageBox.Show("Please Enter Admin's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 DataTable dt = Controller.SelectAdminByID_SuperID(OpenedSession.ID, Convert.ToInt32(AdminEAdminTextBox_ID.Text));
@@ -1047,7 +1027,7 @@ namespace Learning_DB
                 }
                 else
                 {
-                    MessageBox.Show("No Available Admin");
+                    MessageBox.Show("No Available Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -1066,13 +1046,13 @@ namespace Learning_DB
                 }
                 else
                 {
-                    MessageBox.Show("No Available Admin");
+                    MessageBox.Show("No Available Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Please Choose a Searching Method");
+                MessageBox.Show("Please Choose a Searching Method", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             AdminEAdminTextBox_FirstName.StateCommon.Content.Color1 = Color.Black;
@@ -1101,21 +1081,44 @@ namespace Learning_DB
             }
             else
             {
-                MessageBox.Show("No Available Admin");
+                MessageBox.Show("No Available Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
 
         private void AddInstructorButton_Click(object sender, EventArgs e)
         {
-            Tuple<int, string> result = Controller.InsertInstructor(InstructorTextbox_Username.Text, InstructorTextbox_FirstName.Text, InstructorTextbox_LastName.Text, InstructorTextbox_Email.Text, OpenedSession.ID, InstructorTextbox_Password.Text, Instructor_Title_ComboBox.Text);
-            if (result.Item1 == 0)
+            if (InstructorTextbox_FirstName.Text == "Enter Instructor's First Name" || AdminEStudentComboBox_Username.Text == "")
             {
-                MessageBox.Show(result.Item2);
+                MessageBox.Show("Please Enter Instructor's First Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (InstructorTextbox_LastName.Text == "Enter Instructor's Last Name" || AdminEStudentTextBox_LastName.Text == "")
+            {
+                MessageBox.Show("Please Enter Instructor's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (InstructorTextbox_Email.Text == "Enter Instructor's Email" || AdminEStudentTextBox_Email.Text == "")
+            {
+                MessageBox.Show("Please Enter Instructor's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (InstructorTextbox_Username.Text == "Enter Instructor's Username" || AdminEStudentTextBox_Username.Text == "")
+            {
+                MessageBox.Show("Please Enter Instructor's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (InstructorTextbox_Password.Text == "Enter Instructor's Password" || AdminTextBox_Password.Text == "")
+            {
+                MessageBox.Show("Please Enter Instructor's Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Instructor Added Successfuly");
+                Tuple<int, string> result = Controller.InsertInstructor(InstructorTextbox_Username.Text, InstructorTextbox_FirstName.Text, InstructorTextbox_LastName.Text, InstructorTextbox_Email.Text, OpenedSession.ID, InstructorTextbox_Password.Text, Instructor_Title_ComboBox.Text);
+                if (result.Item1 == 0)
+                {
+                    MessageBox.Show(result.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Instructor Added Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -1133,16 +1136,13 @@ namespace Learning_DB
             DataTable dt = Controller.SelectAllInstructor_Username();
             if (dt != null)
             {
-                AdminEInstructorCombobox_Username.DataSource = Controller.SelectAllInstructor_Username();
+                AdminEInstructorCombobox_Username.DataSource = dt;
                 AdminEInstructorCombobox_Username.DisplayMember = "Username";
                 AdminEInstructorCombobox_Username.ValueMember = "Instructor_ID";
-                AdminEInstructorTextbox_ID.Text = "Search by Instructor's ID";
-                AdminEInstructorTextbox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
-                AdminEInstructorTextbox_ID.StateCommon.Content.Color1 = Color.Gray;
             }
             else
             {
-                MessageBox.Show("No Available Instructor");
+                MessageBox.Show("No Available Instructor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -1153,7 +1153,7 @@ namespace Learning_DB
             {
                 if (AdminEInstructorTextbox_ID.Text == "Search by Instructor's ID")
                 {
-                    MessageBox.Show("Please Enter an Instructor's ID");
+                    MessageBox.Show("Please Enter an Instructor's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 AdminEInstructorComboBox_Title.DataSource = new List<string> { "Prof.", "Dr.", "Eng.", "Mr.", "Mrs." };
@@ -1169,7 +1169,7 @@ namespace Learning_DB
                 }
                 else
                 {
-                    MessageBox.Show("No Available Instructor");
+                    MessageBox.Show("No Available Instructor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -1181,22 +1181,22 @@ namespace Learning_DB
                 DataTable dt = Controller.SelectAllInstructor_Username();
                 if (dt != null)
                 {
-                    AdminEInstructorTextbox_FirstName.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][2].ToString();
-                    AdminEInstructorTextbox_LastName.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][3].ToString();
-                    AdminEInstructorTextbox_Email.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][5].ToString();
-                    AdminEInstructorTextbox_Username.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][0].ToString();
-                    AdminEInstructorComboBox_Title.Text = Controller.SelectAllInstructor_Username().Rows[AdminEInstructorCombobox_Username.SelectedIndex][6].ToString();
+                    AdminEInstructorTextbox_FirstName.Text = dt.Rows[AdminEInstructorCombobox_Username.SelectedIndex][2].ToString();
+                    AdminEInstructorTextbox_LastName.Text = dt.Rows[AdminEInstructorCombobox_Username.SelectedIndex][3].ToString();
+                    AdminEInstructorTextbox_Email.Text = dt.Rows[AdminEInstructorCombobox_Username.SelectedIndex][5].ToString();
+                    AdminEInstructorTextbox_Username.Text = dt.Rows[AdminEInstructorCombobox_Username.SelectedIndex][0].ToString();
+                    AdminEInstructorComboBox_Title.Text = dt.Rows[AdminEInstructorCombobox_Username.SelectedIndex][6].ToString();
 
                 }
                 else
                 {
-                    MessageBox.Show("No Available Instructor");
+                    MessageBox.Show("No Available Instructor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Please Choose a Searching Method");
+                MessageBox.Show("Please Choose a Searching Method", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -1230,17 +1230,17 @@ namespace Learning_DB
             {
                 if (AdminEInstructorTextbox_ID.Text == "Search by Instructor's ID")
                 {
-                    MessageBox.Show("Please Enter an Instructor's ID");
+                    MessageBox.Show("Please Enter an Instructor's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 Tuple<int, string> edit = Controller.UpdateInstructor(Convert.ToInt32(AdminEInstructorTextbox_ID.Text), AdminEInstructorTextbox_Username.Text, AdminEInstructorTextbox_FirstName.Text, AdminEInstructorTextbox_LastName.Text, AdminEInstructorTextbox_Email.Text, AdminEInstructorComboBox_Title.Text, null, OpenedSession.ID);
                 if (edit.Item1 == 0)
                 {
-                    MessageBox.Show(edit.Item2);
+                    MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Instructor Updated Successfuly");
+                    MessageBox.Show("Instructor Updated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else if (checkI == 2)
@@ -1532,6 +1532,444 @@ namespace Learning_DB
             else
             {
                 MessageBox.Show("Please Choose a Searching Method");
+                return;
+            }
+        }
+
+        private void AddStudentButton_Click(object sender, EventArgs e)
+        {
+            if(StudentTextbox_FirstName.Text == "Enter Student's First Name" || StudentTextbox_FirstName.Text == "")
+            {
+                MessageBox.Show("Please Enter Student's First Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (StudentTextbox_LastName.Text == "Enter Student's Last Name" || StudentTextbox_LastName.Text == "")
+            {
+                MessageBox.Show("Please Enter Student's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (StudentTextbox_Email.Text == "Enter Student's Email" || StudentTextbox_Email.Text == "")
+            {
+                MessageBox.Show("Please Enter Student's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (StudentTextbox_Username.Text == "Enter Student's Username" || StudentTextbox_Username.Text == "")
+            {
+                MessageBox.Show("Please Enter Student's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (StudentTextbox_Password.Text == "Enter Student's Password" || StudentTextbox_Password.Text == "")
+            {
+                MessageBox.Show("Please Enter Student's Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(StudentTextbox_Level.Text == "Enter Student's Level" || StudentTextbox_Level.Text == "")
+            {
+                MessageBox.Show("Please Enter Student's Level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(Convert.ToInt32(StudentTextbox_Level.Text) < 1 || Convert.ToInt32(StudentTextbox_Level.Text) > 12)
+            {
+                MessageBox.Show("Please Enter Student's Level between 1 and 12 ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Tuple<int, string> add = Controller.InsertStudent(StudentTextbox_Username.Text, StudentTextbox_FirstName.Text, StudentTextbox_LastName.Text, StudentTextbox_Email.Text, OpenedSession.ID, StudentTextbox_Password.Text, StudentDateTimePicker_BOD.Value.ToShortDateString(), Convert.ToInt32(StudentTextbox_Level.Text));
+                if (add.Item1 == 0)
+                {
+                    MessageBox.Show(add.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Student Added Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void StudentRadioButton_SearchID_CheckedChanged(object sender, EventArgs e)
+        {
+            AdminEStudentComboBox_Username.Enabled = false;
+            AdminEStudentTextBox_ID.Enabled = true;
+            checkS = 1;
+        }
+
+        private void StudentRadioButton_SearchUsername_CheckedChanged(object sender, EventArgs e)
+        {
+            AdminEStudentComboBox_Username.Enabled = true;
+            AdminEStudentTextBox_ID.Enabled = false;
+            AdminEStudentTextBox_ID.Text = "Search by Student's ID";
+            checkS = 2;
+            AdminEStudentTextBox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+            AdminEStudentTextBox_ID.StateCommon.Content.Color1 = Color.Gray;
+            DataTable dt = Controller.SelectAllStudent_Username();
+            if (dt != null)
+            {
+                AdminEStudentComboBox_Username.DataSource = dt;
+                AdminEStudentComboBox_Username.DisplayMember = "Username";
+                AdminEStudentComboBox_Username.ValueMember = "StudentID";
+            }
+            else
+            {
+                MessageBox.Show("No Available Student", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+        }
+
+        private void AdminEStudentButton_Search_Click(object sender, EventArgs e)
+        {
+            if(checkS == 1)
+            {
+                if(AdminEStudentTextBox_ID.Text == "Search by Student's ID")
+                {
+                    MessageBox.Show("Please Enter an Student's ID","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                DataTable dt = Controller.SelectStudentByID(Convert.ToInt32(AdminEStudentTextBox_ID.Text));
+                if(dt != null)
+                {
+                    AdminEStudentTextBox_Username.Text = dt.Rows[AdminEStudentComboBox_Username.SelectedIndex][0].ToString();
+                    AdminEStudentTextBox_FirstName.Text = dt.Rows[AdminEStudentComboBox_Username.SelectedIndex][2].ToString();
+                    AdminEStudentTextBox_LastName.Text = dt.Rows[AdminEStudentComboBox_Username.SelectedIndex][3].ToString();
+                    AdminEStudentTextBox_Email.Text = dt.Rows[AdminEStudentComboBox_Username.SelectedIndex][5].ToString();
+                    AdminEStudentTextBox_Level.Text = dt.Rows[AdminEStudentComboBox_Username.SelectedIndex][7].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No Available Student");
+                    return;
+                }
+            }
+            else if (checkS == 2)
+            {
+                DataTable dt = Controller.SelectAllStudent_Username();
+                if (dt != null)
+                {
+                    AdminEStudentTextBox_Username.Text = dt.Rows[0][0].ToString();
+                    AdminEStudentTextBox_FirstName.Text = dt.Rows[0][2].ToString();
+                    AdminEStudentTextBox_LastName.Text = dt.Rows[0][3].ToString();
+                    AdminEStudentTextBox_Email.Text = dt.Rows[0][5].ToString();
+                    AdminEStudentTextBox_Level.Text = dt.Rows[0][7].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No Available Student","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Choose a Searching Method", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            AdminEStudentTextBox_Username.StateCommon.Content.Color1 = Color.Black;
+            AdminEStudentTextBox_FirstName.StateCommon.Content.Color1 = Color.Black;
+            AdminEStudentTextBox_LastName.StateCommon.Content.Color1 = Color.Black;
+            AdminEStudentTextBox_Email.StateCommon.Content.Color1 = Color.Black;
+            AdminEStudentTextBox_Level.StateCommon.Content.Color1 = Color.Black;
+        }
+
+        private void AdminEStudentButton_Edit_Click(object sender, EventArgs e)
+        {
+            if(checkS == 1)
+            {
+                if (AdminEStudentTextBox_ID.Text == "Search by Student's ID")
+                {
+                    MessageBox.Show("Please Enter an Student's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (AdminEStudentTextBox_Username.Text == "Enter Student's Username" || AdminEStudentTextBox_Username.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_FirstName.Text == "Enter Student's First Name" || AdminEStudentTextBox_FirstName.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's First Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_LastName.Text == "Enter Student's Last Name" || AdminEStudentTextBox_LastName.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_Email.Text == "Enter Student's Email" || AdminEStudentTextBox_Email.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_Level.Text == "Enter Student's Level" || AdminEStudentTextBox_Level.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Convert.ToInt32(AdminEStudentTextBox_Level.Text) < 1 || Convert.ToInt32(AdminEStudentTextBox_Level.Text) > 12)
+                {
+                    MessageBox.Show("Please Enter Student's Level between 1 and 12 ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    Tuple<int, string> edit = Controller.UpdateStudent(AdminEStudentTextBox_FirstName.Text, AdminEStudentTextBox_LastName.Text, AdminEStudentTextBox_Email.Text, Convert.ToInt32(AdminEStudentTextBox_Level.Text), AdminEStudentTextBox_Username.Text, Convert.ToInt32(AdminEStudentTextBox_ID.Text));
+                    if (edit.Item1 == 0)
+                    {
+                        MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Student Edited Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else if(checkS == 2)
+            {
+                if (AdminEStudentComboBox_Username.Text == "Search by Student's Username")
+                {
+                    MessageBox.Show("Please Enter an Student's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (AdminEStudentTextBox_Username.Text == "Enter Student's Username" || AdminEStudentTextBox_Username.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_FirstName.Text == "Enter Student's First Name" || AdminEStudentTextBox_FirstName.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's First Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_LastName.Text == "Enter Student's Last Name" || AdminEStudentTextBox_LastName.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_Email.Text == "Enter Student's Email" || AdminEStudentTextBox_Email.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (AdminEStudentTextBox_Level.Text == "Enter Student's Level" || AdminEStudentTextBox_Level.Text == "")
+                {
+                    MessageBox.Show("Please Enter Student's Level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Convert.ToInt32(AdminEStudentTextBox_Level.Text) < 1 || Convert.ToInt32(AdminEStudentTextBox_Level.Text) > 12)
+                {
+                    MessageBox.Show("Please Enter Student's Level between 1 and 12 ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    Tuple<int, string> edit = Controller.UpdateStudent(AdminEStudentTextBox_FirstName.Text, AdminEStudentTextBox_LastName.Text, AdminEStudentTextBox_Email.Text, Convert.ToInt32(AdminEStudentTextBox_Level.Text), AdminEStudentTextBox_Username.Text, Convert.ToInt32(AdminEStudentComboBox_Username.SelectedValue));
+                    if (edit.Item1 == 0)
+                    {
+                        MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Student Edited Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+
+        private void AdminEStudentButton_Activate_Click(object sender, EventArgs e)
+        {
+            if(checkS == 1)
+            {
+                if (AdminEStudentTextBox_ID.Text == "Search by Student's ID")
+                {
+                    MessageBox.Show("Please Enter an Student's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Tuple<int, string> activate = Controller.ActivateStudent(Convert.ToInt32(AdminEStudentTextBox_ID.Text),true,OpenedSession.ID);
+                if (activate.Item1 == 0)
+                {
+                    MessageBox.Show(activate.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Student Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else if (checkS == 2)
+            {
+                if (AdminEStudentComboBox_Username.Text == "Search by Student's Username")
+                {
+                    MessageBox.Show("Please Enter an Student's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Tuple<int, string> activate = Controller.ActivateStudent(Convert.ToInt32(AdminEStudentComboBox_Username.SelectedValue), true, OpenedSession.ID);
+                if (activate.Item1 == 0)
+                {
+                    MessageBox.Show(activate.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Student Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void AdminEStudentButton_DeActivate_Click(object sender, EventArgs e)
+        {
+            if(checkS == 1)
+            {
+                if (AdminEStudentTextBox_ID.Text == "Search by Student's ID")
+                {
+                    MessageBox.Show("Please Enter an Student's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Tuple<int, string> deactivate = Controller.ActivateStudent(Convert.ToInt32(AdminEStudentTextBox_ID.Text), false, OpenedSession.ID);
+                if (deactivate.Item1 == 0)
+                {
+                    MessageBox.Show(deactivate.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Student Deactivated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else if (checkS == 2)
+            {
+                if (AdminEStudentComboBox_Username.Text == "Search by Student's Username")
+                {
+                    MessageBox.Show("Please Enter an Student's Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Tuple<int, string> deactivate = Controller.ActivateStudent(Convert.ToInt32(AdminEStudentComboBox_Username.SelectedValue), false, OpenedSession.ID);
+                if (deactivate.Item1 == 0)
+                {
+                    MessageBox.Show(deactivate.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Student Deactivated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void AddCourseButton_Click(object sender, EventArgs e)
+        {
+            if (CourseTextbox_Name.Text == "Enter Course Name" || CourseTextbox_Name.Text == "")
+            {
+                MessageBox.Show("Please Enter Course Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (CourseTextbox_Description.Text == "Enter Course Description" || CourseTextbox_Description.Text == "")
+            {
+                MessageBox.Show("Please Enter Course Description", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Tuple<int, string> add = Controller.InsertCourse(CourseTextbox_Name.Text, CourseTextbox_Description.Text, OpenedSession.ID);
+                if (add.Item1 == 0)
+                {
+                    MessageBox.Show(add.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Course Added Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+        }
+
+        private void CourseRadioButton_SearchID_CheckedChanged(object sender, EventArgs e)
+        {
+                AdminECourseComboBox_Name.Enabled = false;
+                AdminECourseTextBox_ID.Enabled = true;
+                checkC = 1;
+        }
+
+        private void CourseRadioButton_SearchUsername_CheckedChanged(object sender, EventArgs e)
+        {
+            AdminECourseComboBox_Name.Enabled = true;
+            AdminECourseTextBox_ID.Enabled = false;
+            checkC = 2;
+            AdminECourseTextBox_ID.Text = "Search by Course's ID";
+            AdminECourseTextBox_ID.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+            AdminECourseTextBox_ID.StateCommon.Content.Color1 = Color.Gray;
+            DataTable dt = Controller.SelectAllCourse_Name();
+            if (dt != null)
+            {
+                AdminECourseComboBox_Name.DataSource = dt;
+                AdminECourseComboBox_Name.DisplayMember = "Course_Name";
+                AdminECourseComboBox_Name.ValueMember = "Course_ID";
+            }
+            else
+            {
+                MessageBox.Show("No Courses Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+        }
+
+        private void AdminECourseButton_Search_Click(object sender, EventArgs e)
+        {
+            if(checkC == 1)
+            {
+                if (AdminECourseTextBox_ID.Text == "Search by Course's ID")
+                {
+                    MessageBox.Show("Please Enter an Course's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                DataTable dt = Controller.SelectCoursesbyID(Convert.ToInt32(AdminECourseTextBox_ID.Text));
+                if (dt != null)
+                {
+                    AdminECourseTextBox_Name.Text = dt.Rows[0]["Course_Name"].ToString();
+                    AdminECourseTextBox_Description.Text = dt.Rows[0]["Description"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No Course Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else if (checkC == 2)
+            {
+                DataTable dt = Controller.SelectAllCourse_Name();
+                if (dt != null)
+                {
+                    AdminECourseTextBox_Name.Text = dt.Rows[AdminECourseComboBox_Name.SelectedIndex]["Course_Name"].ToString();
+                    AdminECourseTextBox_Description.Text = dt.Rows[AdminECourseComboBox_Name.SelectedIndex]["Description"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No Course Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Choose a Searching Method", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            AdminECourseTextBox_Name.StateCommon.Content.Color1 = Color.Black;
+            AdminECourseTextBox_Description.StateCommon.Content.Color1 = Color.Black;
+        }
+
+        private void AdminECourseButton_Edit_Click(object sender, EventArgs e)
+        {
+            if (checkC == 1)
+            {
+                if (AdminECourseTextBox_ID.Text == "Search by Course's ID")
+                {
+                    MessageBox.Show("Please Enter an Course's ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Tuple<int, string> edit = Controller.UpdateCourse(Convert.ToInt32(AdminECourseTextBox_ID.Text), AdminECourseTextBox_Name.Text, AdminECourseTextBox_Description.Text, OpenedSession.ID);
+                if (edit.Item1 == 0)
+                {
+                    MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Course Edited Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+            else if (checkC == 2)
+            {
+                Tuple<int, string> edit = Controller.UpdateCourse(Convert.ToInt32(AdminECourseComboBox_Name.SelectedValue), AdminECourseTextBox_Name.Text, AdminECourseTextBox_Description.Text, OpenedSession.ID);
+                if (edit.Item1 == 0)
+                {
+                    MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Course Edited Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Choose a Searching Method", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
