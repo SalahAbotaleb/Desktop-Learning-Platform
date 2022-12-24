@@ -8,6 +8,7 @@ using Learning_DB;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DbHandler
 {
@@ -115,7 +116,31 @@ namespace DbHandler
         //    Parameters.Add("@Title", Title);
 
         //    return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
-        //}
+        //
+        public Tuple<DataTable, string> ManageDoneOnStudent(int ID)
+        {
+            string StoredProcedureName = StoredProcedures.ManageDoneOnStudent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<DataTable, string> ManageDoneOnInstructor(int ID)
+        {
+            string StoredProcedureName = StoredProcedures.ManageDoneOnInstructor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public Tuple<DataTable,string> ManageByAdmin(int ID)
+        {
+            string StoredProcedureName = StoredProcedures.ManageByAdmin;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", ID);
+
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
         public Tuple<int, string> ActivateStudent(int ID, bool Status, int Done_By)
         {
             string StoredProcedureName = StoredProcedures.ActivateStudent;
@@ -150,7 +175,7 @@ namespace DbHandler
             string StoredProcedureName = StoredProcedures.UpdateCourse;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@ID", ID);
-            Parameters.Add("@@Course_Name", Course_Name);
+            Parameters.Add("@Course_Name", Course_Name);
             Parameters.Add("@Description", Description);
             Parameters.Add("@Done_By", Done_By);
 
@@ -318,6 +343,12 @@ namespace DbHandler
             string Query = "SELECT * FROM Classroom WHERE Class_ID = " + CID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectAllAdmin()
+        {
+            string Query = "SELECT * FROM Admin ";
+            return dbMan.ExecuteReader(Query);
+        }
+        
         public DataTable SelectAdminByID(int AID)
         {
             string Query = "SELECT FName + \' \' + LName, Fname,Lname,Email,Username FROM Admin WHERE Admin_ID = " + AID + ";";

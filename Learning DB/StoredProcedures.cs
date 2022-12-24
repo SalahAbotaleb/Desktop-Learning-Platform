@@ -33,6 +33,10 @@ namespace Learning_DB
         public static string InsertCourse = "spInsertCourse";
         public static string UpdateCourse = "spUpdateCourse";
         
+        public static string ManageByAdmin = "SelectManagingByAdmin";
+        public static string ManageDoneOnInstructor = "SelectManageDoneOnInstructor";
+        public static string ManageDoneOnStudent = "SelectManageDoneOnStudent";
+
         public static string AddClassroom = "spCreateClassroom";
         public static string InsertSumbission = "spSubmitAssignment";
 

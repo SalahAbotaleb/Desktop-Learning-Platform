@@ -167,7 +167,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.AdminECourseTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.AdminECourseButton_Remove = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AdminECourseButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AdminECourseButton_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AdminECourseTextBox_Description = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -175,20 +174,29 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.AdminHistoryPage = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.HistoryDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.StudentHRadioButton_Username = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.StudentHRadioButton_SearchID = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.InstructorHRadioButton_SearchUsername = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.InstructorHRadioButton_SearchID = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.AdminHRadioButton_SearchUsername = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.AdminHRadioButton_SearchID = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.HistoryStudent_NameLabel = new System.Windows.Forms.Label();
-            this.StudentHComboBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.StudentHComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.HistoryStudent_IDLabel = new System.Windows.Forms.Label();
             this.StudentHTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.HistoryInstructor_NameLabel = new System.Windows.Forms.Label();
-            this.InstructorHComboBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.InstructorHComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.HistoryInstructor_IDLabel = new System.Windows.Forms.Label();
             this.InstructorHTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.HistoryAdmin_NameLabel = new System.Windows.Forms.Label();
-            this.AdminHComboBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.AdminHComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.HistoryAdmin_IDLabel = new System.Windows.Forms.Label();
             this.AdminHTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.HistoryButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AdminName_Label = new System.Windows.Forms.Label();
             this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Main.SuspendLayout();
@@ -219,10 +227,10 @@
             this.AdminEditCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminECourseComboBox_Name)).BeginInit();
             this.AdminHistoryPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Name)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Name)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Name)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Username)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette2
@@ -293,7 +301,7 @@
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(-6, 54);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 3;
+            this.Main.SelectedIndex = 4;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1210, 652);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -333,12 +341,12 @@
             this.AdminAdminPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminAdminPage.Controls.Add(this.AddAdmin);
             this.AdminAdminPage.Controls.Add(this.EditAdmin);
-            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminAdminPage.IsDerivedStyle = false;
             this.AdminAdminPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminAdminPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminAdminPage.Name = "AdminAdminPage";
-            this.AdminAdminPage.SelectedIndex = 0;
+            this.AdminAdminPage.SelectedIndex = 1;
             this.AdminAdminPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminAdminPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminAdminPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -743,7 +751,7 @@
             this.AdminUsernameSearch_Label.Name = "AdminUsernameSearch_Label";
             this.AdminUsernameSearch_Label.Size = new System.Drawing.Size(270, 21);
             this.AdminUsernameSearch_Label.TabIndex = 51;
-            this.AdminUsernameSearch_Label.Text = "Search by Admin\'s Username";
+            this.AdminUsernameSearch_Label.Text = "Choose by Admin\'s Username";
             // 
             // AdminRadioButton_SearchUsername
             // 
@@ -3320,7 +3328,6 @@
             this.AdminEditCourse.Controls.Add(this.label19);
             this.AdminEditCourse.Controls.Add(this.label20);
             this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_ID);
-            this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Remove);
             this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Search);
             this.AdminEditCourse.Controls.Add(this.AdminECourseButton_Edit);
             this.AdminEditCourse.Controls.Add(this.AdminECourseTextBox_Description);
@@ -3445,73 +3452,12 @@
             this.AdminECourseTextBox_ID.TabIndex = 82;
             this.AdminECourseTextBox_ID.Text = "Search by Course\'s ID";
             this.AdminECourseTextBox_ID.Enter += new System.EventHandler(this.AdminECourseTextBox_ID_Enter);
+            this.AdminECourseTextBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminECourseTextBox_ID_KeyPress);
             this.AdminECourseTextBox_ID.Leave += new System.EventHandler(this.AdminECourseTextBox_ID_Leave);
-            // 
-            // AdminECourseButton_Remove
-            // 
-            this.AdminECourseButton_Remove.Location = new System.Drawing.Point(489, 391);
-            this.AdminECourseButton_Remove.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminECourseButton_Remove.Name = "AdminECourseButton_Remove";
-            this.AdminECourseButton_Remove.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.OverrideDefault.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.OverrideDefault.Border.Width = 1;
-            this.AdminECourseButton_Remove.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminECourseButton_Remove.Size = new System.Drawing.Size(200, 50);
-            this.AdminECourseButton_Remove.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateCommon.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Remove.StateCommon.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.StateCommon.Border.Width = 1;
-            this.AdminECourseButton_Remove.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
-            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.AdminECourseButton_Remove.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminECourseButton_Remove.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.AdminECourseButton_Remove.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Remove.StatePressed.Back.ColorAngle = 135F;
-            this.AdminECourseButton_Remove.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.AdminECourseButton_Remove.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.AdminECourseButton_Remove.StatePressed.Border.ColorAngle = 135F;
-            this.AdminECourseButton_Remove.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.StatePressed.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.StatePressed.Border.Width = 1;
-            this.AdminECourseButton_Remove.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateTracking.Back.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.AdminECourseButton_Remove.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.AdminECourseButton_Remove.StateTracking.Border.ColorAngle = 45F;
-            this.AdminECourseButton_Remove.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminECourseButton_Remove.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminECourseButton_Remove.StateTracking.Border.Rounding = 20;
-            this.AdminECourseButton_Remove.StateTracking.Border.Width = 1;
-            this.AdminECourseButton_Remove.TabIndex = 81;
-            this.AdminECourseButton_Remove.TabStop = false;
-            this.AdminECourseButton_Remove.Values.Text = "Remove";
             // 
             // AdminECourseButton_Search
             // 
-            this.AdminECourseButton_Search.Location = new System.Drawing.Point(891, 391);
+            this.AdminECourseButton_Search.Location = new System.Drawing.Point(858, 391);
             this.AdminECourseButton_Search.Margin = new System.Windows.Forms.Padding(4);
             this.AdminECourseButton_Search.Name = "AdminECourseButton_Search";
             this.AdminECourseButton_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -3574,7 +3520,7 @@
             // 
             // AdminECourseButton_Edit
             // 
-            this.AdminECourseButton_Edit.Location = new System.Drawing.Point(125, 391);
+            this.AdminECourseButton_Edit.Location = new System.Drawing.Point(303, 391);
             this.AdminECourseButton_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.AdminECourseButton_Edit.Name = "AdminECourseButton_Edit";
             this.AdminECourseButton_Edit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -3707,20 +3653,29 @@
             // AdminHistoryPage
             // 
             this.AdminHistoryPage.BaseColor = System.Drawing.SystemColors.Control;
-            this.AdminHistoryPage.Controls.Add(this.kryptonDataGridView1);
+            this.AdminHistoryPage.Controls.Add(this.HistoryDataGridView);
+            this.AdminHistoryPage.Controls.Add(this.label25);
+            this.AdminHistoryPage.Controls.Add(this.label24);
+            this.AdminHistoryPage.Controls.Add(this.label23);
+            this.AdminHistoryPage.Controls.Add(this.StudentHRadioButton_Username);
+            this.AdminHistoryPage.Controls.Add(this.StudentHRadioButton_SearchID);
+            this.AdminHistoryPage.Controls.Add(this.InstructorHRadioButton_SearchUsername);
+            this.AdminHistoryPage.Controls.Add(this.InstructorHRadioButton_SearchID);
+            this.AdminHistoryPage.Controls.Add(this.AdminHRadioButton_SearchUsername);
+            this.AdminHistoryPage.Controls.Add(this.AdminHRadioButton_SearchID);
             this.AdminHistoryPage.Controls.Add(this.HistoryStudent_NameLabel);
-            this.AdminHistoryPage.Controls.Add(this.StudentHComboBox_Name);
+            this.AdminHistoryPage.Controls.Add(this.StudentHComboBox_Username);
             this.AdminHistoryPage.Controls.Add(this.HistoryStudent_IDLabel);
             this.AdminHistoryPage.Controls.Add(this.StudentHTextBox_ID);
             this.AdminHistoryPage.Controls.Add(this.HistoryInstructor_NameLabel);
-            this.AdminHistoryPage.Controls.Add(this.InstructorHComboBox_Name);
+            this.AdminHistoryPage.Controls.Add(this.InstructorHComboBox_Username);
             this.AdminHistoryPage.Controls.Add(this.HistoryInstructor_IDLabel);
             this.AdminHistoryPage.Controls.Add(this.InstructorHTextBox_ID);
             this.AdminHistoryPage.Controls.Add(this.HistoryAdmin_NameLabel);
-            this.AdminHistoryPage.Controls.Add(this.AdminHComboBox_Name);
+            this.AdminHistoryPage.Controls.Add(this.AdminHComboBox_Username);
             this.AdminHistoryPage.Controls.Add(this.HistoryAdmin_IDLabel);
             this.AdminHistoryPage.Controls.Add(this.AdminHTextBox_ID);
-            this.AdminHistoryPage.Controls.Add(this.kryptonButton2);
+            this.AdminHistoryPage.Controls.Add(this.HistoryButton_Search);
             this.AdminHistoryPage.Font = null;
             this.AdminHistoryPage.ImageIndex = 0;
             this.AdminHistoryPage.ImageKey = null;
@@ -3736,18 +3691,125 @@
             this.AdminHistoryPage.ThemeName = null;
             this.AdminHistoryPage.ToolTipText = null;
             // 
-            // kryptonDataGridView1
+            // HistoryDataGridView
             // 
-            this.kryptonDataGridView1.AllowUserToOrderColumns = true;
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Mixed;
-            this.kryptonDataGridView1.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.TabCustom3;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(524, 71);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.RowHeadersWidth = 51;
-            this.kryptonDataGridView1.RowTemplate.Height = 24;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(623, 406);
-            this.kryptonDataGridView1.TabIndex = 88;
+            this.HistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HistoryDataGridView.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Mixed;
+            this.HistoryDataGridView.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridHeaderColumnList;
+            this.HistoryDataGridView.Location = new System.Drawing.Point(537, 47);
+            this.HistoryDataGridView.Name = "HistoryDataGridView";
+            this.HistoryDataGridView.RowHeadersWidth = 51;
+            this.HistoryDataGridView.RowTemplate.Height = 24;
+            this.HistoryDataGridView.Size = new System.Drawing.Size(608, 425);
+            this.HistoryDataGridView.TabIndex = 106;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.SystemColors.Control;
+            this.label25.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Gray;
+            this.label25.Location = new System.Drawing.Point(238, 121);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(270, 21);
+            this.label25.TabIndex = 105;
+            this.label25.Text = "Choose by Admin\'s Username";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.SystemColors.Control;
+            this.label24.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Gray;
+            this.label24.Location = new System.Drawing.Point(241, 291);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(290, 21);
+            this.label24.TabIndex = 104;
+            this.label24.Text = "Choose Instructor\'s Username";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.SystemColors.Control;
+            this.label23.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Gray;
+            this.label23.Location = new System.Drawing.Point(252, 462);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(260, 21);
+            this.label23.TabIndex = 103;
+            this.label23.Text = "Choose Student\'s Username";
+            // 
+            // StudentHRadioButton_Username
+            // 
+            this.StudentHRadioButton_Username.Location = new System.Drawing.Point(11, 460);
+            this.StudentHRadioButton_Username.Margin = new System.Windows.Forms.Padding(10);
+            this.StudentHRadioButton_Username.Name = "StudentHRadioButton_Username";
+            this.StudentHRadioButton_Username.Palette = this.kryptonPalette2;
+            this.StudentHRadioButton_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.StudentHRadioButton_Username.Size = new System.Drawing.Size(18, 12);
+            this.StudentHRadioButton_Username.TabIndex = 102;
+            this.StudentHRadioButton_Username.Values.Text = "";
+            this.StudentHRadioButton_Username.CheckedChanged += new System.EventHandler(this.StudentHRadioButton_Username_CheckedChanged);
+            // 
+            // StudentHRadioButton_SearchID
+            // 
+            this.StudentHRadioButton_SearchID.Location = new System.Drawing.Point(11, 388);
+            this.StudentHRadioButton_SearchID.Margin = new System.Windows.Forms.Padding(10);
+            this.StudentHRadioButton_SearchID.Name = "StudentHRadioButton_SearchID";
+            this.StudentHRadioButton_SearchID.Palette = this.kryptonPalette2;
+            this.StudentHRadioButton_SearchID.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.StudentHRadioButton_SearchID.Size = new System.Drawing.Size(18, 12);
+            this.StudentHRadioButton_SearchID.TabIndex = 101;
+            this.StudentHRadioButton_SearchID.Values.Text = "";
+            this.StudentHRadioButton_SearchID.CheckedChanged += new System.EventHandler(this.StudentHRadioButton_SearchID_CheckedChanged);
+            // 
+            // InstructorHRadioButton_SearchUsername
+            // 
+            this.InstructorHRadioButton_SearchUsername.Location = new System.Drawing.Point(11, 289);
+            this.InstructorHRadioButton_SearchUsername.Margin = new System.Windows.Forms.Padding(10);
+            this.InstructorHRadioButton_SearchUsername.Name = "InstructorHRadioButton_SearchUsername";
+            this.InstructorHRadioButton_SearchUsername.Palette = this.kryptonPalette2;
+            this.InstructorHRadioButton_SearchUsername.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.InstructorHRadioButton_SearchUsername.Size = new System.Drawing.Size(18, 12);
+            this.InstructorHRadioButton_SearchUsername.TabIndex = 100;
+            this.InstructorHRadioButton_SearchUsername.Values.Text = "";
+            this.InstructorHRadioButton_SearchUsername.CheckedChanged += new System.EventHandler(this.InstructorHRadioButton_SearchUsername_CheckedChanged);
+            // 
+            // InstructorHRadioButton_SearchID
+            // 
+            this.InstructorHRadioButton_SearchID.Location = new System.Drawing.Point(13, 217);
+            this.InstructorHRadioButton_SearchID.Margin = new System.Windows.Forms.Padding(10);
+            this.InstructorHRadioButton_SearchID.Name = "InstructorHRadioButton_SearchID";
+            this.InstructorHRadioButton_SearchID.Palette = this.kryptonPalette2;
+            this.InstructorHRadioButton_SearchID.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.InstructorHRadioButton_SearchID.Size = new System.Drawing.Size(18, 12);
+            this.InstructorHRadioButton_SearchID.TabIndex = 99;
+            this.InstructorHRadioButton_SearchID.Values.Text = "";
+            this.InstructorHRadioButton_SearchID.CheckedChanged += new System.EventHandler(this.InstructorHRadioButton_SearchID_CheckedChanged);
+            // 
+            // AdminHRadioButton_SearchUsername
+            // 
+            this.AdminHRadioButton_SearchUsername.Location = new System.Drawing.Point(11, 121);
+            this.AdminHRadioButton_SearchUsername.Margin = new System.Windows.Forms.Padding(10);
+            this.AdminHRadioButton_SearchUsername.Name = "AdminHRadioButton_SearchUsername";
+            this.AdminHRadioButton_SearchUsername.Palette = this.kryptonPalette2;
+            this.AdminHRadioButton_SearchUsername.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.AdminHRadioButton_SearchUsername.Size = new System.Drawing.Size(18, 12);
+            this.AdminHRadioButton_SearchUsername.TabIndex = 98;
+            this.AdminHRadioButton_SearchUsername.Values.Text = "";
+            this.AdminHRadioButton_SearchUsername.CheckedChanged += new System.EventHandler(this.AdminHRadioButton_SearchUsername_CheckedChanged);
+            // 
+            // AdminHRadioButton_SearchID
+            // 
+            this.AdminHRadioButton_SearchID.Location = new System.Drawing.Point(12, 47);
+            this.AdminHRadioButton_SearchID.Margin = new System.Windows.Forms.Padding(10);
+            this.AdminHRadioButton_SearchID.Name = "AdminHRadioButton_SearchID";
+            this.AdminHRadioButton_SearchID.Palette = this.kryptonPalette2;
+            this.AdminHRadioButton_SearchID.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.AdminHRadioButton_SearchID.Size = new System.Drawing.Size(18, 12);
+            this.AdminHRadioButton_SearchID.TabIndex = 97;
+            this.AdminHRadioButton_SearchID.Values.Text = "";
+            this.AdminHRadioButton_SearchID.CheckedChanged += new System.EventHandler(this.AdminHRadioButton_SearchID_CheckedChanged);
             // 
             // HistoryStudent_NameLabel
             // 
@@ -3756,35 +3818,33 @@
             this.HistoryStudent_NameLabel.Location = new System.Drawing.Point(42, 455);
             this.HistoryStudent_NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HistoryStudent_NameLabel.Name = "HistoryStudent_NameLabel";
-            this.HistoryStudent_NameLabel.Size = new System.Drawing.Size(136, 22);
+            this.HistoryStudent_NameLabel.Size = new System.Drawing.Size(175, 22);
             this.HistoryStudent_NameLabel.TabIndex = 87;
-            this.HistoryStudent_NameLabel.Text = "Student Name";
+            this.HistoryStudent_NameLabel.Text = "Student Username";
             // 
-            // StudentHComboBox_Name
+            // StudentHComboBox_Username
             // 
-            this.StudentHComboBox_Name.DropDownWidth = 264;
-            this.StudentHComboBox_Name.Location = new System.Drawing.Point(48, 484);
-            this.StudentHComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.StudentHComboBox_Name.Name = "StudentHComboBox_Name";
-            this.StudentHComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.StudentHComboBox_Name.Size = new System.Drawing.Size(396, 46);
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.StudentHComboBox_Username.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StudentHComboBox_Username.DropDownWidth = 264;
+            this.StudentHComboBox_Username.Location = new System.Drawing.Point(48, 484);
+            this.StudentHComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentHComboBox_Username.Name = "StudentHComboBox_Username";
+            this.StudentHComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.StudentHComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.Rounding = 20;
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Border.Width = 2;
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.StudentHComboBox_Name.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentHComboBox_Name.TabIndex = 86;
-            this.StudentHComboBox_Name.Text = "Search by Student\'s Name";
-            this.StudentHComboBox_Name.Enter += new System.EventHandler(this.StudentHComboBox_Name_Enter);
-            this.StudentHComboBox_Name.Leave += new System.EventHandler(this.StudentHComboBox_Name_Leave);
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.Rounding = 20;
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Border.Width = 2;
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.StudentHComboBox_Username.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentHComboBox_Username.TabIndex = 86;
             // 
             // HistoryStudent_IDLabel
             // 
@@ -3818,6 +3878,7 @@
             this.StudentHTextBox_ID.TabIndex = 84;
             this.StudentHTextBox_ID.Text = "Search by Student\'s ID";
             this.StudentHTextBox_ID.Enter += new System.EventHandler(this.StudentHTextBox_ID_Enter);
+            this.StudentHTextBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StudentHTextBox_ID_KeyPress);
             this.StudentHTextBox_ID.Leave += new System.EventHandler(this.StudentHTextBox_ID_Leave);
             // 
             // HistoryInstructor_NameLabel
@@ -3827,35 +3888,33 @@
             this.HistoryInstructor_NameLabel.Location = new System.Drawing.Point(42, 284);
             this.HistoryInstructor_NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HistoryInstructor_NameLabel.Name = "HistoryInstructor_NameLabel";
-            this.HistoryInstructor_NameLabel.Size = new System.Drawing.Size(151, 22);
+            this.HistoryInstructor_NameLabel.Size = new System.Drawing.Size(190, 22);
             this.HistoryInstructor_NameLabel.TabIndex = 83;
-            this.HistoryInstructor_NameLabel.Text = "Instructor Name";
+            this.HistoryInstructor_NameLabel.Text = "Instructor Username";
             // 
-            // InstructorHComboBox_Name
+            // InstructorHComboBox_Username
             // 
-            this.InstructorHComboBox_Name.DropDownWidth = 264;
-            this.InstructorHComboBox_Name.Location = new System.Drawing.Point(48, 314);
-            this.InstructorHComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.InstructorHComboBox_Name.Name = "InstructorHComboBox_Name";
-            this.InstructorHComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.InstructorHComboBox_Name.Size = new System.Drawing.Size(396, 46);
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.InstructorHComboBox_Username.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.InstructorHComboBox_Username.DropDownWidth = 264;
+            this.InstructorHComboBox_Username.Location = new System.Drawing.Point(48, 314);
+            this.InstructorHComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorHComboBox_Username.Name = "InstructorHComboBox_Username";
+            this.InstructorHComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.InstructorHComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.Rounding = 20;
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Border.Width = 2;
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.InstructorHComboBox_Name.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InstructorHComboBox_Name.TabIndex = 82;
-            this.InstructorHComboBox_Name.Text = "Search by Instructor\'s Name";
-            this.InstructorHComboBox_Name.Enter += new System.EventHandler(this.InstructorHComboBox_Name_Enter);
-            this.InstructorHComboBox_Name.Leave += new System.EventHandler(this.InstructorHComboBox_Name_Leave);
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.Rounding = 20;
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Border.Width = 2;
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.InstructorHComboBox_Username.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorHComboBox_Username.TabIndex = 82;
             // 
             // HistoryInstructor_IDLabel
             // 
@@ -3889,6 +3948,7 @@
             this.InstructorHTextBox_ID.TabIndex = 80;
             this.InstructorHTextBox_ID.Text = "Search by Instructor\'s ID";
             this.InstructorHTextBox_ID.Enter += new System.EventHandler(this.InstructorHTextBox_ID_Enter);
+            this.InstructorHTextBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InstructorHTextBox_ID_KeyPress);
             this.InstructorHTextBox_ID.Leave += new System.EventHandler(this.InstructorHTextBox_ID_Leave);
             // 
             // HistoryAdmin_NameLabel
@@ -3898,35 +3958,33 @@
             this.HistoryAdmin_NameLabel.Location = new System.Drawing.Point(38, 116);
             this.HistoryAdmin_NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HistoryAdmin_NameLabel.Name = "HistoryAdmin_NameLabel";
-            this.HistoryAdmin_NameLabel.Size = new System.Drawing.Size(122, 22);
+            this.HistoryAdmin_NameLabel.Size = new System.Drawing.Size(161, 22);
             this.HistoryAdmin_NameLabel.TabIndex = 79;
-            this.HistoryAdmin_NameLabel.Text = "Admin Name";
+            this.HistoryAdmin_NameLabel.Text = "Admin Username";
             // 
-            // AdminHComboBox_Name
+            // AdminHComboBox_Username
             // 
-            this.AdminHComboBox_Name.DropDownWidth = 264;
-            this.AdminHComboBox_Name.Location = new System.Drawing.Point(44, 146);
-            this.AdminHComboBox_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.AdminHComboBox_Name.Name = "AdminHComboBox_Name";
-            this.AdminHComboBox_Name.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AdminHComboBox_Name.Size = new System.Drawing.Size(396, 46);
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.AdminHComboBox_Username.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AdminHComboBox_Username.DropDownWidth = 264;
+            this.AdminHComboBox_Username.Location = new System.Drawing.Point(44, 146);
+            this.AdminHComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminHComboBox_Username.Name = "AdminHComboBox_Username";
+            this.AdminHComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminHComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.Rounding = 20;
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Border.Width = 2;
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.AdminHComboBox_Name.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminHComboBox_Name.TabIndex = 78;
-            this.AdminHComboBox_Name.Text = "Search by Admin\'s Name";
-            this.AdminHComboBox_Name.Enter += new System.EventHandler(this.AdminHComboBox_Name_Enter);
-            this.AdminHComboBox_Name.Leave += new System.EventHandler(this.AdminHComboBox_Name_Leave);
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.Rounding = 20;
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Border.Width = 2;
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.AdminHComboBox_Username.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminHComboBox_Username.TabIndex = 78;
             // 
             // HistoryAdmin_IDLabel
             // 
@@ -3960,69 +4018,71 @@
             this.AdminHTextBox_ID.TabIndex = 76;
             this.AdminHTextBox_ID.Text = "Search by Admin\'s ID";
             this.AdminHTextBox_ID.Enter += new System.EventHandler(this.AdminHTextBox_ID_Enter);
+            this.AdminHTextBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminHTextBox_ID_KeyPress);
             this.AdminHTextBox_ID.Leave += new System.EventHandler(this.AdminHTextBox_ID_Leave);
             // 
-            // kryptonButton2
+            // HistoryButton_Search
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(770, 500);
-            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton2.OverrideDefault.Back.ColorAngle = 45F;
-            this.kryptonButton2.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton2.OverrideDefault.Border.ColorAngle = 45F;
-            this.kryptonButton2.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.HistoryButton_Search.Location = new System.Drawing.Point(746, 499);
+            this.HistoryButton_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.HistoryButton_Search.Name = "HistoryButton_Search";
+            this.HistoryButton_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.HistoryButton_Search.OverrideDefault.Back.ColorAngle = 45F;
+            this.HistoryButton_Search.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.HistoryButton_Search.OverrideDefault.Border.ColorAngle = 45F;
+            this.HistoryButton_Search.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton2.OverrideDefault.Border.Rounding = 20;
-            this.kryptonButton2.OverrideDefault.Border.Width = 1;
-            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton2.Size = new System.Drawing.Size(200, 50);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.StateCommon.Border.ColorAngle = 45F;
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.HistoryButton_Search.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.HistoryButton_Search.OverrideDefault.Border.Rounding = 20;
+            this.HistoryButton_Search.OverrideDefault.Border.Width = 1;
+            this.HistoryButton_Search.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.HistoryButton_Search.Size = new System.Drawing.Size(200, 50);
+            this.HistoryButton_Search.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.StateCommon.Back.ColorAngle = 45F;
+            this.HistoryButton_Search.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.StateCommon.Border.ColorAngle = 45F;
+            this.HistoryButton_Search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton2.StateCommon.Border.Rounding = 20;
-            this.kryptonButton2.StateCommon.Border.Width = 1;
-            this.kryptonButton2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
-            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton2.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.kryptonButton2.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.kryptonButton2.StatePressed.Back.ColorAngle = 135F;
-            this.kryptonButton2.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.kryptonButton2.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.kryptonButton2.StatePressed.Border.ColorAngle = 135F;
-            this.kryptonButton2.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.HistoryButton_Search.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.HistoryButton_Search.StateCommon.Border.Rounding = 20;
+            this.HistoryButton_Search.StateCommon.Border.Width = 1;
+            this.HistoryButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.HistoryButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.HistoryButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.HistoryButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HistoryButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.HistoryButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.HistoryButton_Search.StatePressed.Back.ColorAngle = 135F;
+            this.HistoryButton_Search.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.HistoryButton_Search.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.HistoryButton_Search.StatePressed.Border.ColorAngle = 135F;
+            this.HistoryButton_Search.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StatePressed.Border.Rounding = 20;
-            this.kryptonButton2.StatePressed.Border.Width = 1;
-            this.kryptonButton2.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton2.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.StateTracking.Back.ColorAngle = 45F;
-            this.kryptonButton2.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.kryptonButton2.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.kryptonButton2.StateTracking.Border.ColorAngle = 45F;
-            this.kryptonButton2.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.HistoryButton_Search.StatePressed.Border.Rounding = 20;
+            this.HistoryButton_Search.StatePressed.Border.Width = 1;
+            this.HistoryButton_Search.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.HistoryButton_Search.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.StateTracking.Back.ColorAngle = 45F;
+            this.HistoryButton_Search.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.HistoryButton_Search.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.HistoryButton_Search.StateTracking.Border.ColorAngle = 45F;
+            this.HistoryButton_Search.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton2.StateTracking.Border.Rounding = 20;
-            this.kryptonButton2.StateTracking.Border.Width = 1;
-            this.kryptonButton2.TabIndex = 75;
-            this.kryptonButton2.TabStop = false;
-            this.kryptonButton2.Values.Text = "Search";
+            this.HistoryButton_Search.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.HistoryButton_Search.StateTracking.Border.Rounding = 20;
+            this.HistoryButton_Search.StateTracking.Border.Width = 1;
+            this.HistoryButton_Search.TabIndex = 75;
+            this.HistoryButton_Search.TabStop = false;
+            this.HistoryButton_Search.Values.Text = "Search";
+            this.HistoryButton_Search.Click += new System.EventHandler(this.HistoryButton_Search_Click);
             // 
             // AdminName_Label
             // 
@@ -4152,10 +4212,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.AdminECourseComboBox_Name)).EndInit();
             this.AdminHistoryPage.ResumeLayout(false);
             this.AdminHistoryPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Name)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Name)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Username)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4272,20 +4332,19 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton AdminEStudentButton_Edit;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminEStudentTextBox_Level;
         private System.Windows.Forms.Label label14;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
         private System.Windows.Forms.Label HistoryStudent_NameLabel;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox StudentHComboBox_Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox StudentHComboBox_Username;
         private System.Windows.Forms.Label HistoryStudent_IDLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox StudentHTextBox_ID;
         private System.Windows.Forms.Label HistoryInstructor_NameLabel;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox InstructorHComboBox_Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox InstructorHComboBox_Username;
         private System.Windows.Forms.Label HistoryInstructor_IDLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox InstructorHTextBox_ID;
         private System.Windows.Forms.Label HistoryAdmin_NameLabel;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox AdminHComboBox_Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox AdminHComboBox_Username;
         private System.Windows.Forms.Label HistoryAdmin_IDLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminHTextBox_ID;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton HistoryButton_Search;
         private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl1;
         private MetroSet_UI.Child.MetroSetSetTabPage AdminAddCourse;
         private MetroSet_UI.Child.MetroSetSetTabPage AdminEditCourse;
@@ -4298,7 +4357,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminECourseTextBox_ID;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton AdminECourseButton_Remove;
         private ComponentFactory.Krypton.Toolkit.KryptonButton AdminECourseButton_Search;
         private ComponentFactory.Krypton.Toolkit.KryptonButton AdminECourseButton_Edit;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminECourseTextBox_Description;
@@ -4325,5 +4383,15 @@
         private System.Windows.Forms.Label label22;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton CourseRadioButton_SearchUsername;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton CourseRadioButton_SearchID;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton StudentHRadioButton_Username;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton StudentHRadioButton_SearchID;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton InstructorHRadioButton_SearchUsername;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton InstructorHRadioButton_SearchID;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton AdminHRadioButton_SearchUsername;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton AdminHRadioButton_SearchID;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView HistoryDataGridView;
     }
 }
