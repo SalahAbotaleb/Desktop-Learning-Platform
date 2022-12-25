@@ -172,5 +172,15 @@ namespace Learning_DB
         {
             Application.Exit();
         }
+
+        private void EnterClassButton_Click(object sender, EventArgs e)
+        {
+            if(ClassroomComboBox.SelectedIndex != -1)
+            {
+                StudentClassroom SC = new StudentClassroom(Convert.ToInt32(ClassroomComboBox.SelectedValue.ToString()),OpenedSession.ID);
+                SC.Show();
+                this.Hide();
+            }
+        }
     }
 }
