@@ -486,6 +486,11 @@ namespace DbHandler
             string Query = "SELECT Title, Link FROM Material WHERE Class_ID = " + CID + " ;";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectEventsForClass(int CID)
+        {
+            string Query = "SELECT Title, Date FROM Event WHERE Class_ID = " + CID + " ;";
+            return dbMan.ExecuteReader(Query);
+        }
         public DataTable SelectPostsForClass(int CID)
         {
             string Query = @"SELECT Class_ID,Timestamp,Posts.Title,Instructor.Title + ' ' + FName + ' ' + Lname + ': ' + Announcement as Announcement,Posts.Instructor_ID 

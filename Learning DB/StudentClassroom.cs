@@ -28,6 +28,7 @@ namespace Learning_DB
         DataTable Post_dt;
         DataTable Comments_dt;
         DataTable Material_dt;
+        DataTable Events_dt;
         int h, m, s;
         int duration;
         Exam exam;
@@ -42,6 +43,11 @@ namespace Learning_DB
             Exam_dt = controller.SelectExamsForClass(ClassID);
             Post_dt = controller.SelectPostsForClass(ClassID);
             Material_dt = controller.SelectMaterialsForClass(ClassID);
+            Events_dt = controller.SelectEventsForClass(ClassID);
+            if (Events_dt.Rows != null)
+            {
+                EventsDatagridView.DataSource = Events_dt;
+            }
             if (MaterialdataGrid.Rows != null) { 
                 MaterialdataGrid.DataSource = Material_dt;
                 OpenMaterialButton.Visible = true;
@@ -477,7 +483,7 @@ namespace Learning_DB
 
         private void OpenMaterialButton_Click(object sender, EventArgs e)
         {
-            if (MaterialdataGrid.SelectedCells[0].ColumnIndex == 0)
+            if (MaterialdataGrid.SelectedCells[0].ColumnIndex == 0 || MaterialdataGrid.SelectedCells[0].RowIndex == MaterialdataGrid.NewRowIndex)
                 return;
             Process.Start(MaterialdataGrid.SelectedCells[0].Value.ToString());
         }
@@ -489,6 +495,15 @@ namespace Learning_DB
             {
                 MaterialdataGrid.DataSource = Material_dt;
                 OpenMaterialButton.Visible = true;
+            }
+        }
+
+        private void EventsRefreshButton_Click(object sender, EventArgs e)
+        {
+            Events_dt = controller.SelectEventsForClass(ClassID);
+            if (Events_dt.Rows != null)
+            {
+                EventsDatagridView.DataSource = Events_dt;
             }
         }
 
