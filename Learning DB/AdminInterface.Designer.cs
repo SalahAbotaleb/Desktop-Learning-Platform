@@ -301,7 +301,7 @@
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(-6, 54);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 2;
+            this.Main.SelectedIndex = 0;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1210, 652);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -341,12 +341,12 @@
             this.AdminAdminPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminAdminPage.Controls.Add(this.AddAdmin);
             this.AdminAdminPage.Controls.Add(this.EditAdmin);
-            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Default;
             this.AdminAdminPage.IsDerivedStyle = false;
             this.AdminAdminPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminAdminPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminAdminPage.Name = "AdminAdminPage";
-            this.AdminAdminPage.SelectedIndex = 1;
+            this.AdminAdminPage.SelectedIndex = 0;
             this.AdminAdminPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminAdminPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminAdminPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -2182,7 +2182,7 @@
             this.AdminStudentPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminStudentPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminStudentPage.Name = "AdminStudentPage";
-            this.AdminStudentPage.SelectedIndex = 0;
+            this.AdminStudentPage.SelectedIndex = 1;
             this.AdminStudentPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminStudentPage.Size = new System.Drawing.Size(1212, 593);
             this.AdminStudentPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -4168,6 +4168,8 @@
             this.Controls.Add(this.Main);
             this.Controls.Add(this.User_Name);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Calendar;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminInterface";
             this.Palette = this.kryptonPalette2;

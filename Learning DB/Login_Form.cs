@@ -44,5 +44,12 @@ namespace Learning_DB
             C.Show();
             this.Hide();
         }
+
+        private void SignUp_Sign_inButton_Click(object sender, EventArgs e)
+        {
+            Sign_Up S = new Sign_Up();
+            S.Show();
+            this.Hide();
+        }
     }
 }

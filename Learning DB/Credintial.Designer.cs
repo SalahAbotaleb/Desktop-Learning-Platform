@@ -91,7 +91,7 @@
             this.UsernameBox.StateCommon.Border.Rounding = 20;
             this.UsernameBox.StateCommon.Border.Width = 2;
             this.UsernameBox.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.UsernameBox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameBox.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.UsernameBox.TabIndex = 0;
             this.UsernameBox.Text = "Username/Email";
@@ -120,6 +120,12 @@
             this.LoginButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(172)))), ((int)(((byte)(244)))));
             this.LoginButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(255)))));
             this.LoginButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.LoginButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.LoginButton.StatePressed.Back.ColorAngle = 45F;
+            this.LoginButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.LoginButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.LoginButton.StateTracking.Back.ColorAngle = 45F;
             this.LoginButton.TabIndex = 1;
             this.LoginButton.TabStop = false;
             this.LoginButton.Values.Text = "Log in";
@@ -140,7 +146,7 @@
             this.PasswordBox.StateCommon.Border.Rounding = 20;
             this.PasswordBox.StateCommon.Border.Width = 2;
             this.PasswordBox.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.PasswordBox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordBox.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.PasswordBox.TabIndex = 2;
             this.PasswordBox.Text = "Password";
@@ -149,7 +155,7 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(188, 34);
+            this.kryptonLabel1.Location = new System.Drawing.Point(194, 34);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(164, 44);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +211,8 @@
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.UsernameBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Calendar;
             this.Name = "Credintial";
             this.Palette = this.kryptonPalette2;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
