@@ -14,14 +14,19 @@ namespace Learning_DB
         {
             InitializeComponent();
             cont = new Controller();
-            
+
             User_NameLabel.Text = OpenedSession.UserData.Rows[0]["Fname"].ToString() + " " + OpenedSession.UserData.Rows[0]["LName"].ToString();
             ClassroomComboBox.DataSource = cont.SelectClassesForStudent(OpenedSession.ID);
             ClassroomComboBox.DisplayMember = "Title";
             ClassroomComboBox.ValueMember = "Class_ID";
             InstructorInClassComboBox.DataSource = cont.SelectInstructorsForClassByID(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1;
             InstructorInClassComboBox.DisplayMember = "Instructor Name";
-            CourseNameInClassBox.Text = cont.SelectClassInfoForStudent(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1.Rows[0]["Course Name"].ToString();
+            DataTable dt = cont.SelectClassInfoForStudent(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1;
+            if (dt != null)
+            {
+                CourseNameInClassBox.Text = dt.Rows[0]["Course Name"].ToString();
+            }
+
 
             FNameBox.Text = OpenedSession.UserData.Rows[0]["FName"].ToString();
             LNameBox.Text = OpenedSession.UserData.Rows[0]["LName"].ToString();
@@ -112,7 +117,11 @@ namespace Learning_DB
 
         private void ClassroomComboBox_DropDownClosed(object sender, EventArgs e)
         {
-            CourseNameInClassBox.Text = cont.SelectClassInfoForStudent(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1.Rows[0]["Course Name"].ToString();
+            DataTable dt = cont.SelectClassInfoForStudent(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1;
+            if (dt == null)
+                return;
+            CourseNameInClassBox.Text = dt.Rows[0]["Course Name"].ToString();
+
             InstructorInClassComboBox.DataSource = cont.SelectInstructorsForClassByID(Convert.ToInt32(ClassroomComboBox.SelectedValue)).Item1;
             InstructorInClassComboBox.DisplayMember = "Instructor Name";
 
@@ -120,28 +129,28 @@ namespace Learning_DB
 
         private void AdminEStudentButton_Edit_Click(object sender, EventArgs e)
         {
-            if(FNameBox.Text == "")
+            if (FNameBox.Text == "")
             {
                 MessageBox.Show("Enter First Name");
                 return;
-                
+
             }
-            if(FNameBox.Text == "")
+            if (FNameBox.Text == "")
             {
                 MessageBox.Show("Enter Last Name");
                 return;
             }
-            if(EmailBox.Text == "")
+            if (EmailBox.Text == "")
             {
                 MessageBox.Show("Enter Email");
                 return;
             }
-            if(UsernameBox.Text == "")
+            if (UsernameBox.Text == "")
             {
                 MessageBox.Show("Enter Username");
                 return;
             }
-            Tuple<int, string> UpSt = cont.UpdateStudent(FNameBox.Text, LNameBox.Text, EmailBox.Text,Convert.ToInt32(LevelBox.Text), UsernameBox.Text, OpenedSession.ID);
+            Tuple<int, string> UpSt = cont.UpdateStudent(FNameBox.Text, LNameBox.Text, EmailBox.Text, Convert.ToInt32(LevelBox.Text), UsernameBox.Text, OpenedSession.ID);
             if (UpSt.Item1 == 0)
             {
                 MessageBox.Show(UpSt.Item2);
