@@ -44,6 +44,7 @@ namespace Learning_DB
 
         ///add question to question bank
         public static string AddQuestion = "spAddQuestion";
+        public static string AddQuestionOption = "spAddQuestionOption";
         
         //material and assignment upload
         public static string AddNewMaterial = "spAddNewMaterial";
