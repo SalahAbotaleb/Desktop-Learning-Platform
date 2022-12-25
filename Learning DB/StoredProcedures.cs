@@ -41,5 +41,7 @@ namespace Learning_DB
         public static string InsertSumbission = "spSubmitAssignment";
 
         public static string CheckExamAvailability = "spCheckExamAvailability";
+
+        public static string CommentOnPost = "spCommentOnPost";
     }
 }

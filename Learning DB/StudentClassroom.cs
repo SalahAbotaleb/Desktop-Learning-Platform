@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,8 +22,11 @@ namespace Learning_DB
         Controller controller = new Controller();
         int Assignment_Page_Counter = 0;
         int Exam_Page_Count = 0;
+        int Post_Count = 0;
         DataTable Assignment_dt;
         DataTable Exam_dt;
+        DataTable Post_dt;
+        DataTable Comments_dt;
         int h, m, s;
         int duration;
         Exam exam;
@@ -35,6 +39,11 @@ namespace Learning_DB
             this.StudentID = StudentID;
             Assignment_dt = controller.SelectAssignmentForClass(ClassID);
             Exam_dt = controller.SelectExamsForClass(ClassID);
+            Post_dt = controller.SelectPostsForClass(ClassID);
+            
+            UpdatePostsPage();
+
+
             ComboBoxSelectExam.DisplayMember = "Title";
             ComboBoxSelectExam.ValueMember = "Exam_ID";
             ComboBoxSelectExam.DataSource = Exam_dt;
@@ -60,7 +69,7 @@ namespace Learning_DB
             exitExam2.Hide();
             SolvedStatus.Hide();
         }
-
+        
         private void UpdateExamPage()
         {
             if (isAnswersShowing == true)
@@ -136,7 +145,42 @@ namespace Learning_DB
             DeadlineDateLabel.Text = Assignment_dt.Rows[Assignment_Page_Counter]["Deadline"].ToString();
             HisGradeLabel.Text = "/" + Assignment_dt.Rows[Assignment_Page_Counter]["Total_Grade"].ToString();
         }
+        
+        public void UpdatePostsPage()
+        {
 
+            if (Post_dt == null)
+            {
+                PostDateLabel.Visible = false;
+                AnnouncementBox.Visible = false;
+                AnnouncementLabel.Visible = false;
+                CommentsDataGrid.Visible = false;
+                CommentsLabel.Visible = false;
+                AddCommentLabel.Visible = false;
+                AddedCommentBox.Visible = false;
+                PostsSubmitButton.Visible = false;
+                PostsNextButton.Visible = false;
+                PostsPreviousButton.Visible = false;
+                return;
+            }
+            PostDateLabel.Visible = true;
+            AnnouncementBox.Visible = true;
+            AnnouncementLabel.Visible = true;
+            CommentsDataGrid.Visible = true;
+            CommentsLabel.Visible = true;
+            AddCommentLabel.Visible = true;
+            AddedCommentBox.Visible = true;
+            PostsSubmitButton.Visible = true;
+            PostsNextButton.Visible = true;
+            PostsPreviousButton.Visible = true;
+            PostDateLabel.Text = Post_dt.Rows[Post_Count]["Timestamp"].ToString();
+            PostTitleLabel.Text = Post_dt.Rows[Post_Count]["Title"].ToString();
+            AnnouncementBox.Text = Post_dt.Rows[Post_Count]["Announcement"].ToString();
+            Comments_dt = controller.SelectCommentsForClass(ClassID, Post_dt.Rows[Post_Count]["Timestamp"].ToString());
+            CommentsDataGrid.DataSource = Comments_dt;
+            CommentsDataGrid.Refresh();
+        }
+        
         private void PreviousButton_Click(object sender, EventArgs e)
         {
             if (Assignment_Page_Counter == 0)
@@ -379,6 +423,51 @@ namespace Learning_DB
             radioButton3.Checked = false;
             radioButton4.Checked = false;
 
+        }
+
+        private void PostsSubmitButton_Click(object sender, EventArgs e)
+        {
+            if (Post_dt != null && AddedCommentBox.Text != "")
+            {
+
+                if (controller.AddComment(Post_dt.Rows[Post_Count]["Class_ID"].ToString(), Post_dt.Rows[Post_Count]["Timestamp"].ToString(), OpenedSession.ID, AddedCommentBox.Text).Item1 != 0)
+                {
+                    AddedCommentBox.Text = "";
+                    Comments_dt = controller.SelectCommentsForClass(ClassID, Post_dt.Rows[Post_Count]["Timestamp"].ToString());
+                    CommentsDataGrid.DataSource = Comments_dt;
+                    CommentsDataGrid.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Error Adding Comment");
+                }
+                
+            }
+        }
+
+        private void PostsNextButton_Click(object sender, EventArgs e)
+        {
+            if (Post_Count == Post_dt.Rows.Count - 1)
+                return;
+            Post_Count++;
+            UpdatePostsPage();
+
+        }
+
+        private void PostsPreviousButton_Click(object sender, EventArgs e)
+        {
+            if (Post_Count == 0)
+                return;
+            Post_Count--;
+            UpdatePostsPage();
+        }
+
+        private void PostsRefreshButton_Click(object sender, EventArgs e)
+        {
+            Post_dt = controller.SelectPostsForClass(ClassID);
+            Post_Count = 0;
+            UpdatePostsPage();
+            
         }
 
         private void kryptonButtonNextQues_Click(object sender, EventArgs e)

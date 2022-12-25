@@ -481,6 +481,36 @@ namespace DbHandler
             string Query = "SELECT * FROM Assignment WHERE Class_ID = " + CID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectPostsForClass(int CID)
+        {
+            string Query = @"SELECT Class_ID,Timestamp,Posts.Title,Instructor.Title + ' ' + FName + ' ' + Lname + ': ' + Announcement as Announcement,Posts.Instructor_ID 
+                            FROM Posts,Instructor 
+                            WHERE Posts.Instructor_ID = Instructor.Instructor_ID AND Class_ID = " + CID + " ORDER BY Timestamp DESC;";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectCommentsForClass(int CID, string timestamp)
+        {
+            string Query = @"select name + ': ' + Comment as Comment,Date
+                            from Comment_On_Post
+                            join (SELECT FName + ' ' + LName as name , StudentID as id
+                            FROM Student
+                            union
+                            SELECT Title + ' ' + FName + ' ' + LName as name, Instructor_ID as id
+                            FROM Instructor) as Names on Comment_Owner_ID = id
+                            where Class_ID =  " + CID + @" And Timestamp = '" + timestamp + @"'
+                            ORDER BY Date DESC;";
+            return dbMan.ExecuteReader(Query);
+        }
 
+        internal Tuple<int, string> AddComment(string CID, string TS, int iD, string Comm)
+        {
+            string StoredProcedureName = StoredProcedures.CommentOnPost;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@class_id", CID);
+            Parameters.Add("@timestamp", TS);
+            Parameters.Add("@Comment_Owner_ID", iD);
+            Parameters.Add("@comment", Comm);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
     }
 }
