@@ -80,7 +80,7 @@
             // 
             // Admin_Sign_inButton
             // 
-            this.Admin_Sign_inButton.Location = new System.Drawing.Point(33, 120);
+            this.Admin_Sign_inButton.Location = new System.Drawing.Point(29, 107);
             this.Admin_Sign_inButton.Name = "Admin_Sign_inButton";
             this.Admin_Sign_inButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.Admin_Sign_inButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -95,7 +95,7 @@
             this.Admin_Sign_inButton.OverrideDefault.Border.Rounding = 20;
             this.Admin_Sign_inButton.OverrideDefault.Border.Width = 1;
             this.Admin_Sign_inButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Admin_Sign_inButton.Size = new System.Drawing.Size(215, 60);
+            this.Admin_Sign_inButton.Size = new System.Drawing.Size(215, 64);
             this.Admin_Sign_inButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.Admin_Sign_inButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.Admin_Sign_inButton.StateCommon.Back.ColorAngle = 45F;
@@ -140,7 +140,7 @@
             // 
             // Instructor_Sign_inButton
             // 
-            this.Instructor_Sign_inButton.Location = new System.Drawing.Point(33, 215);
+            this.Instructor_Sign_inButton.Location = new System.Drawing.Point(29, 201);
             this.Instructor_Sign_inButton.Name = "Instructor_Sign_inButton";
             this.Instructor_Sign_inButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(199)))), ((int)(((byte)(5)))));
             this.Instructor_Sign_inButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(202)))), ((int)(((byte)(4)))));
@@ -155,7 +155,7 @@
             this.Instructor_Sign_inButton.OverrideDefault.Border.Rounding = 20;
             this.Instructor_Sign_inButton.OverrideDefault.Border.Width = 1;
             this.Instructor_Sign_inButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Instructor_Sign_inButton.Size = new System.Drawing.Size(215, 60);
+            this.Instructor_Sign_inButton.Size = new System.Drawing.Size(215, 64);
             this.Instructor_Sign_inButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Instructor_Sign_inButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Instructor_Sign_inButton.StateCommon.Back.ColorAngle = 45F;
@@ -200,7 +200,7 @@
             // 
             // Student_Sign_inButton
             // 
-            this.Student_Sign_inButton.Location = new System.Drawing.Point(29, 310);
+            this.Student_Sign_inButton.Location = new System.Drawing.Point(29, 303);
             this.Student_Sign_inButton.Name = "Student_Sign_inButton";
             this.Student_Sign_inButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
             this.Student_Sign_inButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -215,7 +215,7 @@
             this.Student_Sign_inButton.OverrideDefault.Border.Rounding = 20;
             this.Student_Sign_inButton.OverrideDefault.Border.Width = 1;
             this.Student_Sign_inButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Student_Sign_inButton.Size = new System.Drawing.Size(215, 60);
+            this.Student_Sign_inButton.Size = new System.Drawing.Size(215, 64);
             this.Student_Sign_inButton.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.Student_Sign_inButton.StateCommon.Back.Color2 = System.Drawing.Color.Red;
             this.Student_Sign_inButton.StateCommon.Back.ColorAngle = 45F;
@@ -263,7 +263,7 @@
             this.SignUp_Sign_inButton.Location = new System.Drawing.Point(29, 402);
             this.SignUp_Sign_inButton.Name = "SignUp_Sign_inButton";
             this.SignUp_Sign_inButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.SignUp_Sign_inButton.Size = new System.Drawing.Size(215, 55);
+            this.SignUp_Sign_inButton.Size = new System.Drawing.Size(215, 64);
             this.SignUp_Sign_inButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.SignUp_Sign_inButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.SignUp_Sign_inButton.StateCommon.Back.ColorAngle = 45F;
@@ -305,7 +305,7 @@
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(245, 26);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(193, 57);
+            this.kryptonLabel1.Size = new System.Drawing.Size(193, 60);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("JetBrains Mono", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 7;
             this.kryptonLabel1.Values.Text = "Sign in";
