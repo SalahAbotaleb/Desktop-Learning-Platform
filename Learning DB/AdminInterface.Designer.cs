@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.User_Name = new System.Windows.Forms.Label();
             this.Main = new MetroSet_UI.Controls.MetroSetTabControl();
             this.Admin = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.AdminAdminPage = new MetroSet_UI.Controls.MetroSetTabControl();
@@ -199,6 +198,54 @@
             this.HistoryButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AdminName_Label = new System.Windows.Forms.Label();
             this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Requests = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.metroSetTabControl2 = new MetroSet_UI.Controls.MetroSetTabControl();
+            this.AdminRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.InstructorRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.StudentRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.AdminRComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.AdminRButton_Activate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label27 = new System.Windows.Forms.Label();
+            this.AdminRButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.AdminRTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.AdminRTextBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.AdminRTextBox_LastName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.AdminRTextBox_FirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.InstructorRTextBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.InstructorRTextBox_LastName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.InstructorRTextBox_FirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.InstructorRComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.InstructorRButton_Activate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.InstructorRTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.InstructorRButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.InstructorRTextBox_Title = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.StudentRTextBox_Level = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.StudentRTextBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.StudentRTextBox_LastName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.StudentRTextBox_FirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.StudentRComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.StudentRButton_Activate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.StudentRTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.StudentRButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Main.SuspendLayout();
             this.Admin.SuspendLayout();
             this.AdminAdminPage.SuspendLayout();
@@ -231,6 +278,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Username)).BeginInit();
+            this.Requests.SuspendLayout();
+            this.metroSetTabControl2.SuspendLayout();
+            this.AdminRequests.SuspendLayout();
+            this.InstructorRequests.SuspendLayout();
+            this.StudentRequests.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminRComboBox_Username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorRComboBox_Username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentRComboBox_Username)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette2
@@ -271,19 +326,6 @@
             this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.Rounding = 15;
             this.kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // User_Name
-            // 
-            this.User_Name.AutoSize = true;
-            this.User_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User_Name.ForeColor = System.Drawing.Color.Black;
-            this.User_Name.Location = new System.Drawing.Point(1274, 22);
-            this.User_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.User_Name.Name = "User_Name";
-            this.User_Name.Size = new System.Drawing.Size(89, 32);
-            this.User_Name.TabIndex = 9;
-            this.User_Name.Text = "name";
-            this.User_Name.Click += new System.EventHandler(this.User_Name_Click);
-            // 
             // Main
             // 
             this.Main.AccessibleName = "";
@@ -296,12 +338,13 @@
             this.Main.Controls.Add(this.Student);
             this.Main.Controls.Add(this.History2);
             this.Main.Controls.Add(this.AdminHistoryPage);
+            this.Main.Controls.Add(this.Requests);
             this.Main.Cursor = System.Windows.Forms.Cursors.Default;
             this.Main.IsDerivedStyle = false;
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(-6, 54);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 0;
+            this.Main.SelectedIndex = 5;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1210, 652);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -341,12 +384,12 @@
             this.AdminAdminPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminAdminPage.Controls.Add(this.AddAdmin);
             this.AdminAdminPage.Controls.Add(this.EditAdmin);
-            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminAdminPage.IsDerivedStyle = false;
             this.AdminAdminPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminAdminPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminAdminPage.Name = "AdminAdminPage";
-            this.AdminAdminPage.SelectedIndex = 0;
+            this.AdminAdminPage.SelectedIndex = 1;
             this.AdminAdminPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminAdminPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminAdminPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1207,7 +1250,7 @@
             this.AdminInstructorPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminInstructorPage.Controls.Add(this.AddInstructor);
             this.AdminInstructorPage.Controls.Add(this.EditInstructor);
-            this.AdminInstructorPage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AdminInstructorPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminInstructorPage.IsDerivedStyle = false;
             this.AdminInstructorPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminInstructorPage.Location = new System.Drawing.Point(-4, 0);
@@ -2160,7 +2203,7 @@
             this.Student.IsDerivedStyle = false;
             this.Student.Location = new System.Drawing.Point(4, 64);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(1202, 584);
+            this.Student.Size = new System.Drawing.Size(1199, 584);
             this.Student.Style = MetroSet_UI.Enums.Style.Light;
             this.Student.StyleManager = this.styleManager1;
             this.Student.TabIndex = 2;
@@ -2182,7 +2225,7 @@
             this.AdminStudentPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminStudentPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminStudentPage.Name = "AdminStudentPage";
-            this.AdminStudentPage.SelectedIndex = 1;
+            this.AdminStudentPage.SelectedIndex = 0;
             this.AdminStudentPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminStudentPage.Size = new System.Drawing.Size(1212, 593);
             this.AdminStudentPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -2242,6 +2285,7 @@
             // 
             // StudentDateTimePicker_BOD
             // 
+            this.StudentDateTimePicker_BOD.CalendarTodayDate = new System.DateTime(2022, 12, 25, 0, 0, 0, 0);
             this.StudentDateTimePicker_BOD.Location = new System.Drawing.Point(208, 315);
             this.StudentDateTimePicker_BOD.Name = "StudentDateTimePicker_BOD";
             this.StudentDateTimePicker_BOD.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
@@ -2283,6 +2327,7 @@
             this.StudentTextbox_Level.TabIndex = 74;
             this.StudentTextbox_Level.Text = "Enter Student\'s Level";
             this.StudentTextbox_Level.Enter += new System.EventHandler(this.StudentTextbox_Level_Enter);
+            this.StudentTextbox_Level.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StudentTextbox_Level_KeyPress);
             this.StudentTextbox_Level.Leave += new System.EventHandler(this.StudentTextbox_Level_Leave);
             // 
             // StudentLabel_Level
@@ -3121,7 +3166,7 @@
             this.History2.IsDerivedStyle = false;
             this.History2.Location = new System.Drawing.Point(4, 64);
             this.History2.Name = "History2";
-            this.History2.Size = new System.Drawing.Size(1202, 584);
+            this.History2.Size = new System.Drawing.Size(1199, 584);
             this.History2.Style = MetroSet_UI.Enums.Style.Light;
             this.History2.StyleManager = this.styleManager1;
             this.History2.TabIndex = 5;
@@ -3682,7 +3727,7 @@
             this.AdminHistoryPage.IsDerivedStyle = false;
             this.AdminHistoryPage.Location = new System.Drawing.Point(4, 64);
             this.AdminHistoryPage.Name = "AdminHistoryPage";
-            this.AdminHistoryPage.Size = new System.Drawing.Size(1202, 584);
+            this.AdminHistoryPage.Size = new System.Drawing.Size(1199, 584);
             this.AdminHistoryPage.Style = MetroSet_UI.Enums.Style.Light;
             this.AdminHistoryPage.StyleManager = this.styleManager1;
             this.AdminHistoryPage.TabIndex = 4;
@@ -4157,6 +4202,1130 @@
             this.Admin_LogOutButton.Values.Text = "Log Out";
             this.Admin_LogOutButton.Click += new System.EventHandler(this.Admin_LogOutButton_Click);
             // 
+            // Requests
+            // 
+            this.Requests.BaseColor = System.Drawing.SystemColors.Control;
+            this.Requests.Controls.Add(this.metroSetTabControl2);
+            this.Requests.Font = null;
+            this.Requests.ImageIndex = 0;
+            this.Requests.ImageKey = null;
+            this.Requests.IsDerivedStyle = false;
+            this.Requests.Location = new System.Drawing.Point(4, 64);
+            this.Requests.Name = "Requests";
+            this.Requests.Size = new System.Drawing.Size(1202, 584);
+            this.Requests.Style = MetroSet_UI.Enums.Style.Light;
+            this.Requests.StyleManager = null;
+            this.Requests.TabIndex = 6;
+            this.Requests.Text = "Requests";
+            this.Requests.ThemeAuthor = "Narwin";
+            this.Requests.ThemeName = "MetroLite";
+            this.Requests.ToolTipText = null;
+            // 
+            // metroSetTabControl2
+            // 
+            this.metroSetTabControl2.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
+            this.metroSetTabControl2.AnimateTime = 200;
+            this.metroSetTabControl2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.metroSetTabControl2.Controls.Add(this.AdminRequests);
+            this.metroSetTabControl2.Controls.Add(this.InstructorRequests);
+            this.metroSetTabControl2.Controls.Add(this.StudentRequests);
+            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl2.IsDerivedStyle = false;
+            this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 40);
+            this.metroSetTabControl2.Location = new System.Drawing.Point(3, 0);
+            this.metroSetTabControl2.Name = "metroSetTabControl2";
+            this.metroSetTabControl2.SelectedIndex = 2;
+            this.metroSetTabControl2.SelectedTextColor = System.Drawing.Color.White;
+            this.metroSetTabControl2.Size = new System.Drawing.Size(1203, 588);
+            this.metroSetTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.metroSetTabControl2.Speed = 100;
+            this.metroSetTabControl2.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTabControl2.StyleManager = null;
+            this.metroSetTabControl2.TabIndex = 0;
+            this.metroSetTabControl2.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
+            this.metroSetTabControl2.ThemeAuthor = "Narwin";
+            this.metroSetTabControl2.ThemeName = "MetroLite";
+            this.metroSetTabControl2.UnselectedTextColor = System.Drawing.Color.Gray;
+            // 
+            // AdminRequests
+            // 
+            this.AdminRequests.BaseColor = System.Drawing.SystemColors.Control;
+            this.AdminRequests.Controls.Add(this.label26);
+            this.AdminRequests.Controls.Add(this.AdminRComboBox_Username);
+            this.AdminRequests.Controls.Add(this.AdminRButton_Activate);
+            this.AdminRequests.Controls.Add(this.label27);
+            this.AdminRequests.Controls.Add(this.AdminRButton_Search);
+            this.AdminRequests.Controls.Add(this.AdminRTextBox_ID);
+            this.AdminRequests.Controls.Add(this.label29);
+            this.AdminRequests.Controls.Add(this.AdminRTextBox_Email);
+            this.AdminRequests.Controls.Add(this.AdminRTextBox_LastName);
+            this.AdminRequests.Controls.Add(this.AdminRTextBox_FirstName);
+            this.AdminRequests.Controls.Add(this.label30);
+            this.AdminRequests.Controls.Add(this.label31);
+            this.AdminRequests.Controls.Add(this.label32);
+            this.AdminRequests.Font = null;
+            this.AdminRequests.ImageIndex = 0;
+            this.AdminRequests.ImageKey = null;
+            this.AdminRequests.IsDerivedStyle = false;
+            this.AdminRequests.Location = new System.Drawing.Point(4, 44);
+            this.AdminRequests.Name = "AdminRequests";
+            this.AdminRequests.Size = new System.Drawing.Size(1195, 540);
+            this.AdminRequests.Style = MetroSet_UI.Enums.Style.Light;
+            this.AdminRequests.StyleManager = null;
+            this.AdminRequests.TabIndex = 0;
+            this.AdminRequests.Text = "Admin Requests";
+            this.AdminRequests.ThemeAuthor = "Narwin";
+            this.AdminRequests.ThemeName = "MetroLite";
+            this.AdminRequests.ToolTipText = null;
+            // 
+            // InstructorRequests
+            // 
+            this.InstructorRequests.BaseColor = System.Drawing.SystemColors.Control;
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_Title);
+            this.InstructorRequests.Controls.Add(this.label28);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_Email);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_LastName);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_FirstName);
+            this.InstructorRequests.Controls.Add(this.label35);
+            this.InstructorRequests.Controls.Add(this.label36);
+            this.InstructorRequests.Controls.Add(this.label37);
+            this.InstructorRequests.Controls.Add(this.label38);
+            this.InstructorRequests.Controls.Add(this.InstructorRComboBox_Username);
+            this.InstructorRequests.Controls.Add(this.InstructorRButton_Activate);
+            this.InstructorRequests.Controls.Add(this.label39);
+            this.InstructorRequests.Controls.Add(this.label40);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_ID);
+            this.InstructorRequests.Controls.Add(this.InstructorRButton_Search);
+            this.InstructorRequests.Font = null;
+            this.InstructorRequests.ImageIndex = 0;
+            this.InstructorRequests.ImageKey = null;
+            this.InstructorRequests.IsDerivedStyle = false;
+            this.InstructorRequests.Location = new System.Drawing.Point(4, 44);
+            this.InstructorRequests.Name = "InstructorRequests";
+            this.InstructorRequests.Size = new System.Drawing.Size(1195, 540);
+            this.InstructorRequests.Style = MetroSet_UI.Enums.Style.Light;
+            this.InstructorRequests.StyleManager = null;
+            this.InstructorRequests.TabIndex = 1;
+            this.InstructorRequests.Text = "Instructor Requests";
+            this.InstructorRequests.ThemeAuthor = "Narwin";
+            this.InstructorRequests.ThemeName = "MetroLite";
+            this.InstructorRequests.ToolTipText = null;
+            // 
+            // StudentRequests
+            // 
+            this.StudentRequests.BaseColor = System.Drawing.SystemColors.Control;
+            this.StudentRequests.Controls.Add(this.label33);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_Level);
+            this.StudentRequests.Controls.Add(this.label34);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_Email);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_LastName);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_FirstName);
+            this.StudentRequests.Controls.Add(this.label42);
+            this.StudentRequests.Controls.Add(this.label43);
+            this.StudentRequests.Controls.Add(this.label44);
+            this.StudentRequests.Controls.Add(this.StudentRComboBox_Username);
+            this.StudentRequests.Controls.Add(this.StudentRButton_Activate);
+            this.StudentRequests.Controls.Add(this.label45);
+            this.StudentRequests.Controls.Add(this.label46);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_ID);
+            this.StudentRequests.Controls.Add(this.StudentRButton_Search);
+            this.StudentRequests.Font = null;
+            this.StudentRequests.ImageIndex = 0;
+            this.StudentRequests.ImageKey = null;
+            this.StudentRequests.IsDerivedStyle = false;
+            this.StudentRequests.Location = new System.Drawing.Point(4, 44);
+            this.StudentRequests.Name = "StudentRequests";
+            this.StudentRequests.Size = new System.Drawing.Size(1195, 540);
+            this.StudentRequests.Style = MetroSet_UI.Enums.Style.Light;
+            this.StudentRequests.StyleManager = null;
+            this.StudentRequests.TabIndex = 2;
+            this.StudentRequests.Text = "Student Requests";
+            this.StudentRequests.ThemeAuthor = "Narwin";
+            this.StudentRequests.ThemeName = "MetroLite";
+            this.StudentRequests.ToolTipText = null;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.SystemColors.Control;
+            this.label26.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Gray;
+            this.label26.Location = new System.Drawing.Point(892, 115);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(270, 21);
+            this.label26.TabIndex = 70;
+            this.label26.Text = "Choose by Admin\'s Username";
+            // 
+            // AdminRComboBox_Username
+            // 
+            this.AdminRComboBox_Username.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AdminRComboBox_Username.DropDownWidth = 264;
+            this.AdminRComboBox_Username.Location = new System.Drawing.Point(729, 147);
+            this.AdminRComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminRComboBox_Username.Name = "AdminRComboBox_Username";
+            this.AdminRComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminRComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.AdminRComboBox_Username.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.Rounding = 20;
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Border.Width = 2;
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.AdminRComboBox_Username.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminRComboBox_Username.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRComboBox_Username.TabIndex = 67;
+            // 
+            // AdminRButton_Activate
+            // 
+            this.AdminRButton_Activate.Location = new System.Drawing.Point(314, 428);
+            this.AdminRButton_Activate.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminRButton_Activate.Name = "AdminRButton_Activate";
+            this.AdminRButton_Activate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Activate.OverrideDefault.Back.ColorAngle = 45F;
+            this.AdminRButton_Activate.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Activate.OverrideDefault.Border.ColorAngle = 45F;
+            this.AdminRButton_Activate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Activate.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRButton_Activate.OverrideDefault.Border.Rounding = 20;
+            this.AdminRButton_Activate.OverrideDefault.Border.Width = 1;
+            this.AdminRButton_Activate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminRButton_Activate.Size = new System.Drawing.Size(200, 50);
+            this.AdminRButton_Activate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.StateCommon.Back.ColorAngle = 45F;
+            this.AdminRButton_Activate.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.StateCommon.Border.ColorAngle = 45F;
+            this.AdminRButton_Activate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Activate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRButton_Activate.StateCommon.Border.Rounding = 20;
+            this.AdminRButton_Activate.StateCommon.Border.Width = 1;
+            this.AdminRButton_Activate.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.AdminRButton_Activate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.AdminRButton_Activate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.AdminRButton_Activate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminRButton_Activate.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.AdminRButton_Activate.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminRButton_Activate.StatePressed.Back.ColorAngle = 135F;
+            this.AdminRButton_Activate.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.AdminRButton_Activate.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminRButton_Activate.StatePressed.Border.ColorAngle = 135F;
+            this.AdminRButton_Activate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Activate.StatePressed.Border.Rounding = 20;
+            this.AdminRButton_Activate.StatePressed.Border.Width = 1;
+            this.AdminRButton_Activate.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Activate.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.StateTracking.Back.ColorAngle = 45F;
+            this.AdminRButton_Activate.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Activate.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Activate.StateTracking.Border.ColorAngle = 45F;
+            this.AdminRButton_Activate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Activate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRButton_Activate.StateTracking.Border.Rounding = 20;
+            this.AdminRButton_Activate.StateTracking.Border.Width = 1;
+            this.AdminRButton_Activate.TabIndex = 66;
+            this.AdminRButton_Activate.TabStop = false;
+            this.AdminRButton_Activate.Values.Text = "Activate";
+            this.AdminRButton_Activate.Click += new System.EventHandler(this.AdminRButton_Activate_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(724, 102);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(161, 22);
+            this.label27.TabIndex = 65;
+            this.label27.Text = "Admin Username";
+            // 
+            // AdminRButton_Search
+            // 
+            this.AdminRButton_Search.Location = new System.Drawing.Point(861, 428);
+            this.AdminRButton_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminRButton_Search.Name = "AdminRButton_Search";
+            this.AdminRButton_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Search.OverrideDefault.Back.ColorAngle = 45F;
+            this.AdminRButton_Search.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Search.OverrideDefault.Border.ColorAngle = 45F;
+            this.AdminRButton_Search.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Search.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRButton_Search.OverrideDefault.Border.Rounding = 20;
+            this.AdminRButton_Search.OverrideDefault.Border.Width = 1;
+            this.AdminRButton_Search.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.AdminRButton_Search.Size = new System.Drawing.Size(200, 50);
+            this.AdminRButton_Search.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.StateCommon.Back.ColorAngle = 45F;
+            this.AdminRButton_Search.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.StateCommon.Border.ColorAngle = 45F;
+            this.AdminRButton_Search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Search.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRButton_Search.StateCommon.Border.Rounding = 20;
+            this.AdminRButton_Search.StateCommon.Border.Width = 1;
+            this.AdminRButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.AdminRButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.AdminRButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.AdminRButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminRButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.AdminRButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminRButton_Search.StatePressed.Back.ColorAngle = 135F;
+            this.AdminRButton_Search.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.AdminRButton_Search.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.AdminRButton_Search.StatePressed.Border.ColorAngle = 135F;
+            this.AdminRButton_Search.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Search.StatePressed.Border.Rounding = 20;
+            this.AdminRButton_Search.StatePressed.Border.Width = 1;
+            this.AdminRButton_Search.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Search.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.StateTracking.Back.ColorAngle = 45F;
+            this.AdminRButton_Search.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.AdminRButton_Search.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.AdminRButton_Search.StateTracking.Border.ColorAngle = 45F;
+            this.AdminRButton_Search.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRButton_Search.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRButton_Search.StateTracking.Border.Rounding = 20;
+            this.AdminRButton_Search.StateTracking.Border.Width = 1;
+            this.AdminRButton_Search.TabIndex = 62;
+            this.AdminRButton_Search.TabStop = false;
+            this.AdminRButton_Search.Values.Text = "Search";
+            this.AdminRButton_Search.Click += new System.EventHandler(this.AdminRButton_Search_Click);
+            // 
+            // AdminRTextBox_ID
+            // 
+            this.AdminRTextBox_ID.Location = new System.Drawing.Point(164, 290);
+            this.AdminRTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminRTextBox_ID.Name = "AdminRTextBox_ID";
+            this.AdminRTextBox_ID.ReadOnly = true;
+            this.AdminRTextBox_ID.Size = new System.Drawing.Size(504, 43);
+            this.AdminRTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.AdminRTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRTextBox_ID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRTextBox_ID.StateCommon.Border.Rounding = 20;
+            this.AdminRTextBox_ID.StateCommon.Border.Width = 2;
+            this.AdminRTextBox_ID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminRTextBox_ID.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminRTextBox_ID.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminRTextBox_ID.TabIndex = 61;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(30, 305);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(29, 22);
+            this.label29.TabIndex = 60;
+            this.label29.Text = "ID";
+            // 
+            // AdminRTextBox_Email
+            // 
+            this.AdminRTextBox_Email.Location = new System.Drawing.Point(164, 219);
+            this.AdminRTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminRTextBox_Email.Name = "AdminRTextBox_Email";
+            this.AdminRTextBox_Email.ReadOnly = true;
+            this.AdminRTextBox_Email.Size = new System.Drawing.Size(504, 43);
+            this.AdminRTextBox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.AdminRTextBox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_Email.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRTextBox_Email.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRTextBox_Email.StateCommon.Border.Rounding = 20;
+            this.AdminRTextBox_Email.StateCommon.Border.Width = 2;
+            this.AdminRTextBox_Email.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminRTextBox_Email.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminRTextBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminRTextBox_Email.TabIndex = 58;
+            // 
+            // AdminRTextBox_LastName
+            // 
+            this.AdminRTextBox_LastName.Location = new System.Drawing.Point(164, 142);
+            this.AdminRTextBox_LastName.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminRTextBox_LastName.Name = "AdminRTextBox_LastName";
+            this.AdminRTextBox_LastName.ReadOnly = true;
+            this.AdminRTextBox_LastName.Size = new System.Drawing.Size(504, 43);
+            this.AdminRTextBox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.AdminRTextBox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_LastName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRTextBox_LastName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRTextBox_LastName.StateCommon.Border.Rounding = 20;
+            this.AdminRTextBox_LastName.StateCommon.Border.Width = 2;
+            this.AdminRTextBox_LastName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminRTextBox_LastName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminRTextBox_LastName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminRTextBox_LastName.TabIndex = 57;
+            // 
+            // AdminRTextBox_FirstName
+            // 
+            this.AdminRTextBox_FirstName.Location = new System.Drawing.Point(164, 69);
+            this.AdminRTextBox_FirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.AdminRTextBox_FirstName.Name = "AdminRTextBox_FirstName";
+            this.AdminRTextBox_FirstName.ReadOnly = true;
+            this.AdminRTextBox_FirstName.Size = new System.Drawing.Size(504, 43);
+            this.AdminRTextBox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.AdminRTextBox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdminRTextBox_FirstName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.AdminRTextBox_FirstName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.AdminRTextBox_FirstName.StateCommon.Border.Rounding = 20;
+            this.AdminRTextBox_FirstName.StateCommon.Border.Width = 2;
+            this.AdminRTextBox_FirstName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.AdminRTextBox_FirstName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminRTextBox_FirstName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.AdminRTextBox_FirstName.TabIndex = 56;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(30, 234);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(59, 22);
+            this.label30.TabIndex = 55;
+            this.label30.Text = "Email";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(30, 156);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(105, 22);
+            this.label31.TabIndex = 54;
+            this.label31.Text = "Last Name";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(27, 84);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(107, 22);
+            this.label32.TabIndex = 53;
+            this.label32.Text = "First Name";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.SystemColors.Control;
+            this.label28.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Gray;
+            this.label28.Location = new System.Drawing.Point(894, 131);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(290, 21);
+            this.label28.TabIndex = 96;
+            this.label28.Text = "Choose Instructor\'s Username";
+            // 
+            // InstructorRTextBox_Email
+            // 
+            this.InstructorRTextBox_Email.Location = new System.Drawing.Point(176, 209);
+            this.InstructorRTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRTextBox_Email.Name = "InstructorRTextBox_Email";
+            this.InstructorRTextBox_Email.ReadOnly = true;
+            this.InstructorRTextBox_Email.Size = new System.Drawing.Size(478, 43);
+            this.InstructorRTextBox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorRTextBox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_Email.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRTextBox_Email.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRTextBox_Email.StateCommon.Border.Rounding = 20;
+            this.InstructorRTextBox_Email.StateCommon.Border.Width = 2;
+            this.InstructorRTextBox_Email.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.InstructorRTextBox_Email.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRTextBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.InstructorRTextBox_Email.TabIndex = 92;
+            // 
+            // InstructorRTextBox_LastName
+            // 
+            this.InstructorRTextBox_LastName.Location = new System.Drawing.Point(176, 136);
+            this.InstructorRTextBox_LastName.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRTextBox_LastName.Name = "InstructorRTextBox_LastName";
+            this.InstructorRTextBox_LastName.ReadOnly = true;
+            this.InstructorRTextBox_LastName.Size = new System.Drawing.Size(478, 43);
+            this.InstructorRTextBox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorRTextBox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_LastName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRTextBox_LastName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRTextBox_LastName.StateCommon.Border.Rounding = 20;
+            this.InstructorRTextBox_LastName.StateCommon.Border.Width = 2;
+            this.InstructorRTextBox_LastName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.InstructorRTextBox_LastName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRTextBox_LastName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.InstructorRTextBox_LastName.TabIndex = 91;
+            // 
+            // InstructorRTextBox_FirstName
+            // 
+            this.InstructorRTextBox_FirstName.Location = new System.Drawing.Point(176, 63);
+            this.InstructorRTextBox_FirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRTextBox_FirstName.Name = "InstructorRTextBox_FirstName";
+            this.InstructorRTextBox_FirstName.ReadOnly = true;
+            this.InstructorRTextBox_FirstName.Size = new System.Drawing.Size(478, 43);
+            this.InstructorRTextBox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorRTextBox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_FirstName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRTextBox_FirstName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRTextBox_FirstName.StateCommon.Border.Rounding = 20;
+            this.InstructorRTextBox_FirstName.StateCommon.Border.Width = 2;
+            this.InstructorRTextBox_FirstName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.InstructorRTextBox_FirstName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRTextBox_FirstName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.InstructorRTextBox_FirstName.TabIndex = 90;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(36, 219);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(59, 22);
+            this.label35.TabIndex = 89;
+            this.label35.Text = "Email";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(36, 146);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(105, 22);
+            this.label36.TabIndex = 88;
+            this.label36.Text = "Last Name";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(34, 73);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(107, 22);
+            this.label37.TabIndex = 87;
+            this.label37.Text = "First Name";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(40, 360);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(55, 22);
+            this.label38.TabIndex = 85;
+            this.label38.Text = "Tiltle";
+            // 
+            // InstructorRComboBox_Username
+            // 
+            this.InstructorRComboBox_Username.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.InstructorRComboBox_Username.DropDownWidth = 264;
+            this.InstructorRComboBox_Username.Location = new System.Drawing.Point(731, 156);
+            this.InstructorRComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRComboBox_Username.Name = "InstructorRComboBox_Username";
+            this.InstructorRComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.InstructorRComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.InstructorRComboBox_Username.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.Rounding = 20;
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Border.Width = 2;
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.InstructorRComboBox_Username.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRComboBox_Username.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRComboBox_Username.TabIndex = 84;
+            // 
+            // InstructorRButton_Activate
+            // 
+            this.InstructorRButton_Activate.Location = new System.Drawing.Point(317, 445);
+            this.InstructorRButton_Activate.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRButton_Activate.Name = "InstructorRButton_Activate";
+            this.InstructorRButton_Activate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Activate.OverrideDefault.Back.ColorAngle = 45F;
+            this.InstructorRButton_Activate.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Activate.OverrideDefault.Border.ColorAngle = 45F;
+            this.InstructorRButton_Activate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Activate.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRButton_Activate.OverrideDefault.Border.Rounding = 20;
+            this.InstructorRButton_Activate.OverrideDefault.Border.Width = 1;
+            this.InstructorRButton_Activate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.InstructorRButton_Activate.Size = new System.Drawing.Size(200, 50);
+            this.InstructorRButton_Activate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.StateCommon.Back.ColorAngle = 45F;
+            this.InstructorRButton_Activate.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.StateCommon.Border.ColorAngle = 45F;
+            this.InstructorRButton_Activate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Activate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRButton_Activate.StateCommon.Border.Rounding = 20;
+            this.InstructorRButton_Activate.StateCommon.Border.Width = 1;
+            this.InstructorRButton_Activate.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.InstructorRButton_Activate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.InstructorRButton_Activate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.InstructorRButton_Activate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRButton_Activate.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.InstructorRButton_Activate.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.InstructorRButton_Activate.StatePressed.Back.ColorAngle = 135F;
+            this.InstructorRButton_Activate.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.InstructorRButton_Activate.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.InstructorRButton_Activate.StatePressed.Border.ColorAngle = 135F;
+            this.InstructorRButton_Activate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Activate.StatePressed.Border.Rounding = 20;
+            this.InstructorRButton_Activate.StatePressed.Border.Width = 1;
+            this.InstructorRButton_Activate.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Activate.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.StateTracking.Back.ColorAngle = 45F;
+            this.InstructorRButton_Activate.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Activate.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Activate.StateTracking.Border.ColorAngle = 45F;
+            this.InstructorRButton_Activate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Activate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRButton_Activate.StateTracking.Border.Rounding = 20;
+            this.InstructorRButton_Activate.StateTracking.Border.Width = 1;
+            this.InstructorRButton_Activate.TabIndex = 83;
+            this.InstructorRButton_Activate.TabStop = false;
+            this.InstructorRButton_Activate.Values.Text = "Activate";
+            this.InstructorRButton_Activate.Click += new System.EventHandler(this.InstructorRButton_Activate_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(722, 107);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(190, 22);
+            this.label39.TabIndex = 82;
+            this.label39.Text = "Instructor Username";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(40, 292);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(29, 22);
+            this.label40.TabIndex = 81;
+            this.label40.Text = "ID";
+            // 
+            // InstructorRTextBox_ID
+            // 
+            this.InstructorRTextBox_ID.Location = new System.Drawing.Point(176, 280);
+            this.InstructorRTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRTextBox_ID.Name = "InstructorRTextBox_ID";
+            this.InstructorRTextBox_ID.ReadOnly = true;
+            this.InstructorRTextBox_ID.Size = new System.Drawing.Size(478, 43);
+            this.InstructorRTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorRTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRTextBox_ID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRTextBox_ID.StateCommon.Border.Rounding = 20;
+            this.InstructorRTextBox_ID.StateCommon.Border.Width = 2;
+            this.InstructorRTextBox_ID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.InstructorRTextBox_ID.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRTextBox_ID.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.InstructorRTextBox_ID.TabIndex = 80;
+            // 
+            // InstructorRButton_Search
+            // 
+            this.InstructorRButton_Search.Location = new System.Drawing.Point(823, 445);
+            this.InstructorRButton_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRButton_Search.Name = "InstructorRButton_Search";
+            this.InstructorRButton_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Search.OverrideDefault.Back.ColorAngle = 45F;
+            this.InstructorRButton_Search.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Search.OverrideDefault.Border.ColorAngle = 45F;
+            this.InstructorRButton_Search.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Search.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRButton_Search.OverrideDefault.Border.Rounding = 20;
+            this.InstructorRButton_Search.OverrideDefault.Border.Width = 1;
+            this.InstructorRButton_Search.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.InstructorRButton_Search.Size = new System.Drawing.Size(200, 50);
+            this.InstructorRButton_Search.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.StateCommon.Back.ColorAngle = 45F;
+            this.InstructorRButton_Search.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.StateCommon.Border.ColorAngle = 45F;
+            this.InstructorRButton_Search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Search.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRButton_Search.StateCommon.Border.Rounding = 20;
+            this.InstructorRButton_Search.StateCommon.Border.Width = 1;
+            this.InstructorRButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.InstructorRButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.InstructorRButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.InstructorRButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.InstructorRButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.InstructorRButton_Search.StatePressed.Back.ColorAngle = 135F;
+            this.InstructorRButton_Search.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.InstructorRButton_Search.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.InstructorRButton_Search.StatePressed.Border.ColorAngle = 135F;
+            this.InstructorRButton_Search.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Search.StatePressed.Border.Rounding = 20;
+            this.InstructorRButton_Search.StatePressed.Border.Width = 1;
+            this.InstructorRButton_Search.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Search.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.StateTracking.Back.ColorAngle = 45F;
+            this.InstructorRButton_Search.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.InstructorRButton_Search.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.InstructorRButton_Search.StateTracking.Border.ColorAngle = 45F;
+            this.InstructorRButton_Search.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRButton_Search.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRButton_Search.StateTracking.Border.Rounding = 20;
+            this.InstructorRButton_Search.StateTracking.Border.Width = 1;
+            this.InstructorRButton_Search.TabIndex = 79;
+            this.InstructorRButton_Search.TabStop = false;
+            this.InstructorRButton_Search.Values.Text = "Search";
+            this.InstructorRButton_Search.Click += new System.EventHandler(this.InstructorRButton_Search_Click);
+            // 
+            // InstructorRTextBox_Title
+            // 
+            this.InstructorRTextBox_Title.Location = new System.Drawing.Point(176, 350);
+            this.InstructorRTextBox_Title.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRTextBox_Title.Name = "InstructorRTextBox_Title";
+            this.InstructorRTextBox_Title.ReadOnly = true;
+            this.InstructorRTextBox_Title.Size = new System.Drawing.Size(478, 43);
+            this.InstructorRTextBox_Title.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorRTextBox_Title.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_Title.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_Title.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRTextBox_Title.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRTextBox_Title.StateCommon.Border.Rounding = 20;
+            this.InstructorRTextBox_Title.StateCommon.Border.Width = 2;
+            this.InstructorRTextBox_Title.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.InstructorRTextBox_Title.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRTextBox_Title.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.InstructorRTextBox_Title.TabIndex = 99;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.SystemColors.Control;
+            this.label33.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Gray;
+            this.label33.Location = new System.Drawing.Point(894, 131);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(260, 21);
+            this.label33.TabIndex = 115;
+            this.label33.Text = "Choose Student\'s Username";
+            // 
+            // StudentRTextBox_Level
+            // 
+            this.StudentRTextBox_Level.Location = new System.Drawing.Point(164, 362);
+            this.StudentRTextBox_Level.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRTextBox_Level.Name = "StudentRTextBox_Level";
+            this.StudentRTextBox_Level.ReadOnly = true;
+            this.StudentRTextBox_Level.Size = new System.Drawing.Size(472, 43);
+            this.StudentRTextBox_Level.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.StudentRTextBox_Level.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_Level.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_Level.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRTextBox_Level.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRTextBox_Level.StateCommon.Border.Rounding = 20;
+            this.StudentRTextBox_Level.StateCommon.Border.Width = 2;
+            this.StudentRTextBox_Level.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.StudentRTextBox_Level.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRTextBox_Level.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.StudentRTextBox_Level.TabIndex = 112;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(37, 373);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(58, 22);
+            this.label34.TabIndex = 111;
+            this.label34.Text = "Level";
+            // 
+            // StudentRTextBox_Email
+            // 
+            this.StudentRTextBox_Email.Location = new System.Drawing.Point(164, 210);
+            this.StudentRTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRTextBox_Email.Name = "StudentRTextBox_Email";
+            this.StudentRTextBox_Email.ReadOnly = true;
+            this.StudentRTextBox_Email.Size = new System.Drawing.Size(472, 43);
+            this.StudentRTextBox_Email.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.StudentRTextBox_Email.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_Email.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_Email.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRTextBox_Email.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRTextBox_Email.StateCommon.Border.Rounding = 20;
+            this.StudentRTextBox_Email.StateCommon.Border.Width = 2;
+            this.StudentRTextBox_Email.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.StudentRTextBox_Email.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRTextBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.StudentRTextBox_Email.TabIndex = 108;
+            // 
+            // StudentRTextBox_LastName
+            // 
+            this.StudentRTextBox_LastName.Location = new System.Drawing.Point(164, 137);
+            this.StudentRTextBox_LastName.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRTextBox_LastName.Name = "StudentRTextBox_LastName";
+            this.StudentRTextBox_LastName.ReadOnly = true;
+            this.StudentRTextBox_LastName.Size = new System.Drawing.Size(472, 43);
+            this.StudentRTextBox_LastName.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.StudentRTextBox_LastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_LastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_LastName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRTextBox_LastName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRTextBox_LastName.StateCommon.Border.Rounding = 20;
+            this.StudentRTextBox_LastName.StateCommon.Border.Width = 2;
+            this.StudentRTextBox_LastName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.StudentRTextBox_LastName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRTextBox_LastName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.StudentRTextBox_LastName.TabIndex = 107;
+            // 
+            // StudentRTextBox_FirstName
+            // 
+            this.StudentRTextBox_FirstName.Location = new System.Drawing.Point(164, 64);
+            this.StudentRTextBox_FirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRTextBox_FirstName.Name = "StudentRTextBox_FirstName";
+            this.StudentRTextBox_FirstName.ReadOnly = true;
+            this.StudentRTextBox_FirstName.Size = new System.Drawing.Size(472, 43);
+            this.StudentRTextBox_FirstName.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.StudentRTextBox_FirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_FirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_FirstName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRTextBox_FirstName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRTextBox_FirstName.StateCommon.Border.Rounding = 20;
+            this.StudentRTextBox_FirstName.StateCommon.Border.Width = 2;
+            this.StudentRTextBox_FirstName.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.StudentRTextBox_FirstName.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRTextBox_FirstName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.StudentRTextBox_FirstName.TabIndex = 106;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(36, 220);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(59, 22);
+            this.label42.TabIndex = 105;
+            this.label42.Text = "Email";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(36, 147);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(105, 22);
+            this.label43.TabIndex = 104;
+            this.label43.Text = "Last Name";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(34, 74);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(107, 22);
+            this.label44.TabIndex = 103;
+            this.label44.Text = "First Name";
+            // 
+            // StudentRComboBox_Username
+            // 
+            this.StudentRComboBox_Username.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StudentRComboBox_Username.DropDownWidth = 264;
+            this.StudentRComboBox_Username.Location = new System.Drawing.Point(723, 158);
+            this.StudentRComboBox_Username.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRComboBox_Username.Name = "StudentRComboBox_Username";
+            this.StudentRComboBox_Username.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.StudentRComboBox_Username.Size = new System.Drawing.Size(396, 46);
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.Rounding = 20;
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Border.Width = 2;
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.StudentRComboBox_Username.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRComboBox_Username.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRComboBox_Username.TabIndex = 102;
+            // 
+            // StudentRButton_Activate
+            // 
+            this.StudentRButton_Activate.Location = new System.Drawing.Point(278, 456);
+            this.StudentRButton_Activate.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRButton_Activate.Name = "StudentRButton_Activate";
+            this.StudentRButton_Activate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Activate.OverrideDefault.Back.ColorAngle = 45F;
+            this.StudentRButton_Activate.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Activate.OverrideDefault.Border.ColorAngle = 45F;
+            this.StudentRButton_Activate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Activate.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRButton_Activate.OverrideDefault.Border.Rounding = 20;
+            this.StudentRButton_Activate.OverrideDefault.Border.Width = 1;
+            this.StudentRButton_Activate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.StudentRButton_Activate.Size = new System.Drawing.Size(200, 50);
+            this.StudentRButton_Activate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.StateCommon.Back.ColorAngle = 45F;
+            this.StudentRButton_Activate.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.StateCommon.Border.ColorAngle = 45F;
+            this.StudentRButton_Activate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Activate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRButton_Activate.StateCommon.Border.Rounding = 20;
+            this.StudentRButton_Activate.StateCommon.Border.Width = 1;
+            this.StudentRButton_Activate.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.StudentRButton_Activate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.StudentRButton_Activate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.StudentRButton_Activate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRButton_Activate.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.StudentRButton_Activate.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.StudentRButton_Activate.StatePressed.Back.ColorAngle = 135F;
+            this.StudentRButton_Activate.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.StudentRButton_Activate.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.StudentRButton_Activate.StatePressed.Border.ColorAngle = 135F;
+            this.StudentRButton_Activate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Activate.StatePressed.Border.Rounding = 20;
+            this.StudentRButton_Activate.StatePressed.Border.Width = 1;
+            this.StudentRButton_Activate.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Activate.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.StateTracking.Back.ColorAngle = 45F;
+            this.StudentRButton_Activate.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Activate.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Activate.StateTracking.Border.ColorAngle = 45F;
+            this.StudentRButton_Activate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Activate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRButton_Activate.StateTracking.Border.Rounding = 20;
+            this.StudentRButton_Activate.StateTracking.Border.Width = 1;
+            this.StudentRButton_Activate.TabIndex = 101;
+            this.StudentRButton_Activate.TabStop = false;
+            this.StudentRButton_Activate.Values.Text = "Activate";
+            this.StudentRButton_Activate.Click += new System.EventHandler(this.StudentRButton_Activate_Click);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(718, 109);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(169, 22);
+            this.label45.TabIndex = 100;
+            this.label45.Text = "Sudent Username";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(37, 300);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(29, 22);
+            this.label46.TabIndex = 99;
+            this.label46.Text = "ID";
+            // 
+            // StudentRTextBox_ID
+            // 
+            this.StudentRTextBox_ID.Location = new System.Drawing.Point(164, 290);
+            this.StudentRTextBox_ID.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRTextBox_ID.Name = "StudentRTextBox_ID";
+            this.StudentRTextBox_ID.ReadOnly = true;
+            this.StudentRTextBox_ID.Size = new System.Drawing.Size(472, 43);
+            this.StudentRTextBox_ID.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.StudentRTextBox_ID.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_ID.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentRTextBox_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRTextBox_ID.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRTextBox_ID.StateCommon.Border.Rounding = 20;
+            this.StudentRTextBox_ID.StateCommon.Border.Width = 2;
+            this.StudentRTextBox_ID.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.StudentRTextBox_ID.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRTextBox_ID.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.StudentRTextBox_ID.TabIndex = 98;
+            // 
+            // StudentRButton_Search
+            // 
+            this.StudentRButton_Search.Location = new System.Drawing.Point(869, 456);
+            this.StudentRButton_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentRButton_Search.Name = "StudentRButton_Search";
+            this.StudentRButton_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Search.OverrideDefault.Back.ColorAngle = 45F;
+            this.StudentRButton_Search.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Search.OverrideDefault.Border.ColorAngle = 45F;
+            this.StudentRButton_Search.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Search.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRButton_Search.OverrideDefault.Border.Rounding = 20;
+            this.StudentRButton_Search.OverrideDefault.Border.Width = 1;
+            this.StudentRButton_Search.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.StudentRButton_Search.Size = new System.Drawing.Size(200, 50);
+            this.StudentRButton_Search.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.StateCommon.Back.ColorAngle = 45F;
+            this.StudentRButton_Search.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.StateCommon.Border.ColorAngle = 45F;
+            this.StudentRButton_Search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Search.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRButton_Search.StateCommon.Border.Rounding = 20;
+            this.StudentRButton_Search.StateCommon.Border.Width = 1;
+            this.StudentRButton_Search.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
+            this.StudentRButton_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.StudentRButton_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.StudentRButton_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentRButton_Search.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.StudentRButton_Search.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.StudentRButton_Search.StatePressed.Back.ColorAngle = 135F;
+            this.StudentRButton_Search.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.StudentRButton_Search.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.StudentRButton_Search.StatePressed.Border.ColorAngle = 135F;
+            this.StudentRButton_Search.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Search.StatePressed.Border.Rounding = 20;
+            this.StudentRButton_Search.StatePressed.Border.Width = 1;
+            this.StudentRButton_Search.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Search.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.StateTracking.Back.ColorAngle = 45F;
+            this.StudentRButton_Search.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.StudentRButton_Search.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.StudentRButton_Search.StateTracking.Border.ColorAngle = 45F;
+            this.StudentRButton_Search.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StudentRButton_Search.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.StudentRButton_Search.StateTracking.Border.Rounding = 20;
+            this.StudentRButton_Search.StateTracking.Border.Width = 1;
+            this.StudentRButton_Search.TabIndex = 97;
+            this.StudentRButton_Search.TabStop = false;
+            this.StudentRButton_Search.Values.Text = "Search";
+            this.StudentRButton_Search.Click += new System.EventHandler(this.StudentRButton_Search_Click);
+            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -4166,7 +5335,6 @@
             this.Controls.Add(this.Admin_LogOutButton);
             this.Controls.Add(this.AdminName_Label);
             this.Controls.Add(this.Main);
-            this.Controls.Add(this.User_Name);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Calendar;
@@ -4218,6 +5386,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.StudentHComboBox_Username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InstructorHComboBox_Username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdminHComboBox_Username)).EndInit();
+            this.Requests.ResumeLayout(false);
+            this.metroSetTabControl2.ResumeLayout(false);
+            this.AdminRequests.ResumeLayout(false);
+            this.AdminRequests.PerformLayout();
+            this.InstructorRequests.ResumeLayout(false);
+            this.InstructorRequests.PerformLayout();
+            this.StudentRequests.ResumeLayout(false);
+            this.StudentRequests.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminRComboBox_Username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorRComboBox_Username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentRComboBox_Username)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4226,7 +5405,6 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
-        private System.Windows.Forms.Label User_Name;
         private MetroSet_UI.Controls.MetroSetTabControl Main;
         private MetroSet_UI.Child.MetroSetSetTabPage Admin;
         public MetroSet_UI.Child.MetroSetSetTabPage Instructor;
@@ -4395,5 +5573,53 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView HistoryDataGridView;
+        private MetroSet_UI.Child.MetroSetSetTabPage Requests;
+        private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl2;
+        private MetroSet_UI.Child.MetroSetSetTabPage AdminRequests;
+        private MetroSet_UI.Child.MetroSetSetTabPage InstructorRequests;
+        private MetroSet_UI.Child.MetroSetSetTabPage StudentRequests;
+        private System.Windows.Forms.Label label26;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox AdminRComboBox_Username;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton AdminRButton_Activate;
+        private System.Windows.Forms.Label label27;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton AdminRButton_Search;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminRTextBox_ID;
+        private System.Windows.Forms.Label label29;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminRTextBox_Email;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminRTextBox_LastName;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox AdminRTextBox_FirstName;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label28;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox InstructorRTextBox_Email;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox InstructorRTextBox_LastName;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox InstructorRTextBox_FirstName;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox InstructorRComboBox_Username;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton InstructorRButton_Activate;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox InstructorRTextBox_ID;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton InstructorRButton_Search;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox InstructorRTextBox_Title;
+        private System.Windows.Forms.Label label33;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox StudentRTextBox_Level;
+        private System.Windows.Forms.Label label34;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox StudentRTextBox_Email;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox StudentRTextBox_LastName;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox StudentRTextBox_FirstName;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox StudentRComboBox_Username;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton StudentRButton_Activate;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox StudentRTextBox_ID;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton StudentRButton_Search;
     }
 }

@@ -370,6 +370,21 @@ namespace DbHandler
             string Query = "SELECT * FROM Classroom WHERE Class_ID = " + CID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectAdminToBeActivated()
+        {
+            string Query = "Select * From Admin Where Super_ID = 20 And Activated = 0 ";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectInstructorToBeActivated()
+        {
+            string Query = "Select * From Instructor Where Instructor_ID IN (Select Instructor_ID From Manage_Instructor Where  Admin_ID = 20 And Operation = 'Deactivate')";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectStudentToBeActivated()
+        {
+            string Query = "Select * From Student Where StudentID IN (Select Student_ID From Manage_Student Where  Admin_ID = 20 And Operation = 'Deactivate')";
+            return dbMan.ExecuteReader(Query);
+        }
         public DataTable SelectLastAdmin()
         {
             string Query = "Select IDENT_CURRENT( 'Admin' ) ";

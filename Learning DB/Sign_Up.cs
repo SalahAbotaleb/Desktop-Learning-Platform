@@ -107,14 +107,14 @@ namespace Learning_DB
                     MessageBox.Show("Please Enter Student's Level between 1 and 12 ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                Tuple<int, string> add = Controller.InsertStudent(Sign_UpTextbox_Username.Text, Sign_UpTextbox_FirstName.Text, Sign_UpTextbox_LastName.Text, Sign_UpTextbox_Email.Text, AID , Sign_UpTextbox_Password.Text, Sign_UpDateTimePicker_BOD.Value.ToShortDateString(), Convert.ToInt32(Sign_UpTextbox_Level.Text));
+                Tuple<int, string> add = Controller.InsertStudent(Sign_UpTextbox_Username.Text, Sign_UpTextbox_FirstName.Text, Sign_UpTextbox_LastName.Text, Sign_UpTextbox_Email.Text, AID , Sign_UpTextbox_Password.Text, Sign_UpDateTimePicker_BOD.Value.ToString("yyyy-MM-dd"), Convert.ToInt32(Sign_UpTextbox_Level.Text));
                 if (add.Item1 == 0)
                 {
                     MessageBox.Show(add.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    Tuple<int, string> edit = Controller.ActivateInstructor(Convert.ToInt32(Controller.SelectLastInstructor().Rows[0][0]), false, AID);
+                    Tuple<int, string> edit = Controller.ActivateStudent(Convert.ToInt32(Controller.SelectLastStudent().Rows[0][0]), false, AID);
                     if (edit.Item1 == 0)
                     {
                         MessageBox.Show(edit.Item2);
