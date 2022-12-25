@@ -775,7 +775,6 @@
             this.FNameBox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FNameBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.FNameBox.TabIndex = 102;
-            this.FNameBox.TextChanged += new System.EventHandler(this.FNameBox_TextChanged);
             // 
             // label6
             // 
@@ -1029,6 +1028,7 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.Text = "StudentClasses";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentClasses_FormClosing);
             this.Main.ResumeLayout(false);
             this.MyCalssesTab.ResumeLayout(false);
             this.MyCalssesTab.PerformLayout();

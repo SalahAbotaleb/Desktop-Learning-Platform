@@ -17,13 +17,11 @@ namespace Learning_DB
 {
     public partial class Credintial : KryptonForm
     {
-        Usertype utype;
         Controller con;
-        public Credintial(Usertype user)
+        public Credintial()
         {
             InitializeComponent();
             con = new Controller();
-            utype = user;
             Invalid_message.Visible = false;
         }
 
@@ -73,20 +71,9 @@ namespace Learning_DB
                 PasswordBox.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 12, System.Drawing.FontStyle.Italic);
             }
         }
-        //private Boolean ValidateUsername()
-        //{ 
-        //    //validate text in usernamebox to see if in valid email format
-        //    if(UsernameBox.Text.Contains("@"))
-        //    {
-
-        //    }
-        //    return true;
-        //}
-        
-        //bool valid = true; // for validation (will be changed in future validation in username and password)
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(utype == Usertype.instructor)
+            if(OpenedSession.User == Usertype.instructor)
             {
                 Tuple<DataTable, string> ins = con.LoginInstructor(UsernameBox.Text, PasswordBox.Text);
                 if(ins.Item1 == null)
@@ -95,10 +82,12 @@ namespace Learning_DB
                     return;
                 }
                 //instructor interface
+                OpenedSession.ID = Convert.ToInt32(ins.Item1.Rows[0]["Instructor_ID"]);
+                OpenedSession.UserData = ins.Item1;
                 Inst1 i = new Inst1(10004);//hardcoded
                 i.Show();
             }
-            else if (utype== Usertype.student)
+            else if (OpenedSession.User == Usertype.student)
             {
                 Tuple<DataTable,string> st = con.LoginStudent(UsernameBox.Text, PasswordBox.Text);
                 if (st.Item1 == null)
@@ -107,6 +96,11 @@ namespace Learning_DB
                     return;
                 }
                 //studentinterface
+                OpenedSession.ID = Convert.ToInt32(st.Item1.Rows[0]["StudentID"]);
+                OpenedSession.UserData = st.Item1;
+                StudentClasses s = new StudentClasses();
+                s.Show();
+                this.Hide();
             }
             else
             {
@@ -116,8 +110,12 @@ namespace Learning_DB
                     Invalid_message.Show();
                     return;
                 }
+                //admin interface
+                OpenedSession.ID = Convert.ToInt32(ad.Item1.Rows[0]["Admin_ID"]);
+                OpenedSession.UserData = ad.Item1;
                 AdminInterface A = new AdminInterface();
                 A.Show();
+                this.Hide();
             }
         }
         
