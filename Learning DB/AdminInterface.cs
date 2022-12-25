@@ -22,16 +22,23 @@ namespace Learning_DB
         int checkS = 0;
         int checkC = 0;
         int checkH = 0;
+        bool okA = false;
+        bool okI = false;
+        bool okS = false;
         public AdminInterface()
         {
             InitializeComponent();
             AdminName_Label.Text = Controller.SelectAdminByID(OpenedSession.ID).Rows[0][0].ToString();
             Instructor_Title_ComboBox.DataSource = new List<string> { "Prof.", "Dr.", "Eng.", "Mr.", "Mrs." };
-        }
-
-        private void User_Name_Click(object sender, EventArgs e)
-        {
-
+            AdminRComboBox_Username.DataSource = Controller.SelectAdminToBeActivated();
+            AdminRComboBox_Username.DisplayMember = "Username";
+            AdminRComboBox_Username.ValueMember = "Admin_ID";
+            InstructorRComboBox_Username.DataSource = Controller.SelectInstructorToBeActivated();
+            InstructorRComboBox_Username.DisplayMember = "Username";
+            InstructorRComboBox_Username.ValueMember = "Instructor_ID";
+            StudentRComboBox_Username.DataSource = Controller.SelectStudentToBeActivated();
+            StudentRComboBox_Username.DisplayMember = "Username";
+            StudentRComboBox_Username.ValueMember = "StudentID";
         }
 
         private void AdminTextBox_FirstName_Enter(object sender, EventArgs e)
@@ -860,8 +867,14 @@ namespace Learning_DB
                 else
                 {
                     MessageBox.Show("Admin Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AdminTextBox_FirstName.Text = "Enter Admin's First Name";
+                    AdminTextBox_LastName.Text = "Enter Admin's Last Name";
+                    AdminTextBox_Email.Text = "Enter Admin's Email";
+                    AdminTextBox_Username.Text = "Enter Admin's Username";
+                    AdminTextBox_Password.Text = "Enter Admin's Password";
                 }
             }
+
         }
 
         private void AdminEAdminButton_Edit_Click(object sender, EventArgs e)
@@ -1034,8 +1047,25 @@ namespace Learning_DB
                 else
                 {
                     MessageBox.Show("Instructor Added Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InstructorTextbox_FirstName.Text = "Enter Instructor's First Name";
+                    InstructorTextbox_FirstName.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    InstructorTextbox_FirstName.StateCommon.Content.Color1 = Color.Gray;
+                    InstructorTextbox_LastName.Text = "Enter Instructor's Last Name";
+                    InstructorTextbox_LastName.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    InstructorTextbox_LastName.StateCommon.Content.Color1 = Color.Gray;
+                    InstructorTextbox_Email.Text = "Enter Instructor's Email";
+                    InstructorTextbox_Email.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    InstructorTextbox_Email.StateCommon.Content.Color1 = Color.Gray;
+                    InstructorTextbox_Username.Text = "Enter Instructor's Username";
+                    InstructorTextbox_Username.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    InstructorTextbox_Username.StateCommon.Content.Color1 = Color.Gray;
+                    InstructorTextbox_Password.Text = "Enter Instructor's Password";
+                    InstructorTextbox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    InstructorTextbox_Password.StateCommon.Content.Color1 = Color.Gray;
+                    
                 }
             }
+            
         }
 
         private void InstructorRadioButton_SearchID_Click(object sender, EventArgs e)
@@ -1486,7 +1516,7 @@ namespace Learning_DB
             }
             else
             {
-                Tuple<int, string> add = Controller.InsertStudent(StudentTextbox_Username.Text, StudentTextbox_FirstName.Text, StudentTextbox_LastName.Text, StudentTextbox_Email.Text, OpenedSession.ID, StudentTextbox_Password.Text, StudentDateTimePicker_BOD.Value.ToShortDateString(), Convert.ToInt32(StudentTextbox_Level.Text));
+                Tuple<int, string> add = Controller.InsertStudent(StudentTextbox_Username.Text, StudentTextbox_FirstName.Text, StudentTextbox_LastName.Text, StudentTextbox_Email.Text, OpenedSession.ID, StudentTextbox_Password.Text, StudentDateTimePicker_BOD.Value.ToString("yyyy-MM-dd"), Convert.ToInt32(StudentTextbox_Level.Text));
                 if (add.Item1 == 0)
                 {
                     MessageBox.Show(add.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -2200,7 +2230,7 @@ namespace Learning_DB
                     }
                 }
             }
-            else if(checkH == 6)
+            else if (checkH == 6)
             {
                 if (StudentHComboBox_Username.SelectedIndex == -1)
                 {
@@ -2222,6 +2252,147 @@ namespace Learning_DB
                     }
                 }
             }
+        }
+
+        private void StudentTextbox_Level_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+        }
+
+        private void AdminRButton_Search_Click(object sender, EventArgs e)
+        {
+
+            DataTable dt = Controller.SelectAdminToBeActivated();
+            if (dt != null)
+            {
+                AdminRTextBox_FirstName.Text = dt.Rows[AdminRComboBox_Username.SelectedIndex]["FName"].ToString();
+                AdminRTextBox_LastName.Text = dt.Rows[AdminRComboBox_Username.SelectedIndex]["LName"].ToString();
+                AdminRTextBox_Email.Text = dt.Rows[AdminRComboBox_Username.SelectedIndex]["Email"].ToString();
+                AdminRTextBox_ID.Text = dt.Rows[AdminRComboBox_Username.SelectedIndex]["Admin_ID"].ToString();
+                AdminRTextBox_FirstName.Enabled = false;
+                AdminRTextBox_LastName.Enabled = false;
+                AdminRTextBox_Email.Enabled = false;
+                AdminRTextBox_ID.Enabled = false;
+                okA = true;
+            }
+            else
+            {
+                MessageBox.Show("There are no Admins in waiting list", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+        }
+
+        private void AdminRButton_Activate_Click(object sender, EventArgs e)
+        {
+            if (okA)
+            {
+                Tuple<int, string> edit = Controller.ActivateAdmin(Convert.ToInt32(AdminRComboBox_Username.SelectedValue), true);
+                if (edit.Item1 == 0)
+                {
+                    MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    AdminRComboBox_Username.DataSource = Controller.SelectAdminToBeActivated();
+                    MessageBox.Show("Admin Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Search for Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void InstructorRButton_Search_Click(object sender, EventArgs e)
+        {
+            DataTable dt = Controller.SelectInstructorToBeActivated();
+            if(dt != null)
+            {
+                InstructorRTextBox_FirstName.Text = dt.Rows[InstructorRComboBox_Username.SelectedIndex]["FName"].ToString();
+                InstructorRTextBox_LastName.Text = dt.Rows[InstructorRComboBox_Username.SelectedIndex]["LName"].ToString();
+                InstructorRTextBox_Email.Text = dt.Rows[InstructorRComboBox_Username.SelectedIndex]["Email"].ToString();
+                InstructorRTextBox_ID.Text = dt.Rows[InstructorRComboBox_Username.SelectedIndex]["Instructor_ID"].ToString();
+                InstructorRTextBox_Title.Text = dt.Rows[InstructorRComboBox_Username.SelectedIndex]["Title"].ToString();
+                InstructorRTextBox_FirstName.Enabled = false;
+                InstructorRTextBox_LastName.Enabled = false;
+                InstructorRTextBox_Email.Enabled = false;
+                InstructorRTextBox_ID.Enabled = false;
+                InstructorRTextBox_Title.Enabled = false;
+                okI = true;
+            }
+            else
+            {
+                MessageBox.Show("There are no Instructors in waiting list", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void InstructorRButton_Activate_Click(object sender, EventArgs e)
+        {
+            if (okI)
+            {
+                Tuple<int, string> edit = Controller.ActivateInstructor(Convert.ToInt32(InstructorRComboBox_Username.SelectedValue), true , OpenedSession.ID);
+                if (edit.Item1 == 0)
+                {
+                    MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    InstructorRComboBox_Username.DataSource = Controller.SelectInstructorToBeActivated();
+                    MessageBox.Show("Instructor Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+                MessageBox.Show("Please Search for Instructor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        private void StudentRButton_Search_Click(object sender, EventArgs e)
+        {
+            DataTable dt = Controller.SelectStudentToBeActivated();
+            if(dt != null)
+            {
+                StudentRTextBox_FirstName.Text = dt.Rows[StudentRComboBox_Username.SelectedIndex]["FName"].ToString();
+                StudentRTextBox_LastName.Text = dt.Rows[StudentRComboBox_Username.SelectedIndex]["LName"].ToString();
+                StudentRTextBox_Email.Text = dt.Rows[StudentRComboBox_Username.SelectedIndex]["Email"].ToString();
+                StudentRTextBox_ID.Text = dt.Rows[StudentRComboBox_Username.SelectedIndex]["StudentID"].ToString();
+                StudentRTextBox_Level.Text = dt.Rows[StudentRComboBox_Username.SelectedIndex]["year"].ToString();
+                StudentRTextBox_FirstName.Enabled = false;
+                StudentRTextBox_LastName.Enabled = false;
+                StudentRTextBox_Email.Enabled = false;
+                StudentRTextBox_ID.Enabled = false;
+                StudentRTextBox_Level.Enabled = false;
+                okS = true;
+            }
+            else
+            {
+                MessageBox.Show("There are no Students in waiting list", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void StudentRButton_Activate_Click(object sender, EventArgs e)
+        {
+            if (okS)
+            {
+                Tuple<int, string> edit = Controller.ActivateStudent(Convert.ToInt32(StudentRComboBox_Username.SelectedValue), true, OpenedSession.ID);
+                if (edit.Item1 == 0)
+                {
+                    MessageBox.Show(edit.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    StudentRComboBox_Username.DataSource = Controller.SelectStudentToBeActivated();
+                    StudentRComboBox_Username.DisplayMember = "Username";
+                    StudentRComboBox_Username.ValueMember = "StudentID";
+                    MessageBox.Show("Student Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+                MessageBox.Show("Please Search for Student", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

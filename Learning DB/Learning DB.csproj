@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Learning_DB</RootNamespace>
     <AssemblyName>Learning DB</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,12 +44,26 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\..\..\..\..\OneDrive - Cairo University - Students\CUFE\Junior\Term 1\Database\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a" />
     <Reference Include="MetroSet UI, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroSet_UI.2.0.0\lib\net45\MetroSet UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +93,30 @@
     <Compile Include="Classroom.Designer.cs">
       <DependentUpon>Classroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Exam.cs" />
     <Compile Include="Inst1.cs">
       <SubType>Form</SubType>
@@ -106,6 +145,12 @@
     <Compile Include="InstructorInterface2.Designer.cs">
       <DependentUpon>InstructorInterface2.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorReports.Designer.cs">
+      <DependentUpon>InstructorReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +160,12 @@
     <Compile Include="OpenedSession.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sign_Up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign_Up.Designer.cs">
+      <DependentUpon>Sign_Up.cs</DependentUpon>
+    </Compile>
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="Instructor_Interface.cs">
       <SubType>Form</SubType>
@@ -140,6 +191,18 @@
     <Compile Include="StudentInterface.Designer.cs">
       <DependentUpon>StudentInterface.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student_Progress.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student_Progress.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="triaal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="triaal.Designer.cs">
+      <DependentUpon>triaal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAssignment .resx">
       <DependentUpon>AddAssignment .cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +211,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Classroom.resx">
       <DependentUpon>Classroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Inst1.resx">
       <DependentUpon>Inst1.cs</DependentUpon>
@@ -161,6 +240,9 @@
     <EmbeddedResource Include="InstructorInterface2.resx">
       <DependentUpon>InstructorInterface2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstructorReports.resx">
+      <DependentUpon>InstructorReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +254,9 @@
     <EmbeddedResource Include="Instructor_Interface.resx">
       <DependentUpon>Instructor_Interface.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sign_Up.resx">
+      <DependentUpon>Sign_Up.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentClasses.resx">
       <DependentUpon>StudentClasses.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +266,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentInterface.resx">
       <DependentUpon>StudentInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Progress.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Student_Progress.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="triaal.resx">
+      <DependentUpon>triaal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -239,6 +331,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\addcourse-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
