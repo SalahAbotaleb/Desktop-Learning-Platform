@@ -652,5 +652,8 @@ namespace DbHandler
             string Query = "SELECT IDENT_CURRENT('Question_Options');";
             return dbMan.ExecuteNonQuery(Query);
         }
+
+
+
     }
 }

@@ -52,11 +52,6 @@
             this.topicComboinQuestionBank = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.addanswerstab = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.choosequestionlabel = new System.Windows.Forms.Label();
-            this.chooseQuestioninAddAnswers = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.delquestiontab = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.deletequestionbutton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -94,11 +89,9 @@
             this.Posts = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl5 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.Addpost = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.metroSetCheckBox1 = new MetroSet_UI.Controls.MetroSetCheckBox();
             this.addpostextbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ViewTimelinetab = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.Type = new System.Windows.Forms.Label();
-            this.DetermineQuesType_comboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.op3_textbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.op4_textbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.op2_textbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -109,6 +102,7 @@
             this.op1 = new MetroSet_UI.Controls.MetroSetRadioButton();
             this.True_RadioButton = new MetroSet_UI.Controls.MetroSetRadioButton();
             this.false_radiobutton = new MetroSet_UI.Controls.MetroSetRadioButton();
+            this.DetermineQuesType_comboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.exam.SuspendLayout();
             this.metroSetTabControl3.SuspendLayout();
             this.createxambutton.SuspendLayout();
@@ -120,9 +114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.diffUpDownQB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointsUpdownQB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topicComboinQuestionBank)).BeginInit();
-            this.addanswerstab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chooseQuestioninAddAnswers)).BeginInit();
             this.delquestiontab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Qtxtboxin_Del_Ques)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteQuestionTopic)).BeginInit();
@@ -164,12 +155,12 @@
             this.metroSetTabControl3.BackgroundColor = System.Drawing.Color.White;
             this.metroSetTabControl3.Controls.Add(this.createxambutton);
             this.metroSetTabControl3.Controls.Add(this.ViewExamgradestab);
-            this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl3.IsDerivedStyle = true;
             this.metroSetTabControl3.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl3.Location = new System.Drawing.Point(0, 3);
             this.metroSetTabControl3.Name = "metroSetTabControl3";
-            this.metroSetTabControl3.SelectedIndex = 1;
+            this.metroSetTabControl3.SelectedIndex = 0;
             this.metroSetTabControl3.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl3.Size = new System.Drawing.Size(1023, 506);
             this.metroSetTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -420,16 +411,15 @@
             this.metroSetTabControl2.AnimateTime = 200;
             this.metroSetTabControl2.BackgroundColor = System.Drawing.Color.White;
             this.metroSetTabControl2.Controls.Add(this.addquestion);
-            this.metroSetTabControl2.Controls.Add(this.addanswerstab);
             this.metroSetTabControl2.Controls.Add(this.delquestiontab);
-            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetTabControl2.IsDerivedStyle = true;
             this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl2.Location = new System.Drawing.Point(3, 11);
+            this.metroSetTabControl2.Location = new System.Drawing.Point(3, 3);
             this.metroSetTabControl2.Name = "metroSetTabControl2";
-            this.metroSetTabControl2.SelectedIndex = 0;
+            this.metroSetTabControl2.SelectedIndex = 1;
             this.metroSetTabControl2.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl2.Size = new System.Drawing.Size(1084, 539);
+            this.metroSetTabControl2.Size = new System.Drawing.Size(1084, 547);
             this.metroSetTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl2.Speed = 100;
             this.metroSetTabControl2.Style = MetroSet_UI.Enums.Style.Light;
@@ -443,6 +433,7 @@
             // addquestion
             // 
             this.addquestion.BaseColor = System.Drawing.Color.White;
+            this.addquestion.Controls.Add(this.DetermineQuesType_comboBox);
             this.addquestion.Controls.Add(this.false_radiobutton);
             this.addquestion.Controls.Add(this.True_RadioButton);
             this.addquestion.Controls.Add(this.op3_textbox);
@@ -453,7 +444,6 @@
             this.addquestion.Controls.Add(this.op2);
             this.addquestion.Controls.Add(this.op3);
             this.addquestion.Controls.Add(this.op1);
-            this.addquestion.Controls.Add(this.DetermineQuesType_comboBox);
             this.addquestion.Controls.Add(this.Type);
             this.addquestion.Controls.Add(this.diffUpDownQB);
             this.addquestion.Controls.Add(this.pointsUpdownQB);
@@ -470,7 +460,7 @@
             this.addquestion.IsDerivedStyle = true;
             this.addquestion.Location = new System.Drawing.Point(4, 42);
             this.addquestion.Name = "addquestion";
-            this.addquestion.Size = new System.Drawing.Size(1076, 493);
+            this.addquestion.Size = new System.Drawing.Size(1076, 501);
             this.addquestion.Style = MetroSet_UI.Enums.Style.Light;
             this.addquestion.StyleManager = null;
             this.addquestion.TabIndex = 0;
@@ -682,115 +672,6 @@
             this.label2.TabIndex = 133;
             this.label2.Text = "Question";
             // 
-            // addanswerstab
-            // 
-            this.addanswerstab.BaseColor = System.Drawing.Color.White;
-            this.addanswerstab.Controls.Add(this.kryptonComboBox1);
-            this.addanswerstab.Controls.Add(this.label8);
-            this.addanswerstab.Controls.Add(this.choosequestionlabel);
-            this.addanswerstab.Controls.Add(this.chooseQuestioninAddAnswers);
-            this.addanswerstab.Font = null;
-            this.addanswerstab.ImageIndex = 0;
-            this.addanswerstab.ImageKey = null;
-            this.addanswerstab.IsDerivedStyle = true;
-            this.addanswerstab.Location = new System.Drawing.Point(4, 42);
-            this.addanswerstab.Name = "addanswerstab";
-            this.addanswerstab.Size = new System.Drawing.Size(1076, 493);
-            this.addanswerstab.Style = MetroSet_UI.Enums.Style.Light;
-            this.addanswerstab.StyleManager = null;
-            this.addanswerstab.TabIndex = 1;
-            this.addanswerstab.Text = "Add Answers";
-            this.addanswerstab.ThemeAuthor = "Narwin";
-            this.addanswerstab.ThemeName = "MetroLite";
-            this.addanswerstab.ToolTipText = null;
-            // 
-            // kryptonComboBox1
-            // 
-            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kryptonComboBox1.DropDownWidth = 264;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(231, 35);
-            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonComboBox1.Size = new System.Drawing.Size(789, 44);
-            this.kryptonComboBox1.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonComboBox1.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 20;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 2;
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox1.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonComboBox1.TabIndex = 144;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 22);
-            this.label8.TabIndex = 143;
-            this.label8.Text = "Topic";
-            // 
-            // choosequestionlabel
-            // 
-            this.choosequestionlabel.AutoSize = true;
-            this.choosequestionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choosequestionlabel.Location = new System.Drawing.Point(44, 99);
-            this.choosequestionlabel.Name = "choosequestionlabel";
-            this.choosequestionlabel.Size = new System.Drawing.Size(68, 22);
-            this.choosequestionlabel.TabIndex = 138;
-            this.choosequestionlabel.Text = "Delete";
-            // 
-            // chooseQuestioninAddAnswers
-            // 
-            this.chooseQuestioninAddAnswers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.chooseQuestioninAddAnswers.DropDownWidth = 264;
-            this.chooseQuestioninAddAnswers.Location = new System.Drawing.Point(231, 87);
-            this.chooseQuestioninAddAnswers.Margin = new System.Windows.Forms.Padding(4);
-            this.chooseQuestioninAddAnswers.Name = "chooseQuestioninAddAnswers";
-            this.chooseQuestioninAddAnswers.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.chooseQuestioninAddAnswers.Size = new System.Drawing.Size(789, 44);
-            this.chooseQuestioninAddAnswers.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.chooseQuestioninAddAnswers.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.Rounding = 20;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Border.Width = 2;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
-            this.chooseQuestioninAddAnswers.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chooseQuestioninAddAnswers.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.chooseQuestioninAddAnswers.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.chooseQuestioninAddAnswers.TabIndex = 137;
-            this.chooseQuestioninAddAnswers.SelectedIndexChanged += new System.EventHandler(this.chooseQuestioninAddAnswers_SelectedIndexChanged);
-            // 
             // delquestiontab
             // 
             this.delquestiontab.BaseColor = System.Drawing.Color.White;
@@ -805,7 +686,7 @@
             this.delquestiontab.IsDerivedStyle = true;
             this.delquestiontab.Location = new System.Drawing.Point(4, 42);
             this.delquestiontab.Name = "delquestiontab";
-            this.delquestiontab.Size = new System.Drawing.Size(1076, 470);
+            this.delquestiontab.Size = new System.Drawing.Size(1076, 501);
             this.delquestiontab.Style = MetroSet_UI.Enums.Style.Light;
             this.delquestiontab.StyleManager = null;
             this.delquestiontab.TabIndex = 2;
@@ -1278,7 +1159,7 @@
             this.copyaccesscode.OverrideDefault.Border.Rounding = 20;
             this.copyaccesscode.OverrideDefault.Border.Width = 1;
             this.copyaccesscode.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.copyaccesscode.Size = new System.Drawing.Size(436, 50);
+            this.copyaccesscode.Size = new System.Drawing.Size(447, 50);
             this.copyaccesscode.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Back.ColorAngle = 45F;
@@ -1417,7 +1298,7 @@
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl1.Location = new System.Drawing.Point(12, 12);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 2;
+            this.metroSetTabControl1.SelectedIndex = 5;
             this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl1.Size = new System.Drawing.Size(1113, 599);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1672,7 +1553,6 @@
             // Addpost
             // 
             this.Addpost.BaseColor = System.Drawing.Color.White;
-            this.Addpost.Controls.Add(this.metroSetCheckBox1);
             this.Addpost.Controls.Add(this.addpostextbox);
             this.Addpost.Font = null;
             this.Addpost.ImageIndex = 0;
@@ -1689,34 +1569,11 @@
             this.Addpost.ThemeName = "MetroLite";
             this.Addpost.ToolTipText = null;
             // 
-            // metroSetCheckBox1
-            // 
-            this.metroSetCheckBox1.BackColor = System.Drawing.Color.Transparent;
-            this.metroSetCheckBox1.BackgroundColor = System.Drawing.Color.White;
-            this.metroSetCheckBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetCheckBox1.Checked = false;
-            this.metroSetCheckBox1.CheckSignColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetCheckBox1.CheckState = MetroSet_UI.Enums.CheckState.Unchecked;
-            this.metroSetCheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroSetCheckBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
-            this.metroSetCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetCheckBox1.IsDerivedStyle = true;
-            this.metroSetCheckBox1.Location = new System.Drawing.Point(151, 113);
-            this.metroSetCheckBox1.Name = "metroSetCheckBox1";
-            this.metroSetCheckBox1.SignStyle = MetroSet_UI.Enums.SignStyle.Sign;
-            this.metroSetCheckBox1.Size = new System.Drawing.Size(75, 16);
-            this.metroSetCheckBox1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetCheckBox1.StyleManager = null;
-            this.metroSetCheckBox1.TabIndex = 119;
-            this.metroSetCheckBox1.Text = "metroSetCheckBox1";
-            this.metroSetCheckBox1.ThemeAuthor = "Narwin";
-            this.metroSetCheckBox1.ThemeName = "MetroLite";
-            // 
             // addpostextbox
             // 
             this.addpostextbox.Location = new System.Drawing.Point(196, 51);
             this.addpostextbox.Name = "addpostextbox";
-            this.addpostextbox.Size = new System.Drawing.Size(583, 43);
+            this.addpostextbox.Size = new System.Drawing.Size(688, 43);
             this.addpostextbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.addpostextbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.addpostextbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1761,18 +1618,6 @@
             this.Type.Size = new System.Drawing.Size(55, 22);
             this.Type.TabIndex = 151;
             this.Type.Text = "Type";
-            // 
-            // DetermineQuesType_comboBox
-            // 
-            this.DetermineQuesType_comboBox.DropDownWidth = 120;
-            this.DetermineQuesType_comboBox.Items.AddRange(new object[] {
-            "MCQ",
-            "T/F"});
-            this.DetermineQuesType_comboBox.Location = new System.Drawing.Point(221, 309);
-            this.DetermineQuesType_comboBox.Name = "DetermineQuesType_comboBox";
-            this.DetermineQuesType_comboBox.Size = new System.Drawing.Size(120, 25);
-            this.DetermineQuesType_comboBox.TabIndex = 155;
-            this.DetermineQuesType_comboBox.SelectedIndexChanged += new System.EventHandler(this.DetermineQuesType_comboBox_SelectedIndexChanged);
             // 
             // op3_textbox
             // 
@@ -1984,6 +1829,43 @@
             this.false_radiobutton.ThemeAuthor = "Narwin";
             this.false_radiobutton.ThemeName = "MetroLite";
             // 
+            // DetermineQuesType_comboBox
+            // 
+            this.DetermineQuesType_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DetermineQuesType_comboBox.DropDownWidth = 264;
+            this.DetermineQuesType_comboBox.Items.AddRange(new object[] {
+            "MCQ",
+            "T/F"});
+            this.DetermineQuesType_comboBox.Location = new System.Drawing.Point(221, 300);
+            this.DetermineQuesType_comboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DetermineQuesType_comboBox.Name = "DetermineQuesType_comboBox";
+            this.DetermineQuesType_comboBox.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.DetermineQuesType_comboBox.Size = new System.Drawing.Size(120, 44);
+            this.DetermineQuesType_comboBox.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.DetermineQuesType_comboBox.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.ColorAngle = 45F;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Rounding = 20;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Width = 2;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetermineQuesType_comboBox.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.DetermineQuesType_comboBox.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.DetermineQuesType_comboBox.TabIndex = 174;
+            this.DetermineQuesType_comboBox.SelectedIndexChanged += new System.EventHandler(this.DetermineQuesType_comboBox_SelectedIndexChanged_1);
+            // 
             // Classroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2005,10 +1887,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.diffUpDownQB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointsUpdownQB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topicComboinQuestionBank)).EndInit();
-            this.addanswerstab.ResumeLayout(false);
-            this.addanswerstab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chooseQuestioninAddAnswers)).EndInit();
             this.delquestiontab.ResumeLayout(false);
             this.delquestiontab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Qtxtboxin_Del_Ques)).EndInit();
@@ -2065,11 +1943,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox topicComboinQuestionBank;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private MetroSet_UI.Child.MetroSetSetTabPage addanswerstab;
         private System.Windows.Forms.NumericUpDown diffUpDownQB;
         private System.Windows.Forms.NumericUpDown pointsUpdownQB;
-        private System.Windows.Forms.Label choosequestionlabel;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox chooseQuestioninAddAnswers;
         private MetroSet_UI.Child.MetroSetSetTabPage delquestiontab;
         private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl3;
         private MetroSet_UI.Child.MetroSetSetTabPage createxambutton;
@@ -2099,9 +1974,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox addpostextbox;
         private MetroSet_UI.Child.MetroSetSetTabPage ViewTimelinetab;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-        private MetroSet_UI.Controls.MetroSetCheckBox metroSetCheckBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
-        private System.Windows.Forms.Label label8;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox op3_textbox;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox op4_textbox;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox op2_textbox;
@@ -2110,9 +1982,9 @@
         private MetroSet_UI.Controls.MetroSetRadioButton op2;
         private MetroSet_UI.Controls.MetroSetRadioButton op3;
         private MetroSet_UI.Controls.MetroSetRadioButton op1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox DetermineQuesType_comboBox;
         private System.Windows.Forms.Label Type;
         private MetroSet_UI.Controls.MetroSetRadioButton false_radiobutton;
         private MetroSet_UI.Controls.MetroSetRadioButton True_RadioButton;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox DetermineQuesType_comboBox;
     }
 }

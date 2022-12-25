@@ -42,6 +42,7 @@ namespace Learning_DB
             op4_textbox.Hide();
             True_RadioButton.Hide();
             false_radiobutton.Hide();
+            //DetermineQuesType_comboBox.Cursor.Dispose();
             DataTable dt;//= new DataTable();
             dt = c.SelectClassroomByID(Classroom_ID);
             kryptonTextBox15.Text = dt.Rows[0]["Title"].ToString();
@@ -60,6 +61,7 @@ namespace Learning_DB
             topicComboinQuestionBank.DisplayMember = "Topic";
             deleteQuestionTopic.DataSource = d3;
             deleteQuestionTopic.DisplayMember = "Topic";
+            deleteQuestionTopic.ValueMember = "Topic";
 
 
 
@@ -102,51 +104,14 @@ namespace Learning_DB
 
         private void AddQuestionQuestioBank_Click(object sender, EventArgs e)
         {
-            //if(DetermineQuesType_comboBox.Text=="")
-            //if (!op1.Checked || !op2.Checked) { 
-
-            //    return;
-            //}
-            //else
-            //{
-            //}
-            //MetroSetRadioButton b = new MetroSetRadioButton();
-            //string answer;
+          
             AddQuestionQuestioBank.Enabled = true;
 
             string option1 = op1_textbox.Text;
             string option2 = op2_textbox.Text;
             string option3 = op3_textbox.Text;
             string option4 = op4_textbox.Text;
-            //if (DetermineQuesType_comboBox.Text == "MCQ") { if (op1.Checked) { b = op1;
-            //        answer = op1_textbox.Text;
-            //    }
-            //    if (op2.Checked) {
-            //        b = op2;
-            //        answer = op2_textbox.Text;
-            //    }
-            //    if (op3.Checked) {
-            //        b = op3;
-            //        answer = op3_textbox.Text;
-            //    }
-            //    if (op4.Checked) {
-            //        b = op4;
-            //        answer = op4_textbox.Text;
-            //    }
-            //}
-            //else if (DetermineQuesType_comboBox.Text == "T/F")
-            //{
-            //    if (True_RadioButton.Checked) {
-            //        b = True_RadioButton;
-            //        answer = "True";
-
-            //    }
-            //    else
-            //    {
-            //        b = false_radiobutton;
-            //        answer = "False";
-            //    }
-            //}
+ 
             if (questionDescriptQB.Text == "")
             {
                 MessageBox.Show("Cannot Insert an Empty Question!");
@@ -162,14 +127,17 @@ namespace Learning_DB
             else
             {
                 int x = c.getLastQuestion();
+                MessageBox.Show(x.ToString());
                 if (DetermineQuesType_comboBox.Text == "T/F") {
                     if (True_RadioButton.Checked)
                     {
                         Tuple<int, string> s = c.AddQuestionOption(x, "True", true);
                         Tuple<int, string> s1 = c.AddQuestionOption(x, "False", false);
-                    
+                        MessageBox.Show("Question Options added.");
+
                     }
-                }else if(DetermineQuesType_comboBox.Text == "MCQ")
+                }
+                else if(DetermineQuesType_comboBox.Text == "MCQ")
                 {
                     if (op1.Checked) { 
                         Tuple<int, string> s1 = c.AddQuestionOption(x, option1, true); 
@@ -195,9 +163,10 @@ namespace Learning_DB
                         Tuple<int, string> s3 = c.AddQuestionOption(x, option3, false);
                         Tuple<int, string> s4 = c.AddQuestionOption(x, option4, true);
                     }
+                    MessageBox.Show("Question Options added.");
                 }
                 MessageBox.Show("Question added successfuly");
-                AddQuestionQuestioBank.Enabled=false;
+                AddQuestionQuestioBank.Enabled=true;
             }
         }
 
@@ -254,23 +223,23 @@ namespace Learning_DB
             Qtxtboxin_Del_Ques.DataSource = dt;
             Qtxtboxin_Del_Ques.DisplayMember = "Description";
             Qtxtboxin_Del_Ques.ValueMember = "Question_ID";
-            TodeleteQuestionID = Int16.Parse(Qtxtboxin_Del_Ques.ValueMember);
+            //TodeleteQuestionID = Int16.Parse(Qtxtboxin_Del_Ques.ValueMember);
         }
 
         private void deletequestionbutton_Click(object sender, EventArgs e)
         {
 
-            //int result = c.DeleteQuestionbyID(TodeleteQuestionID);
-            //if (result == 0)
-            //{
-            //    //MessageBox.Show(result);
-            //    MessageBox.Show("Question couldn't be deleted.");
+            int result=0;// = c.DeleteQuestionbyID(TodeleteQuestionID);
+            if (result == 0)
+            {
+                //MessageBox.Show(result);
+                MessageBox.Show("Question couldn't be deleted.");
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Question deleted successfuly");
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Question deleted successfuly");
+            }
         }
 
         private void Qtxtboxin_Del_Ques_SelectedIndexChanged(object sender, EventArgs e)
@@ -313,7 +282,36 @@ namespace Learning_DB
 
         }
 
-        private void DetermineQuesType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        //private void DetermineQuesType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (DetermineQuesType_comboBox.Text == "T/F")
+        //    {
+        //        op1.Hide();
+        //        op2.Hide();
+        //        op3.Hide();
+        //        op4.Hide();
+        //    op1_textbox.Hide();
+        //    op2_textbox.Hide();
+        //    op3_textbox.Hide();
+        //    op4_textbox.Hide();
+        //        True_RadioButton.Show();
+        //        false_radiobutton.Show();
+        //    }else if(DetermineQuesType_comboBox.Text == "MCQ")
+        //    {
+        //        op1.Show();
+        //        op2.Show();
+        //        op3.Show();
+        //        op4.Show();
+        //        op1_textbox.Show();
+        //        op2_textbox.Show();
+        //        op3_textbox.Show();
+        //        op4_textbox.Show();
+        //        True_RadioButton.Hide();
+        //        false_radiobutton.Hide();
+        //    }
+        //}
+
+        private void DetermineQuesType_comboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (DetermineQuesType_comboBox.Text == "T/F")
             {
@@ -321,13 +319,14 @@ namespace Learning_DB
                 op2.Hide();
                 op3.Hide();
                 op4.Hide();
-            op1_textbox.Hide();
-            op2_textbox.Hide();
-            op3_textbox.Hide();
-            op4_textbox.Hide();
+                op1_textbox.Hide();
+                op2_textbox.Hide();
+                op3_textbox.Hide();
+                op4_textbox.Hide();
                 True_RadioButton.Show();
                 false_radiobutton.Show();
-            }else if(DetermineQuesType_comboBox.Text == "MCQ")
+            }
+            else if (DetermineQuesType_comboBox.Text == "MCQ")
             {
                 op1.Show();
                 op2.Show();
@@ -341,9 +340,6 @@ namespace Learning_DB
                 false_radiobutton.Hide();
             }
         }
-
-
-      
     }
 
 
