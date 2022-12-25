@@ -151,7 +151,10 @@ namespace Learning_DB
 
         private void deleteQuestionTopic_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            DataTable dt = new DataTable();
+            dt = c.SelectQuestionsbyTopic(deleteQuestionTopic.Text);
+            Qtxtboxin_Del_Ques.DataSource = dt;
+            Qtxtboxin_Del_Ques.DisplayMember = "";
         }
 
         private void deletequestionbutton_Click(object sender, EventArgs e)

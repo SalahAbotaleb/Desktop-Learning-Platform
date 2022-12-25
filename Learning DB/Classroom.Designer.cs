@@ -80,13 +80,19 @@
             this.classroomtitle = new System.Windows.Forms.Label();
             this.metroSetTabControl1 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.materialstab = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.material_title_Textbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.materialtitlelabel = new System.Windows.Forms.Label();
-            this.material_Link = new System.Windows.Forms.Label();
-            this.linktextbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.uploadmaterialbtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.material_Description = new System.Windows.Forms.Label();
             this.material_des_txtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.material_Description = new System.Windows.Forms.Label();
+            this.uploadmaterialbtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.linktextbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.material_Link = new System.Windows.Forms.Label();
+            this.materialtitlelabel = new System.Windows.Forms.Label();
+            this.material_title_Textbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.Posts = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.metroSetTabControl5 = new MetroSet_UI.Controls.MetroSetTabControl();
+            this.Addpost = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.ViewTimelinetab = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.ViewExamgradestab = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.exam.SuspendLayout();
             this.metroSetTabControl3.SuspendLayout();
             this.createxambutton.SuspendLayout();
@@ -107,6 +113,9 @@
             this.metroSetSetTabPage1.SuspendLayout();
             this.metroSetTabControl1.SuspendLayout();
             this.materialstab.SuspendLayout();
+            this.Posts.SuspendLayout();
+            this.metroSetTabControl5.SuspendLayout();
+            this.Addpost.SuspendLayout();
             this.SuspendLayout();
             // 
             // exam
@@ -119,7 +128,7 @@
             this.exam.IsDerivedStyle = true;
             this.exam.Location = new System.Drawing.Point(4, 42);
             this.exam.Name = "exam";
-            this.exam.Size = new System.Drawing.Size(1026, 486);
+            this.exam.Size = new System.Drawing.Size(1026, 524);
             this.exam.Style = MetroSet_UI.Enums.Style.Light;
             this.exam.StyleManager = null;
             this.exam.TabIndex = 3;
@@ -134,14 +143,15 @@
             this.metroSetTabControl3.AnimateTime = 200;
             this.metroSetTabControl3.BackgroundColor = System.Drawing.Color.White;
             this.metroSetTabControl3.Controls.Add(this.createxambutton);
-            this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl3.Controls.Add(this.ViewExamgradestab);
+            this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl3.IsDerivedStyle = true;
             this.metroSetTabControl3.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl3.Location = new System.Drawing.Point(3, 15);
+            this.metroSetTabControl3.Location = new System.Drawing.Point(0, 3);
             this.metroSetTabControl3.Name = "metroSetTabControl3";
             this.metroSetTabControl3.SelectedIndex = 0;
             this.metroSetTabControl3.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl3.Size = new System.Drawing.Size(993, 454);
+            this.metroSetTabControl3.Size = new System.Drawing.Size(1023, 506);
             this.metroSetTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl3.Speed = 100;
             this.metroSetTabControl3.Style = MetroSet_UI.Enums.Style.Light;
@@ -168,7 +178,7 @@
             this.createxambutton.IsDerivedStyle = true;
             this.createxambutton.Location = new System.Drawing.Point(4, 42);
             this.createxambutton.Name = "createxambutton";
-            this.createxambutton.Size = new System.Drawing.Size(985, 408);
+            this.createxambutton.Size = new System.Drawing.Size(1015, 460);
             this.createxambutton.Style = MetroSet_UI.Enums.Style.Light;
             this.createxambutton.StyleManager = null;
             this.createxambutton.TabIndex = 1;
@@ -335,7 +345,7 @@
             this.questionbank.IsDerivedStyle = true;
             this.questionbank.Location = new System.Drawing.Point(4, 42);
             this.questionbank.Name = "questionbank";
-            this.questionbank.Size = new System.Drawing.Size(1026, 486);
+            this.questionbank.Size = new System.Drawing.Size(1026, 524);
             this.questionbank.Style = MetroSet_UI.Enums.Style.Light;
             this.questionbank.StyleManager = null;
             this.questionbank.TabIndex = 2;
@@ -352,12 +362,12 @@
             this.metroSetTabControl2.Controls.Add(this.addquestion);
             this.metroSetTabControl2.Controls.Add(this.addanswerstab);
             this.metroSetTabControl2.Controls.Add(this.delquestiontab);
-            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl2.IsDerivedStyle = true;
             this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl2.Location = new System.Drawing.Point(3, 11);
             this.metroSetTabControl2.Name = "metroSetTabControl2";
-            this.metroSetTabControl2.SelectedIndex = 1;
+            this.metroSetTabControl2.SelectedIndex = 2;
             this.metroSetTabControl2.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl2.Size = new System.Drawing.Size(1020, 443);
             this.metroSetTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1225,6 +1235,7 @@
             this.metroSetTabControl1.Controls.Add(this.questionbank);
             this.metroSetTabControl1.Controls.Add(this.exam);
             this.metroSetTabControl1.Controls.Add(this.materialstab);
+            this.metroSetTabControl1.Controls.Add(this.Posts);
             this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl1.IsDerivedStyle = true;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
@@ -1232,7 +1243,7 @@
             this.metroSetTabControl1.Name = "metroSetTabControl1";
             this.metroSetTabControl1.SelectedIndex = 4;
             this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl1.Size = new System.Drawing.Size(1034, 532);
+            this.metroSetTabControl1.Size = new System.Drawing.Size(1034, 570);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl1.Speed = 100;
             this.metroSetTabControl1.Style = MetroSet_UI.Enums.Style.Light;
@@ -1259,7 +1270,7 @@
             this.materialstab.IsDerivedStyle = true;
             this.materialstab.Location = new System.Drawing.Point(4, 42);
             this.materialstab.Name = "materialstab";
-            this.materialstab.Size = new System.Drawing.Size(1026, 486);
+            this.materialstab.Size = new System.Drawing.Size(1026, 524);
             this.materialstab.Style = MetroSet_UI.Enums.Style.Light;
             this.materialstab.StyleManager = null;
             this.materialstab.TabIndex = 4;
@@ -1268,68 +1279,36 @@
             this.materialstab.ThemeName = "MetroLite";
             this.materialstab.ToolTipText = null;
             // 
-            // material_title_Textbox
+            // material_des_txtbox
             // 
-            this.material_title_Textbox.Location = new System.Drawing.Point(213, 42);
-            this.material_title_Textbox.Margin = new System.Windows.Forms.Padding(4);
-            this.material_title_Textbox.Name = "material_title_Textbox";
-            this.material_title_Textbox.Size = new System.Drawing.Size(571, 41);
-            this.material_title_Textbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.material_title_Textbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.material_title_Textbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.material_title_Textbox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.material_des_txtbox.Location = new System.Drawing.Point(213, 188);
+            this.material_des_txtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.material_des_txtbox.Name = "material_des_txtbox";
+            this.material_des_txtbox.Size = new System.Drawing.Size(571, 41);
+            this.material_des_txtbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.material_des_txtbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.material_des_txtbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.material_des_txtbox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.material_title_Textbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.material_title_Textbox.StateCommon.Border.Rounding = 20;
-            this.material_title_Textbox.StateCommon.Border.Width = 2;
-            this.material_title_Textbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.material_title_Textbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.material_title_Textbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.material_title_Textbox.TabIndex = 150;
-            this.material_title_Textbox.TextChanged += new System.EventHandler(this.material_title_Textbox_TextChanged);
+            this.material_des_txtbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.material_des_txtbox.StateCommon.Border.Rounding = 20;
+            this.material_des_txtbox.StateCommon.Border.Width = 2;
+            this.material_des_txtbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.material_des_txtbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.material_des_txtbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.material_des_txtbox.TabIndex = 157;
             // 
-            // materialtitlelabel
+            // material_Description
             // 
-            this.materialtitlelabel.AutoSize = true;
-            this.materialtitlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialtitlelabel.Location = new System.Drawing.Point(72, 52);
-            this.materialtitlelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialtitlelabel.Name = "materialtitlelabel";
-            this.materialtitlelabel.Size = new System.Drawing.Size(127, 22);
-            this.materialtitlelabel.TabIndex = 151;
-            this.materialtitlelabel.Text = "Material Title";
-            // 
-            // material_Link
-            // 
-            this.material_Link.AutoSize = true;
-            this.material_Link.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.material_Link.Location = new System.Drawing.Point(72, 132);
-            this.material_Link.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.material_Link.Name = "material_Link";
-            this.material_Link.Size = new System.Drawing.Size(53, 22);
-            this.material_Link.TabIndex = 153;
-            this.material_Link.Text = "Link ";
-            // 
-            // linktextbox
-            // 
-            this.linktextbox.Location = new System.Drawing.Point(213, 113);
-            this.linktextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.linktextbox.Name = "linktextbox";
-            this.linktextbox.Size = new System.Drawing.Size(571, 41);
-            this.linktextbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.linktextbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linktextbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linktextbox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.linktextbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.linktextbox.StateCommon.Border.Rounding = 20;
-            this.linktextbox.StateCommon.Border.Width = 2;
-            this.linktextbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.linktextbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linktextbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.linktextbox.TabIndex = 154;
+            this.material_Description.AutoSize = true;
+            this.material_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.material_Description.Location = new System.Drawing.Point(11, 198);
+            this.material_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.material_Description.Name = "material_Description";
+            this.material_Description.Size = new System.Drawing.Size(188, 22);
+            this.material_Description.TabIndex = 156;
+            this.material_Description.Text = "Material Description";
             // 
             // uploadmaterialbtn
             // 
@@ -1394,36 +1373,187 @@
             this.uploadmaterialbtn.Values.Text = "Upload Material";
             this.uploadmaterialbtn.Click += new System.EventHandler(this.uploadmaterialbtn_Click);
             // 
-            // material_Description
+            // linktextbox
             // 
-            this.material_Description.AutoSize = true;
-            this.material_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.material_Description.Location = new System.Drawing.Point(11, 198);
-            this.material_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.material_Description.Name = "material_Description";
-            this.material_Description.Size = new System.Drawing.Size(188, 22);
-            this.material_Description.TabIndex = 156;
-            this.material_Description.Text = "Material Description";
-            // 
-            // material_des_txtbox
-            // 
-            this.material_des_txtbox.Location = new System.Drawing.Point(213, 188);
-            this.material_des_txtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.material_des_txtbox.Name = "material_des_txtbox";
-            this.material_des_txtbox.Size = new System.Drawing.Size(571, 41);
-            this.material_des_txtbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.material_des_txtbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.material_des_txtbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.material_des_txtbox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.linktextbox.Location = new System.Drawing.Point(213, 113);
+            this.linktextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.linktextbox.Name = "linktextbox";
+            this.linktextbox.Size = new System.Drawing.Size(571, 41);
+            this.linktextbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.linktextbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linktextbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linktextbox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.material_des_txtbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.material_des_txtbox.StateCommon.Border.Rounding = 20;
-            this.material_des_txtbox.StateCommon.Border.Width = 2;
-            this.material_des_txtbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.material_des_txtbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.material_des_txtbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.material_des_txtbox.TabIndex = 157;
+            this.linktextbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.linktextbox.StateCommon.Border.Rounding = 20;
+            this.linktextbox.StateCommon.Border.Width = 2;
+            this.linktextbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.linktextbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linktextbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.linktextbox.TabIndex = 154;
+            // 
+            // material_Link
+            // 
+            this.material_Link.AutoSize = true;
+            this.material_Link.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.material_Link.Location = new System.Drawing.Point(72, 132);
+            this.material_Link.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.material_Link.Name = "material_Link";
+            this.material_Link.Size = new System.Drawing.Size(53, 22);
+            this.material_Link.TabIndex = 153;
+            this.material_Link.Text = "Link ";
+            // 
+            // materialtitlelabel
+            // 
+            this.materialtitlelabel.AutoSize = true;
+            this.materialtitlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialtitlelabel.Location = new System.Drawing.Point(72, 52);
+            this.materialtitlelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialtitlelabel.Name = "materialtitlelabel";
+            this.materialtitlelabel.Size = new System.Drawing.Size(127, 22);
+            this.materialtitlelabel.TabIndex = 151;
+            this.materialtitlelabel.Text = "Material Title";
+            // 
+            // material_title_Textbox
+            // 
+            this.material_title_Textbox.Location = new System.Drawing.Point(213, 42);
+            this.material_title_Textbox.Margin = new System.Windows.Forms.Padding(4);
+            this.material_title_Textbox.Name = "material_title_Textbox";
+            this.material_title_Textbox.Size = new System.Drawing.Size(571, 41);
+            this.material_title_Textbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.material_title_Textbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.material_title_Textbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.material_title_Textbox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.material_title_Textbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.material_title_Textbox.StateCommon.Border.Rounding = 20;
+            this.material_title_Textbox.StateCommon.Border.Width = 2;
+            this.material_title_Textbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.material_title_Textbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.material_title_Textbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.material_title_Textbox.TabIndex = 150;
+            this.material_title_Textbox.TextChanged += new System.EventHandler(this.material_title_Textbox_TextChanged);
+            // 
+            // Posts
+            // 
+            this.Posts.BaseColor = System.Drawing.Color.White;
+            this.Posts.Controls.Add(this.metroSetTabControl5);
+            this.Posts.Font = null;
+            this.Posts.ImageIndex = 0;
+            this.Posts.ImageKey = null;
+            this.Posts.IsDerivedStyle = true;
+            this.Posts.Location = new System.Drawing.Point(4, 42);
+            this.Posts.Name = "Posts";
+            this.Posts.Size = new System.Drawing.Size(1026, 486);
+            this.Posts.Style = MetroSet_UI.Enums.Style.Light;
+            this.Posts.StyleManager = null;
+            this.Posts.TabIndex = 5;
+            this.Posts.Text = "Posts";
+            this.Posts.ThemeAuthor = "Narwin";
+            this.Posts.ThemeName = "MetroLite";
+            this.Posts.ToolTipText = null;
+            // 
+            // metroSetTabControl5
+            // 
+            this.metroSetTabControl5.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
+            this.metroSetTabControl5.AnimateTime = 200;
+            this.metroSetTabControl5.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl5.Controls.Add(this.Addpost);
+            this.metroSetTabControl5.Controls.Add(this.ViewTimelinetab);
+            this.metroSetTabControl5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl5.IsDerivedStyle = true;
+            this.metroSetTabControl5.ItemSize = new System.Drawing.Size(100, 38);
+            this.metroSetTabControl5.Location = new System.Drawing.Point(3, 16);
+            this.metroSetTabControl5.Name = "metroSetTabControl5";
+            this.metroSetTabControl5.SelectedIndex = 0;
+            this.metroSetTabControl5.SelectedTextColor = System.Drawing.Color.White;
+            this.metroSetTabControl5.Size = new System.Drawing.Size(1010, 444);
+            this.metroSetTabControl5.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.metroSetTabControl5.Speed = 100;
+            this.metroSetTabControl5.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTabControl5.StyleManager = null;
+            this.metroSetTabControl5.TabIndex = 0;
+            this.metroSetTabControl5.ThemeAuthor = "Narwin";
+            this.metroSetTabControl5.ThemeName = "MetroLite";
+            this.metroSetTabControl5.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl5.UseAnimation = false;
+            // 
+            // Addpost
+            // 
+            this.Addpost.BaseColor = System.Drawing.Color.White;
+            this.Addpost.Controls.Add(this.kryptonTextBox2);
+            this.Addpost.Font = null;
+            this.Addpost.ImageIndex = 0;
+            this.Addpost.ImageKey = null;
+            this.Addpost.IsDerivedStyle = true;
+            this.Addpost.Location = new System.Drawing.Point(4, 42);
+            this.Addpost.Name = "Addpost";
+            this.Addpost.Size = new System.Drawing.Size(1002, 398);
+            this.Addpost.Style = MetroSet_UI.Enums.Style.Light;
+            this.Addpost.StyleManager = null;
+            this.Addpost.TabIndex = 0;
+            this.Addpost.Text = "Add Post";
+            this.Addpost.ThemeAuthor = "Narwin";
+            this.Addpost.ThemeName = "MetroLite";
+            this.Addpost.ToolTipText = null;
+            // 
+            // ViewTimelinetab
+            // 
+            this.ViewTimelinetab.BaseColor = System.Drawing.Color.White;
+            this.ViewTimelinetab.Font = null;
+            this.ViewTimelinetab.ImageIndex = 0;
+            this.ViewTimelinetab.ImageKey = null;
+            this.ViewTimelinetab.IsDerivedStyle = true;
+            this.ViewTimelinetab.Location = new System.Drawing.Point(4, 42);
+            this.ViewTimelinetab.Name = "ViewTimelinetab";
+            this.ViewTimelinetab.Size = new System.Drawing.Size(1002, 398);
+            this.ViewTimelinetab.Style = MetroSet_UI.Enums.Style.Light;
+            this.ViewTimelinetab.StyleManager = null;
+            this.ViewTimelinetab.TabIndex = 1;
+            this.ViewTimelinetab.Text = "View Timeline";
+            this.ViewTimelinetab.ThemeAuthor = "Narwin";
+            this.ViewTimelinetab.ThemeName = "MetroLite";
+            this.ViewTimelinetab.ToolTipText = null;
+            // 
+            // kryptonTextBox2
+            // 
+            this.kryptonTextBox2.Location = new System.Drawing.Point(230, 47);
+            this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.Size = new System.Drawing.Size(539, 43);
+            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox2.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox2.StateCommon.Border.Width = 2;
+            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.kryptonTextBox2.TabIndex = 118;
+            this.kryptonTextBox2.Text = "Enter Assignment Title";
+            // 
+            // ViewExamgradestab
+            // 
+            this.ViewExamgradestab.BaseColor = System.Drawing.Color.White;
+            this.ViewExamgradestab.Font = null;
+            this.ViewExamgradestab.ImageIndex = 0;
+            this.ViewExamgradestab.ImageKey = null;
+            this.ViewExamgradestab.IsDerivedStyle = true;
+            this.ViewExamgradestab.Location = new System.Drawing.Point(4, 42);
+            this.ViewExamgradestab.Name = "ViewExamgradestab";
+            this.ViewExamgradestab.Size = new System.Drawing.Size(1015, 460);
+            this.ViewExamgradestab.Style = MetroSet_UI.Enums.Style.Light;
+            this.ViewExamgradestab.StyleManager = null;
+            this.ViewExamgradestab.TabIndex = 2;
+            this.ViewExamgradestab.Text = "View Grades";
+            this.ViewExamgradestab.ThemeAuthor = "Narwin";
+            this.ViewExamgradestab.ThemeName = "MetroLite";
+            this.ViewExamgradestab.ToolTipText = null;
             // 
             // Classroom
             // 
@@ -1460,6 +1590,10 @@
             this.metroSetTabControl1.ResumeLayout(false);
             this.materialstab.ResumeLayout(false);
             this.materialstab.PerformLayout();
+            this.Posts.ResumeLayout(false);
+            this.metroSetTabControl5.ResumeLayout(false);
+            this.Addpost.ResumeLayout(false);
+            this.Addpost.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1525,5 +1659,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox material_des_txtbox;
         private System.Windows.Forms.Label material_Description;
         private ComponentFactory.Krypton.Toolkit.KryptonButton uploadmaterialbtn;
+        private MetroSet_UI.Child.MetroSetSetTabPage ViewExamgradestab;
+        private MetroSet_UI.Child.MetroSetSetTabPage Posts;
+        private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl5;
+        private MetroSet_UI.Child.MetroSetSetTabPage Addpost;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private MetroSet_UI.Child.MetroSetSetTabPage ViewTimelinetab;
     }
 }
