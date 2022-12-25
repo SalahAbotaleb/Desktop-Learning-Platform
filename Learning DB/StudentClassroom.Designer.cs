@@ -58,6 +58,9 @@
             this.QuestionLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ExamTab = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.exitexam = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.viewcorrection = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabelYouGot = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.metroSetProgressBar1 = new MetroSet_UI.Controls.MetroSetProgressBar();
             this.TextBoxTimer = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -93,6 +96,8 @@
             this.AccessCodeBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.AccessCode = new System.Windows.Forms.Label();
             this.MaterialTab = new System.Windows.Forms.TabPage();
+            this.exitExam2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.SolvedStatus = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.Main.SuspendLayout();
             this.AssignmentTab.SuspendLayout();
             this.EventTab.SuspendLayout();
@@ -825,6 +830,11 @@
             // ExamTab
             // 
             this.ExamTab.BaseColor = System.Drawing.SystemColors.Control;
+            this.ExamTab.Controls.Add(this.SolvedStatus);
+            this.ExamTab.Controls.Add(this.exitExam2);
+            this.ExamTab.Controls.Add(this.exitexam);
+            this.ExamTab.Controls.Add(this.viewcorrection);
+            this.ExamTab.Controls.Add(this.kryptonLabelYouGot);
             this.ExamTab.Controls.Add(this.metroSetProgressBar1);
             this.ExamTab.Controls.Add(this.TextBoxTimer);
             this.ExamTab.Controls.Add(this.radioButton4);
@@ -862,6 +872,139 @@
             this.ExamTab.ThemeAuthor = "Narwin";
             this.ExamTab.ThemeName = "MetroLite";
             this.ExamTab.ToolTipText = null;
+            // 
+            // exitexam
+            // 
+            this.exitexam.Location = new System.Drawing.Point(700, 298);
+            this.exitexam.Margin = new System.Windows.Forms.Padding(4);
+            this.exitexam.Name = "exitexam";
+            this.exitexam.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitexam.OverrideDefault.Back.ColorAngle = 45F;
+            this.exitexam.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitexam.OverrideDefault.Border.ColorAngle = 45F;
+            this.exitexam.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitexam.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.exitexam.OverrideDefault.Border.Rounding = 20;
+            this.exitexam.OverrideDefault.Border.Width = 1;
+            this.exitexam.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.exitexam.Size = new System.Drawing.Size(380, 56);
+            this.exitexam.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.StateCommon.Back.ColorAngle = 45F;
+            this.exitexam.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.StateCommon.Border.ColorAngle = 45F;
+            this.exitexam.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitexam.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.exitexam.StateCommon.Border.Rounding = 20;
+            this.exitexam.StateCommon.Border.Width = 1;
+            this.exitexam.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
+            this.exitexam.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.exitexam.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.exitexam.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitexam.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.exitexam.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.exitexam.StatePressed.Back.ColorAngle = 135F;
+            this.exitexam.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.exitexam.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.exitexam.StatePressed.Border.ColorAngle = 135F;
+            this.exitexam.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitexam.StatePressed.Border.Rounding = 20;
+            this.exitexam.StatePressed.Border.Width = 1;
+            this.exitexam.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitexam.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.StateTracking.Back.ColorAngle = 45F;
+            this.exitexam.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitexam.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitexam.StateTracking.Border.ColorAngle = 45F;
+            this.exitexam.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitexam.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.exitexam.StateTracking.Border.Rounding = 20;
+            this.exitexam.StateTracking.Border.Width = 1;
+            this.exitexam.TabIndex = 125;
+            this.exitexam.Values.Text = "Exit Exam";
+            this.exitexam.Click += new System.EventHandler(this.exitexam_Click);
+            // 
+            // viewcorrection
+            // 
+            this.viewcorrection.Location = new System.Drawing.Point(148, 298);
+            this.viewcorrection.Margin = new System.Windows.Forms.Padding(4);
+            this.viewcorrection.Name = "viewcorrection";
+            this.viewcorrection.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.viewcorrection.OverrideDefault.Back.ColorAngle = 45F;
+            this.viewcorrection.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.viewcorrection.OverrideDefault.Border.ColorAngle = 45F;
+            this.viewcorrection.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.viewcorrection.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.viewcorrection.OverrideDefault.Border.Rounding = 20;
+            this.viewcorrection.OverrideDefault.Border.Width = 1;
+            this.viewcorrection.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.viewcorrection.Size = new System.Drawing.Size(380, 56);
+            this.viewcorrection.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.StateCommon.Back.ColorAngle = 45F;
+            this.viewcorrection.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.StateCommon.Border.ColorAngle = 45F;
+            this.viewcorrection.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.viewcorrection.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.viewcorrection.StateCommon.Border.Rounding = 20;
+            this.viewcorrection.StateCommon.Border.Width = 1;
+            this.viewcorrection.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
+            this.viewcorrection.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.viewcorrection.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.viewcorrection.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewcorrection.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.viewcorrection.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.viewcorrection.StatePressed.Back.ColorAngle = 135F;
+            this.viewcorrection.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.viewcorrection.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.viewcorrection.StatePressed.Border.ColorAngle = 135F;
+            this.viewcorrection.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.viewcorrection.StatePressed.Border.Rounding = 20;
+            this.viewcorrection.StatePressed.Border.Width = 1;
+            this.viewcorrection.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.viewcorrection.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.StateTracking.Back.ColorAngle = 45F;
+            this.viewcorrection.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.viewcorrection.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.viewcorrection.StateTracking.Border.ColorAngle = 45F;
+            this.viewcorrection.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.viewcorrection.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.viewcorrection.StateTracking.Border.Rounding = 20;
+            this.viewcorrection.StateTracking.Border.Width = 1;
+            this.viewcorrection.TabIndex = 124;
+            this.viewcorrection.Values.Text = "View Correction";
+            this.viewcorrection.Click += new System.EventHandler(this.viewcorrection_Click);
+            // 
+            // kryptonLabelYouGot
+            // 
+            this.kryptonLabelYouGot.Location = new System.Drawing.Point(489, 135);
+            this.kryptonLabelYouGot.Name = "kryptonLabelYouGot";
+            this.kryptonLabelYouGot.Size = new System.Drawing.Size(183, 47);
+            this.kryptonLabelYouGot.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabelYouGot.TabIndex = 123;
+            this.kryptonLabelYouGot.Values.Text = "Question 1";
             // 
             // metroSetProgressBar1
             // 
@@ -913,40 +1056,43 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(333, 404);
+            this.radioButton4.Location = new System.Drawing.Point(127, 524);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(43, 24);
             this.radioButton4.TabIndex = 120;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "D";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(333, 353);
+            this.radioButton3.Location = new System.Drawing.Point(127, 457);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(42, 24);
             this.radioButton3.TabIndex = 119;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "C";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(333, 297);
+            this.radioButton2.Location = new System.Drawing.Point(127, 392);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(42, 24);
             this.radioButton2.TabIndex = 118;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "B";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(333, 233);
+            this.radioButton1.Location = new System.Drawing.Point(127, 325);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(41, 24);
             this.radioButton1.TabIndex = 117;
@@ -959,7 +1105,7 @@
             // 
             this.LabelPoints.AutoSize = true;
             this.LabelPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPoints.Location = new System.Drawing.Point(362, 441);
+            this.LabelPoints.Location = new System.Drawing.Point(144, 273);
             this.LabelPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelPoints.Name = "LabelPoints";
             this.LabelPoints.Size = new System.Drawing.Size(17, 22);
@@ -968,9 +1114,9 @@
             // 
             // kryptonRichQuestionDescription
             // 
-            this.kryptonRichQuestionDescription.Location = new System.Drawing.Point(347, 114);
+            this.kryptonRichQuestionDescription.Location = new System.Drawing.Point(158, 114);
             this.kryptonRichQuestionDescription.Name = "kryptonRichQuestionDescription";
-            this.kryptonRichQuestionDescription.Size = new System.Drawing.Size(469, 98);
+            this.kryptonRichQuestionDescription.Size = new System.Drawing.Size(938, 149);
             this.kryptonRichQuestionDescription.StateCommon.Back.Color1 = System.Drawing.SystemColors.Control;
             this.kryptonRichQuestionDescription.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.kryptonRichQuestionDescription.StateCommon.Border.Color2 = System.Drawing.Color.Black;
@@ -987,7 +1133,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(189, 190);
+            this.label9.Location = new System.Drawing.Point(12, 125);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 22);
@@ -998,7 +1144,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(189, 441);
+            this.label8.Location = new System.Drawing.Point(57, 273);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 22);
@@ -1074,6 +1220,7 @@
             this.kryptonButtonNextQues.StateTracking.Border.Width = 1;
             this.kryptonButtonNextQues.TabIndex = 109;
             this.kryptonButtonNextQues.Values.Text = "Next";
+            this.kryptonButtonNextQues.Click += new System.EventHandler(this.kryptonButtonNextQues_Click);
             // 
             // kryptonButtonPrevQues
             // 
@@ -1139,7 +1286,7 @@
             // 
             // SubmitExam
             // 
-            this.SubmitExam.Location = new System.Drawing.Point(816, 484);
+            this.SubmitExam.Location = new System.Drawing.Point(775, 567);
             this.SubmitExam.Margin = new System.Windows.Forms.Padding(4);
             this.SubmitExam.Name = "SubmitExam";
             this.SubmitExam.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -1697,6 +1844,77 @@
             this.MaterialTab.TabIndex = 4;
             this.MaterialTab.Text = "Material";
             // 
+            // exitExam2
+            // 
+            this.exitExam2.Location = new System.Drawing.Point(772, 554);
+            this.exitExam2.Margin = new System.Windows.Forms.Padding(4);
+            this.exitExam2.Name = "exitExam2";
+            this.exitExam2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitExam2.OverrideDefault.Back.ColorAngle = 45F;
+            this.exitExam2.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitExam2.OverrideDefault.Border.ColorAngle = 45F;
+            this.exitExam2.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitExam2.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.exitExam2.OverrideDefault.Border.Rounding = 20;
+            this.exitExam2.OverrideDefault.Border.Width = 1;
+            this.exitExam2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.exitExam2.Size = new System.Drawing.Size(380, 56);
+            this.exitExam2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.StateCommon.Back.ColorAngle = 45F;
+            this.exitExam2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.StateCommon.Border.ColorAngle = 45F;
+            this.exitExam2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitExam2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.exitExam2.StateCommon.Border.Rounding = 20;
+            this.exitExam2.StateCommon.Border.Width = 1;
+            this.exitExam2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
+            this.exitExam2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.exitExam2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.exitExam2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitExam2.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.exitExam2.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.exitExam2.StatePressed.Back.ColorAngle = 135F;
+            this.exitExam2.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.exitExam2.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.exitExam2.StatePressed.Border.ColorAngle = 135F;
+            this.exitExam2.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitExam2.StatePressed.Border.Rounding = 20;
+            this.exitExam2.StatePressed.Border.Width = 1;
+            this.exitExam2.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitExam2.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.StateTracking.Back.ColorAngle = 45F;
+            this.exitExam2.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.exitExam2.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.exitExam2.StateTracking.Border.ColorAngle = 45F;
+            this.exitExam2.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.exitExam2.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.exitExam2.StateTracking.Border.Rounding = 20;
+            this.exitExam2.StateTracking.Border.Width = 1;
+            this.exitExam2.TabIndex = 126;
+            this.exitExam2.Values.Text = "Exit Exam";
+            this.exitExam2.Click += new System.EventHandler(this.exitExam2_Click);
+            // 
+            // SolvedStatus
+            // 
+            this.SolvedStatus.Location = new System.Drawing.Point(332, 576);
+            this.SolvedStatus.Name = "SolvedStatus";
+            this.SolvedStatus.Size = new System.Drawing.Size(183, 47);
+            this.SolvedStatus.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SolvedStatus.TabIndex = 127;
+            this.SolvedStatus.Values.Text = "Question 1";
+            // 
             // StudentClassroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1790,5 +2008,10 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBoxTimer;
         private MetroSet_UI.Controls.MetroSetProgressBar metroSetProgressBar1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelYouGot;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton exitexam;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton viewcorrection;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton exitExam2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel SolvedStatus;
     }
 }

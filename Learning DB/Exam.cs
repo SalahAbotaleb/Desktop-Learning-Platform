@@ -1,10 +1,8 @@
-﻿using System;
+﻿using DbHandler;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DbHandler;
 
 namespace Learning_DB
 {
@@ -14,14 +12,14 @@ namespace Learning_DB
         public string []options;
         bool[] is_answer;
         int[] Answer_ID;
-        bool isCorrect;
+        bool isCorrect=false;
         int Question_ID;
         int student_ID;
         int Exam_ID;
-        int points;
+        public int points;
         int load_index;
         public int answer_index;
-        public int selected_index;
+        public int selected_index=-1;
         Controller Controller;
         public Question(int Question_ID,int Student_ID, Controller Controller, int exam_ID)
         {
@@ -53,8 +51,9 @@ namespace Learning_DB
         }
         public bool submit_Question()
         {
-            if (selected_index == answer_index)
-                isCorrect = true;
+             if (selected_index!=-1 && selected_index == answer_index)
+                   isCorrect = true;
+            
             Controller.SubmitAnswerForQuestion(Question_ID, Exam_ID, student_ID, isCorrect);
 
             return isCorrect;
@@ -65,23 +64,27 @@ namespace Learning_DB
         int Student_ID;
         int Exam_ID;
         int CurrQuestion;
-        int marks;
+        int PointsWin=0;
+        int totalPoints=0;
         int count;
+        int TotalMarks;
+        int ActualMarks;
         Controller Controller;
-        List<Question> questions= new List<Question>();
-        List<Tuple<int, int>> ls= new List<Tuple<int, int>>();
-        public Exam(int Student_ID, int Exam_ID, Controller Controller)
+        List<Question> questions = new List<Question>();
+        List<Tuple<int, int>> ls = new List<Tuple<int, int>>();
+        public Exam(int Student_ID, int Exam_ID, Controller Controller,int Marks)
         {
 
             this.Student_ID = Student_ID;
             this.Exam_ID = Exam_ID;
             this.Controller = Controller;
+            TotalMarks = Marks;
             DataTable dt = Controller.SelectQuestionsForExam(Exam_ID);
             if (dt == null)
                 return;
             foreach (DataRow question in dt.Rows)
             {
-                
+
                 questions.Add(new Question(Convert.ToInt32(question["Question_ID"]), Student_ID, Controller, Exam_ID));
             }
             count = questions.Count;
@@ -102,13 +105,13 @@ namespace Learning_DB
         {
             return questions[CurrQuestion].Description;
         }
-        public  string[] getCurrQuesOptions()
+        public string[] getCurrQuesOptions()
         {
             return questions[CurrQuestion].options;
         }
         public void InsertAnswer(int idx)
         {
-            questions[CurrQuestion].selected_index=idx;
+            questions[CurrQuestion].selected_index = idx;
         }
         public void submitExam()
         {
@@ -116,26 +119,47 @@ namespace Learning_DB
             {
                 if (question.submit_Question() == true)
                 {
-                    marks++;
+                    PointsWin+=question.points;
                 }
+                totalPoints+=question.points;
                 ls.Add(new Tuple<int, int>(question.answer_index, question.selected_index));
             }
-            Controller.SubmitExam(Student_ID, Exam_ID, marks);
+            ActualMarks = (int)(((float)PointsWin * (float)TotalMarks) / (float)totalPoints);
+            Controller.SubmitExam(Student_ID, Exam_ID, PointsWin);
         }
         public int getMarks()
         {
-            return marks;
+            return PointsWin;
         }
-        List<Tuple<int, int>> ReviewAnswers()
+        public int getTotalMarks()
+        {
+            return totalPoints;
+        }
+        public int getPoints()
+        {
+            return TotalMarks;
+        }
+        public List<Tuple<int, int>> ReviewAnswers()
         {
             return ls;
-            
         }
         public int QuestionsCount()
         {
             return count;
         }
-
-
+        public int GetCurrQuesPoints()
+        {
+            return questions[CurrQuestion].points;
+        }
+        public void AnswerCurrent(int idx)
+        {
+            questions[CurrQuestion].selected_index = idx;
+        }
+        public int selectedOption()
+        { return questions[CurrQuestion].selected_index; }
+        public void resetCount()
+        {
+            CurrQuestion = 0;
+        }
     }
 }

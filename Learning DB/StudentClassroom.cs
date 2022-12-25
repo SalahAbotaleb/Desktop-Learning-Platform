@@ -15,6 +15,7 @@ namespace Learning_DB
 {
     public partial class StudentClassroom : KryptonForm
     {
+        bool isAnswersShowing = false;
         int ClassID;
         int StudentID;
         Controller controller = new Controller();
@@ -25,6 +26,7 @@ namespace Learning_DB
         int h, m, s;
         int duration;
         Exam exam;
+        List<Tuple<int, int>> ls;
         System.Timers.Timer Time_Remaining;
         public StudentClassroom(int classID,int StudentID)
         {
@@ -52,12 +54,64 @@ namespace Learning_DB
             kryptonButtonNextQues.Hide();
             kryptonButtonPrevQues.Hide();
             metroSetProgressBar1.Hide();
+            kryptonLabelYouGot.Hide();
+            viewcorrection.Hide();
+            exitexam.Hide();
+            exitExam2.Hide();
+            SolvedStatus.Hide();
         }
 
         private void UpdateExamPage()
         {
-            //kryptonLabelQuestionNumber.Values = "Exam";
-
+            if (isAnswersShowing == true)
+            {
+                if(ls[Exam_Page_Count].Item1 == ls[Exam_Page_Count].Item2)
+                    SolvedStatus.Text="You Solved Correctly";
+                else
+                    SolvedStatus.Text = "You Solved Incorrectly";
+                radioButton1.Checked = (ls[Exam_Page_Count].Item1 == 0);
+                radioButton2.Checked = (ls[Exam_Page_Count].Item1 == 1);
+                radioButton3.Checked = (ls[Exam_Page_Count].Item1 == 2);
+                radioButton4.Checked = (ls[Exam_Page_Count].Item1 == 3);
+                radioButton1.Hide();
+                radioButton2.Hide();
+                radioButton3.Hide();
+                radioButton4.Hide();
+            }
+            else {
+                        radioButton1.Checked = (exam.selectedOption() == 0);
+                        radioButton2.Checked = (exam.selectedOption() == 1);
+                        radioButton3.Checked = (exam.selectedOption() == 2);
+                        radioButton4.Checked = (exam.selectedOption() == 3);
+                        radioButton1.Hide();
+                        radioButton2.Hide();
+                        radioButton3.Hide();
+                        radioButton4.Hide();
+                    }
+            kryptonLabelQuestionNumber.Text = "Question " + (Exam_Page_Count+1).ToString() + " Out of " + exam.QuestionsCount().ToString();
+            kryptonRichQuestionDescription.Text = exam.getCurrQuesDescription();
+            LabelPoints.Text = exam.GetCurrQuesPoints().ToString();
+            string[] options = exam.getCurrQuesOptions();
+            if (options[0] != null)
+            {
+                radioButton1.Text = options[0];
+                radioButton1.Show();
+            }
+            if (options[1] != null)
+            {
+                radioButton2.Text = options[1];
+                radioButton2.Show();
+            }
+            if (options[2] != null)
+            {
+                radioButton3.Text = options[2];
+                radioButton3.Show();
+            }
+            if (options[3] != null)
+            {
+                radioButton4.Text = options[3];
+                radioButton4.Show();
+            }
         }
 
         private void StudentClassroom_Load(object sender, EventArgs e)
@@ -108,7 +162,9 @@ namespace Learning_DB
         {
             if (true)
             {
+                isAnswersShowing = false;
                 //Exam_dt != null&&cont.CheckExamAvailability(Convert.ToInt32(ComboBoxSelectExam.SelectedValue)) =="Enter"
+                exitExam2.Hide();
                 ComboBoxSelectExam.Hide();
                 TextboxExamDate.Hide();
                 TextBoxExamID.Hide();
@@ -140,7 +196,8 @@ namespace Learning_DB
                 Time_Remaining.Elapsed += OnTimedEvent;
                 Time_Remaining.Start();
                 /********/
-                exam = new Exam(StudentID, Convert.ToInt32(ComboBoxSelectExam.SelectedValue),controller);
+
+                exam = new Exam(StudentID, Convert.ToInt32(ComboBoxSelectExam.SelectedValue), controller, Convert.ToInt32(Exam_dt.Rows[ComboBoxSelectExam.SelectedIndex]["Marks"]));
                 UpdateExamPage();
                 /********/
             }
@@ -188,21 +245,158 @@ namespace Learning_DB
         }
         private void EndExam()
         {
-
+            Exam_Page_Count = 0;
+            exam.submitExam();
+            kryptonRichQuestionDescription.Hide();
+            kryptonLabelQuestionNumber.Hide();
+            TextBoxTimer.Hide();
+            label9.Hide();
+            LabelPoints.Hide();
+            radioButton1.Hide();
+            radioButton2.Hide();
+            radioButton3.Hide();
+            radioButton4.Hide();
+            label8.Hide();
+            SubmitExam.Hide();
+            kryptonButtonNextQues.Hide();
+            kryptonButtonPrevQues.Hide();
+            metroSetProgressBar1.Hide();
+       
         }
         private void SubmitExam_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void kryptonButton5_Click(object sender, EventArgs e)
-        {
+            EndExam();
+            kryptonLabelYouGot.Text = String.Format("You got {0} out of {1}", exam.getMarks().ToString(), exam.getTotalMarks());
+            kryptonLabelYouGot.Show();
+            viewcorrection.Show();
+            exitexam.Show();
 
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            if (radioButton1.Checked == true)
+                exam.AnswerCurrent(0);
+        }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+                exam.AnswerCurrent(1);
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked == true)
+                exam.AnswerCurrent(2);
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked == true)
+                exam.AnswerCurrent(3);
+        }
+
+        private void exitexam_Click(object sender, EventArgs e)
+        {
+            kryptonLabelYouGot.Hide();
+            viewcorrection.Hide();
+            exitexam.Hide();
+            ComboBoxSelectExam.Show();
+            TextboxExamDate.Show();
+            TextBoxExamID.Show();
+            TextBoxExmDuration.Show();
+            label3.Show();
+            label7.Show();
+            label4.Show();
+            label6.Show();
+            ButtonEnterExam.Show();
+            h = 0;
+            m = 0;
+            s = 0;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+        }
+
+        private void viewcorrection_Click(object sender, EventArgs e)
+        {
+            isAnswersShowing = true;
+            kryptonLabelYouGot.Hide();
+            exitexam.Hide();
+            viewcorrection.Hide();
+            exitExam2.Show();
+            kryptonRichQuestionDescription.Show();
+            kryptonLabelQuestionNumber.Show();
+            label9.Show();
+            LabelPoints.Show();
+            radioButton1.Show();
+            radioButton2.Show();
+            radioButton3.Show();
+            radioButton4.Show();
+            label8.Show();
+            kryptonButtonNextQues.Show();
+            kryptonButtonPrevQues.Show();
+            Exam_Page_Count = 0;
+            exam.resetCount();
+            SolvedStatus.Show();
+            ls = exam.ReviewAnswers();
+            UpdateExamPage();
+            
+        }
+
+        private void exitExam2_Click(object sender, EventArgs e)
+        {
+            radioButton1.Hide();
+            radioButton2.Hide();
+            radioButton3.Hide();
+            radioButton4.Hide();
+            label8.Hide();
+            LabelPoints.Hide();
+            label9.Hide();
+            exitExam2.Hide();
+            kryptonLabelQuestionNumber.Hide();
+            kryptonRichQuestionDescription.Hide();
+            SolvedStatus.Hide();
+            kryptonLabelYouGot.Hide();
+            viewcorrection.Hide();
+            exitexam.Hide();
+            ComboBoxSelectExam.Show();
+            TextboxExamDate.Show();
+            TextBoxExamID.Show();
+            TextBoxExmDuration.Show();
+            label3.Show();
+            label7.Show();
+            label4.Show();
+            label6.Show();
+            ButtonEnterExam.Show();
+            h = 0;
+            m = 0;
+            s = 0;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+
+        }
+
+        private void kryptonButtonNextQues_Click(object sender, EventArgs e)
+        {
+            if (Exam_Page_Count == exam.QuestionsCount()-1)
+                return;
+            Exam_Page_Count++;
+            exam.CurrentQuestionIncr();
+            this.UpdateExamPage();
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            if (Exam_Page_Count ==0)
+                return;
+            Exam_Page_Count--;
+            exam.CurrentQuestionDecr();
+            this.UpdateExamPage();
         }
     }
 }
