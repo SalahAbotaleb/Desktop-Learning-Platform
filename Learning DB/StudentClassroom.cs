@@ -27,12 +27,13 @@ namespace Learning_DB
         DataTable Exam_dt;
         DataTable Post_dt;
         DataTable Comments_dt;
+        DataTable Material_dt;
         int h, m, s;
         int duration;
         Exam exam;
         List<Tuple<int, int>> ls;
         System.Timers.Timer Time_Remaining;
-        public StudentClassroom(int classID,int StudentID)
+        public StudentClassroom(int classID, int StudentID)
         {
             InitializeComponent();
             this.ClassID = classID;
@@ -40,7 +41,11 @@ namespace Learning_DB
             Assignment_dt = controller.SelectAssignmentForClass(ClassID);
             Exam_dt = controller.SelectExamsForClass(ClassID);
             Post_dt = controller.SelectPostsForClass(ClassID);
-            
+            Material_dt = controller.SelectMaterialsForClass(ClassID);
+            if (MaterialdataGrid.Rows != null) { 
+                MaterialdataGrid.DataSource = Material_dt;
+                OpenMaterialButton.Visible = true;
+            }
             UpdatePostsPage();
 
 
@@ -468,6 +473,23 @@ namespace Learning_DB
             Post_Count = 0;
             UpdatePostsPage();
             
+        }
+
+        private void OpenMaterialButton_Click(object sender, EventArgs e)
+        {
+            if (MaterialdataGrid.SelectedCells[0].ColumnIndex == 0)
+                return;
+            Process.Start(MaterialdataGrid.SelectedCells[0].Value.ToString());
+        }
+
+        private void MaterialRefreshButton_Click(object sender, EventArgs e)
+        {
+            Material_dt = controller.SelectMaterialsForClass(ClassID);
+            if (MaterialdataGrid.Rows != null)
+            {
+                MaterialdataGrid.DataSource = Material_dt;
+                OpenMaterialButton.Visible = true;
+            }
         }
 
         private void kryptonButtonNextQues_Click(object sender, EventArgs e)
