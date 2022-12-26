@@ -131,6 +131,12 @@
     <Compile Include="CreateExam.Designer.cs">
       <DependentUpon>CreateExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExamStatistics.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExamStatistics.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Inst1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateExam.resx">
       <DependentUpon>CreateExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamStatistics.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExamStatistics.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Inst1.resx">
       <DependentUpon>Inst1.cs</DependentUpon>
