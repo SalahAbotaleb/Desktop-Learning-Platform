@@ -266,6 +266,7 @@
             this.EnterClassButton.StateTracking.Border.Width = 1;
             this.EnterClassButton.TabIndex = 42;
             this.EnterClassButton.Values.Text = "Enter";
+            this.EnterClassButton.Click += new System.EventHandler(this.EnterClassButton_Click);
             // 
             // label4
             // 

@@ -74,6 +74,8 @@
             this.SubmissionLabel = new System.Windows.Forms.Label();
             this.Main = new MetroSet_UI.Controls.MetroSetTabControl();
             this.PostsTab = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.PostsRefreshButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.CommentsDataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.AddedCommentBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.AnnouncementBox = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.CommentsLabel = new System.Windows.Forms.Label();
@@ -84,13 +86,11 @@
             this.PostsSubmitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.AnnouncementLabel = new System.Windows.Forms.Label();
             this.AddCommentLabel = new System.Windows.Forms.Label();
-            this.CommentsDataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.PostsRefreshButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.MaterialsTab = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.MaterialRefreshButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.MaterialdataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.MaterialLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.OpenMaterialButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.MaterialRefreshButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.EventsTab = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.EventsRefreshButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.EventsDatagridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
@@ -505,6 +505,7 @@
             // 
             this.kryptonRichQuestionDescription.Location = new System.Drawing.Point(158, 114);
             this.kryptonRichQuestionDescription.Name = "kryptonRichQuestionDescription";
+            this.kryptonRichQuestionDescription.ReadOnly = true;
             this.kryptonRichQuestionDescription.Size = new System.Drawing.Size(938, 149);
             this.kryptonRichQuestionDescription.StateCommon.Back.Color1 = System.Drawing.SystemColors.Control;
             this.kryptonRichQuestionDescription.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -972,10 +973,10 @@
             // 
             this.DeadLineLabel.Location = new System.Drawing.Point(206, 288);
             this.DeadLineLabel.Name = "DeadLineLabel";
-            this.DeadLineLabel.Size = new System.Drawing.Size(153, 47);
+            this.DeadLineLabel.Size = new System.Drawing.Size(144, 40);
             this.DeadLineLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
             this.DeadLineLabel.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
-            this.DeadLineLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeadLineLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeadLineLabel.TabIndex = 98;
             this.DeadLineLabel.Values.Text = "Deadline";
             // 
@@ -983,10 +984,10 @@
             // 
             this.DeadlineDateLabel.Location = new System.Drawing.Point(419, 288);
             this.DeadlineDateLabel.Name = "DeadlineDateLabel";
-            this.DeadlineDateLabel.Size = new System.Drawing.Size(148, 47);
+            this.DeadlineDateLabel.Size = new System.Drawing.Size(142, 40);
             this.DeadlineDateLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
             this.DeadlineDateLabel.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
-            this.DeadlineDateLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeadlineDateLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeadlineDateLabel.TabIndex = 97;
             this.DeadlineDateLabel.Values.Text = "1/1/2022";
             // 
@@ -1053,8 +1054,8 @@
             // 
             this.AssignmentTitlelabel.Location = new System.Drawing.Point(524, 16);
             this.AssignmentTitlelabel.Name = "AssignmentTitlelabel";
-            this.AssignmentTitlelabel.Size = new System.Drawing.Size(159, 47);
-            this.AssignmentTitlelabel.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentTitlelabel.Size = new System.Drawing.Size(146, 40);
+            this.AssignmentTitlelabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssignmentTitlelabel.TabIndex = 92;
             this.AssignmentTitlelabel.Values.Text = "blablabla";
             // 
@@ -1282,7 +1283,7 @@
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(4, 46);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 4;
+            this.Main.SelectedIndex = 1;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1205, 734);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1324,6 +1325,78 @@
             this.PostsTab.ThemeAuthor = "Narwin";
             this.PostsTab.ThemeName = "MetroLite";
             this.PostsTab.ToolTipText = null;
+            // 
+            // PostsRefreshButton
+            // 
+            this.PostsRefreshButton.Location = new System.Drawing.Point(1014, 574);
+            this.PostsRefreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.PostsRefreshButton.Name = "PostsRefreshButton";
+            this.PostsRefreshButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.PostsRefreshButton.OverrideDefault.Back.ColorAngle = 45F;
+            this.PostsRefreshButton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.PostsRefreshButton.OverrideDefault.Border.ColorAngle = 45F;
+            this.PostsRefreshButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PostsRefreshButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.PostsRefreshButton.OverrideDefault.Border.Rounding = 20;
+            this.PostsRefreshButton.OverrideDefault.Border.Width = 1;
+            this.PostsRefreshButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.PostsRefreshButton.Size = new System.Drawing.Size(164, 37);
+            this.PostsRefreshButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.StateCommon.Back.ColorAngle = 45F;
+            this.PostsRefreshButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.StateCommon.Border.ColorAngle = 45F;
+            this.PostsRefreshButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PostsRefreshButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.PostsRefreshButton.StateCommon.Border.Rounding = 20;
+            this.PostsRefreshButton.StateCommon.Border.Width = 1;
+            this.PostsRefreshButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
+            this.PostsRefreshButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.PostsRefreshButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.PostsRefreshButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PostsRefreshButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.PostsRefreshButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.PostsRefreshButton.StatePressed.Back.ColorAngle = 135F;
+            this.PostsRefreshButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.PostsRefreshButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.PostsRefreshButton.StatePressed.Border.ColorAngle = 135F;
+            this.PostsRefreshButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PostsRefreshButton.StatePressed.Border.Rounding = 20;
+            this.PostsRefreshButton.StatePressed.Border.Width = 1;
+            this.PostsRefreshButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.PostsRefreshButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.StateTracking.Back.ColorAngle = 45F;
+            this.PostsRefreshButton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.PostsRefreshButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.PostsRefreshButton.StateTracking.Border.ColorAngle = 45F;
+            this.PostsRefreshButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PostsRefreshButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.PostsRefreshButton.StateTracking.Border.Rounding = 20;
+            this.PostsRefreshButton.StateTracking.Border.Width = 1;
+            this.PostsRefreshButton.TabIndex = 98;
+            this.PostsRefreshButton.Values.Text = "Refresh";
+            this.PostsRefreshButton.Click += new System.EventHandler(this.PostsRefreshButton_Click);
+            // 
+            // CommentsDataGrid
+            // 
+            this.CommentsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CommentsDataGrid.Location = new System.Drawing.Point(291, 242);
+            this.CommentsDataGrid.Name = "CommentsDataGrid";
+            this.CommentsDataGrid.RowHeadersWidth = 51;
+            this.CommentsDataGrid.RowTemplate.Height = 24;
+            this.CommentsDataGrid.Size = new System.Drawing.Size(709, 206);
+            this.CommentsDataGrid.TabIndex = 97;
             // 
             // AddedCommentBox
             // 
@@ -1601,78 +1674,6 @@
             this.AddCommentLabel.TabIndex = 37;
             this.AddCommentLabel.Text = "Add Comment";
             // 
-            // CommentsDataGrid
-            // 
-            this.CommentsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CommentsDataGrid.Location = new System.Drawing.Point(291, 242);
-            this.CommentsDataGrid.Name = "CommentsDataGrid";
-            this.CommentsDataGrid.RowHeadersWidth = 51;
-            this.CommentsDataGrid.RowTemplate.Height = 24;
-            this.CommentsDataGrid.Size = new System.Drawing.Size(709, 206);
-            this.CommentsDataGrid.TabIndex = 97;
-            // 
-            // PostsRefreshButton
-            // 
-            this.PostsRefreshButton.Location = new System.Drawing.Point(1014, 574);
-            this.PostsRefreshButton.Margin = new System.Windows.Forms.Padding(4);
-            this.PostsRefreshButton.Name = "PostsRefreshButton";
-            this.PostsRefreshButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.PostsRefreshButton.OverrideDefault.Back.ColorAngle = 45F;
-            this.PostsRefreshButton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.PostsRefreshButton.OverrideDefault.Border.ColorAngle = 45F;
-            this.PostsRefreshButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.PostsRefreshButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.PostsRefreshButton.OverrideDefault.Border.Rounding = 20;
-            this.PostsRefreshButton.OverrideDefault.Border.Width = 1;
-            this.PostsRefreshButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.PostsRefreshButton.Size = new System.Drawing.Size(164, 37);
-            this.PostsRefreshButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.StateCommon.Back.ColorAngle = 45F;
-            this.PostsRefreshButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.StateCommon.Border.ColorAngle = 45F;
-            this.PostsRefreshButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.PostsRefreshButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.PostsRefreshButton.StateCommon.Border.Rounding = 20;
-            this.PostsRefreshButton.StateCommon.Border.Width = 1;
-            this.PostsRefreshButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
-            this.PostsRefreshButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.PostsRefreshButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.PostsRefreshButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostsRefreshButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.PostsRefreshButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.PostsRefreshButton.StatePressed.Back.ColorAngle = 135F;
-            this.PostsRefreshButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.PostsRefreshButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.PostsRefreshButton.StatePressed.Border.ColorAngle = 135F;
-            this.PostsRefreshButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.PostsRefreshButton.StatePressed.Border.Rounding = 20;
-            this.PostsRefreshButton.StatePressed.Border.Width = 1;
-            this.PostsRefreshButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.PostsRefreshButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.StateTracking.Back.ColorAngle = 45F;
-            this.PostsRefreshButton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.PostsRefreshButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.PostsRefreshButton.StateTracking.Border.ColorAngle = 45F;
-            this.PostsRefreshButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.PostsRefreshButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.PostsRefreshButton.StateTracking.Border.Rounding = 20;
-            this.PostsRefreshButton.StateTracking.Border.Width = 1;
-            this.PostsRefreshButton.TabIndex = 98;
-            this.PostsRefreshButton.Values.Text = "Refresh";
-            this.PostsRefreshButton.Click += new System.EventHandler(this.PostsRefreshButton_Click);
-            // 
             // MaterialsTab
             // 
             this.MaterialsTab.BaseColor = System.Drawing.SystemColors.Control;
@@ -1694,6 +1695,68 @@
             this.MaterialsTab.ThemeAuthor = "Narwin";
             this.MaterialsTab.ThemeName = "MetroLite";
             this.MaterialsTab.ToolTipText = null;
+            // 
+            // MaterialRefreshButton
+            // 
+            this.MaterialRefreshButton.Location = new System.Drawing.Point(996, 574);
+            this.MaterialRefreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.MaterialRefreshButton.Name = "MaterialRefreshButton";
+            this.MaterialRefreshButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.MaterialRefreshButton.OverrideDefault.Back.ColorAngle = 45F;
+            this.MaterialRefreshButton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.MaterialRefreshButton.OverrideDefault.Border.ColorAngle = 45F;
+            this.MaterialRefreshButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.MaterialRefreshButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.MaterialRefreshButton.OverrideDefault.Border.Rounding = 20;
+            this.MaterialRefreshButton.OverrideDefault.Border.Width = 1;
+            this.MaterialRefreshButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.MaterialRefreshButton.Size = new System.Drawing.Size(164, 37);
+            this.MaterialRefreshButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.StateCommon.Back.ColorAngle = 45F;
+            this.MaterialRefreshButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.StateCommon.Border.ColorAngle = 45F;
+            this.MaterialRefreshButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.MaterialRefreshButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.MaterialRefreshButton.StateCommon.Border.Rounding = 20;
+            this.MaterialRefreshButton.StateCommon.Border.Width = 1;
+            this.MaterialRefreshButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
+            this.MaterialRefreshButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.MaterialRefreshButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.MaterialRefreshButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaterialRefreshButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.MaterialRefreshButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.MaterialRefreshButton.StatePressed.Back.ColorAngle = 135F;
+            this.MaterialRefreshButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.MaterialRefreshButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.MaterialRefreshButton.StatePressed.Border.ColorAngle = 135F;
+            this.MaterialRefreshButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.MaterialRefreshButton.StatePressed.Border.Rounding = 20;
+            this.MaterialRefreshButton.StatePressed.Border.Width = 1;
+            this.MaterialRefreshButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.MaterialRefreshButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.StateTracking.Back.ColorAngle = 45F;
+            this.MaterialRefreshButton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.MaterialRefreshButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.MaterialRefreshButton.StateTracking.Border.ColorAngle = 45F;
+            this.MaterialRefreshButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.MaterialRefreshButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.MaterialRefreshButton.StateTracking.Border.Rounding = 20;
+            this.MaterialRefreshButton.StateTracking.Border.Width = 1;
+            this.MaterialRefreshButton.TabIndex = 99;
+            this.MaterialRefreshButton.Values.Text = "Refresh";
+            this.MaterialRefreshButton.Click += new System.EventHandler(this.MaterialRefreshButton_Click);
             // 
             // MaterialdataGrid
             // 
@@ -1776,68 +1839,6 @@
             this.OpenMaterialButton.Values.Text = "Open Selected";
             this.OpenMaterialButton.Visible = false;
             this.OpenMaterialButton.Click += new System.EventHandler(this.OpenMaterialButton_Click);
-            // 
-            // MaterialRefreshButton
-            // 
-            this.MaterialRefreshButton.Location = new System.Drawing.Point(996, 574);
-            this.MaterialRefreshButton.Margin = new System.Windows.Forms.Padding(4);
-            this.MaterialRefreshButton.Name = "MaterialRefreshButton";
-            this.MaterialRefreshButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.MaterialRefreshButton.OverrideDefault.Back.ColorAngle = 45F;
-            this.MaterialRefreshButton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.MaterialRefreshButton.OverrideDefault.Border.ColorAngle = 45F;
-            this.MaterialRefreshButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.MaterialRefreshButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.MaterialRefreshButton.OverrideDefault.Border.Rounding = 20;
-            this.MaterialRefreshButton.OverrideDefault.Border.Width = 1;
-            this.MaterialRefreshButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.MaterialRefreshButton.Size = new System.Drawing.Size(164, 37);
-            this.MaterialRefreshButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.StateCommon.Back.ColorAngle = 45F;
-            this.MaterialRefreshButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.StateCommon.Border.ColorAngle = 45F;
-            this.MaterialRefreshButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.MaterialRefreshButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.MaterialRefreshButton.StateCommon.Border.Rounding = 20;
-            this.MaterialRefreshButton.StateCommon.Border.Width = 1;
-            this.MaterialRefreshButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-2, -2, -2, -5);
-            this.MaterialRefreshButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.MaterialRefreshButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.MaterialRefreshButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaterialRefreshButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.MaterialRefreshButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.MaterialRefreshButton.StatePressed.Back.ColorAngle = 135F;
-            this.MaterialRefreshButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
-            this.MaterialRefreshButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.MaterialRefreshButton.StatePressed.Border.ColorAngle = 135F;
-            this.MaterialRefreshButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.MaterialRefreshButton.StatePressed.Border.Rounding = 20;
-            this.MaterialRefreshButton.StatePressed.Border.Width = 1;
-            this.MaterialRefreshButton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.MaterialRefreshButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.StateTracking.Back.ColorAngle = 45F;
-            this.MaterialRefreshButton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.MaterialRefreshButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.MaterialRefreshButton.StateTracking.Border.ColorAngle = 45F;
-            this.MaterialRefreshButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.MaterialRefreshButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.MaterialRefreshButton.StateTracking.Border.Rounding = 20;
-            this.MaterialRefreshButton.StateTracking.Border.Width = 1;
-            this.MaterialRefreshButton.TabIndex = 99;
-            this.MaterialRefreshButton.Values.Text = "Refresh";
-            this.MaterialRefreshButton.Click += new System.EventHandler(this.MaterialRefreshButton_Click);
             // 
             // EventsTab
             // 
@@ -1952,6 +1953,7 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.Text = "Student Classroom";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentClassroom_FormClosing);
             this.Load += new System.EventHandler(this.StudentClassroom_Load);
             this.ExamTab.ResumeLayout(false);
             this.ExamTab.PerformLayout();
