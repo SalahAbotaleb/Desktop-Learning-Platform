@@ -177,7 +177,7 @@ namespace Learning_DB
         {
             if(ClassroomComboBox.SelectedIndex != -1)
             {
-                StudentClassroom SC = new StudentClassroom(Convert.ToInt32(ClassroomComboBox.SelectedValue.ToString()),OpenedSession.ID);
+                StudentClassroom SC = new StudentClassroom(Convert.ToInt32(ClassroomComboBox.SelectedValue.ToString()));
                 SC.Show();
                 this.Hide();
             }

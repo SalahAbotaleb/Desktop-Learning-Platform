@@ -30,6 +30,7 @@ namespace Learning_DB
             //Application.Run(new Credintial());
             //Application.Run(new Sign_Up());
             Application.Run(new Login_Form());
+            //Application.Run(new InstructorReports());
 
             //Application.Run(new triaal());
             //Application.Run(new triaal());

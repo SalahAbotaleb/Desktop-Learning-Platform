@@ -317,7 +317,7 @@ namespace Learning_DB
 
         private void Admin_LogOutButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Close();
             Login_Form login = new Login_Form();
             login.Show();
 
@@ -2286,7 +2286,7 @@ namespace Learning_DB
 
         private void AdminRButton_Activate_Click(object sender, EventArgs e)
         {
-            if (okA)
+            if (okA && AdminRComboBox_Username.SelectedIndex != -1)
             {
                 Tuple<int, string> edit = Controller.ActivateAdmin(Convert.ToInt32(AdminRComboBox_Username.SelectedValue), true);
                 if (edit.Item1 == 0)
@@ -2296,7 +2296,13 @@ namespace Learning_DB
                 else
                 {
                     AdminRComboBox_Username.DataSource = Controller.SelectAdminToBeActivated();
+                    AdminRComboBox_Username.SelectedIndex = -1;
+                    AdminRComboBox_Username.Refresh();
                     MessageBox.Show("Admin Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AdminRTextBox_FirstName.Clear();
+                    AdminRTextBox_LastName.Clear();
+                    AdminRTextBox_Email.Clear();
+                    AdminRTextBox_ID.Clear();
                 }
             }
             else
@@ -2332,7 +2338,7 @@ namespace Learning_DB
 
         private void InstructorRButton_Activate_Click(object sender, EventArgs e)
         {
-            if (okI)
+            if (okI && InstructorRComboBox_Username.SelectedIndex != -1)
             {
                 Tuple<int, string> edit = Controller.ActivateInstructor(Convert.ToInt32(InstructorRComboBox_Username.SelectedValue), true , OpenedSession.ID);
                 if (edit.Item1 == 0)
@@ -2342,7 +2348,14 @@ namespace Learning_DB
                 else
                 {
                     InstructorRComboBox_Username.DataSource = Controller.SelectInstructorToBeActivated();
+                    InstructorRComboBox_Username.SelectedIndex = -1;
+                    InstructorRComboBox_Username.Refresh();
                     MessageBox.Show("Instructor Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InstructorRTextBox_FirstName.Clear();
+                    InstructorRTextBox_LastName.Clear();
+                    InstructorRTextBox_Email.Clear();
+                    InstructorRTextBox_ID.Clear();
+                    InstructorRTextBox_Title.Clear();
                 }
             }
             else
@@ -2376,7 +2389,7 @@ namespace Learning_DB
 
         private void StudentRButton_Activate_Click(object sender, EventArgs e)
         {
-            if (okS)
+            if (okS && StudentRComboBox_Username.SelectedIndex != -1)
             {
                 Tuple<int, string> edit = Controller.ActivateStudent(Convert.ToInt32(StudentRComboBox_Username.SelectedValue), true, OpenedSession.ID);
                 if (edit.Item1 == 0)
@@ -2386,9 +2399,14 @@ namespace Learning_DB
                 else
                 {
                     StudentRComboBox_Username.DataSource = Controller.SelectStudentToBeActivated();
-                    StudentRComboBox_Username.DisplayMember = "Username";
-                    StudentRComboBox_Username.ValueMember = "StudentID";
+                    StudentRComboBox_Username.SelectedIndex = -1;
+                    StudentRComboBox_Username.Refresh();
                     MessageBox.Show("Student Activated Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    StudentRTextBox_FirstName.Clear();
+                    StudentRTextBox_LastName.Clear();
+                    StudentRTextBox_Email.Clear();
+                    StudentRTextBox_ID.Clear();
+                    StudentRTextBox_Level.Clear();
                 }
             }
             else

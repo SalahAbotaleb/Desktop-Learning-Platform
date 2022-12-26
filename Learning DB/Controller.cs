@@ -9,6 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace DbHandler
 {
@@ -352,11 +353,7 @@ namespace DbHandler
             string Query = "SELECT * FROM Course";
             return dbMan.ExecuteReader(Query);
         }
-        //public DataTable SelectCourses(int )
-        //{
-        //    string Query = "SELECT Course_Name FROM Course";
-        //    return dbMan.ExecuteReader(Query);
-        //}
+    
 
         public DataTable SelectClassrooms()
         {
@@ -375,6 +372,16 @@ namespace DbHandler
             string Query = "SELECT * FROM Classroom WHERE Class_ID = " + CID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectStudent_UsernameByClassroomID(int CID)
+        {
+            string Query = "Select * From Student Where StudentID IN(Select Student_ID From Student_Enrolled_In Where Class_ID = " + CID + ");";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectStudentByClassroomID(int CID , int SID)
+        {
+            string Query = "Select * From Student Where StudentID IN(Select Student_ID From Student_Enrolled_In Where Class_ID = "+CID+" And Student_ID = "+SID+");";
+            return dbMan.ExecuteReader(Query);
+        }
         public DataTable SelectAdminToBeActivated()
         {
             string Query = "Select * From Admin Where Super_ID = 20 And Activated = 0 ";
@@ -382,12 +389,12 @@ namespace DbHandler
         }
         public DataTable SelectInstructorToBeActivated()
         {
-            string Query = "Select * From Instructor Where Instructor_ID IN (Select Instructor_ID From Manage_Instructor Where  Admin_ID = 20 And Operation = 'Deactivate')";
+            string Query = "Select * From Instructor Where Instructor_ID IN (Select Instructor_ID From Manage_Instructor Where  Admin_ID = 20 And Activated = 0)";
             return dbMan.ExecuteReader(Query);
         }
         public DataTable SelectStudentToBeActivated()
         {
-            string Query = "Select * From Student Where StudentID IN (Select Student_ID From Manage_Student Where  Admin_ID = 20 And Operation = 'Deactivate')";
+            string Query = "Select * From Student Where StudentID IN(Select Student_ID From Manage_Student Where Admin_ID = 20 And Activated = 0)";
             return dbMan.ExecuteReader(Query);
         }
         public DataTable SelectLastAdmin()
@@ -649,11 +656,40 @@ namespace DbHandler
         }
         public int getLastQuestion()
         {
-            string Query = "SELECT IDENT_CURRENT('Question_Options');";
+            string Query = "Select top 1 Question_ID from Question order by Question_ID desc";
             return dbMan.ExecuteNonQuery(Query);
         }
 
+        public DataTable SelectStudentbyClassroom(int C_ID)
+        {
+            string Query = "SELECT * FROM STUDENT WHERE StudentID in ( SELECT Student_ID FROM Student_Enrolled_In Where Class_ID="+C_ID+");";
+            return dbMan.ExecuteReader(Query);
+        }
 
+        public int SelectMaxGradeinExam(int EID)
+        {
+            string Query = "Select Max(Marks) from Exam Where Exam_ID=" + EID + ";"; 
+            return dbMan.ExecuteNonQuery(Query);
+        }
+
+        public int SelectMinGradeinExam(int EID)
+        {
+            string Query = "Select Min(Marks) from Exam Where Exam_ID=" + EID + ";";
+            return dbMan.ExecuteNonQuery(Query);
+        }
+        public Tuple<int, string> AddAssignment(DateTime Deadline, string Description, int Class_ID, string Title,int Total_Grade)
+        {
+            string StoredProcedureName = StoredProcedures.AddAssignment;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Deadline", Deadline);
+            Parameters.Add("@Description", Description);
+            Parameters.Add("@Class_ID", Class_ID);
+            Parameters.Add("@Title", Title);
+            Parameters.Add("@Total_Grade", Total_Grade);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        
 
     }
 }

@@ -175,5 +175,12 @@ namespace Learning_DB
             Sign_UpTextbox_Password.PasswordChar = '*';
             
         }
+
+        private void SignUp_LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login_Form login = new Login_Form();
+            login.Show();
+        }
     }
 }
