@@ -19,10 +19,10 @@ namespace Learning_DB
         DataTable d1;
         DataTable d3;
         DataTable dtQuestbyTopic;
+        DataTable stdAssignmentDatatable;
         DataTable AssignmentDataTable;
-        int totalexampoints;
-        int scalingfactor;
-        int TodeleteQuestionID;
+        DataTable examsForClassroom;
+        int ViewExamID = 0;
         public Classroom(int C_ID)
         {
             Classroom_ID = C_ID;
@@ -43,16 +43,11 @@ namespace Learning_DB
             op4_textbox.Hide();
             True_RadioButton.Hide();
             false_radiobutton.Hide();
-            //DetermineQuesType_comboBox.Cursor.Dispose();
-            DataTable dt;//= new DataTable();
+            DataTable dt;
             dt = c.SelectClassroomByID(Classroom_ID);
             kryptonTextBox15.Text = dt.Rows[0]["Title"].ToString();
             kryptonTextBox14.Text = dt.Rows[0]["Access_code"].ToString();
 
-
-     
-
-            //QuestionBank datatable
             d3 = new DataTable();
             d3 = c.SelectTopics();
             
@@ -64,15 +59,24 @@ namespace Learning_DB
             deleteQuestionTopic.DisplayMember = "Topic";
             deleteQuestionTopic.ValueMember = "Topic";
 
-
             /// Assignment ComboBox
             AssignmentDataTable = c.SelectAssignmentForClass(Classroom_ID);
             assignmentcombobox.DataSource = AssignmentDataTable;
             assignmentcombobox.DisplayMember = "Title";
             assignmentcombobox.DisplayMember = "Assignment_ID";
-            studentnameComboBox.DataSource = c.SelectStudentbyClassroom(Classroom_ID);
+            stdAssignmentDatatable = c.SelectStudentbyClassroom(Classroom_ID);
+            studentnameComboBox.ValueMember= "Student_ID";
             studentnameComboBox.DisplayMember= "Student_ID";
-            
+           
+
+            //view grades
+            chooseexamCombo.DataSource = c.SelectExamsForClass(Classroom_ID);
+            chooseexamCombo.DisplayMember = "Title";
+            chooseexamCombo.ValueMember = "Exam_ID";
+
+
+            //exam for classroom initialization
+            examsForClassroom = c.SelectExamsForClass(Classroom_ID);
 
         }
 
@@ -181,15 +185,7 @@ namespace Learning_DB
 
         
 
-        private void totalexampointstxtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void questionpointsTxtboxExam_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void addquestionbutton_Click(object sender, EventArgs e)
         {
@@ -291,34 +287,7 @@ namespace Learning_DB
 
         }
 
-        //private void DetermineQuesType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (DetermineQuesType_comboBox.Text == "T/F")
-        //    {
-        //        op1.Hide();
-        //        op2.Hide();
-        //        op3.Hide();
-        //        op4.Hide();
-        //    op1_textbox.Hide();
-        //    op2_textbox.Hide();
-        //    op3_textbox.Hide();
-        //    op4_textbox.Hide();
-        //        True_RadioButton.Show();
-        //        false_radiobutton.Show();
-        //    }else if(DetermineQuesType_comboBox.Text == "MCQ")
-        //    {
-        //        op1.Show();
-        //        op2.Show();
-        //        op3.Show();
-        //        op4.Show();
-        //        op1_textbox.Show();
-        //        op2_textbox.Show();
-        //        op3_textbox.Show();
-        //        op4_textbox.Show();
-        //        True_RadioButton.Hide();
-        //        false_radiobutton.Hide();
-        //    }
-        //}
+       
 
         private void DetermineQuesType_comboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -362,10 +331,76 @@ namespace Learning_DB
 
         private void studentnameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //kryptonComboBox1.
         }
 
         private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chooseexamCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (chooseexamCombo.SelectedIndex == -1) return;
+            //examsForClassroom.Da
+            int id=Int16.Parse(examsForClassroom.Rows[chooseexamCombo.SelectedIndex]["Exam_ID"].ToString());
+            maxgradetxtbox.Text = c.SelectMaxGradeinExam(id).ToString();
+            mingradeTextbox.Text = c.SelectMinGradeinExam(id).ToString();
+        
+        }
+
+        private void mingradeTextbox_TextChanged(object sender, EventArgs e)
+        {
+            int id = Int16.Parse(examsForClassroom.Rows[chooseexamCombo.SelectedIndex]["Exam_ID"].ToString());
+        }
+
+        private void maxgradetxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewStudentGradesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void chooseexamCombo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //fe error fl code dah, bydrb hna
+            if (chooseexamCombo.SelectedIndex == -1) return;
+            //examsForClassroom.Da
+            int id = Int16.Parse(examsForClassroom.Rows[chooseexamCombo.SelectedIndex]["Exam_ID"].ToString());
+            maxgradetxtbox.Text = c.SelectMaxGradeinExam(id).ToString();
+            mingradeTextbox.Text = c.SelectMinGradeinExam(id).ToString();
+
+        }
+
+        private void AddAssignment_Button_Click(object sender, EventArgs e)
+        {
+            if (assignmentTitleTxtBox.Text== "" || assignmentLinkTxtBox.Text == "")
+            {
+                MessageBox.Show("Error! Fill all the required fields.");
+                    return;
+            }
+            else
+            {
+                
+                Tuple<int, string> result = c.AddAssignment(AssignmentDeadlineDateTime.Value,
+                    assignment_description.Text, Classroom_ID, assignmentTitleTxtBox.Text, Convert.ToInt32(assignmenttotalgradNumeric.Value));
+                if (result.Item1 == 0)
+                {
+                    MessageBox.Show(result.Item2);
+                    MessageBox.Show("Assignment couldn't be uploaded to the sytem");
+
+                }
+                else
+                {
+                    MessageBox.Show("Assignment Uploaded successfuly");
+                }
+
+            }
+        }
+
+        private void assignmenttotalgradNumeric_Click(object sender, EventArgs e)
         {
 
         }
@@ -373,3 +408,44 @@ namespace Learning_DB
 
 
 }
+
+
+//private void DetermineQuesType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+//{
+//    if (DetermineQuesType_comboBox.Text == "T/F")
+//    {
+//        op1.Hide();
+//        op2.Hide();
+//        op3.Hide();
+//        op4.Hide();
+//    op1_textbox.Hide();
+//    op2_textbox.Hide();
+//    op3_textbox.Hide();
+//    op4_textbox.Hide();
+//        True_RadioButton.Show();
+//        false_radiobutton.Show();
+//    }else if(DetermineQuesType_comboBox.Text == "MCQ")
+//    {
+//        op1.Show();
+//        op2.Show();
+//        op3.Show();
+//        op4.Show();
+//        op1_textbox.Show();
+//        op2_textbox.Show();
+//        op3_textbox.Show();
+//        op4_textbox.Show();
+//        True_RadioButton.Hide();
+//        false_radiobutton.Hide();
+//    }
+//}
+
+
+//private void totalexampointstxtbox_TextChanged(object sender, EventArgs e)
+//{
+
+//}
+
+//private void questionpointsTxtboxExam_TextChanged(object sender, EventArgs e)
+//{
+
+//}

@@ -48,6 +48,7 @@ namespace Learning_DB
         
         //material and assignment upload
         public static string AddNewMaterial = "spAddNewMaterial";
+        public static string AddAssignment = "spAddAssignment";
 
 
 
