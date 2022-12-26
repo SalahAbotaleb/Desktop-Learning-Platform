@@ -43,6 +43,7 @@
             this.classroomcombobox = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GoToClassroom = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.metroSetSetTabPage6 = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.label10 = new System.Windows.Forms.Label();
             this.coursescombobox = new MetroSet_UI.Controls.MetroSetComboBox();
             this.Courseid = new System.Windows.Forms.Label();
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -77,7 +78,6 @@
             this.fnametextbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.metroSetTabControl1 = new MetroSet_UI.Controls.MetroSetTabControl();
-            this.label10 = new System.Windows.Forms.Label();
             this.metroSetSetTabPage2.SuspendLayout();
             this.metroSetTabControl3.SuspendLayout();
             this.metroSetSetTabPage5.SuspendLayout();
@@ -150,7 +150,7 @@
             // 
             // Instructor_LogOutButton
             // 
-            this.Instructor_LogOutButton.Location = new System.Drawing.Point(1105, 12);
+            this.Instructor_LogOutButton.Location = new System.Drawing.Point(1084, 12);
             this.Instructor_LogOutButton.Name = "Instructor_LogOutButton";
             this.Instructor_LogOutButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
             this.Instructor_LogOutButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -165,7 +165,7 @@
             this.Instructor_LogOutButton.OverrideDefault.Border.Rounding = 20;
             this.Instructor_LogOutButton.OverrideDefault.Border.Width = 1;
             this.Instructor_LogOutButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Instructor_LogOutButton.Size = new System.Drawing.Size(87, 29);
+            this.Instructor_LogOutButton.Size = new System.Drawing.Size(108, 42);
             this.Instructor_LogOutButton.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.Instructor_LogOutButton.StateCommon.Back.Color2 = System.Drawing.Color.Red;
             this.Instructor_LogOutButton.StateCommon.Back.ColorAngle = 45F;
@@ -224,15 +224,15 @@
             // 
             // metroSetSetTabPage2
             // 
-            this.metroSetSetTabPage2.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage2.BaseColor = System.Drawing.SystemColors.Control;
             this.metroSetSetTabPage2.Controls.Add(this.metroSetTabControl3);
             this.metroSetSetTabPage2.Font = null;
             this.metroSetSetTabPage2.ImageIndex = 0;
             this.metroSetSetTabPage2.ImageKey = null;
-            this.metroSetSetTabPage2.IsDerivedStyle = true;
-            this.metroSetSetTabPage2.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage2.IsDerivedStyle = false;
+            this.metroSetSetTabPage2.Location = new System.Drawing.Point(4, 54);
             this.metroSetSetTabPage2.Name = "metroSetSetTabPage2";
-            this.metroSetSetTabPage2.Size = new System.Drawing.Size(1172, 518);
+            this.metroSetSetTabPage2.Size = new System.Drawing.Size(1172, 588);
             this.metroSetSetTabPage2.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage2.StyleManager = this.styleManager1;
             this.metroSetSetTabPage2.TabIndex = 1;
@@ -245,30 +245,30 @@
             // 
             this.metroSetTabControl3.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl3.AnimateTime = 200;
-            this.metroSetTabControl3.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl3.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl3.Controls.Add(this.metroSetSetTabPage5);
             this.metroSetTabControl3.Controls.Add(this.metroSetSetTabPage6);
             this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroSetTabControl3.IsDerivedStyle = true;
+            this.metroSetTabControl3.IsDerivedStyle = false;
             this.metroSetTabControl3.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl3.Location = new System.Drawing.Point(3, 8);
+            this.metroSetTabControl3.Location = new System.Drawing.Point(-4, 0);
             this.metroSetTabControl3.Name = "metroSetTabControl3";
-            this.metroSetTabControl3.SelectedIndex = 1;
+            this.metroSetTabControl3.SelectedIndex = 0;
             this.metroSetTabControl3.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl3.Size = new System.Drawing.Size(1166, 503);
+            this.metroSetTabControl3.Size = new System.Drawing.Size(1180, 588);
             this.metroSetTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl3.Speed = 100;
             this.metroSetTabControl3.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetTabControl3.StyleManager = this.styleManager1;
             this.metroSetTabControl3.TabIndex = 1;
+            this.metroSetTabControl3.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
             this.metroSetTabControl3.ThemeAuthor = null;
             this.metroSetTabControl3.ThemeName = null;
             this.metroSetTabControl3.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl3.UseAnimation = false;
             // 
             // metroSetSetTabPage5
             // 
-            this.metroSetSetTabPage5.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage5.BaseColor = System.Drawing.SystemColors.Control;
             this.metroSetSetTabPage5.Controls.Add(this.label9);
             this.metroSetSetTabPage5.Controls.Add(this.accesscodetextbox);
             this.metroSetSetTabPage5.Controls.Add(this.label8);
@@ -280,7 +280,7 @@
             this.metroSetSetTabPage5.IsDerivedStyle = true;
             this.metroSetSetTabPage5.Location = new System.Drawing.Point(4, 42);
             this.metroSetSetTabPage5.Name = "metroSetSetTabPage5";
-            this.metroSetSetTabPage5.Size = new System.Drawing.Size(1158, 457);
+            this.metroSetSetTabPage5.Size = new System.Drawing.Size(1172, 542);
             this.metroSetSetTabPage5.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage5.StyleManager = this.styleManager1;
             this.metroSetSetTabPage5.TabIndex = 0;
@@ -293,9 +293,9 @@
             // 
             this.label9.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 139);
+            this.label9.Location = new System.Drawing.Point(63, 195);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(127, 22);
@@ -304,7 +304,7 @@
             // 
             // accesscodetextbox
             // 
-            this.accesscodetextbox.Location = new System.Drawing.Point(223, 139);
+            this.accesscodetextbox.Location = new System.Drawing.Point(259, 195);
             this.accesscodetextbox.Margin = new System.Windows.Forms.Padding(4);
             this.accesscodetextbox.Name = "accesscodetextbox";
             this.accesscodetextbox.Size = new System.Drawing.Size(447, 41);
@@ -327,7 +327,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 53);
+            this.label8.Location = new System.Drawing.Point(52, 109);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(161, 22);
@@ -351,7 +351,7 @@
             this.classroomcombobox.FormattingEnabled = true;
             this.classroomcombobox.IsDerivedStyle = true;
             this.classroomcombobox.ItemHeight = 20;
-            this.classroomcombobox.Location = new System.Drawing.Point(223, 50);
+            this.classroomcombobox.Location = new System.Drawing.Point(273, 105);
             this.classroomcombobox.Name = "classroomcombobox";
             this.classroomcombobox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.classroomcombobox.SelectedItemForeColor = System.Drawing.Color.White;
@@ -365,7 +365,7 @@
             // 
             // GoToClassroom
             // 
-            this.GoToClassroom.Location = new System.Drawing.Point(771, 46);
+            this.GoToClassroom.Location = new System.Drawing.Point(407, 325);
             this.GoToClassroom.Margin = new System.Windows.Forms.Padding(4);
             this.GoToClassroom.Name = "GoToClassroom";
             this.GoToClassroom.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -428,7 +428,7 @@
             // 
             // metroSetSetTabPage6
             // 
-            this.metroSetSetTabPage6.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage6.BaseColor = System.Drawing.SystemColors.Control;
             this.metroSetSetTabPage6.Controls.Add(this.label10);
             this.metroSetSetTabPage6.Controls.Add(this.coursescombobox);
             this.metroSetSetTabPage6.Controls.Add(this.Courseid);
@@ -439,10 +439,10 @@
             this.metroSetSetTabPage6.Font = null;
             this.metroSetSetTabPage6.ImageIndex = 0;
             this.metroSetSetTabPage6.ImageKey = null;
-            this.metroSetSetTabPage6.IsDerivedStyle = true;
+            this.metroSetSetTabPage6.IsDerivedStyle = false;
             this.metroSetSetTabPage6.Location = new System.Drawing.Point(4, 42);
             this.metroSetSetTabPage6.Name = "metroSetSetTabPage6";
-            this.metroSetSetTabPage6.Size = new System.Drawing.Size(1158, 457);
+            this.metroSetSetTabPage6.Size = new System.Drawing.Size(1165, 465);
             this.metroSetSetTabPage6.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage6.StyleManager = this.styleManager1;
             this.metroSetSetTabPage6.TabIndex = 1;
@@ -450,6 +450,17 @@
             this.metroSetSetTabPage6.ThemeAuthor = null;
             this.metroSetSetTabPage6.ThemeName = null;
             this.metroSetSetTabPage6.ToolTipText = null;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(84, 210);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(131, 22);
+            this.label10.TabIndex = 126;
+            this.label10.Text = "Course Name";
             // 
             // coursescombobox
             // 
@@ -468,7 +479,7 @@
             this.coursescombobox.FormattingEnabled = true;
             this.coursescombobox.IsDerivedStyle = true;
             this.coursescombobox.ItemHeight = 20;
-            this.coursescombobox.Location = new System.Drawing.Point(284, 184);
+            this.coursescombobox.Location = new System.Drawing.Point(274, 210);
             this.coursescombobox.Name = "coursescombobox";
             this.coursescombobox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.coursescombobox.SelectedItemForeColor = System.Drawing.Color.White;
@@ -484,7 +495,7 @@
             // 
             this.Courseid.AutoSize = true;
             this.Courseid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Courseid.Location = new System.Drawing.Point(101, 135);
+            this.Courseid.Location = new System.Drawing.Point(84, 135);
             this.Courseid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Courseid.Name = "Courseid";
             this.Courseid.Size = new System.Drawing.Size(99, 22);
@@ -493,7 +504,7 @@
             // 
             // kryptonTextBox6
             // 
-            this.kryptonTextBox6.Location = new System.Drawing.Point(259, 135);
+            this.kryptonTextBox6.Location = new System.Drawing.Point(274, 135);
             this.kryptonTextBox6.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonTextBox6.Name = "kryptonTextBox6";
             this.kryptonTextBox6.ReadOnly = true;
@@ -610,15 +621,15 @@
             // 
             // metroSetSetTabPage1
             // 
-            this.metroSetSetTabPage1.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage1.BaseColor = System.Drawing.SystemColors.Control;
             this.metroSetSetTabPage1.Controls.Add(this.metroSetTabControl2);
             this.metroSetSetTabPage1.Font = null;
             this.metroSetSetTabPage1.ImageIndex = 0;
             this.metroSetSetTabPage1.ImageKey = null;
-            this.metroSetSetTabPage1.IsDerivedStyle = true;
-            this.metroSetSetTabPage1.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage1.IsDerivedStyle = false;
+            this.metroSetSetTabPage1.Location = new System.Drawing.Point(4, 54);
             this.metroSetSetTabPage1.Name = "metroSetSetTabPage1";
-            this.metroSetSetTabPage1.Size = new System.Drawing.Size(1172, 518);
+            this.metroSetSetTabPage1.Size = new System.Drawing.Size(1172, 506);
             this.metroSetSetTabPage1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage1.StyleManager = this.styleManager1;
             this.metroSetSetTabPage1.TabIndex = 0;
@@ -631,30 +642,30 @@
             // 
             this.metroSetTabControl2.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl2.AnimateTime = 200;
-            this.metroSetTabControl2.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl2.Controls.Add(this.metroSetSetTabPage3);
             this.metroSetTabControl2.Controls.Add(this.metroSetSetTabPage4);
             this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl2.IsDerivedStyle = true;
             this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl2.Location = new System.Drawing.Point(3, 3);
+            this.metroSetTabControl2.Location = new System.Drawing.Point(-4, 0);
             this.metroSetTabControl2.Name = "metroSetTabControl2";
             this.metroSetTabControl2.SelectedIndex = 0;
             this.metroSetTabControl2.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl2.Size = new System.Drawing.Size(1166, 503);
+            this.metroSetTabControl2.Size = new System.Drawing.Size(1180, 506);
             this.metroSetTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl2.Speed = 100;
             this.metroSetTabControl2.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetTabControl2.StyleManager = this.styleManager1;
             this.metroSetTabControl2.TabIndex = 0;
+            this.metroSetTabControl2.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
             this.metroSetTabControl2.ThemeAuthor = null;
             this.metroSetTabControl2.ThemeName = null;
             this.metroSetTabControl2.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl2.UseAnimation = false;
             // 
             // metroSetSetTabPage3
             // 
-            this.metroSetSetTabPage3.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage3.BaseColor = System.Drawing.SystemColors.Control;
             this.metroSetSetTabPage3.Controls.Add(this.titletextbox);
             this.metroSetSetTabPage3.Controls.Add(this.Instructor_Title_Label);
             this.metroSetSetTabPage3.Controls.Add(this.UsernameBox);
@@ -667,11 +678,10 @@
             this.metroSetSetTabPage3.Controls.Add(this.Instructor_FirstName_Label);
             this.metroSetSetTabPage3.Font = null;
             this.metroSetSetTabPage3.ImageIndex = 0;
-            this.metroSetSetTabPage3.ImageKey = null;
-            this.metroSetSetTabPage3.IsDerivedStyle = true;
+            this.metroSetSetTabPage3.IsDerivedStyle = false;
             this.metroSetSetTabPage3.Location = new System.Drawing.Point(4, 42);
             this.metroSetSetTabPage3.Name = "metroSetSetTabPage3";
-            this.metroSetSetTabPage3.Size = new System.Drawing.Size(1158, 457);
+            this.metroSetSetTabPage3.Size = new System.Drawing.Size(1172, 460);
             this.metroSetSetTabPage3.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage3.StyleManager = this.styleManager1;
             this.metroSetSetTabPage3.TabIndex = 0;
@@ -682,7 +692,7 @@
             // 
             // titletextbox
             // 
-            this.titletextbox.Location = new System.Drawing.Point(197, 250);
+            this.titletextbox.Location = new System.Drawing.Point(197, 319);
             this.titletextbox.Margin = new System.Windows.Forms.Padding(4);
             this.titletextbox.Name = "titletextbox";
             this.titletextbox.ReadOnly = true;
@@ -706,7 +716,7 @@
             // 
             this.Instructor_Title_Label.AutoSize = true;
             this.Instructor_Title_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Instructor_Title_Label.Location = new System.Drawing.Point(18, 260);
+            this.Instructor_Title_Label.Location = new System.Drawing.Point(40, 329);
             this.Instructor_Title_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Instructor_Title_Label.Name = "Instructor_Title_Label";
             this.Instructor_Title_Label.Size = new System.Drawing.Size(55, 22);
@@ -715,7 +725,7 @@
             // 
             // UsernameBox
             // 
-            this.UsernameBox.Location = new System.Drawing.Point(197, 187);
+            this.UsernameBox.Location = new System.Drawing.Point(197, 240);
             this.UsernameBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.ReadOnly = true;
@@ -739,7 +749,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 206);
+            this.label3.Location = new System.Drawing.Point(38, 259);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 22);
@@ -748,7 +758,7 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(197, 123);
+            this.EmailBox.Location = new System.Drawing.Point(197, 167);
             this.EmailBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.ReadOnly = true;
@@ -772,7 +782,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 133);
+            this.label6.Location = new System.Drawing.Point(40, 177);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 22);
@@ -781,7 +791,7 @@
             // 
             // LNameBox
             // 
-            this.LNameBox.Location = new System.Drawing.Point(197, 65);
+            this.LNameBox.Location = new System.Drawing.Point(197, 90);
             this.LNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.LNameBox.Name = "LNameBox";
             this.LNameBox.ReadOnly = true;
@@ -804,7 +814,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 75);
+            this.label12.Location = new System.Drawing.Point(40, 100);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 22);
@@ -837,7 +847,7 @@
             // 
             this.Instructor_FirstName_Label.AutoSize = true;
             this.Instructor_FirstName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Instructor_FirstName_Label.Location = new System.Drawing.Point(16, 26);
+            this.Instructor_FirstName_Label.Location = new System.Drawing.Point(38, 26);
             this.Instructor_FirstName_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Instructor_FirstName_Label.Name = "Instructor_FirstName_Label";
             this.Instructor_FirstName_Label.Size = new System.Drawing.Size(107, 22);
@@ -846,7 +856,7 @@
             // 
             // metroSetSetTabPage4
             // 
-            this.metroSetSetTabPage4.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage4.BaseColor = System.Drawing.SystemColors.Control;
             this.metroSetSetTabPage4.Controls.Add(this.password);
             this.metroSetSetTabPage4.Controls.Add(this.passwordtextbox);
             this.metroSetSetTabPage4.Controls.Add(this.AdminEInstructorButton_Edit);
@@ -863,10 +873,10 @@
             this.metroSetSetTabPage4.Font = null;
             this.metroSetSetTabPage4.ImageIndex = 0;
             this.metroSetSetTabPage4.ImageKey = null;
-            this.metroSetSetTabPage4.IsDerivedStyle = true;
+            this.metroSetSetTabPage4.IsDerivedStyle = false;
             this.metroSetSetTabPage4.Location = new System.Drawing.Point(4, 42);
             this.metroSetSetTabPage4.Name = "metroSetSetTabPage4";
-            this.metroSetSetTabPage4.Size = new System.Drawing.Size(1158, 457);
+            this.metroSetSetTabPage4.Size = new System.Drawing.Size(1165, 460);
             this.metroSetSetTabPage4.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage4.StyleManager = this.styleManager1;
             this.metroSetSetTabPage4.TabIndex = 1;
@@ -879,7 +889,7 @@
             // 
             this.password.AutoSize = true;
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(103, 267);
+            this.password.Location = new System.Drawing.Point(94, 277);
             this.password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(97, 22);
@@ -888,7 +898,7 @@
             // 
             // passwordtextbox
             // 
-            this.passwordtextbox.Location = new System.Drawing.Point(274, 267);
+            this.passwordtextbox.Location = new System.Drawing.Point(265, 267);
             this.passwordtextbox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordtextbox.Name = "passwordtextbox";
             this.passwordtextbox.Size = new System.Drawing.Size(438, 41);
@@ -971,7 +981,7 @@
             // 
             // Title_textbox
             // 
-            this.Title_textbox.Location = new System.Drawing.Point(274, 322);
+            this.Title_textbox.Location = new System.Drawing.Point(265, 322);
             this.Title_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.Title_textbox.Name = "Title_textbox";
             this.Title_textbox.Size = new System.Drawing.Size(447, 41);
@@ -993,7 +1003,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 322);
+            this.label1.Location = new System.Drawing.Point(95, 331);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 22);
@@ -1002,7 +1012,7 @@
             // 
             // usernametextbox
             // 
-            this.usernametextbox.Location = new System.Drawing.Point(274, 203);
+            this.usernametextbox.Location = new System.Drawing.Point(265, 203);
             this.usernametextbox.Margin = new System.Windows.Forms.Padding(4);
             this.usernametextbox.Name = "usernametextbox";
             this.usernametextbox.Size = new System.Drawing.Size(438, 41);
@@ -1024,7 +1034,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 212);
+            this.label2.Location = new System.Drawing.Point(91, 222);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 22);
@@ -1033,7 +1043,7 @@
             // 
             // emailtextbox
             // 
-            this.emailtextbox.Location = new System.Drawing.Point(274, 150);
+            this.emailtextbox.Location = new System.Drawing.Point(265, 144);
             this.emailtextbox.Margin = new System.Windows.Forms.Padding(4);
             this.emailtextbox.Name = "emailtextbox";
             this.emailtextbox.Size = new System.Drawing.Size(447, 41);
@@ -1055,7 +1065,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(115, 160);
+            this.label4.Location = new System.Drawing.Point(91, 153);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 22);
@@ -1064,7 +1074,7 @@
             // 
             // lnametextbox
             // 
-            this.lnametextbox.Location = new System.Drawing.Point(274, 101);
+            this.lnametextbox.Location = new System.Drawing.Point(265, 89);
             this.lnametextbox.Margin = new System.Windows.Forms.Padding(4);
             this.lnametextbox.Name = "lnametextbox";
             this.lnametextbox.Size = new System.Drawing.Size(447, 41);
@@ -1086,7 +1096,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(86, 111);
+            this.label5.Location = new System.Drawing.Point(86, 99);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 22);
@@ -1095,7 +1105,7 @@
             // 
             // fnametextbox
             // 
-            this.fnametextbox.Location = new System.Drawing.Point(274, 52);
+            this.fnametextbox.Location = new System.Drawing.Point(265, 34);
             this.fnametextbox.Margin = new System.Windows.Forms.Padding(4);
             this.fnametextbox.Name = "fnametextbox";
             this.fnametextbox.Size = new System.Drawing.Size(447, 41);
@@ -1117,7 +1127,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(84, 62);
+            this.label7.Location = new System.Drawing.Point(84, 44);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 22);
@@ -1128,17 +1138,17 @@
             // 
             this.metroSetTabControl1.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl1.AnimateTime = 200;
-            this.metroSetTabControl1.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl1.Controls.Add(this.metroSetSetTabPage1);
             this.metroSetTabControl1.Controls.Add(this.metroSetSetTabPage2);
             this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroSetTabControl1.IsDerivedStyle = true;
-            this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
+            this.metroSetTabControl1.IsDerivedStyle = false;
+            this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 50);
             this.metroSetTabControl1.Location = new System.Drawing.Point(12, 60);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
             this.metroSetTabControl1.SelectedIndex = 1;
             this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl1.Size = new System.Drawing.Size(1180, 564);
+            this.metroSetTabControl1.Size = new System.Drawing.Size(1180, 646);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl1.Speed = 100;
             this.metroSetTabControl1.Style = MetroSet_UI.Enums.Style.Light;
@@ -1148,17 +1158,6 @@
             this.metroSetTabControl1.ThemeName = null;
             this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
             this.metroSetTabControl1.UseAnimation = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(101, 187);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 22);
-            this.label10.TabIndex = 126;
-            this.label10.Text = "Course Name";
             // 
             // Inst1
             // 
@@ -1171,6 +1170,8 @@
             this.Controls.Add(this.Instructor_LogOutButton);
             this.Controls.Add(this.User_Name);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Calendar;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inst1";
             this.Palette = this.kryptonPalette2;

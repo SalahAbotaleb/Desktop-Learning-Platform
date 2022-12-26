@@ -18,6 +18,9 @@ namespace Learning_DB
     {
         Controller c;
         int Classroom_ID;
+        int Post_Count = 0;
+        DataTable Post_dt;
+        DataTable Comments_dt;
         DataTable res;
         DataTable d1;
         DataTable d3;
@@ -31,6 +34,8 @@ namespace Learning_DB
             Classroom_ID = C_ID;
             InitializeComponent();
             c = new Controller();
+            Post_dt = c.SelectPostsForClass(Classroom_ID);
+            UpdatePostsPage();
 
 
             //initializing the AddQuestionToExam Button to be disabled
@@ -83,7 +88,81 @@ namespace Learning_DB
             examsForClassroom = c.SelectExamsForClass(Classroom_ID);
 
         }
+        public void UpdatePostsPage()
+        {
 
+            if (Post_dt == null)
+            {
+                PostDateLabel.Visible = false;
+                AnnouncementBox.Visible = false;
+                AnnouncementLabel.Visible = false;
+                CommentsDataGrid.Visible = false;
+                CommentsLabel.Visible = false;
+                AddCommentLabel.Visible = false;
+                AddedCommentBox.Visible = false;
+                PostsSubmitButton.Visible = false;
+                PostsNextButton.Visible = false;
+                PostsPreviousButton.Visible = false;
+                return;
+            }
+            PostDateLabel.Visible = true;
+            AnnouncementBox.Visible = true;
+            AnnouncementLabel.Visible = true;
+            CommentsDataGrid.Visible = true;
+            CommentsLabel.Visible = true;
+            AddCommentLabel.Visible = true;
+            AddedCommentBox.Visible = true;
+            PostsSubmitButton.Visible = true;
+            PostsNextButton.Visible = true;
+            PostsPreviousButton.Visible = true;
+            PostDateLabel.Text = Post_dt.Rows[Post_Count]["Timestamp"].ToString();
+            PostTitleLabel.Text = Post_dt.Rows[Post_Count]["Title"].ToString();
+            AnnouncementBox.Text = Post_dt.Rows[Post_Count]["Announcement"].ToString();
+            Comments_dt = c.SelectCommentsForClass(Classroom_ID, Post_dt.Rows[Post_Count]["Timestamp"].ToString());
+            CommentsDataGrid.DataSource = Comments_dt;
+            CommentsDataGrid.Refresh();
+        }
+        private void PostsSubmitButton_Click(object sender, EventArgs e)
+        {
+            if (Post_dt != null && AddedCommentBox.Text != "")
+            {
+
+                if (c.AddComment(Classroom_ID.ToString(), Post_dt.Rows[Post_Count]["Timestamp"].ToString(), OpenedSession.ID, AddedCommentBox.Text).Item1 != 0)
+                {
+                    AddedCommentBox.Text = "";
+                    Comments_dt = c.SelectCommentsForClass(Classroom_ID, Post_dt.Rows[Post_Count]["Timestamp"].ToString());
+                    CommentsDataGrid.DataSource = Comments_dt;
+                    CommentsDataGrid.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Error Adding Comment");
+                }
+
+            }
+        }
+        private void PostsNextButton_Click(object sender, EventArgs e)
+        {
+            if (Post_Count == Post_dt.Rows.Count - 1)
+                return;
+            Post_Count++;
+            UpdatePostsPage();
+
+        }
+        private void PostsPreviousButton_Click(object sender, EventArgs e)
+        {
+            if (Post_Count == 0)
+                return;
+            Post_Count--;
+            UpdatePostsPage();
+        }
+        private void PostsRefreshButton_Click(object sender, EventArgs e)
+        {
+            Post_dt = c.SelectPostsForClass(Classroom_ID);
+            Post_Count = 0;
+            UpdatePostsPage();
+
+        }
         private void copyaccesscode_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Clipboard.SetText(kryptonTextBox14.Text);
@@ -430,6 +509,19 @@ namespace Learning_DB
         {
             InstructorReports IR = new InstructorReports(Classroom_ID);
             IR.Show();
+        }
+
+        private void uploadPost_Click(object sender, EventArgs e)
+        {
+            if (addpostTitletextbox.Text != "" || AddpostAnnouncementBox.Text != "")
+            {
+                c.AddAnnouncement(Classroom_ID,addpostTitletextbox.Text, AddpostAnnouncementBox.Text, OpenedSession.ID);
+                MessageBox.Show("Post Uploaded successfuly");
+            }
+            else
+            {
+                MessageBox.Show("Error! Fill all the required fields.");
+            }
         }
     }
 

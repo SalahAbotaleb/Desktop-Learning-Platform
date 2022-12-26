@@ -1981,10 +1981,13 @@
             this.ClientSize = new System.Drawing.Size(1221, 790);
             this.Controls.Add(this.gobackbutton);
             this.Controls.Add(this.Main);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Calendar;
             this.Name = "StudentClassroom";
             this.Palette = this.kryptonPalette2;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Classroom";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentClassroom_FormClosing);
             this.Load += new System.EventHandler(this.StudentClassroom_Load);

@@ -613,6 +613,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Sign_UpComboBox_Title);
             this.Controls.Add(this.label11);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Calendar;
             this.MaximizeBox = false;
             this.Name = "Sign_Up";
             this.Palette = this.kryptonPalette2;

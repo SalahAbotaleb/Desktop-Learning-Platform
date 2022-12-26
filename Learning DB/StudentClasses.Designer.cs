@@ -1024,10 +1024,13 @@
             this.Controls.Add(this.User_NameLabel);
             this.Controls.Add(this.Admin_LogOutButton);
             this.Controls.Add(this.Main);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Calendar;
             this.Name = "StudentClasses";
             this.Palette = this.kryptonPalette2;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentClasses";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentClasses_FormClosing);
             this.Main.ResumeLayout(false);
