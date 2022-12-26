@@ -288,8 +288,9 @@ namespace Learning_DB
 
         private void createexambtn_Click(object sender, EventArgs e)
         {
-            CreateExam c = new CreateExam(Classroom_ID, dateTimePicker2.Value);
-            c.Show();
+            CreateExam ct = new CreateExam(Classroom_ID, dateTimePicker2.Value);
+            c.addExam(Convert.ToInt32(kryptonTextBox2.Text), dateTimePicker2.Value.ToString("yyyy-MM-dd"), dateTimePicker1.Value.ToString("hh:mm:ss"), Classroom_ID, examtitletextbox.Text);
+            ct.Show();
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)

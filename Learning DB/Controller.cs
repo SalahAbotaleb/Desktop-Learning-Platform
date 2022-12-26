@@ -180,6 +180,20 @@ namespace DbHandler
 
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        public Tuple<int, string> addExam(int Marks, string date,string duration,int class_id, string title)
+        {
+            string StoredProcedureName = StoredProcedures.AddExam;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Marks", Marks);
+            Parameters.Add("@date", date);
+            Parameters.Add("@duration", duration);
+            Parameters.Add("@class_id", class_id);
+            Parameters.Add("@title", title);
+     
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
         public Tuple<int, string> ActivateAdmin(int ID, bool Status)
         {
             string StoredProcedureName = StoredProcedures.ActivateAdmin;

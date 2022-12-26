@@ -145,6 +145,9 @@
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Exittstat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.exam.SuspendLayout();
             this.metroSetTabControl3.SuspendLayout();
             this.createxambutton.SuspendLayout();
@@ -225,6 +228,9 @@
             // createxambutton
             // 
             this.createxambutton.BaseColor = System.Drawing.SystemColors.Control;
+            this.createxambutton.Controls.Add(this.label14);
+            this.createxambutton.Controls.Add(this.kryptonTextBox2);
+            this.createxambutton.Controls.Add(this.dateTimePicker1);
             this.createxambutton.Controls.Add(this.examDate);
             this.createxambutton.Controls.Add(this.dateTimePicker2);
             this.createxambutton.Controls.Add(this.ExamDurationUpDown);
@@ -294,7 +300,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(71, 110);
+            this.label3.Location = new System.Drawing.Point(45, 114);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 22);
@@ -305,7 +311,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(71, 48);
+            this.label10.Location = new System.Drawing.Point(107, 67);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 22);
@@ -334,7 +340,7 @@
             // 
             // createexambtn
             // 
-            this.createexambtn.Location = new System.Drawing.Point(399, 248);
+            this.createexambtn.Location = new System.Drawing.Point(392, 307);
             this.createexambtn.Margin = new System.Windows.Forms.Padding(4);
             this.createexambtn.Name = "createexambtn";
             this.createexambtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -1968,7 +1974,7 @@
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 50);
             this.metroSetTabControl1.Location = new System.Drawing.Point(0, 53);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 1;
+            this.metroSetTabControl1.SelectedIndex = 3;
             this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl1.Size = new System.Drawing.Size(1132, 567);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -2913,6 +2919,45 @@
             this.Exittstat.Values.Text = "Go to statistics";
             this.Exittstat.Click += new System.EventHandler(this.Exittstat_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(320, 215);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 155;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(151, 267);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 22);
+            this.label14.TabIndex = 157;
+            this.label14.Text = "Marks";
+            // 
+            // kryptonTextBox2
+            // 
+            this.kryptonTextBox2.Location = new System.Drawing.Point(320, 248);
+            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.Size = new System.Drawing.Size(543, 41);
+            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox2.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox2.StateCommon.Border.Width = 2;
+            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.kryptonTextBox2.TabIndex = 156;
+            // 
             // Classroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3091,5 +3136,8 @@
         private System.Windows.Forms.Label AddCommentLabel;
         private System.Windows.Forms.Label label13;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox AddpostAnnouncementBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label14;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
     }
 }
