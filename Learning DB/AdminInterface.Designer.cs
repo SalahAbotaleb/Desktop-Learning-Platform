@@ -355,6 +355,7 @@
             this.Main.ThemeAuthor = null;
             this.Main.ThemeName = null;
             this.Main.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.Main.UseAnimation = false;
             // 
             // Admin
             // 
@@ -400,6 +401,7 @@
             this.AdminAdminPage.ThemeAuthor = null;
             this.AdminAdminPage.ThemeName = null;
             this.AdminAdminPage.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.AdminAdminPage.UseAnimation = false;
             // 
             // AddAdmin
             // 
@@ -1265,6 +1267,7 @@
             this.AdminInstructorPage.ThemeAuthor = null;
             this.AdminInstructorPage.ThemeName = null;
             this.AdminInstructorPage.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.AdminInstructorPage.UseAnimation = false;
             // 
             // AddInstructor
             // 
@@ -2234,6 +2237,7 @@
             this.AdminStudentPage.ThemeAuthor = null;
             this.AdminStudentPage.ThemeName = null;
             this.AdminStudentPage.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.AdminStudentPage.UseAnimation = false;
             // 
             // AdminAddStudent
             // 
@@ -3196,6 +3200,7 @@
             this.metroSetTabControl1.ThemeAuthor = null;
             this.metroSetTabControl1.ThemeName = null;
             this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl1.UseAnimation = false;
             // 
             // AdminAddCourse
             // 
@@ -4168,6 +4173,7 @@
             this.metroSetTabControl2.ThemeAuthor = "Narwin";
             this.metroSetTabControl2.ThemeName = "MetroLite";
             this.metroSetTabControl2.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl2.UseAnimation = false;
             // 
             // AdminRequests
             // 

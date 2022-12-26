@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.exam = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl3 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.createxambutton = new MetroSet_UI.Child.MetroSetSetTabPage();
@@ -79,6 +80,8 @@
             this.uploadassignment = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl4 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.metroSetSetTabPage2 = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.assignmenttotalgradNumeric = new MetroSet_UI.Controls.MetroSetNumeric();
+            this.assignmentLinkTxtBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.assignment_description = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AssignmentTitle = new System.Windows.Forms.Label();
@@ -121,8 +124,11 @@
             this.ViewTimelinetab = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.eventsTab = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.assignmentLinkTxtBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.assignmenttotalgradNumeric = new MetroSet_UI.Controls.MetroSetNumeric();
+            this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.ChooseInstructorUsername_Label = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.exam.SuspendLayout();
             this.metroSetTabControl3.SuspendLayout();
             this.createxambutton.SuspendLayout();
@@ -164,9 +170,9 @@
             this.exam.ImageIndex = 0;
             this.exam.ImageKey = null;
             this.exam.IsDerivedStyle = true;
-            this.exam.Location = new System.Drawing.Point(4, 42);
+            this.exam.Location = new System.Drawing.Point(4, 54);
             this.exam.Name = "exam";
-            this.exam.Size = new System.Drawing.Size(1105, 553);
+            this.exam.Size = new System.Drawing.Size(1124, 509);
             this.exam.Style = MetroSet_UI.Enums.Style.Light;
             this.exam.StyleManager = null;
             this.exam.TabIndex = 3;
@@ -179,30 +185,30 @@
             // 
             this.metroSetTabControl3.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl3.AnimateTime = 200;
-            this.metroSetTabControl3.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl3.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl3.Controls.Add(this.createxambutton);
             this.metroSetTabControl3.Controls.Add(this.ViewExamgradestab);
             this.metroSetTabControl3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroSetTabControl3.IsDerivedStyle = true;
+            this.metroSetTabControl3.IsDerivedStyle = false;
             this.metroSetTabControl3.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl3.Location = new System.Drawing.Point(-4, 0);
             this.metroSetTabControl3.Name = "metroSetTabControl3";
             this.metroSetTabControl3.SelectedIndex = 1;
             this.metroSetTabControl3.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl3.Size = new System.Drawing.Size(1106, 509);
+            this.metroSetTabControl3.Size = new System.Drawing.Size(1132, 525);
             this.metroSetTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl3.Speed = 100;
             this.metroSetTabControl3.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetTabControl3.StyleManager = null;
             this.metroSetTabControl3.TabIndex = 0;
+            this.metroSetTabControl3.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
             this.metroSetTabControl3.ThemeAuthor = "Narwin";
             this.metroSetTabControl3.ThemeName = "MetroLite";
             this.metroSetTabControl3.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl3.UseAnimation = false;
             // 
             // createxambutton
             // 
-            this.createxambutton.BaseColor = System.Drawing.Color.White;
+            this.createxambutton.BaseColor = System.Drawing.SystemColors.Control;
             this.createxambutton.Controls.Add(this.examDate);
             this.createxambutton.Controls.Add(this.dateTimePicker2);
             this.createxambutton.Controls.Add(this.ExamDurationUpDown);
@@ -213,10 +219,10 @@
             this.createxambutton.Font = null;
             this.createxambutton.ImageIndex = 0;
             this.createxambutton.ImageKey = null;
-            this.createxambutton.IsDerivedStyle = true;
+            this.createxambutton.IsDerivedStyle = false;
             this.createxambutton.Location = new System.Drawing.Point(4, 42);
             this.createxambutton.Name = "createxambutton";
-            this.createxambutton.Size = new System.Drawing.Size(1098, 463);
+            this.createxambutton.Size = new System.Drawing.Size(1105, 479);
             this.createxambutton.Style = MetroSet_UI.Enums.Style.Light;
             this.createxambutton.StyleManager = null;
             this.createxambutton.TabIndex = 1;
@@ -238,7 +244,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(345, 178);
+            this.dateTimePicker2.Location = new System.Drawing.Point(320, 178);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(304, 26);
             this.dateTimePicker2.TabIndex = 153;
@@ -254,7 +260,7 @@
             this.ExamDurationUpDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             this.ExamDurationUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ExamDurationUpDown.IsDerivedStyle = true;
-            this.ExamDurationUpDown.Location = new System.Drawing.Point(399, 110);
+            this.ExamDurationUpDown.Location = new System.Drawing.Point(374, 110);
             this.ExamDurationUpDown.Maximum = 120;
             this.ExamDurationUpDown.Minimum = 1;
             this.ExamDurationUpDown.Name = "ExamDurationUpDown";
@@ -292,10 +298,10 @@
             // 
             // examtitletextbox
             // 
-            this.examtitletextbox.Location = new System.Drawing.Point(228, 39);
+            this.examtitletextbox.Location = new System.Drawing.Point(320, 48);
             this.examtitletextbox.Margin = new System.Windows.Forms.Padding(4);
             this.examtitletextbox.Name = "examtitletextbox";
-            this.examtitletextbox.Size = new System.Drawing.Size(571, 41);
+            this.examtitletextbox.Size = new System.Drawing.Size(543, 41);
             this.examtitletextbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.examtitletextbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.examtitletextbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -303,7 +309,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.examtitletextbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.examtitletextbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.examtitletextbox.StateCommon.Border.Rounding = 20;
             this.examtitletextbox.StateCommon.Border.Width = 2;
             this.examtitletextbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -319,7 +324,6 @@
             this.createexambtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.createexambtn.OverrideDefault.Back.ColorAngle = 45F;
-            this.createexambtn.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.createexambtn.OverrideDefault.Border.ColorAngle = 45F;
@@ -327,7 +331,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.createexambtn.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.createexambtn.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.OverrideDefault.Border.Rounding = 20;
             this.createexambtn.OverrideDefault.Border.Width = 1;
             this.createexambtn.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -335,7 +338,6 @@
             this.createexambtn.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.StateCommon.Back.ColorAngle = 45F;
-            this.createexambtn.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.StateCommon.Border.ColorAngle = 45F;
@@ -343,32 +345,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.createexambtn.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.createexambtn.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.StateCommon.Border.Rounding = 20;
             this.createexambtn.StateCommon.Border.Width = 1;
             this.createexambtn.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.createexambtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.createexambtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.createexambtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createexambtn.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.createexambtn.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.createexambtn.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.createexambtn.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.createexambtn.StatePressed.Back.ColorAngle = 135F;
-            this.createexambtn.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.createexambtn.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.createexambtn.StatePressed.Border.ColorAngle = 135F;
             this.createexambtn.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.createexambtn.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.StatePressed.Border.Rounding = 20;
             this.createexambtn.StatePressed.Border.Width = 1;
             this.createexambtn.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.createexambtn.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.StateTracking.Back.ColorAngle = 45F;
-            this.createexambtn.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.createexambtn.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.createexambtn.StateTracking.Border.ColorAngle = 45F;
@@ -376,7 +372,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.createexambtn.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.createexambtn.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.createexambtn.StateTracking.Border.Rounding = 20;
             this.createexambtn.StateTracking.Border.Width = 1;
             this.createexambtn.TabIndex = 148;
@@ -386,7 +381,7 @@
             // 
             // ViewExamgradestab
             // 
-            this.ViewExamgradestab.BaseColor = System.Drawing.Color.White;
+            this.ViewExamgradestab.BaseColor = System.Drawing.SystemColors.Control;
             this.ViewExamgradestab.Controls.Add(this.mingradeTextbox);
             this.ViewExamgradestab.Controls.Add(this.label8);
             this.ViewExamgradestab.Controls.Add(this.maxgradelbl);
@@ -397,10 +392,10 @@
             this.ViewExamgradestab.Font = null;
             this.ViewExamgradestab.ImageIndex = 0;
             this.ViewExamgradestab.ImageKey = null;
-            this.ViewExamgradestab.IsDerivedStyle = true;
+            this.ViewExamgradestab.IsDerivedStyle = false;
             this.ViewExamgradestab.Location = new System.Drawing.Point(4, 42);
             this.ViewExamgradestab.Name = "ViewExamgradestab";
-            this.ViewExamgradestab.Size = new System.Drawing.Size(1098, 463);
+            this.ViewExamgradestab.Size = new System.Drawing.Size(1124, 479);
             this.ViewExamgradestab.Style = MetroSet_UI.Enums.Style.Light;
             this.ViewExamgradestab.StyleManager = null;
             this.ViewExamgradestab.TabIndex = 2;
@@ -423,7 +418,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.mingradeTextbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.mingradeTextbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.mingradeTextbox.StateCommon.Border.Rounding = 20;
             this.mingradeTextbox.StateCommon.Border.Width = 2;
             this.mingradeTextbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -474,7 +468,6 @@
             this.chooseexamCombo.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.chooseexamCombo.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.chooseexamCombo.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.chooseexamCombo.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.chooseexamCombo.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -484,7 +477,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.chooseexamCombo.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.chooseexamCombo.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.chooseexamCombo.StateCommon.ComboBox.Border.Rounding = 20;
             this.chooseexamCombo.StateCommon.ComboBox.Border.Width = 2;
             this.chooseexamCombo.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -492,7 +484,6 @@
             this.chooseexamCombo.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.chooseexamCombo.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.chooseexamCombo.TabIndex = 143;
             this.chooseexamCombo.DropDownClosed += new System.EventHandler(this.chooseexamCombo_SelectedIndexChanged);
             this.chooseexamCombo.SelectedIndexChanged += new System.EventHandler(this.chooseexamCombo_SelectedIndexChanged_1);
@@ -511,7 +502,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.maxgradetxtbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.maxgradetxtbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.maxgradetxtbox.StateCommon.Border.Rounding = 20;
             this.maxgradetxtbox.StateCommon.Border.Width = 2;
             this.maxgradetxtbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -539,9 +529,9 @@
             this.questionbank.ImageIndex = 0;
             this.questionbank.ImageKey = null;
             this.questionbank.IsDerivedStyle = true;
-            this.questionbank.Location = new System.Drawing.Point(4, 42);
+            this.questionbank.Location = new System.Drawing.Point(4, 54);
             this.questionbank.Name = "questionbank";
-            this.questionbank.Size = new System.Drawing.Size(1105, 553);
+            this.questionbank.Size = new System.Drawing.Size(1124, 509);
             this.questionbank.Style = MetroSet_UI.Enums.Style.Light;
             this.questionbank.StyleManager = null;
             this.questionbank.TabIndex = 2;
@@ -554,30 +544,30 @@
             // 
             this.metroSetTabControl2.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl2.AnimateTime = 200;
-            this.metroSetTabControl2.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl2.Controls.Add(this.addquestion);
             this.metroSetTabControl2.Controls.Add(this.delquestiontab);
             this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroSetTabControl2.IsDerivedStyle = true;
+            this.metroSetTabControl2.IsDerivedStyle = false;
             this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl2.Location = new System.Drawing.Point(3, 3);
+            this.metroSetTabControl2.Location = new System.Drawing.Point(-4, 0);
             this.metroSetTabControl2.Name = "metroSetTabControl2";
-            this.metroSetTabControl2.SelectedIndex = 1;
+            this.metroSetTabControl2.SelectedIndex = 0;
             this.metroSetTabControl2.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl2.Size = new System.Drawing.Size(1084, 547);
+            this.metroSetTabControl2.Size = new System.Drawing.Size(1132, 513);
             this.metroSetTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl2.Speed = 100;
             this.metroSetTabControl2.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetTabControl2.StyleManager = null;
             this.metroSetTabControl2.TabIndex = 0;
+            this.metroSetTabControl2.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
             this.metroSetTabControl2.ThemeAuthor = "Narwin";
             this.metroSetTabControl2.ThemeName = "MetroLite";
             this.metroSetTabControl2.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl2.UseAnimation = false;
             // 
             // addquestion
             // 
-            this.addquestion.BaseColor = System.Drawing.Color.White;
+            this.addquestion.BaseColor = System.Drawing.SystemColors.Control;
             this.addquestion.Controls.Add(this.DetermineQuesType_comboBox);
             this.addquestion.Controls.Add(this.false_radiobutton);
             this.addquestion.Controls.Add(this.True_RadioButton);
@@ -602,10 +592,10 @@
             this.addquestion.Font = null;
             this.addquestion.ImageIndex = 0;
             this.addquestion.ImageKey = null;
-            this.addquestion.IsDerivedStyle = true;
+            this.addquestion.IsDerivedStyle = false;
             this.addquestion.Location = new System.Drawing.Point(4, 42);
             this.addquestion.Name = "addquestion";
-            this.addquestion.Size = new System.Drawing.Size(1076, 501);
+            this.addquestion.Size = new System.Drawing.Size(1124, 467);
             this.addquestion.Style = MetroSet_UI.Enums.Style.Light;
             this.addquestion.StyleManager = null;
             this.addquestion.TabIndex = 0;
@@ -621,7 +611,7 @@
             this.DetermineQuesType_comboBox.Items.AddRange(new object[] {
             "MCQ",
             "T/F"});
-            this.DetermineQuesType_comboBox.Location = new System.Drawing.Point(221, 300);
+            this.DetermineQuesType_comboBox.Location = new System.Drawing.Point(246, 292);
             this.DetermineQuesType_comboBox.Margin = new System.Windows.Forms.Padding(4);
             this.DetermineQuesType_comboBox.Name = "DetermineQuesType_comboBox";
             this.DetermineQuesType_comboBox.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -629,7 +619,6 @@
             this.DetermineQuesType_comboBox.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.DetermineQuesType_comboBox.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.DetermineQuesType_comboBox.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -639,7 +628,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Rounding = 20;
             this.DetermineQuesType_comboBox.StateCommon.ComboBox.Border.Width = 2;
             this.DetermineQuesType_comboBox.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -647,7 +635,6 @@
             this.DetermineQuesType_comboBox.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.DetermineQuesType_comboBox.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.DetermineQuesType_comboBox.TabIndex = 174;
             this.DetermineQuesType_comboBox.SelectedIndexChanged += new System.EventHandler(this.DetermineQuesType_comboBox_SelectedIndexChanged_1);
             // 
@@ -662,7 +649,7 @@
             this.false_radiobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.false_radiobutton.Group = 0;
             this.false_radiobutton.IsDerivedStyle = true;
-            this.false_radiobutton.Location = new System.Drawing.Point(677, 309);
+            this.false_radiobutton.Location = new System.Drawing.Point(702, 301);
             this.false_radiobutton.Name = "false_radiobutton";
             this.false_radiobutton.Size = new System.Drawing.Size(79, 17);
             this.false_radiobutton.Style = MetroSet_UI.Enums.Style.Light;
@@ -683,7 +670,7 @@
             this.True_RadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.True_RadioButton.Group = 0;
             this.True_RadioButton.IsDerivedStyle = true;
-            this.True_RadioButton.Location = new System.Drawing.Point(592, 309);
+            this.True_RadioButton.Location = new System.Drawing.Point(617, 301);
             this.True_RadioButton.Name = "True_RadioButton";
             this.True_RadioButton.Size = new System.Drawing.Size(79, 17);
             this.True_RadioButton.Style = MetroSet_UI.Enums.Style.Light;
@@ -695,7 +682,7 @@
             // 
             // op3_textbox
             // 
-            this.op3_textbox.Location = new System.Drawing.Point(178, 413);
+            this.op3_textbox.Location = new System.Drawing.Point(203, 405);
             this.op3_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.op3_textbox.Name = "op3_textbox";
             this.op3_textbox.Size = new System.Drawing.Size(163, 41);
@@ -706,7 +693,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.op3_textbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.op3_textbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.op3_textbox.StateCommon.Border.Rounding = 20;
             this.op3_textbox.StateCommon.Border.Width = 2;
             this.op3_textbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -716,7 +702,7 @@
             // 
             // op4_textbox
             // 
-            this.op4_textbox.Location = new System.Drawing.Point(560, 413);
+            this.op4_textbox.Location = new System.Drawing.Point(585, 405);
             this.op4_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.op4_textbox.Name = "op4_textbox";
             this.op4_textbox.Size = new System.Drawing.Size(163, 41);
@@ -727,7 +713,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.op4_textbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.op4_textbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.op4_textbox.StateCommon.Border.Rounding = 20;
             this.op4_textbox.StateCommon.Border.Width = 2;
             this.op4_textbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -737,7 +722,7 @@
             // 
             // op2_textbox
             // 
-            this.op2_textbox.Location = new System.Drawing.Point(560, 364);
+            this.op2_textbox.Location = new System.Drawing.Point(585, 356);
             this.op2_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.op2_textbox.Name = "op2_textbox";
             this.op2_textbox.Size = new System.Drawing.Size(163, 41);
@@ -748,7 +733,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.op2_textbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.op2_textbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.op2_textbox.StateCommon.Border.Rounding = 20;
             this.op2_textbox.StateCommon.Border.Width = 2;
             this.op2_textbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -758,7 +742,7 @@
             // 
             // op1_textbox
             // 
-            this.op1_textbox.Location = new System.Drawing.Point(178, 364);
+            this.op1_textbox.Location = new System.Drawing.Point(203, 356);
             this.op1_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.op1_textbox.Name = "op1_textbox";
             this.op1_textbox.Size = new System.Drawing.Size(163, 41);
@@ -769,7 +753,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.op1_textbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.op1_textbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.op1_textbox.StateCommon.Border.Rounding = 20;
             this.op1_textbox.StateCommon.Border.Width = 2;
             this.op1_textbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -788,7 +771,7 @@
             this.op4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.op4.Group = 0;
             this.op4.IsDerivedStyle = true;
-            this.op4.Location = new System.Drawing.Point(442, 426);
+            this.op4.Location = new System.Drawing.Point(467, 418);
             this.op4.Name = "op4";
             this.op4.Size = new System.Drawing.Size(99, 17);
             this.op4.Style = MetroSet_UI.Enums.Style.Light;
@@ -809,7 +792,7 @@
             this.op2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.op2.Group = 0;
             this.op2.IsDerivedStyle = true;
-            this.op2.Location = new System.Drawing.Point(442, 376);
+            this.op2.Location = new System.Drawing.Point(467, 368);
             this.op2.Name = "op2";
             this.op2.Size = new System.Drawing.Size(99, 17);
             this.op2.Style = MetroSet_UI.Enums.Style.Light;
@@ -830,7 +813,7 @@
             this.op3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.op3.Group = 0;
             this.op3.IsDerivedStyle = true;
-            this.op3.Location = new System.Drawing.Point(35, 426);
+            this.op3.Location = new System.Drawing.Point(60, 418);
             this.op3.Name = "op3";
             this.op3.Size = new System.Drawing.Size(102, 17);
             this.op3.Style = MetroSet_UI.Enums.Style.Light;
@@ -851,7 +834,7 @@
             this.op1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.op1.Group = 0;
             this.op1.IsDerivedStyle = true;
-            this.op1.Location = new System.Drawing.Point(35, 376);
+            this.op1.Location = new System.Drawing.Point(60, 368);
             this.op1.Name = "op1";
             this.op1.Size = new System.Drawing.Size(102, 17);
             this.op1.Style = MetroSet_UI.Enums.Style.Light;
@@ -865,7 +848,7 @@
             // 
             this.Type.AutoSize = true;
             this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type.Location = new System.Drawing.Point(3, 309);
+            this.Type.Location = new System.Drawing.Point(28, 301);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(55, 22);
             this.Type.TabIndex = 151;
@@ -873,7 +856,7 @@
             // 
             // diffUpDownQB
             // 
-            this.diffUpDownQB.Location = new System.Drawing.Point(221, 255);
+            this.diffUpDownQB.Location = new System.Drawing.Point(246, 247);
             this.diffUpDownQB.Maximum = new decimal(new int[] {
             5,
             0,
@@ -890,7 +873,7 @@
             // 
             // pointsUpdownQB
             // 
-            this.pointsUpdownQB.Location = new System.Drawing.Point(221, 196);
+            this.pointsUpdownQB.Location = new System.Drawing.Point(246, 188);
             this.pointsUpdownQB.Maximum = new decimal(new int[] {
             5,
             0,
@@ -907,13 +890,12 @@
             // 
             // AddQuestionQuestioBank
             // 
-            this.AddQuestionQuestioBank.Location = new System.Drawing.Point(787, 196);
+            this.AddQuestionQuestioBank.Location = new System.Drawing.Point(812, 188);
             this.AddQuestionQuestioBank.Margin = new System.Windows.Forms.Padding(4);
             this.AddQuestionQuestioBank.Name = "AddQuestionQuestioBank";
             this.AddQuestionQuestioBank.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddQuestionQuestioBank.OverrideDefault.Back.ColorAngle = 45F;
-            this.AddQuestionQuestioBank.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddQuestionQuestioBank.OverrideDefault.Border.ColorAngle = 45F;
@@ -921,7 +903,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AddQuestionQuestioBank.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AddQuestionQuestioBank.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.OverrideDefault.Border.Rounding = 20;
             this.AddQuestionQuestioBank.OverrideDefault.Border.Width = 1;
             this.AddQuestionQuestioBank.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -929,7 +910,6 @@
             this.AddQuestionQuestioBank.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.StateCommon.Back.ColorAngle = 45F;
-            this.AddQuestionQuestioBank.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.StateCommon.Border.ColorAngle = 45F;
@@ -937,32 +917,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AddQuestionQuestioBank.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AddQuestionQuestioBank.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.StateCommon.Border.Rounding = 20;
             this.AddQuestionQuestioBank.StateCommon.Border.Width = 1;
             this.AddQuestionQuestioBank.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.AddQuestionQuestioBank.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AddQuestionQuestioBank.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.AddQuestionQuestioBank.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddQuestionQuestioBank.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.AddQuestionQuestioBank.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.AddQuestionQuestioBank.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AddQuestionQuestioBank.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AddQuestionQuestioBank.StatePressed.Back.ColorAngle = 135F;
-            this.AddQuestionQuestioBank.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.AddQuestionQuestioBank.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AddQuestionQuestioBank.StatePressed.Border.ColorAngle = 135F;
             this.AddQuestionQuestioBank.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AddQuestionQuestioBank.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.StatePressed.Border.Rounding = 20;
             this.AddQuestionQuestioBank.StatePressed.Border.Width = 1;
             this.AddQuestionQuestioBank.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddQuestionQuestioBank.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.StateTracking.Back.ColorAngle = 45F;
-            this.AddQuestionQuestioBank.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddQuestionQuestioBank.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddQuestionQuestioBank.StateTracking.Border.ColorAngle = 45F;
@@ -970,7 +944,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AddQuestionQuestioBank.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AddQuestionQuestioBank.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddQuestionQuestioBank.StateTracking.Border.Rounding = 20;
             this.AddQuestionQuestioBank.StateTracking.Border.Width = 1;
             this.AddQuestionQuestioBank.TabIndex = 142;
@@ -982,7 +955,7 @@
             // 
             this.Difficulty.AutoSize = true;
             this.Difficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Difficulty.Location = new System.Drawing.Point(5, 255);
+            this.Difficulty.Location = new System.Drawing.Point(30, 247);
             this.Difficulty.Name = "Difficulty";
             this.Difficulty.Size = new System.Drawing.Size(88, 22);
             this.Difficulty.TabIndex = 140;
@@ -992,7 +965,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 196);
+            this.label6.Location = new System.Drawing.Point(28, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 22);
             this.label6.TabIndex = 138;
@@ -1000,7 +973,7 @@
             // 
             // questionDescriptQB
             // 
-            this.questionDescriptQB.Location = new System.Drawing.Point(124, 34);
+            this.questionDescriptQB.Location = new System.Drawing.Point(149, 26);
             this.questionDescriptQB.Margin = new System.Windows.Forms.Padding(4);
             this.questionDescriptQB.Name = "questionDescriptQB";
             this.questionDescriptQB.Size = new System.Drawing.Size(788, 41);
@@ -1011,7 +984,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.questionDescriptQB.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.questionDescriptQB.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.questionDescriptQB.StateCommon.Border.Rounding = 20;
             this.questionDescriptQB.StateCommon.Border.Width = 2;
             this.questionDescriptQB.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -1024,7 +996,7 @@
             // 
             this.topicComboinQuestionBank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.topicComboinQuestionBank.DropDownWidth = 264;
-            this.topicComboinQuestionBank.Location = new System.Drawing.Point(167, 114);
+            this.topicComboinQuestionBank.Location = new System.Drawing.Point(192, 106);
             this.topicComboinQuestionBank.Margin = new System.Windows.Forms.Padding(4);
             this.topicComboinQuestionBank.Name = "topicComboinQuestionBank";
             this.topicComboinQuestionBank.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -1032,7 +1004,6 @@
             this.topicComboinQuestionBank.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.topicComboinQuestionBank.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.topicComboinQuestionBank.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.topicComboinQuestionBank.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.topicComboinQuestionBank.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1042,7 +1013,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.topicComboinQuestionBank.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.topicComboinQuestionBank.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.topicComboinQuestionBank.StateCommon.ComboBox.Border.Rounding = 20;
             this.topicComboinQuestionBank.StateCommon.ComboBox.Border.Width = 2;
             this.topicComboinQuestionBank.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -1050,7 +1020,6 @@
             this.topicComboinQuestionBank.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.topicComboinQuestionBank.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.topicComboinQuestionBank.TabIndex = 136;
             this.topicComboinQuestionBank.SelectedIndexChanged += new System.EventHandler(this.topicComboinQuestionBank_SelectedIndexChanged_1);
             // 
@@ -1058,7 +1027,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 126);
+            this.label5.Location = new System.Drawing.Point(46, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 22);
             this.label5.TabIndex = 134;
@@ -1068,7 +1037,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 53);
+            this.label2.Location = new System.Drawing.Point(28, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 22);
             this.label2.TabIndex = 133;
@@ -1076,7 +1045,7 @@
             // 
             // delquestiontab
             // 
-            this.delquestiontab.BaseColor = System.Drawing.Color.White;
+            this.delquestiontab.BaseColor = System.Drawing.SystemColors.Control;
             this.delquestiontab.Controls.Add(this.deletequestionbutton);
             this.delquestiontab.Controls.Add(this.label7);
             this.delquestiontab.Controls.Add(this.Qtxtboxin_Del_Ques);
@@ -1085,10 +1054,10 @@
             this.delquestiontab.Font = null;
             this.delquestiontab.ImageIndex = 0;
             this.delquestiontab.ImageKey = null;
-            this.delquestiontab.IsDerivedStyle = true;
+            this.delquestiontab.IsDerivedStyle = false;
             this.delquestiontab.Location = new System.Drawing.Point(4, 42);
             this.delquestiontab.Name = "delquestiontab";
-            this.delquestiontab.Size = new System.Drawing.Size(1076, 501);
+            this.delquestiontab.Size = new System.Drawing.Size(1124, 467);
             this.delquestiontab.Style = MetroSet_UI.Enums.Style.Light;
             this.delquestiontab.StyleManager = null;
             this.delquestiontab.TabIndex = 2;
@@ -1105,7 +1074,6 @@
             this.deletequestionbutton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.deletequestionbutton.OverrideDefault.Back.ColorAngle = 45F;
-            this.deletequestionbutton.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.deletequestionbutton.OverrideDefault.Border.ColorAngle = 45F;
@@ -1113,7 +1081,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.deletequestionbutton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.deletequestionbutton.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.OverrideDefault.Border.Rounding = 20;
             this.deletequestionbutton.OverrideDefault.Border.Width = 1;
             this.deletequestionbutton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -1121,7 +1088,6 @@
             this.deletequestionbutton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.StateCommon.Back.ColorAngle = 45F;
-            this.deletequestionbutton.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.StateCommon.Border.ColorAngle = 45F;
@@ -1129,32 +1095,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.deletequestionbutton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.deletequestionbutton.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.StateCommon.Border.Rounding = 20;
             this.deletequestionbutton.StateCommon.Border.Width = 1;
             this.deletequestionbutton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.deletequestionbutton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.deletequestionbutton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.deletequestionbutton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletequestionbutton.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.deletequestionbutton.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.deletequestionbutton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.deletequestionbutton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.deletequestionbutton.StatePressed.Back.ColorAngle = 135F;
-            this.deletequestionbutton.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.deletequestionbutton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.deletequestionbutton.StatePressed.Border.ColorAngle = 135F;
             this.deletequestionbutton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.deletequestionbutton.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.StatePressed.Border.Rounding = 20;
             this.deletequestionbutton.StatePressed.Border.Width = 1;
             this.deletequestionbutton.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.deletequestionbutton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.StateTracking.Back.ColorAngle = 45F;
-            this.deletequestionbutton.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.deletequestionbutton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.deletequestionbutton.StateTracking.Border.ColorAngle = 45F;
@@ -1162,7 +1122,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.deletequestionbutton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.deletequestionbutton.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deletequestionbutton.StateTracking.Border.Rounding = 20;
             this.deletequestionbutton.StateTracking.Border.Width = 1;
             this.deletequestionbutton.TabIndex = 143;
@@ -1192,7 +1151,6 @@
             this.Qtxtboxin_Del_Ques.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Qtxtboxin_Del_Ques.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1202,7 +1160,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Border.Rounding = 20;
             this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Border.Width = 2;
             this.Qtxtboxin_Del_Ques.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -1210,7 +1167,6 @@
             this.Qtxtboxin_Del_Ques.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Qtxtboxin_Del_Ques.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Qtxtboxin_Del_Ques.TabIndex = 139;
             this.Qtxtboxin_Del_Ques.SelectedIndexChanged += new System.EventHandler(this.Qtxtboxin_Del_Ques_SelectedIndexChanged);
             // 
@@ -1236,7 +1192,6 @@
             this.deleteQuestionTopic.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.deleteQuestionTopic.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deleteQuestionTopic.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.deleteQuestionTopic.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.deleteQuestionTopic.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1246,7 +1201,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.deleteQuestionTopic.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.deleteQuestionTopic.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deleteQuestionTopic.StateCommon.ComboBox.Border.Rounding = 20;
             this.deleteQuestionTopic.StateCommon.ComboBox.Border.Width = 2;
             this.deleteQuestionTopic.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -1254,21 +1208,20 @@
             this.deleteQuestionTopic.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.deleteQuestionTopic.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.deleteQuestionTopic.TabIndex = 137;
             this.deleteQuestionTopic.SelectedIndexChanged += new System.EventHandler(this.deleteQuestionTopic_SelectedIndexChanged);
             // 
             // uploadassignment
             // 
-            this.uploadassignment.BaseColor = System.Drawing.Color.White;
+            this.uploadassignment.BaseColor = System.Drawing.SystemColors.Control;
             this.uploadassignment.Controls.Add(this.metroSetTabControl4);
             this.uploadassignment.Font = null;
             this.uploadassignment.ImageIndex = 0;
             this.uploadassignment.ImageKey = null;
             this.uploadassignment.IsDerivedStyle = true;
-            this.uploadassignment.Location = new System.Drawing.Point(4, 42);
+            this.uploadassignment.Location = new System.Drawing.Point(4, 54);
             this.uploadassignment.Name = "uploadassignment";
-            this.uploadassignment.Size = new System.Drawing.Size(1105, 553);
+            this.uploadassignment.Size = new System.Drawing.Size(1124, 509);
             this.uploadassignment.Style = MetroSet_UI.Enums.Style.Light;
             this.uploadassignment.StyleManager = null;
             this.uploadassignment.TabIndex = 1;
@@ -1281,30 +1234,32 @@
             // 
             this.metroSetTabControl4.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl4.AnimateTime = 200;
-            this.metroSetTabControl4.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl4.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl4.Controls.Add(this.metroSetSetTabPage2);
             this.metroSetTabControl4.Controls.Add(this.gradeAssignemnt);
-            this.metroSetTabControl4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroSetTabControl4.IsDerivedStyle = true;
-            this.metroSetTabControl4.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl4.Location = new System.Drawing.Point(3, 3);
+            this.metroSetTabControl4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl4.IsDerivedStyle = false;
+            this.metroSetTabControl4.ItemSize = new System.Drawing.Size(100, 40);
+            this.metroSetTabControl4.Location = new System.Drawing.Point(-4, 0);
             this.metroSetTabControl4.Name = "metroSetTabControl4";
             this.metroSetTabControl4.SelectedIndex = 0;
             this.metroSetTabControl4.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl4.Size = new System.Drawing.Size(1079, 515);
+            this.metroSetTabControl4.Size = new System.Drawing.Size(1132, 518);
             this.metroSetTabControl4.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl4.Speed = 100;
             this.metroSetTabControl4.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetTabControl4.StyleManager = null;
             this.metroSetTabControl4.TabIndex = 0;
+            this.metroSetTabControl4.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
             this.metroSetTabControl4.ThemeAuthor = "Narwin";
             this.metroSetTabControl4.ThemeName = "MetroLite";
             this.metroSetTabControl4.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl4.UseAnimation = false;
             // 
             // metroSetSetTabPage2
             // 
-            this.metroSetSetTabPage2.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage2.BaseColor = System.Drawing.SystemColors.Control;
+            this.metroSetSetTabPage2.Controls.Add(this.label9);
+            this.metroSetSetTabPage2.Controls.Add(this.ChooseInstructorUsername_Label);
             this.metroSetSetTabPage2.Controls.Add(this.assignmenttotalgradNumeric);
             this.metroSetSetTabPage2.Controls.Add(this.assignmentLinkTxtBox);
             this.metroSetSetTabPage2.Controls.Add(this.assignment_description);
@@ -1319,10 +1274,10 @@
             this.metroSetSetTabPage2.Font = null;
             this.metroSetSetTabPage2.ImageIndex = 0;
             this.metroSetSetTabPage2.ImageKey = null;
-            this.metroSetSetTabPage2.IsDerivedStyle = true;
-            this.metroSetSetTabPage2.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage2.IsDerivedStyle = false;
+            this.metroSetSetTabPage2.Location = new System.Drawing.Point(4, 44);
             this.metroSetSetTabPage2.Name = "metroSetSetTabPage2";
-            this.metroSetSetTabPage2.Size = new System.Drawing.Size(1071, 469);
+            this.metroSetSetTabPage2.Size = new System.Drawing.Size(1124, 470);
             this.metroSetSetTabPage2.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage2.StyleManager = null;
             this.metroSetSetTabPage2.TabIndex = 0;
@@ -1330,6 +1285,51 @@
             this.metroSetSetTabPage2.ThemeAuthor = "Narwin";
             this.metroSetSetTabPage2.ThemeName = "MetroLite";
             this.metroSetSetTabPage2.ToolTipText = null;
+            // 
+            // assignmenttotalgradNumeric
+            // 
+            this.assignmenttotalgradNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.assignmenttotalgradNumeric.BackgroundColor = System.Drawing.Color.Empty;
+            this.assignmenttotalgradNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.assignmenttotalgradNumeric.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.assignmenttotalgradNumeric.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.assignmenttotalgradNumeric.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.assignmenttotalgradNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.assignmenttotalgradNumeric.IsDerivedStyle = true;
+            this.assignmenttotalgradNumeric.Location = new System.Drawing.Point(293, 87);
+            this.assignmenttotalgradNumeric.Maximum = 100;
+            this.assignmenttotalgradNumeric.Minimum = 1;
+            this.assignmenttotalgradNumeric.Name = "assignmenttotalgradNumeric";
+            this.assignmenttotalgradNumeric.Size = new System.Drawing.Size(130, 26);
+            this.assignmenttotalgradNumeric.Style = MetroSet_UI.Enums.Style.Light;
+            this.assignmenttotalgradNumeric.StyleManager = null;
+            this.assignmenttotalgradNumeric.SymbolsColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.assignmenttotalgradNumeric.TabIndex = 145;
+            this.assignmenttotalgradNumeric.Text = "metroSetNumeric1";
+            this.assignmenttotalgradNumeric.ThemeAuthor = "Narwin";
+            this.assignmenttotalgradNumeric.ThemeName = "MetroLite";
+            this.assignmenttotalgradNumeric.Value = 1;
+            this.assignmenttotalgradNumeric.Click += new System.EventHandler(this.assignmenttotalgradNumeric_Click);
+            // 
+            // assignmentLinkTxtBox
+            // 
+            this.assignmentLinkTxtBox.Location = new System.Drawing.Point(250, 128);
+            this.assignmentLinkTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.assignmentLinkTxtBox.Name = "assignmentLinkTxtBox";
+            this.assignmentLinkTxtBox.Size = new System.Drawing.Size(529, 41);
+            this.assignmentLinkTxtBox.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.assignmentLinkTxtBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.assignmentLinkTxtBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.assignmentLinkTxtBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.assignmentLinkTxtBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.assignmentLinkTxtBox.StateCommon.Border.Rounding = 20;
+            this.assignmentLinkTxtBox.StateCommon.Border.Width = 2;
+            this.assignmentLinkTxtBox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.assignmentLinkTxtBox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentLinkTxtBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.assignmentLinkTxtBox.TabIndex = 144;
             // 
             // assignment_description
             // 
@@ -1343,14 +1343,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.assignment_description.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.assignment_description.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.assignment_description.StateCommon.Border.Rounding = 20;
             this.assignment_description.StateCommon.Border.Width = 2;
             this.assignment_description.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.assignment_description.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignment_description.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.assignment_description.TabIndex = 121;
-            this.assignment_description.Text = "Enter Assignment Description";
             // 
             // label1
             // 
@@ -1376,7 +1374,7 @@
             // 
             this.assignmentTitleTxtBox.Location = new System.Drawing.Point(250, 20);
             this.assignmentTitleTxtBox.Name = "assignmentTitleTxtBox";
-            this.assignmentTitleTxtBox.Size = new System.Drawing.Size(539, 43);
+            this.assignmentTitleTxtBox.Size = new System.Drawing.Size(539, 41);
             this.assignmentTitleTxtBox.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.assignmentTitleTxtBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.assignmentTitleTxtBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1384,20 +1382,18 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.assignmentTitleTxtBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.assignmentTitleTxtBox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.assignmentTitleTxtBox.StateCommon.Border.Rounding = 20;
             this.assignmentTitleTxtBox.StateCommon.Border.Width = 2;
             this.assignmentTitleTxtBox.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.assignmentTitleTxtBox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignmentTitleTxtBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.assignmentTitleTxtBox.TabIndex = 117;
-            this.assignmentTitleTxtBox.Text = "Enter Assignment Title";
             // 
             // AssignmentDeadlineDateTime
             // 
-            this.AssignmentDeadlineDateTime.Location = new System.Drawing.Point(649, 188);
+            this.AssignmentDeadlineDateTime.Location = new System.Drawing.Point(324, 188);
             this.AssignmentDeadlineDateTime.Name = "AssignmentDeadlineDateTime";
-            this.AssignmentDeadlineDateTime.Size = new System.Drawing.Size(14, 26);
+            this.AssignmentDeadlineDateTime.Size = new System.Drawing.Size(223, 26);
             this.AssignmentDeadlineDateTime.TabIndex = 116;
             // 
             // AddAssignment_Button
@@ -1407,7 +1403,6 @@
             this.AddAssignment_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddAssignment_Button.OverrideDefault.Back.ColorAngle = 45F;
-            this.AddAssignment_Button.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddAssignment_Button.OverrideDefault.Border.ColorAngle = 45F;
@@ -1415,7 +1410,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AddAssignment_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AddAssignment_Button.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.OverrideDefault.Border.Rounding = 20;
             this.AddAssignment_Button.OverrideDefault.Border.Width = 1;
             this.AddAssignment_Button.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -1423,7 +1417,6 @@
             this.AddAssignment_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateCommon.Back.ColorAngle = 45F;
-            this.AddAssignment_Button.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateCommon.Border.ColorAngle = 45F;
@@ -1431,32 +1424,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AddAssignment_Button.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AddAssignment_Button.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.StateCommon.Border.Rounding = 20;
             this.AddAssignment_Button.StateCommon.Border.Width = 1;
             this.AddAssignment_Button.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-5);
             this.AddAssignment_Button.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AddAssignment_Button.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.AddAssignment_Button.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddAssignment_Button.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.AddAssignment_Button.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.AddAssignment_Button.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AddAssignment_Button.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AddAssignment_Button.StatePressed.Back.ColorAngle = 135F;
-            this.AddAssignment_Button.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.AddAssignment_Button.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AddAssignment_Button.StatePressed.Border.ColorAngle = 135F;
             this.AddAssignment_Button.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AddAssignment_Button.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.StatePressed.Border.Rounding = 20;
             this.AddAssignment_Button.StatePressed.Border.Width = 1;
             this.AddAssignment_Button.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddAssignment_Button.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateTracking.Back.ColorAngle = 45F;
-            this.AddAssignment_Button.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AddAssignment_Button.StateTracking.Border.ColorAngle = 45F;
@@ -1464,7 +1451,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AddAssignment_Button.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AddAssignment_Button.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AddAssignment_Button.StateTracking.Border.Rounding = 20;
             this.AddAssignment_Button.StateTracking.Border.Width = 1;
             this.AddAssignment_Button.TabIndex = 114;
@@ -1503,7 +1489,7 @@
             // 
             // gradeAssignemnt
             // 
-            this.gradeAssignemnt.BaseColor = System.Drawing.Color.White;
+            this.gradeAssignemnt.BaseColor = System.Drawing.SystemColors.Control;
             this.gradeAssignemnt.Controls.Add(this.AssignGrade);
             this.gradeAssignemnt.Controls.Add(this.gradelabel);
             this.gradeAssignemnt.Controls.Add(this.assignmentGradeTxtbox);
@@ -1516,10 +1502,10 @@
             this.gradeAssignemnt.Font = null;
             this.gradeAssignemnt.ImageIndex = 0;
             this.gradeAssignemnt.ImageKey = null;
-            this.gradeAssignemnt.IsDerivedStyle = true;
-            this.gradeAssignemnt.Location = new System.Drawing.Point(4, 42);
+            this.gradeAssignemnt.IsDerivedStyle = false;
+            this.gradeAssignemnt.Location = new System.Drawing.Point(4, 44);
             this.gradeAssignemnt.Name = "gradeAssignemnt";
-            this.gradeAssignemnt.Size = new System.Drawing.Size(1071, 469);
+            this.gradeAssignemnt.Size = new System.Drawing.Size(1124, 470);
             this.gradeAssignemnt.Style = MetroSet_UI.Enums.Style.Light;
             this.gradeAssignemnt.StyleManager = null;
             this.gradeAssignemnt.TabIndex = 1;
@@ -1536,7 +1522,6 @@
             this.AssignGrade.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AssignGrade.OverrideDefault.Back.ColorAngle = 45F;
-            this.AssignGrade.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AssignGrade.OverrideDefault.Border.ColorAngle = 45F;
@@ -1544,7 +1529,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AssignGrade.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AssignGrade.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.OverrideDefault.Border.Rounding = 20;
             this.AssignGrade.OverrideDefault.Border.Width = 1;
             this.AssignGrade.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -1552,7 +1536,6 @@
             this.AssignGrade.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.StateCommon.Back.ColorAngle = 45F;
-            this.AssignGrade.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.StateCommon.Border.ColorAngle = 45F;
@@ -1560,32 +1543,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AssignGrade.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AssignGrade.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.StateCommon.Border.Rounding = 20;
             this.AssignGrade.StateCommon.Border.Width = 1;
             this.AssignGrade.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-5);
             this.AssignGrade.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.AssignGrade.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.AssignGrade.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssignGrade.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.AssignGrade.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.AssignGrade.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.AssignGrade.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AssignGrade.StatePressed.Back.ColorAngle = 135F;
-            this.AssignGrade.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.AssignGrade.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.AssignGrade.StatePressed.Border.ColorAngle = 135F;
             this.AssignGrade.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AssignGrade.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.StatePressed.Border.Rounding = 20;
             this.AssignGrade.StatePressed.Border.Width = 1;
             this.AssignGrade.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AssignGrade.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.StateTracking.Back.ColorAngle = 45F;
-            this.AssignGrade.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AssignGrade.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.AssignGrade.StateTracking.Border.ColorAngle = 45F;
@@ -1593,7 +1570,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.AssignGrade.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.AssignGrade.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.AssignGrade.StateTracking.Border.Rounding = 20;
             this.AssignGrade.StateTracking.Border.Width = 1;
             this.AssignGrade.TabIndex = 143;
@@ -1622,7 +1598,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.assignmentGradeTxtbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.assignmentGradeTxtbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.assignmentGradeTxtbox.StateCommon.Border.Rounding = 20;
             this.assignmentGradeTxtbox.StateCommon.Border.Width = 2;
             this.assignmentGradeTxtbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -1642,7 +1617,6 @@
             this.studentnameComboBox.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.studentnameComboBox.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.studentnameComboBox.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.studentnameComboBox.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.studentnameComboBox.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1652,7 +1626,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.studentnameComboBox.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.studentnameComboBox.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.studentnameComboBox.StateCommon.ComboBox.Border.Rounding = 20;
             this.studentnameComboBox.StateCommon.ComboBox.Border.Width = 2;
             this.studentnameComboBox.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -1660,7 +1633,6 @@
             this.studentnameComboBox.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.studentnameComboBox.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.studentnameComboBox.TabIndex = 140;
             this.studentnameComboBox.SelectedIndexChanged += new System.EventHandler(this.studentnameComboBox_SelectedIndexChanged);
             // 
@@ -1676,7 +1648,6 @@
             this.StudentIDComboBox.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StudentIDComboBox.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.StudentIDComboBox.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.StudentIDComboBox.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StudentIDComboBox.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1686,7 +1657,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StudentIDComboBox.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.StudentIDComboBox.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.StudentIDComboBox.StateCommon.ComboBox.Border.Rounding = 20;
             this.StudentIDComboBox.StateCommon.ComboBox.Border.Width = 2;
             this.StudentIDComboBox.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -1694,7 +1664,6 @@
             this.StudentIDComboBox.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StudentIDComboBox.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.StudentIDComboBox.TabIndex = 139;
             this.StudentIDComboBox.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
             // 
@@ -1710,7 +1679,6 @@
             this.assignmentcombobox.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.assignmentcombobox.StateActive.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.assignmentcombobox.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.assignmentcombobox.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.assignmentcombobox.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1720,7 +1688,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.assignmentcombobox.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.assignmentcombobox.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.assignmentcombobox.StateCommon.ComboBox.Border.Rounding = 20;
             this.assignmentcombobox.StateCommon.ComboBox.Border.Width = 2;
             this.assignmentcombobox.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
@@ -1728,7 +1695,6 @@
             this.assignmentcombobox.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.assignmentcombobox.StateCommon.Item.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.assignmentcombobox.TabIndex = 138;
             this.assignmentcombobox.SelectedIndexChanged += new System.EventHandler(this.assignmentcombobox_SelectedIndexChanged);
             // 
@@ -1764,7 +1730,7 @@
             // 
             // metroSetSetTabPage1
             // 
-            this.metroSetSetTabPage1.BaseColor = System.Drawing.Color.White;
+            this.metroSetSetTabPage1.BaseColor = System.Drawing.SystemColors.Control;
             this.metroSetSetTabPage1.Controls.Add(this.copyaccesscode);
             this.metroSetSetTabPage1.Controls.Add(this.kryptonTextBox14);
             this.metroSetSetTabPage1.Controls.Add(this.label17);
@@ -1773,10 +1739,10 @@
             this.metroSetSetTabPage1.Font = null;
             this.metroSetSetTabPage1.ImageIndex = 0;
             this.metroSetSetTabPage1.ImageKey = null;
-            this.metroSetSetTabPage1.IsDerivedStyle = true;
-            this.metroSetSetTabPage1.Location = new System.Drawing.Point(4, 42);
+            this.metroSetSetTabPage1.IsDerivedStyle = false;
+            this.metroSetSetTabPage1.Location = new System.Drawing.Point(4, 54);
             this.metroSetSetTabPage1.Name = "metroSetSetTabPage1";
-            this.metroSetSetTabPage1.Size = new System.Drawing.Size(1105, 553);
+            this.metroSetSetTabPage1.Size = new System.Drawing.Size(1124, 509);
             this.metroSetSetTabPage1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetSetTabPage1.StyleManager = null;
             this.metroSetSetTabPage1.TabIndex = 0;
@@ -1793,7 +1759,6 @@
             this.copyaccesscode.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.copyaccesscode.OverrideDefault.Back.ColorAngle = 45F;
-            this.copyaccesscode.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.copyaccesscode.OverrideDefault.Border.ColorAngle = 45F;
@@ -1801,7 +1766,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.copyaccesscode.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.copyaccesscode.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.OverrideDefault.Border.Rounding = 20;
             this.copyaccesscode.OverrideDefault.Border.Width = 1;
             this.copyaccesscode.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -1809,7 +1773,6 @@
             this.copyaccesscode.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Back.ColorAngle = 45F;
-            this.copyaccesscode.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Border.ColorAngle = 45F;
@@ -1817,32 +1780,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.copyaccesscode.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.copyaccesscode.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.StateCommon.Border.Rounding = 20;
             this.copyaccesscode.StateCommon.Border.Width = 1;
             this.copyaccesscode.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.copyaccesscode.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.copyaccesscode.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.copyaccesscode.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.copyaccesscode.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.copyaccesscode.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.copyaccesscode.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.copyaccesscode.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.copyaccesscode.StatePressed.Back.ColorAngle = 135F;
-            this.copyaccesscode.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.copyaccesscode.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.copyaccesscode.StatePressed.Border.ColorAngle = 135F;
             this.copyaccesscode.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.copyaccesscode.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.StatePressed.Border.Rounding = 20;
             this.copyaccesscode.StatePressed.Border.Width = 1;
             this.copyaccesscode.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.copyaccesscode.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateTracking.Back.ColorAngle = 45F;
-            this.copyaccesscode.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.copyaccesscode.StateTracking.Border.ColorAngle = 45F;
@@ -1850,7 +1807,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.copyaccesscode.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.copyaccesscode.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.copyaccesscode.StateTracking.Border.Rounding = 20;
             this.copyaccesscode.StateTracking.Border.Width = 1;
             this.copyaccesscode.TabIndex = 123;
@@ -1872,7 +1828,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox14.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox14.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTextBox14.StateCommon.Border.Rounding = 20;
             this.kryptonTextBox14.StateCommon.Border.Width = 2;
             this.kryptonTextBox14.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -1885,7 +1840,7 @@
             // 
             this.label17.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label17.BackColor = System.Drawing.SystemColors.Control;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(52, 137);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -1908,7 +1863,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox15.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox15.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTextBox15.StateCommon.Border.Rounding = 20;
             this.kryptonTextBox15.StateCommon.Border.Width = 2;
             this.kryptonTextBox15.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -1932,7 +1886,7 @@
             // 
             this.metroSetTabControl1.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl1.AnimateTime = 200;
-            this.metroSetTabControl1.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl1.Controls.Add(this.metroSetSetTabPage1);
             this.metroSetTabControl1.Controls.Add(this.uploadassignment);
             this.metroSetTabControl1.Controls.Add(this.questionbank);
@@ -1940,14 +1894,14 @@
             this.metroSetTabControl1.Controls.Add(this.materialstab);
             this.metroSetTabControl1.Controls.Add(this.Posts);
             this.metroSetTabControl1.Controls.Add(this.eventsTab);
-            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroSetTabControl1.IsDerivedStyle = true;
-            this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl1.Location = new System.Drawing.Point(12, 12);
+            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl1.IsDerivedStyle = false;
+            this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 50);
+            this.metroSetTabControl1.Location = new System.Drawing.Point(0, 53);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 1;
+            this.metroSetTabControl1.SelectedIndex = 6;
             this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl1.Size = new System.Drawing.Size(1113, 599);
+            this.metroSetTabControl1.Size = new System.Drawing.Size(1132, 567);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl1.Speed = 100;
             this.metroSetTabControl1.Style = MetroSet_UI.Enums.Style.Light;
@@ -1956,11 +1910,10 @@
             this.metroSetTabControl1.ThemeAuthor = "Narwin";
             this.metroSetTabControl1.ThemeName = "MetroLite";
             this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl1.UseAnimation = false;
             // 
             // materialstab
             // 
-            this.materialstab.BaseColor = System.Drawing.Color.White;
+            this.materialstab.BaseColor = System.Drawing.SystemColors.Control;
             this.materialstab.Controls.Add(this.material_des_txtbox);
             this.materialstab.Controls.Add(this.material_Description);
             this.materialstab.Controls.Add(this.uploadmaterialbtn);
@@ -1971,10 +1924,10 @@
             this.materialstab.Font = null;
             this.materialstab.ImageIndex = 0;
             this.materialstab.ImageKey = null;
-            this.materialstab.IsDerivedStyle = true;
-            this.materialstab.Location = new System.Drawing.Point(4, 42);
+            this.materialstab.IsDerivedStyle = false;
+            this.materialstab.Location = new System.Drawing.Point(4, 54);
             this.materialstab.Name = "materialstab";
-            this.materialstab.Size = new System.Drawing.Size(1105, 553);
+            this.materialstab.Size = new System.Drawing.Size(1124, 509);
             this.materialstab.Style = MetroSet_UI.Enums.Style.Light;
             this.materialstab.StyleManager = null;
             this.materialstab.TabIndex = 4;
@@ -1985,7 +1938,7 @@
             // 
             // material_des_txtbox
             // 
-            this.material_des_txtbox.Location = new System.Drawing.Point(213, 188);
+            this.material_des_txtbox.Location = new System.Drawing.Point(293, 188);
             this.material_des_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.material_des_txtbox.Name = "material_des_txtbox";
             this.material_des_txtbox.Size = new System.Drawing.Size(571, 41);
@@ -1996,7 +1949,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.material_des_txtbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.material_des_txtbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.material_des_txtbox.StateCommon.Border.Rounding = 20;
             this.material_des_txtbox.StateCommon.Border.Width = 2;
             this.material_des_txtbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -2008,7 +1960,7 @@
             // 
             this.material_Description.AutoSize = true;
             this.material_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.material_Description.Location = new System.Drawing.Point(11, 198);
+            this.material_Description.Location = new System.Drawing.Point(72, 198);
             this.material_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.material_Description.Name = "material_Description";
             this.material_Description.Size = new System.Drawing.Size(188, 22);
@@ -2023,7 +1975,6 @@
             this.uploadmaterialbtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadmaterialbtn.OverrideDefault.Back.ColorAngle = 45F;
-            this.uploadmaterialbtn.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadmaterialbtn.OverrideDefault.Border.ColorAngle = 45F;
@@ -2031,7 +1982,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.uploadmaterialbtn.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.uploadmaterialbtn.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.OverrideDefault.Border.Rounding = 20;
             this.uploadmaterialbtn.OverrideDefault.Border.Width = 1;
             this.uploadmaterialbtn.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -2039,7 +1989,6 @@
             this.uploadmaterialbtn.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.StateCommon.Back.ColorAngle = 45F;
-            this.uploadmaterialbtn.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.StateCommon.Border.ColorAngle = 45F;
@@ -2047,32 +1996,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.uploadmaterialbtn.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.uploadmaterialbtn.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.StateCommon.Border.Rounding = 20;
             this.uploadmaterialbtn.StateCommon.Border.Width = 1;
             this.uploadmaterialbtn.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.uploadmaterialbtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.uploadmaterialbtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.uploadmaterialbtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadmaterialbtn.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.uploadmaterialbtn.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.uploadmaterialbtn.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.uploadmaterialbtn.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.uploadmaterialbtn.StatePressed.Back.ColorAngle = 135F;
-            this.uploadmaterialbtn.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.uploadmaterialbtn.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.uploadmaterialbtn.StatePressed.Border.ColorAngle = 135F;
             this.uploadmaterialbtn.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.uploadmaterialbtn.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.StatePressed.Border.Rounding = 20;
             this.uploadmaterialbtn.StatePressed.Border.Width = 1;
             this.uploadmaterialbtn.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadmaterialbtn.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.StateTracking.Back.ColorAngle = 45F;
-            this.uploadmaterialbtn.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadmaterialbtn.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadmaterialbtn.StateTracking.Border.ColorAngle = 45F;
@@ -2080,7 +2023,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.uploadmaterialbtn.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.uploadmaterialbtn.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadmaterialbtn.StateTracking.Border.Rounding = 20;
             this.uploadmaterialbtn.StateTracking.Border.Width = 1;
             this.uploadmaterialbtn.TabIndex = 155;
@@ -2090,7 +2032,7 @@
             // 
             // linktextbox
             // 
-            this.linktextbox.Location = new System.Drawing.Point(213, 113);
+            this.linktextbox.Location = new System.Drawing.Point(293, 113);
             this.linktextbox.Margin = new System.Windows.Forms.Padding(4);
             this.linktextbox.Name = "linktextbox";
             this.linktextbox.Size = new System.Drawing.Size(571, 41);
@@ -2101,7 +2043,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.linktextbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.linktextbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.linktextbox.StateCommon.Border.Rounding = 20;
             this.linktextbox.StateCommon.Border.Width = 2;
             this.linktextbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -2133,7 +2074,7 @@
             // 
             // material_title_Textbox
             // 
-            this.material_title_Textbox.Location = new System.Drawing.Point(213, 42);
+            this.material_title_Textbox.Location = new System.Drawing.Point(293, 42);
             this.material_title_Textbox.Margin = new System.Windows.Forms.Padding(4);
             this.material_title_Textbox.Name = "material_title_Textbox";
             this.material_title_Textbox.Size = new System.Drawing.Size(571, 41);
@@ -2144,7 +2085,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.material_title_Textbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.material_title_Textbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.material_title_Textbox.StateCommon.Border.Rounding = 20;
             this.material_title_Textbox.StateCommon.Border.Width = 2;
             this.material_title_Textbox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -2155,15 +2095,15 @@
             // 
             // Posts
             // 
-            this.Posts.BaseColor = System.Drawing.Color.White;
+            this.Posts.BaseColor = System.Drawing.SystemColors.Control;
             this.Posts.Controls.Add(this.metroSetTabControl5);
             this.Posts.Font = null;
             this.Posts.ImageIndex = 0;
             this.Posts.ImageKey = null;
-            this.Posts.IsDerivedStyle = true;
-            this.Posts.Location = new System.Drawing.Point(4, 42);
+            this.Posts.IsDerivedStyle = false;
+            this.Posts.Location = new System.Drawing.Point(4, 54);
             this.Posts.Name = "Posts";
-            this.Posts.Size = new System.Drawing.Size(1105, 553);
+            this.Posts.Size = new System.Drawing.Size(1124, 509);
             this.Posts.Style = MetroSet_UI.Enums.Style.Light;
             this.Posts.StyleManager = null;
             this.Posts.TabIndex = 5;
@@ -2176,39 +2116,40 @@
             // 
             this.metroSetTabControl5.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
             this.metroSetTabControl5.AnimateTime = 200;
-            this.metroSetTabControl5.BackgroundColor = System.Drawing.Color.White;
+            this.metroSetTabControl5.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.metroSetTabControl5.Controls.Add(this.Addpost);
             this.metroSetTabControl5.Controls.Add(this.ViewTimelinetab);
-            this.metroSetTabControl5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroSetTabControl5.IsDerivedStyle = true;
+            this.metroSetTabControl5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl5.IsDerivedStyle = false;
             this.metroSetTabControl5.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl5.Location = new System.Drawing.Point(3, 16);
+            this.metroSetTabControl5.Location = new System.Drawing.Point(-4, 0);
             this.metroSetTabControl5.Name = "metroSetTabControl5";
             this.metroSetTabControl5.SelectedIndex = 1;
             this.metroSetTabControl5.SelectedTextColor = System.Drawing.Color.White;
-            this.metroSetTabControl5.Size = new System.Drawing.Size(1088, 491);
+            this.metroSetTabControl5.Size = new System.Drawing.Size(1132, 507);
             this.metroSetTabControl5.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl5.Speed = 100;
             this.metroSetTabControl5.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetTabControl5.StyleManager = null;
             this.metroSetTabControl5.TabIndex = 0;
+            this.metroSetTabControl5.TabStyle = MetroSet_UI.Enums.TabStyle.Style2;
             this.metroSetTabControl5.ThemeAuthor = "Narwin";
             this.metroSetTabControl5.ThemeName = "MetroLite";
             this.metroSetTabControl5.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl5.UseAnimation = false;
             // 
             // Addpost
             // 
-            this.Addpost.BaseColor = System.Drawing.Color.White;
+            this.Addpost.BaseColor = System.Drawing.SystemColors.Control;
+            this.Addpost.Controls.Add(this.label11);
             this.Addpost.Controls.Add(this.uploadPost);
             this.Addpost.Controls.Add(this.addpostextbox);
             this.Addpost.Font = null;
             this.Addpost.ImageIndex = 0;
             this.Addpost.ImageKey = null;
-            this.Addpost.IsDerivedStyle = true;
+            this.Addpost.IsDerivedStyle = false;
             this.Addpost.Location = new System.Drawing.Point(4, 42);
             this.Addpost.Name = "Addpost";
-            this.Addpost.Size = new System.Drawing.Size(1080, 445);
+            this.Addpost.Size = new System.Drawing.Size(1124, 461);
             this.Addpost.Style = MetroSet_UI.Enums.Style.Light;
             this.Addpost.StyleManager = null;
             this.Addpost.TabIndex = 0;
@@ -2225,7 +2166,6 @@
             this.uploadPost.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadPost.OverrideDefault.Back.ColorAngle = 45F;
-            this.uploadPost.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadPost.OverrideDefault.Border.ColorAngle = 45F;
@@ -2233,7 +2173,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.uploadPost.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.uploadPost.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.OverrideDefault.Border.Rounding = 20;
             this.uploadPost.OverrideDefault.Border.Width = 1;
             this.uploadPost.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -2241,7 +2180,6 @@
             this.uploadPost.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.StateCommon.Back.ColorAngle = 45F;
-            this.uploadPost.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.StateCommon.Border.ColorAngle = 45F;
@@ -2249,32 +2187,26 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.uploadPost.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.uploadPost.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.StateCommon.Border.Rounding = 20;
             this.uploadPost.StateCommon.Border.Width = 1;
             this.uploadPost.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-3, -3, -3, -5);
             this.uploadPost.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.uploadPost.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.uploadPost.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadPost.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.uploadPost.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.uploadPost.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.uploadPost.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.uploadPost.StatePressed.Back.ColorAngle = 135F;
-            this.uploadPost.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
             this.uploadPost.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.uploadPost.StatePressed.Border.ColorAngle = 135F;
             this.uploadPost.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.uploadPost.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.StatePressed.Border.Rounding = 20;
             this.uploadPost.StatePressed.Border.Width = 1;
             this.uploadPost.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadPost.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.StateTracking.Back.ColorAngle = 45F;
-            this.uploadPost.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.uploadPost.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.uploadPost.StateTracking.Border.ColorAngle = 45F;
@@ -2282,7 +2214,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.uploadPost.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.uploadPost.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.uploadPost.StateTracking.Border.Rounding = 20;
             this.uploadPost.StateTracking.Border.Width = 1;
             this.uploadPost.TabIndex = 156;
@@ -2293,7 +2224,7 @@
             // 
             this.addpostextbox.Location = new System.Drawing.Point(105, 59);
             this.addpostextbox.Name = "addpostextbox";
-            this.addpostextbox.Size = new System.Drawing.Size(906, 43);
+            this.addpostextbox.Size = new System.Drawing.Size(906, 41);
             this.addpostextbox.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.addpostextbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.addpostextbox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -2301,27 +2232,25 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.addpostextbox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.addpostextbox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.addpostextbox.StateCommon.Border.Rounding = 20;
             this.addpostextbox.StateCommon.Border.Width = 2;
             this.addpostextbox.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.addpostextbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addpostextbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.addpostextbox.TabIndex = 118;
-            this.addpostextbox.Text = "Write a Post to Classroom...";
             this.addpostextbox.TextChanged += new System.EventHandler(this.kryptonTextBox2_TextChanged);
             // 
             // ViewTimelinetab
             // 
-            this.ViewTimelinetab.BaseColor = System.Drawing.Color.White;
+            this.ViewTimelinetab.BaseColor = System.Drawing.SystemColors.Control;
             this.ViewTimelinetab.Controls.Add(this.kryptonDataGridView1);
             this.ViewTimelinetab.Font = null;
             this.ViewTimelinetab.ImageIndex = 0;
             this.ViewTimelinetab.ImageKey = null;
-            this.ViewTimelinetab.IsDerivedStyle = true;
+            this.ViewTimelinetab.IsDerivedStyle = false;
             this.ViewTimelinetab.Location = new System.Drawing.Point(4, 42);
             this.ViewTimelinetab.Name = "ViewTimelinetab";
-            this.ViewTimelinetab.Size = new System.Drawing.Size(1080, 445);
+            this.ViewTimelinetab.Size = new System.Drawing.Size(1124, 461);
             this.ViewTimelinetab.Style = MetroSet_UI.Enums.Style.Light;
             this.ViewTimelinetab.StyleManager = null;
             this.ViewTimelinetab.TabIndex = 1;
@@ -2342,14 +2271,14 @@
             // 
             // eventsTab
             // 
-            this.eventsTab.BaseColor = System.Drawing.Color.White;
+            this.eventsTab.BaseColor = System.Drawing.SystemColors.Control;
             this.eventsTab.Font = null;
             this.eventsTab.ImageIndex = 0;
             this.eventsTab.ImageKey = null;
-            this.eventsTab.IsDerivedStyle = true;
-            this.eventsTab.Location = new System.Drawing.Point(4, 42);
+            this.eventsTab.IsDerivedStyle = false;
+            this.eventsTab.Location = new System.Drawing.Point(4, 54);
             this.eventsTab.Name = "eventsTab";
-            this.eventsTab.Size = new System.Drawing.Size(1105, 553);
+            this.eventsTab.Size = new System.Drawing.Size(1124, 509);
             this.eventsTab.Style = MetroSet_UI.Enums.Style.Light;
             this.eventsTab.StyleManager = null;
             this.eventsTab.TabIndex = 6;
@@ -2358,59 +2287,154 @@
             this.eventsTab.ThemeName = "MetroLite";
             this.eventsTab.ToolTipText = null;
             // 
-            // assignmentLinkTxtBox
+            // kryptonPalette2
             // 
-            this.assignmentLinkTxtBox.Location = new System.Drawing.Point(250, 128);
-            this.assignmentLinkTxtBox.Margin = new System.Windows.Forms.Padding(4);
-            this.assignmentLinkTxtBox.Name = "assignmentLinkTxtBox";
-            this.assignmentLinkTxtBox.Size = new System.Drawing.Size(529, 41);
-            this.assignmentLinkTxtBox.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.assignmentLinkTxtBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.assignmentLinkTxtBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.assignmentLinkTxtBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonPalette2.ButtonSpecs.FormClose.Image = global::Learning_DB.Properties.Resources.Picture1;
+            this.kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::Learning_DB.Properties.Resources.Picture1;
+            this.kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::Learning_DB.Properties.Resources.Picture1;
+            this.kryptonPalette2.ButtonSpecs.FormMax.Image = global::Learning_DB.Properties.Resources.Picture3;
+            this.kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::Learning_DB.Properties.Resources.Picture3;
+            this.kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::Learning_DB.Properties.Resources.Picture3;
+            this.kryptonPalette2.ButtonSpecs.FormMin.Image = global::Learning_DB.Properties.Resources.Picture2;
+            this.kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImagePressed = global::Learning_DB.Properties.Resources.Picture2;
+            this.kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImageTracking = global::Learning_DB.Properties.Resources.Picture2;
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.assignmentLinkTxtBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.assignmentLinkTxtBox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.assignmentLinkTxtBox.StateCommon.Border.Rounding = 20;
-            this.assignmentLinkTxtBox.StateCommon.Border.Width = 2;
-            this.assignmentLinkTxtBox.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.assignmentLinkTxtBox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignmentLinkTxtBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.assignmentLinkTxtBox.TabIndex = 144;
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Back.Color1 = System.Drawing.SystemColors.Control;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Back.Color2 = System.Drawing.SystemColors.Control;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.Rounding = 15;
+            this.kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // assignmenttotalgradNumeric
+            // Admin_LogOutButton
             // 
-            this.assignmenttotalgradNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.assignmenttotalgradNumeric.BackgroundColor = System.Drawing.Color.Empty;
-            this.assignmenttotalgradNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.assignmenttotalgradNumeric.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.assignmenttotalgradNumeric.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.assignmenttotalgradNumeric.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.assignmenttotalgradNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.assignmenttotalgradNumeric.IsDerivedStyle = true;
-            this.assignmenttotalgradNumeric.Location = new System.Drawing.Point(293, 87);
-            this.assignmenttotalgradNumeric.Maximum = 100;
-            this.assignmenttotalgradNumeric.Minimum = 1;
-            this.assignmenttotalgradNumeric.Name = "assignmenttotalgradNumeric";
-            this.assignmenttotalgradNumeric.Size = new System.Drawing.Size(130, 26);
-            this.assignmenttotalgradNumeric.Style = MetroSet_UI.Enums.Style.Light;
-            this.assignmenttotalgradNumeric.StyleManager = null;
-            this.assignmenttotalgradNumeric.SymbolsColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.assignmenttotalgradNumeric.TabIndex = 145;
-            this.assignmenttotalgradNumeric.Text = "metroSetNumeric1";
-            this.assignmenttotalgradNumeric.ThemeAuthor = "Narwin";
-            this.assignmenttotalgradNumeric.ThemeName = "MetroLite";
-            this.assignmenttotalgradNumeric.Value = 1;
-            this.assignmenttotalgradNumeric.Click += new System.EventHandler(this.assignmenttotalgradNumeric_Click);
+            this.Admin_LogOutButton.Location = new System.Drawing.Point(1045, 12);
+            this.Admin_LogOutButton.Name = "Admin_LogOutButton";
+            this.Admin_LogOutButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.OverrideDefault.Back.ColorAngle = 45F;
+            this.Admin_LogOutButton.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.OverrideDefault.Border.ColorAngle = 45F;
+            this.Admin_LogOutButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Admin_LogOutButton.OverrideDefault.Border.Rounding = 20;
+            this.Admin_LogOutButton.OverrideDefault.Border.Width = 1;
+            this.Admin_LogOutButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Admin_LogOutButton.Size = new System.Drawing.Size(87, 29);
+            this.Admin_LogOutButton.StateCommon.Back.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Back.Color2 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Back.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateCommon.Border.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Border.Color2 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Border.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Admin_LogOutButton.StateCommon.Border.Rounding = 20;
+            this.Admin_LogOutButton.StateCommon.Border.Width = 1;
+            this.Admin_LogOutButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-7, -7, -8, -8);
+            this.Admin_LogOutButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.Admin_LogOutButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.Admin_LogOutButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin_LogOutButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Admin_LogOutButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
+            this.Admin_LogOutButton.StatePressed.Back.ColorAngle = 135F;
+            this.Admin_LogOutButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Admin_LogOutButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
+            this.Admin_LogOutButton.StatePressed.Border.ColorAngle = 135F;
+            this.Admin_LogOutButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.StatePressed.Border.Rounding = 20;
+            this.Admin_LogOutButton.StatePressed.Border.Width = 1;
+            this.Admin_LogOutButton.StateTracking.Back.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.StateTracking.Back.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateTracking.Border.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.StateTracking.Border.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Admin_LogOutButton.StateTracking.Border.Rounding = 20;
+            this.Admin_LogOutButton.StateTracking.Border.Width = 1;
+            this.Admin_LogOutButton.TabIndex = 35;
+            this.Admin_LogOutButton.TabStop = false;
+            this.Admin_LogOutButton.Values.Text = "Log Out";
+            // 
+            // ChooseInstructorUsername_Label
+            // 
+            this.ChooseInstructorUsername_Label.AutoSize = true;
+            this.ChooseInstructorUsername_Label.BackColor = System.Drawing.SystemColors.Control;
+            this.ChooseInstructorUsername_Label.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChooseInstructorUsername_Label.ForeColor = System.Drawing.Color.Gray;
+            this.ChooseInstructorUsername_Label.Location = new System.Drawing.Point(811, 32);
+            this.ChooseInstructorUsername_Label.Name = "ChooseInstructorUsername_Label";
+            this.ChooseInstructorUsername_Label.Size = new System.Drawing.Size(230, 21);
+            this.ChooseInstructorUsername_Label.TabIndex = 146;
+            this.ChooseInstructorUsername_Label.Text = "Enter Assignment Title";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(811, 244);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(290, 21);
+            this.label9.TabIndex = 147;
+            this.label9.Text = "Enter Assignment Description";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(64, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(290, 21);
+            this.label11.TabIndex = 157;
+            this.label11.Text = "Write a Post to Classroom...";
             // 
             // Classroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 623);
+            this.Controls.Add(this.Admin_LogOutButton);
             this.Controls.Add(this.metroSetTabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Classroom";
+            this.Palette = this.kryptonPalette2;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Classroom";
             this.exam.ResumeLayout(false);
             this.metroSetTabControl3.ResumeLayout(false);
@@ -2553,5 +2577,10 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox assignmentLinkTxtBox;
         private MetroSet_UI.Controls.MetroSetNumeric assignmenttotalgradNumeric;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Admin_LogOutButton;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label ChooseInstructorUsername_Label;
+        private System.Windows.Forms.Label label11;
     }
 }
