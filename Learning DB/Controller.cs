@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
+using System.Diagnostics;
 
 namespace DbHandler
 {
@@ -702,7 +703,15 @@ namespace DbHandler
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        
-
+        public Tuple<int,string> AddAnnouncement(int classroom_ID, string Title, string Announce, int id)
+        {
+            string StoredProcedureName = StoredProcedures.AddPost;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Title", Title);
+            Parameters.Add("@Announcement", Announce);
+            Parameters.Add("@Owner_ID", id);
+            Parameters.Add("@Class_ID", classroom_ID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
     }
 }
