@@ -18,6 +18,7 @@ namespace Learning_DB
     {
         Controller c;
         int Classroom_ID;
+        DataTable res;
         DataTable d1;
         DataTable d3;
         DataTable dtQuestbyTopic;
@@ -51,7 +52,7 @@ namespace Learning_DB
             kryptonTextBox14.Text = dt.Rows[0]["Access_code"].ToString();
 
             d3 = new DataTable();
-            d3 = c.SelectTopics();
+            d3 = c.SelectTopics(Classroom_ID);
             
             //not sure if we should restrict the topics to select from here by the courses relat
             //-ed to our classroom
@@ -63,13 +64,14 @@ namespace Learning_DB
 
             /// Assignment ComboBox
             AssignmentDataTable = c.SelectAssignmentForClass(Classroom_ID);
-            assignmentcombobox.DataSource = AssignmentDataTable;
             assignmentcombobox.DisplayMember = "Title";
-            assignmentcombobox.DisplayMember = "Assignment_ID";
-            stdAssignmentDatatable = c.SelectStudentbyClassroom(Classroom_ID);
-            studentnameComboBox.ValueMember= "Student_ID";
-            studentnameComboBox.DisplayMember= "Student_ID";
-           
+            assignmentcombobox.ValueMember = "Assignment_ID";
+            assignmentcombobox.DataSource = AssignmentDataTable;
+            
+            //stdAssignmentDatatable = c.SelectStudentbyClassroom(Classroom_ID);
+            //studentnameComboBox.ValueMember= "Student_ID";
+            //studentnameComboBox.DisplayMember= "Student_ID";
+
 
             //view grades
             chooseexamCombo.DataSource = c.SelectExamsForClass(Classroom_ID);
@@ -141,8 +143,7 @@ namespace Learning_DB
             }
             else
             {
-                int x = c.getLastQuestion();
-                MessageBox.Show(x.ToString());
+                int x = Convert.ToInt32(c.getLastQuestion().Rows[0][0]);
                 if (DetermineQuesType_comboBox.Text == "T/F") {
                     if (True_RadioButton.Checked)
                     {
@@ -178,7 +179,6 @@ namespace Learning_DB
                         Tuple<int, string> s3 = c.AddQuestionOption(x, option3, false);
                         Tuple<int, string> s4 = c.AddQuestionOption(x, option4, true);
                     }
-                    MessageBox.Show("Question Options added.");
                 }
                 MessageBox.Show("Question added successfuly");
                 AddQuestionQuestioBank.Enabled=true;
@@ -328,6 +328,12 @@ namespace Learning_DB
 
         private void assignmentcombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            res = c.SelectStudentbyClassroomandAss(Convert.ToInt32(assignmentcombobox.SelectedValue));
+            StudentIDComboBox.DataSource = res;
+            StudentIDComboBox.ValueMember = "Student_ID";
+            StudentIDComboBox.DisplayMember = "Student_ID";
+            kryptonTextBox1.Text = res.Rows[assignmentcombobox.SelectedIndex]["Fname"].ToString()+" "+ res.Rows[assignmentcombobox.SelectedIndex]["Lname"].ToString();
+            Submission_Link.Text=res.Rows[assignmentcombobox.SelectedIndex]["Submission_Link"].ToString();
 
         }
 
@@ -342,11 +348,11 @@ namespace Learning_DB
 
         private void chooseexamCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (chooseexamCombo.SelectedIndex == -1) return;
-            //examsForClassroom.Da
-            int id=Int16.Parse(examsForClassroom.Rows[chooseexamCombo.SelectedIndex]["Exam_ID"].ToString());
-            maxgradetxtbox.Text = c.SelectMaxGradeinExam(id).ToString();
-            mingradeTextbox.Text = c.SelectMinGradeinExam(id).ToString();
+            //if (chooseexamCombo.SelectedIndex == -1) return;
+            ////examsForClassroom.Da
+            //int id=Int16.Parse(examsForClassroom.Rows[chooseexamCombo.SelectedIndex]["Exam_ID"].ToString());
+            //maxgradetxtbox.Text = c.SelectMaxGradeinExam(id).ToString();
+            //mingradeTextbox.Text = c.SelectMinGradeinExam(id).ToString();
         
         }
 
@@ -369,6 +375,8 @@ namespace Learning_DB
         {
             //fe error fl code dah, bydrb hna
             if (chooseexamCombo.SelectedIndex == -1) return;
+            if (examsForClassroom == null)
+                return;
             //examsForClassroom.Da
             int id = Int16.Parse(examsForClassroom.Rows[chooseexamCombo.SelectedIndex]["Exam_ID"].ToString());
             maxgradetxtbox.Text = c.SelectMaxGradeinExam(id).ToString();
@@ -405,6 +413,23 @@ namespace Learning_DB
         private void assignmenttotalgradNumeric_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AssignGrade_Click(object sender, EventArgs e)
+        {
+            if (assignmentGradeTxtbox.Text == "")
+            {
+                MessageBox.Show("Enter value");
+                return;
+            }
+            c.SetGrade(Convert.ToInt32(assignmentcombobox.SelectedValue), Convert.ToInt32(StudentIDComboBox.SelectedValue), Convert.ToInt32(assignmentGradeTxtbox.Text));
+            MessageBox.Show("Grade entered successufly");
+        }
+
+        private void Exittstat_Click(object sender, EventArgs e)
+        {
+            InstructorReports IR = new InstructorReports(Classroom_ID);
+            IR.Show();
         }
     }
 

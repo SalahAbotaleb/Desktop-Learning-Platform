@@ -80,6 +80,8 @@
             this.uploadassignment = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl4 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.metroSetSetTabPage2 = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ChooseInstructorUsername_Label = new System.Windows.Forms.Label();
             this.assignmenttotalgradNumeric = new MetroSet_UI.Controls.MetroSetNumeric();
             this.assignmentLinkTxtBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.assignment_description = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -92,10 +94,12 @@
             this.AssignmentLinkLabel = new System.Windows.Forms.Label();
             this.grade = new System.Windows.Forms.Label();
             this.gradeAssignemnt = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.Submission_Link = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.AssignGrade = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.gradelabel = new System.Windows.Forms.Label();
             this.assignmentGradeTxtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.studentnameComboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.StudentIDComboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.assignmentcombobox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.assignment = new System.Windows.Forms.Label();
@@ -119,6 +123,7 @@
             this.Posts = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl5 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.Addpost = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.label11 = new System.Windows.Forms.Label();
             this.uploadPost = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.addpostextbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ViewTimelinetab = new MetroSet_UI.Child.MetroSetSetTabPage();
@@ -126,9 +131,7 @@
             this.eventsTab = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.ChooseInstructorUsername_Label = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Exittstat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.exam.SuspendLayout();
             this.metroSetTabControl3.SuspendLayout();
             this.createxambutton.SuspendLayout();
@@ -149,7 +152,6 @@
             this.metroSetTabControl4.SuspendLayout();
             this.metroSetSetTabPage2.SuspendLayout();
             this.gradeAssignemnt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentnameComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentIDComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assignmentcombobox)).BeginInit();
             this.metroSetSetTabPage1.SuspendLayout();
@@ -205,6 +207,7 @@
             this.metroSetTabControl3.ThemeAuthor = "Narwin";
             this.metroSetTabControl3.ThemeName = "MetroLite";
             this.metroSetTabControl3.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl3.UseAnimation = false;
             // 
             // createxambutton
             // 
@@ -222,7 +225,7 @@
             this.createxambutton.IsDerivedStyle = false;
             this.createxambutton.Location = new System.Drawing.Point(4, 42);
             this.createxambutton.Name = "createxambutton";
-            this.createxambutton.Size = new System.Drawing.Size(1105, 479);
+            this.createxambutton.Size = new System.Drawing.Size(1124, 479);
             this.createxambutton.Style = MetroSet_UI.Enums.Style.Light;
             this.createxambutton.StyleManager = null;
             this.createxambutton.TabIndex = 1;
@@ -564,6 +567,7 @@
             this.metroSetTabControl2.ThemeAuthor = "Narwin";
             this.metroSetTabControl2.ThemeName = "MetroLite";
             this.metroSetTabControl2.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl2.UseAnimation = false;
             // 
             // addquestion
             // 
@@ -1213,7 +1217,7 @@
             // 
             // uploadassignment
             // 
-            this.uploadassignment.BaseColor = System.Drawing.SystemColors.Control;
+            this.uploadassignment.BaseColor = System.Drawing.Color.White;
             this.uploadassignment.Controls.Add(this.metroSetTabControl4);
             this.uploadassignment.Font = null;
             this.uploadassignment.ImageIndex = 0;
@@ -1242,7 +1246,7 @@
             this.metroSetTabControl4.ItemSize = new System.Drawing.Size(100, 40);
             this.metroSetTabControl4.Location = new System.Drawing.Point(-4, 0);
             this.metroSetTabControl4.Name = "metroSetTabControl4";
-            this.metroSetTabControl4.SelectedIndex = 0;
+            this.metroSetTabControl4.SelectedIndex = 1;
             this.metroSetTabControl4.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl4.Size = new System.Drawing.Size(1132, 518);
             this.metroSetTabControl4.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1254,6 +1258,7 @@
             this.metroSetTabControl4.ThemeAuthor = "Narwin";
             this.metroSetTabControl4.ThemeName = "MetroLite";
             this.metroSetTabControl4.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl4.UseAnimation = false;
             // 
             // metroSetSetTabPage2
             // 
@@ -1286,6 +1291,30 @@
             this.metroSetSetTabPage2.ThemeName = "MetroLite";
             this.metroSetSetTabPage2.ToolTipText = null;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(811, 244);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(233, 20);
+            this.label9.TabIndex = 147;
+            this.label9.Text = "Enter Assignment Description";
+            // 
+            // ChooseInstructorUsername_Label
+            // 
+            this.ChooseInstructorUsername_Label.AutoSize = true;
+            this.ChooseInstructorUsername_Label.BackColor = System.Drawing.SystemColors.Control;
+            this.ChooseInstructorUsername_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChooseInstructorUsername_Label.ForeColor = System.Drawing.Color.Gray;
+            this.ChooseInstructorUsername_Label.Location = new System.Drawing.Point(811, 32);
+            this.ChooseInstructorUsername_Label.Name = "ChooseInstructorUsername_Label";
+            this.ChooseInstructorUsername_Label.Size = new System.Drawing.Size(179, 20);
+            this.ChooseInstructorUsername_Label.TabIndex = 146;
+            this.ChooseInstructorUsername_Label.Text = "Enter Assignment Title";
+            // 
             // assignmenttotalgradNumeric
             // 
             this.assignmenttotalgradNumeric.BackColor = System.Drawing.Color.Transparent;
@@ -1300,7 +1329,7 @@
             this.assignmenttotalgradNumeric.Maximum = 100;
             this.assignmenttotalgradNumeric.Minimum = 1;
             this.assignmenttotalgradNumeric.Name = "assignmenttotalgradNumeric";
-            this.assignmenttotalgradNumeric.Size = new System.Drawing.Size(130, 26);
+            this.assignmenttotalgradNumeric.Size = new System.Drawing.Size(159, 26);
             this.assignmenttotalgradNumeric.Style = MetroSet_UI.Enums.Style.Light;
             this.assignmenttotalgradNumeric.StyleManager = null;
             this.assignmenttotalgradNumeric.SymbolsColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1335,7 +1364,7 @@
             // 
             this.assignment_description.Location = new System.Drawing.Point(250, 234);
             this.assignment_description.Name = "assignment_description";
-            this.assignment_description.Size = new System.Drawing.Size(374, 43);
+            this.assignment_description.Size = new System.Drawing.Size(374, 41);
             this.assignment_description.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.assignment_description.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.assignment_description.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1393,7 +1422,7 @@
             // 
             this.AssignmentDeadlineDateTime.Location = new System.Drawing.Point(324, 188);
             this.AssignmentDeadlineDateTime.Name = "AssignmentDeadlineDateTime";
-            this.AssignmentDeadlineDateTime.Size = new System.Drawing.Size(223, 26);
+            this.AssignmentDeadlineDateTime.Size = new System.Drawing.Size(300, 26);
             this.AssignmentDeadlineDateTime.TabIndex = 116;
             // 
             // AddAssignment_Button
@@ -1413,7 +1442,7 @@
             this.AddAssignment_Button.OverrideDefault.Border.Rounding = 20;
             this.AddAssignment_Button.OverrideDefault.Border.Width = 1;
             this.AddAssignment_Button.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.AddAssignment_Button.Size = new System.Drawing.Size(209, 55);
+            this.AddAssignment_Button.Size = new System.Drawing.Size(261, 55);
             this.AddAssignment_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.AddAssignment_Button.StateCommon.Back.ColorAngle = 45F;
@@ -1490,10 +1519,12 @@
             // gradeAssignemnt
             // 
             this.gradeAssignemnt.BaseColor = System.Drawing.SystemColors.Control;
+            this.gradeAssignemnt.Controls.Add(this.kryptonTextBox1);
+            this.gradeAssignemnt.Controls.Add(this.Submission_Link);
+            this.gradeAssignemnt.Controls.Add(this.label12);
             this.gradeAssignemnt.Controls.Add(this.AssignGrade);
             this.gradeAssignemnt.Controls.Add(this.gradelabel);
             this.gradeAssignemnt.Controls.Add(this.assignmentGradeTxtbox);
-            this.gradeAssignemnt.Controls.Add(this.studentnameComboBox);
             this.gradeAssignemnt.Controls.Add(this.StudentIDComboBox);
             this.gradeAssignemnt.Controls.Add(this.assignmentcombobox);
             this.gradeAssignemnt.Controls.Add(this.assignment);
@@ -1514,6 +1545,61 @@
             this.gradeAssignemnt.ThemeName = "MetroLite";
             this.gradeAssignemnt.ToolTipText = null;
             this.gradeAssignemnt.Click += new System.EventHandler(this.gradeAssignemnt_Click);
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(252, 138);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.ReadOnly = true;
+            this.kryptonTextBox1.Size = new System.Drawing.Size(703, 41);
+            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox1.StateCommon.Border.Width = 2;
+            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.kryptonTextBox1.TabIndex = 146;
+            // 
+            // Submission_Link
+            // 
+            this.Submission_Link.Location = new System.Drawing.Point(252, 196);
+            this.Submission_Link.Margin = new System.Windows.Forms.Padding(4);
+            this.Submission_Link.Name = "Submission_Link";
+            this.Submission_Link.ReadOnly = true;
+            this.Submission_Link.Size = new System.Drawing.Size(703, 41);
+            this.Submission_Link.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.Submission_Link.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Submission_Link.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Submission_Link.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Submission_Link.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Submission_Link.StateCommon.Border.Rounding = 20;
+            this.Submission_Link.StateCommon.Border.Width = 2;
+            this.Submission_Link.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.Submission_Link.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Submission_Link.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.Submission_Link.TabIndex = 145;
+            // 
+            // label12
+            // 
+            this.label12.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.Control;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(36, 215);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(155, 22);
+            this.label12.TabIndex = 144;
+            this.label12.Text = "Submission Link";
             // 
             // AssignGrade
             // 
@@ -1574,12 +1660,13 @@
             this.AssignGrade.StateTracking.Border.Width = 1;
             this.AssignGrade.TabIndex = 143;
             this.AssignGrade.Values.Text = "Assign Grade";
+            this.AssignGrade.Click += new System.EventHandler(this.AssignGrade_Click);
             // 
             // gradelabel
             // 
             this.gradelabel.AutoSize = true;
             this.gradelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gradelabel.Location = new System.Drawing.Point(74, 223);
+            this.gradelabel.Location = new System.Drawing.Point(55, 266);
             this.gradelabel.Name = "gradelabel";
             this.gradelabel.Size = new System.Drawing.Size(65, 22);
             this.gradelabel.TabIndex = 142;
@@ -1587,7 +1674,7 @@
             // 
             // assignmentGradeTxtbox
             // 
-            this.assignmentGradeTxtbox.Location = new System.Drawing.Point(252, 204);
+            this.assignmentGradeTxtbox.Location = new System.Drawing.Point(252, 257);
             this.assignmentGradeTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.assignmentGradeTxtbox.Name = "assignmentGradeTxtbox";
             this.assignmentGradeTxtbox.Size = new System.Drawing.Size(147, 41);
@@ -1605,42 +1692,11 @@
             this.assignmentGradeTxtbox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
             this.assignmentGradeTxtbox.TabIndex = 141;
             // 
-            // studentnameComboBox
-            // 
-            this.studentnameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.studentnameComboBox.DropDownWidth = 264;
-            this.studentnameComboBox.Location = new System.Drawing.Point(252, 83);
-            this.studentnameComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.studentnameComboBox.Name = "studentnameComboBox";
-            this.studentnameComboBox.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.studentnameComboBox.Size = new System.Drawing.Size(703, 44);
-            this.studentnameComboBox.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.studentnameComboBox.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.studentnameComboBox.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.studentnameComboBox.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.studentnameComboBox.StateCommon.ComboBox.Border.ColorAngle = 45F;
-            this.studentnameComboBox.StateCommon.ComboBox.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.studentnameComboBox.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.studentnameComboBox.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.studentnameComboBox.StateCommon.ComboBox.Border.Rounding = 20;
-            this.studentnameComboBox.StateCommon.ComboBox.Border.Width = 2;
-            this.studentnameComboBox.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
-            this.studentnameComboBox.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentnameComboBox.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.studentnameComboBox.TabIndex = 140;
-            this.studentnameComboBox.SelectedIndexChanged += new System.EventHandler(this.studentnameComboBox_SelectedIndexChanged);
-            // 
             // StudentIDComboBox
             // 
             this.StudentIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.StudentIDComboBox.DropDownWidth = 264;
-            this.StudentIDComboBox.Location = new System.Drawing.Point(252, 135);
+            this.StudentIDComboBox.Location = new System.Drawing.Point(252, 83);
             this.StudentIDComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.StudentIDComboBox.Name = "StudentIDComboBox";
             this.StudentIDComboBox.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -1712,7 +1768,7 @@
             // 
             this.studentID.AutoSize = true;
             this.studentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentID.Location = new System.Drawing.Point(55, 157);
+            this.studentID.Location = new System.Drawing.Point(55, 94);
             this.studentID.Name = "studentID";
             this.studentID.Size = new System.Drawing.Size(104, 22);
             this.studentID.TabIndex = 120;
@@ -1722,7 +1778,7 @@
             // 
             this.studentName.AutoSize = true;
             this.studentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentName.Location = new System.Drawing.Point(55, 105);
+            this.studentName.Location = new System.Drawing.Point(55, 157);
             this.studentName.Name = "studentName";
             this.studentName.Size = new System.Drawing.Size(136, 22);
             this.studentName.TabIndex = 119;
@@ -1769,7 +1825,7 @@
             this.copyaccesscode.OverrideDefault.Border.Rounding = 20;
             this.copyaccesscode.OverrideDefault.Border.Width = 1;
             this.copyaccesscode.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.copyaccesscode.Size = new System.Drawing.Size(447, 50);
+            this.copyaccesscode.Size = new System.Drawing.Size(532, 50);
             this.copyaccesscode.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.copyaccesscode.StateCommon.Back.ColorAngle = 45F;
@@ -1894,12 +1950,12 @@
             this.metroSetTabControl1.Controls.Add(this.materialstab);
             this.metroSetTabControl1.Controls.Add(this.Posts);
             this.metroSetTabControl1.Controls.Add(this.eventsTab);
-            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl1.IsDerivedStyle = false;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 50);
             this.metroSetTabControl1.Location = new System.Drawing.Point(0, 53);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 6;
+            this.metroSetTabControl1.SelectedIndex = 1;
             this.metroSetTabControl1.SelectedTextColor = System.Drawing.Color.White;
             this.metroSetTabControl1.Size = new System.Drawing.Size(1132, 567);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1910,6 +1966,7 @@
             this.metroSetTabControl1.ThemeAuthor = "Narwin";
             this.metroSetTabControl1.ThemeName = "MetroLite";
             this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl1.UseAnimation = false;
             // 
             // materialstab
             // 
@@ -2136,6 +2193,7 @@
             this.metroSetTabControl5.ThemeAuthor = "Narwin";
             this.metroSetTabControl5.ThemeName = "MetroLite";
             this.metroSetTabControl5.UnselectedTextColor = System.Drawing.Color.Gray;
+            this.metroSetTabControl5.UseAnimation = false;
             // 
             // Addpost
             // 
@@ -2157,6 +2215,18 @@
             this.Addpost.ThemeAuthor = "Narwin";
             this.Addpost.ThemeName = "MetroLite";
             this.Addpost.ToolTipText = null;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(64, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(219, 20);
+            this.label11.TabIndex = 157;
+            this.label11.Text = "Write a Post to Classroom...";
             // 
             // uploadPost
             // 
@@ -2386,47 +2456,73 @@
             this.Admin_LogOutButton.TabStop = false;
             this.Admin_LogOutButton.Values.Text = "Log Out";
             // 
-            // ChooseInstructorUsername_Label
+            // Exittstat
             // 
-            this.ChooseInstructorUsername_Label.AutoSize = true;
-            this.ChooseInstructorUsername_Label.BackColor = System.Drawing.SystemColors.Control;
-            this.ChooseInstructorUsername_Label.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChooseInstructorUsername_Label.ForeColor = System.Drawing.Color.Gray;
-            this.ChooseInstructorUsername_Label.Location = new System.Drawing.Point(811, 32);
-            this.ChooseInstructorUsername_Label.Name = "ChooseInstructorUsername_Label";
-            this.ChooseInstructorUsername_Label.Size = new System.Drawing.Size(230, 21);
-            this.ChooseInstructorUsername_Label.TabIndex = 146;
-            this.ChooseInstructorUsername_Label.Text = "Enter Assignment Title";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.Control;
-            this.label9.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(811, 244);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(290, 21);
-            this.label9.TabIndex = 147;
-            this.label9.Text = "Enter Assignment Description";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(64, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(290, 21);
-            this.label11.TabIndex = 157;
-            this.label11.Text = "Write a Post to Classroom...";
+            this.Exittstat.Location = new System.Drawing.Point(12, 12);
+            this.Exittstat.Name = "Exittstat";
+            this.Exittstat.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.Exittstat.OverrideDefault.Back.ColorAngle = 45F;
+            this.Exittstat.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.Exittstat.OverrideDefault.Border.ColorAngle = 45F;
+            this.Exittstat.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Exittstat.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Exittstat.OverrideDefault.Border.Rounding = 20;
+            this.Exittstat.OverrideDefault.Border.Width = 1;
+            this.Exittstat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Exittstat.Size = new System.Drawing.Size(206, 35);
+            this.Exittstat.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.StateCommon.Back.ColorAngle = 45F;
+            this.Exittstat.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.StateCommon.Border.ColorAngle = 45F;
+            this.Exittstat.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Exittstat.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Exittstat.StateCommon.Border.Rounding = 20;
+            this.Exittstat.StateCommon.Border.Width = 1;
+            this.Exittstat.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-5);
+            this.Exittstat.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.Exittstat.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.Exittstat.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exittstat.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.Exittstat.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.Exittstat.StatePressed.Back.ColorAngle = 135F;
+            this.Exittstat.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(195)))));
+            this.Exittstat.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.Exittstat.StatePressed.Border.ColorAngle = 135F;
+            this.Exittstat.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Exittstat.StatePressed.Border.Rounding = 20;
+            this.Exittstat.StatePressed.Border.Width = 1;
+            this.Exittstat.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.Exittstat.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.StateTracking.Back.ColorAngle = 45F;
+            this.Exittstat.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.Exittstat.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.Exittstat.StateTracking.Border.ColorAngle = 45F;
+            this.Exittstat.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Exittstat.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Exittstat.StateTracking.Border.Rounding = 20;
+            this.Exittstat.StateTracking.Border.Width = 1;
+            this.Exittstat.TabIndex = 144;
+            this.Exittstat.Values.Text = "Go to statistics";
+            this.Exittstat.Click += new System.EventHandler(this.Exittstat_Click);
             // 
             // Classroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 623);
+            this.Controls.Add(this.Exittstat);
             this.Controls.Add(this.Admin_LogOutButton);
             this.Controls.Add(this.metroSetTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -2462,7 +2558,6 @@
             this.metroSetSetTabPage2.PerformLayout();
             this.gradeAssignemnt.ResumeLayout(false);
             this.gradeAssignemnt.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentnameComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentIDComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assignmentcombobox)).EndInit();
             this.metroSetSetTabPage1.ResumeLayout(false);
@@ -2561,7 +2656,6 @@
         private System.Windows.Forms.Label assignment;
         private System.Windows.Forms.Label studentID;
         private System.Windows.Forms.Label studentName;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox studentnameComboBox;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox StudentIDComboBox;
         private MetroSet_UI.Child.MetroSetSetTabPage eventsTab;
         private ComponentFactory.Krypton.Toolkit.KryptonButton AssignGrade;
@@ -2582,5 +2676,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label ChooseInstructorUsername_Label;
         private System.Windows.Forms.Label label11;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox Submission_Link;
+        private System.Windows.Forms.Label label12;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Exittstat;
     }
 }

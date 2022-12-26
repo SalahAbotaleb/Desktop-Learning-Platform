@@ -20,6 +20,7 @@ namespace Learning_DB
         int Student_ID;
         int check = 0;
         int class_id;
+        int s_id;
         public InstructorReports(int Class_ID)
         {
             class_id = Class_ID;
@@ -48,14 +49,14 @@ namespace Learning_DB
             ParameterField pid = new ParameterField();
             pid.Name = "StudentID";
             ParameterDiscreteValue val = new ParameterDiscreteValue();
-            val.Value = class_id.ToString();
+            val.Value = "50002";
             pid.CurrentValues.Add(val);
             p.Add(pid);
             /******/
             ParameterField pid2 = new ParameterField();
             pid2.Name = "ClassID";
             ParameterDiscreteValue val2 = new ParameterDiscreteValue();
-            val2.Value = "8";
+            val2.Value = class_id.ToString();
             pid2.CurrentValues.Add(val2);
             p.Add(pid2);
             /******/
@@ -108,7 +109,7 @@ namespace Learning_DB
             IRTextBox_StudentID.ForeColor = Color.Gray;
             IRTextBox_StudentID.Enabled = false;
             IRComboBox_StudentUsername.Enabled = true;
-            IRComboBox_StudentUsername.DataSource = Controller.SelectStudent_UsernameByClassroomID(7);
+            IRComboBox_StudentUsername.DataSource = Controller.SelectStudent_UsernameByClassroomID(class_id);
             IRComboBox_StudentUsername.DisplayMember = "Username";
             IRComboBox_StudentUsername.ValueMember = "StudentID";
             IRTextBox_FName.Clear();
@@ -125,11 +126,12 @@ namespace Learning_DB
                     MessageBox.Show("Please Enter a Student ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                DataTable dt = Controller.SelectStudentByClassroomID( 7   , Convert.ToInt32(IRTextBox_StudentID.Text));
+                DataTable dt = Controller.SelectStudentByClassroomID( class_id   , Convert.ToInt32(IRTextBox_StudentID.Text));
                 if ( dt!= null)
                 {
                     IRTextBox_FName.Text = dt.Rows[0]["FName"].ToString();
                     IRTextBox_LName.Text = dt.Rows[0]["LName"].ToString();
+                    s_id = Convert.ToInt32(IRTextBox_StudentID);
                 }
                 else
                 {
@@ -139,12 +141,13 @@ namespace Learning_DB
             }
             else if (check == 2)
             {
-                DataTable dt = Controller.SelectStudent_UsernameByClassroomID(7);
+                DataTable dt = Controller.SelectStudent_UsernameByClassroomID(class_id);
 
                 if (dt != null)
                 {
                     IRTextBox_FName.Text = dt.Rows[IRComboBox_StudentUsername.SelectedIndex]["FName"].ToString();
                     IRTextBox_LName.Text = dt.Rows[IRComboBox_StudentUsername.SelectedIndex]["LName"].ToString();
+                    s_id = Convert.ToInt32(dt.Rows[IRComboBox_StudentUsername.SelectedIndex]["StudentID"]);
                 }
                 else
                 {

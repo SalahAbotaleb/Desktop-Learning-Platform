@@ -355,9 +355,9 @@ namespace DbHandler
         }
     
 
-        public DataTable SelectClassrooms()
+        public DataTable SelectClassrooms(int id)
         {
-            string Query = "SELECT * FROM Classroom";
+            string Query = "select * from Classroom,Teaches where Instructor_ID="+id.ToString()+" and Teaches.Class_ID=Classroom.Class_ID";
             return dbMan.ExecuteReader(Query);
         }
 
@@ -562,9 +562,9 @@ namespace DbHandler
             string Query = "SELECT * FROM Question ;";
             return dbMan.ExecuteReader(Query);
         }
-        public DataTable SelectTopics()
+        public DataTable SelectTopics(int id)
         {
-            string Query = "SELECT * FROM Course_Topics ;";
+            string Query = "select * from Course_Topics,Classroom where Classroom.Course_ID=Course_Topics.Course_ID and Class_ID="+id.ToString();
             return dbMan.ExecuteReader(Query);
         }
 
@@ -654,10 +654,10 @@ namespace DbHandler
             Parameters.Add("@comment", Comm);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        public int getLastQuestion()
+        public DataTable getLastQuestion()
         {
-            string Query = "Select top 1 Question_ID from Question order by Question_ID desc";
-            return dbMan.ExecuteNonQuery(Query);
+            string Query = "select IDENT_CURRENT( 'Question' )";
+            return dbMan.ExecuteReader(Query);
         }
 
         public DataTable SelectStudentbyClassroom(int C_ID)
@@ -665,7 +665,20 @@ namespace DbHandler
             string Query = "SELECT * FROM STUDENT WHERE StudentID in ( SELECT Student_ID FROM Student_Enrolled_In Where Class_ID="+C_ID+");";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectStudentbyClassroomandAss(int C_ID)
+        {
+            string Query = "select * from student,Submits_Assignment where Assignment_ID="+C_ID.ToString()+" and Submits_Assignment.Student_ID=Student.StudentID";
+            return dbMan.ExecuteReader(Query);
+        }
+        public int SetGrade(int Ass_id,int s_id,int val)
+        {
+            string Query = @"update Submits_Assignment
+                set Assignment_Grade = " + val.ToString() +
+                " where Student_ID ="+ s_id.ToString() +"and Assignment_ID=" +Ass_id.ToString();
+            return dbMan.ExecuteNonQuery(Query);
 
+          
+        }
         public int SelectMaxGradeinExam(int EID)
         {
             string Query = "Select Max(Marks) from Exam Where Exam_ID=" + EID + ";"; 

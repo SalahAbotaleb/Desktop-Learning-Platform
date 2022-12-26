@@ -30,7 +30,7 @@ namespace Learning_DB
             ClassroomID = cid;
             c=new Controller(); 
             d1 = new DataTable();
-            d1 = c.SelectTopics();
+            d1 = c.SelectTopics(ClassroomID);
             choosetopiccombobox.DataSource = d1;
             choosetopiccombobox.DisplayMember = "Topic";
             totalexampoints = 0;    

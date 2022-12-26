@@ -19,21 +19,8 @@ namespace Learning_DB
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            
-            //OpenedSession.ID = 50002;
-            //Application.Run(new StudentClassroom(7,50002));
-            //Application.Run(new AdminInterface());
-            //OpenedSession.ID = 8;
-            //Application.Run(new AdminInterface());
-            //Application.Run(new StudentClassroom(17,50002));
-            //Application.Run(new Credintial());
-            //Application.Run(new Sign_Up());
-            //Application.Run(new Login_Form());
-            Application.Run(new InstructorReports(7));
-
-            //Application.Run(new triaal());
-            //Application.Run(new triaal());
+            Application.Run(new Login_Form());
+        
         }
     }
 }

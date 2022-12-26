@@ -41,7 +41,7 @@ namespace Learning_DB
             d1 = cont.SelectCourses();
 
             d2 = new DataTable();
-            d2 = cont.SelectClassrooms();
+            d2 = cont.SelectClassrooms(IID);
 
             coursescombobox.DataSource = d1;
             coursescombobox.DisplayMember = "Course_Name";
@@ -190,7 +190,7 @@ namespace Learning_DB
 
         private void addclassroombutton_Click(object sender, EventArgs e)
         {
-            if (kryptonTextBox14.Text == "" || kryptonTextBox15.Text == "")
+            if (kryptonTextBox15.Text == "")
             {
                 MessageBox.Show("Fill all fields.");
                 return;
@@ -205,6 +205,9 @@ namespace Learning_DB
             else
             {
                 MessageBox.Show("Classroom added successfuly");
+                d2 = cont.SelectClassrooms(InstructorID);
+                classroomcombobox.DataSource = d2;
+                classroomcombobox.Refresh();
             }
         }
 

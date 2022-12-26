@@ -88,41 +88,11 @@
     <Compile Include="AddAssignment .Designer.cs">
       <DependentUpon>AddAssignment .cs</DependentUpon>
     </Compile>
-    <Compile Include="AddAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddAdmin.Designer.cs">
-      <DependentUpon>AddAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classroom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classroom.Designer.cs">
       <DependentUpon>Classroom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport2.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport3.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport3.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport4.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport4.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Exam.cs" />
     <Compile Include="CreateExam.cs">
@@ -158,12 +128,6 @@
     </Compile>
     <Compile Include="DBManager.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="InstructorInterface2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InstructorInterface2.Designer.cs">
-      <DependentUpon>InstructorInterface2.cs</DependentUpon>
-    </Compile>
     <Compile Include="InstructorReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,12 +150,6 @@
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
     <Compile Include="StoredProcedures.cs" />
-    <Compile Include="Instructor_Interface.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Instructor_Interface.Designer.cs">
-      <DependentUpon>Instructor_Interface.cs</DependentUpon>
-    </Compile>
     <Compile Include="StudentClasses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,48 +162,17 @@
     <Compile Include="StudentClassroom.Designer.cs">
       <DependentUpon>StudentClassroom.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentInterface.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentInterface.Designer.cs">
-      <DependentUpon>StudentInterface.cs</DependentUpon>
-    </Compile>
     <Compile Include="Student_Progress.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Student_Progress.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="triaal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="triaal.Designer.cs">
-      <DependentUpon>triaal.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddAssignment .resx">
       <DependentUpon>AddAssignment .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddAdmin.resx">
-      <DependentUpon>AddAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Classroom.resx">
       <DependentUpon>Classroom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport4.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateExam.resx">
       <DependentUpon>CreateExam.cs</DependentUpon>
@@ -263,9 +190,6 @@
     <EmbeddedResource Include="Credintial.resx">
       <DependentUpon>Credintial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructorInterface2.resx">
-      <DependentUpon>InstructorInterface2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InstructorReports.resx">
       <DependentUpon>InstructorReports.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,9 +201,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Instructor_Interface.resx">
-      <DependentUpon>Instructor_Interface.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,15 +211,9 @@
       <DependentUpon>StudentClassroom.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentInterface.resx">
-      <DependentUpon>StudentInterface.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Student_Progress.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Student_Progress.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="triaal.resx">
-      <DependentUpon>triaal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
