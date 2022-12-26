@@ -1953,6 +1953,7 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.Text = "Student Classroom";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentClassroom_FormClosing);
             this.Load += new System.EventHandler(this.StudentClassroom_Load);
             this.ExamTab.ResumeLayout(false);
             this.ExamTab.PerformLayout();

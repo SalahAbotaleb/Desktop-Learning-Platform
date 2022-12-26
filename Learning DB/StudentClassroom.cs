@@ -18,7 +18,6 @@ namespace Learning_DB
     {
         bool isAnswersShowing = false;
         int ClassID;
-        int StudentID;
         Controller controller = new Controller();
         int Assignment_Page_Counter = 0;
         int Exam_Page_Count = 0;
@@ -34,11 +33,10 @@ namespace Learning_DB
         Exam exam;
         List<Tuple<int, int>> ls;
         System.Timers.Timer Time_Remaining;
-        public StudentClassroom(int classID, int StudentID)
+        public StudentClassroom(int classID)
         {
             InitializeComponent();
             this.ClassID = classID;
-            this.StudentID = StudentID;
             Assignment_dt = controller.SelectAssignmentForClass(ClassID);
             Exam_dt = controller.SelectExamsForClass(ClassID);
             Post_dt = controller.SelectPostsForClass(ClassID);
@@ -205,7 +203,7 @@ namespace Learning_DB
         {
             if(SubmissionLinkBox.Text != null)
             {
-                Tuple<int, string> tp = controller.InsertSubmission(StudentID, Convert.ToInt32(Assignment_dt.Rows[Assignment_Page_Counter]["Assignment_ID"]), SubmissionLinkBox.Text);
+                Tuple<int, string> tp = controller.InsertSubmission(OpenedSession.ID, Convert.ToInt32(Assignment_dt.Rows[Assignment_Page_Counter]["Assignment_ID"]), SubmissionLinkBox.Text);
                 if (tp.Item1==1)
                     MessageBox.Show("Submission Successfuly");
                 else
@@ -253,7 +251,7 @@ namespace Learning_DB
                 Time_Remaining.Start();
                 /********/
 
-                exam = new Exam(StudentID, Convert.ToInt32(ComboBoxSelectExam.SelectedValue), controller, Convert.ToInt32(Exam_dt.Rows[ComboBoxSelectExam.SelectedIndex]["Marks"]));
+                exam = new Exam(OpenedSession.ID, Convert.ToInt32(ComboBoxSelectExam.SelectedValue), controller, Convert.ToInt32(Exam_dt.Rows[ComboBoxSelectExam.SelectedIndex]["Marks"]));
                 UpdateExamPage();
                 /********/
             }
@@ -293,7 +291,7 @@ namespace Learning_DB
 
         private void ComboBoxSelectExam_DropDownClosed(object sender, EventArgs e)
         {
-            if (Exam_dt == null)
+            if (Exam_dt == null || ComboBoxSelectExam.SelectedIndex == -1)
                 return;
             TextboxExamDate.Text = Exam_dt.Rows[ComboBoxSelectExam.SelectedIndex]["Date"].ToString();
             TextBoxExmDuration.Text = Exam_dt.Rows[ComboBoxSelectExam.SelectedIndex]["Duration"].ToString();
@@ -506,6 +504,11 @@ namespace Learning_DB
             {
                 EventsDatagridView.DataSource = Events_dt;
             }
+        }
+
+        private void StudentClassroom_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void kryptonButtonNextQues_Click(object sender, EventArgs e)
