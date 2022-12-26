@@ -344,7 +344,7 @@
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(-6, 54);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 1;
+            this.Main.SelectedIndex = 2;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1210, 652);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -389,7 +389,7 @@
             this.AdminAdminPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminAdminPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminAdminPage.Name = "AdminAdminPage";
-            this.AdminAdminPage.SelectedIndex = 1;
+            this.AdminAdminPage.SelectedIndex = 0;
             this.AdminAdminPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminAdminPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminAdminPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -1250,12 +1250,12 @@
             this.AdminInstructorPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminInstructorPage.Controls.Add(this.AddInstructor);
             this.AdminInstructorPage.Controls.Add(this.EditInstructor);
-            this.AdminInstructorPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdminInstructorPage.Cursor = System.Windows.Forms.Cursors.Default;
             this.AdminInstructorPage.IsDerivedStyle = false;
             this.AdminInstructorPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminInstructorPage.Location = new System.Drawing.Point(-4, 0);
             this.AdminInstructorPage.Name = "AdminInstructorPage";
-            this.AdminInstructorPage.SelectedIndex = 1;
+            this.AdminInstructorPage.SelectedIndex = 0;
             this.AdminInstructorPage.SelectedTextColor = System.Drawing.Color.White;
             this.AdminInstructorPage.Size = new System.Drawing.Size(1208, 589);
             this.AdminInstructorPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;

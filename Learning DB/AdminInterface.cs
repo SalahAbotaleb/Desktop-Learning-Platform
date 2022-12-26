@@ -868,10 +868,23 @@ namespace Learning_DB
                 {
                     MessageBox.Show("Admin Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AdminTextBox_FirstName.Text = "Enter Admin's First Name";
+                    AdminTextBox_FirstName.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    AdminTextBox_FirstName.StateCommon.Content.Color1 = Color.Gray;
                     AdminTextBox_LastName.Text = "Enter Admin's Last Name";
+                    AdminTextBox_LastName.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    AdminTextBox_LastName.StateCommon.Content.Color1 = Color.Gray;
                     AdminTextBox_Email.Text = "Enter Admin's Email";
+                    AdminTextBox_Email.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    AdminTextBox_Email.StateCommon.Content.Color1 = Color.Gray;
                     AdminTextBox_Username.Text = "Enter Admin's Username";
-                    AdminTextBox_Password.Text = "Enter Admin's Password";
+                    AdminTextBox_Username.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    AdminTextBox_Username.StateCommon.Content.Color1 = Color.Gray;
+                    AdminTextBox_Password.Text = "";
+                    AdminTextBox_Password.PasswordChar = '\0';
+                    AdminTextBox_Password.Text = "Enter Student's Password";
+                    AdminTextBox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    AdminTextBox_Password.StateCommon.Content.Color1 = Color.Gray;
+
                 }
             }
 
@@ -1059,10 +1072,13 @@ namespace Learning_DB
                     InstructorTextbox_Username.Text = "Enter Instructor's Username";
                     InstructorTextbox_Username.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                     InstructorTextbox_Username.StateCommon.Content.Color1 = Color.Gray;
-                    InstructorTextbox_Password.Text = "Enter Instructor's Password";
+                    InstructorTextbox_Password.Text = "";
+                    InstructorTextbox_Password.PasswordChar = '\0';
+                    InstructorTextbox_Password.Text = "Enter Student's Password";
                     InstructorTextbox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
                     InstructorTextbox_Password.StateCommon.Content.Color1 = Color.Gray;
-                    
+
+
                 }
             }
             
@@ -1524,6 +1540,27 @@ namespace Learning_DB
                 else
                 {
                     MessageBox.Show("Student Added Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    StudentTextbox_FirstName.Text = "Enter Student's First Name";
+                    StudentTextbox_FirstName.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    StudentTextbox_FirstName.StateCommon.Content.Color1 = Color.Gray;
+                    StudentTextbox_LastName.Text = "Enter Student's Last Name";
+                    StudentTextbox_LastName.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    StudentTextbox_LastName.StateCommon.Content.Color1 = Color.Gray;
+                    StudentTextbox_Email.Text = "Enter Student's Email";
+                    StudentTextbox_Email.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    StudentTextbox_Email.StateCommon.Content.Color1 = Color.Gray;
+                    StudentTextbox_Username.Text = "Enter Student's Username";
+                    StudentTextbox_Username.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    StudentTextbox_Username.StateCommon.Content.Color1 = Color.Gray;
+                    StudentTextbox_Level.Text = "Enter Student's Level";
+                    StudentTextbox_Level.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    StudentTextbox_Level.StateCommon.Content.Color1 = Color.Gray;
+                    StudentTextbox_Password.Text = "";
+                    StudentTextbox_Password.PasswordChar = '\0';
+                    StudentTextbox_Password.Text = "Enter Student's Password";
+                    StudentTextbox_Password.StateCommon.Content.Font = new Font("JetBrains Mono", 12, System.Drawing.FontStyle.Italic);
+                    StudentTextbox_Password.StateCommon.Content.Color1 = Color.Gray;
+
                 }
             }
         }
