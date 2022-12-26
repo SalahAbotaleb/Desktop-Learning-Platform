@@ -9,10 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
+
 
 namespace Learning_DB
 {
-    public partial class Classroom : Form
+    public partial class Classroom : KryptonForm
     {
         Controller c;
         int Classroom_ID;
