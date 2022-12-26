@@ -196,13 +196,9 @@
             this.HistoryAdmin_IDLabel = new System.Windows.Forms.Label();
             this.AdminHTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.HistoryButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.AdminName_Label = new System.Windows.Forms.Label();
-            this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Requests = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.metroSetTabControl2 = new MetroSet_UI.Controls.MetroSetTabControl();
             this.AdminRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.InstructorRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
-            this.StudentRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.label26 = new System.Windows.Forms.Label();
             this.AdminRComboBox_Username = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.AdminRButton_Activate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -216,6 +212,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.InstructorRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.InstructorRTextBox_Title = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.InstructorRTextBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.InstructorRTextBox_LastName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -230,7 +228,7 @@
             this.label40 = new System.Windows.Forms.Label();
             this.InstructorRTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.InstructorRButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.InstructorRTextBox_Title = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.StudentRequests = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.label33 = new System.Windows.Forms.Label();
             this.StudentRTextBox_Level = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -246,6 +244,8 @@
             this.label46 = new System.Windows.Forms.Label();
             this.StudentRTextBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.StudentRButton_Search = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.AdminName_Label = new System.Windows.Forms.Label();
+            this.Admin_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Main.SuspendLayout();
             this.Admin.SuspendLayout();
             this.AdminAdminPage.SuspendLayout();
@@ -281,10 +281,10 @@
             this.Requests.SuspendLayout();
             this.metroSetTabControl2.SuspendLayout();
             this.AdminRequests.SuspendLayout();
-            this.InstructorRequests.SuspendLayout();
-            this.StudentRequests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminRComboBox_Username)).BeginInit();
+            this.InstructorRequests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InstructorRComboBox_Username)).BeginInit();
+            this.StudentRequests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentRComboBox_Username)).BeginInit();
             this.SuspendLayout();
             // 
@@ -344,7 +344,7 @@
             this.Main.ItemSize = new System.Drawing.Size(100, 60);
             this.Main.Location = new System.Drawing.Point(-6, 54);
             this.Main.Name = "Main";
-            this.Main.SelectedIndex = 5;
+            this.Main.SelectedIndex = 1;
             this.Main.SelectedTextColor = System.Drawing.Color.White;
             this.Main.Size = new System.Drawing.Size(1210, 652);
             this.Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -355,7 +355,6 @@
             this.Main.ThemeAuthor = null;
             this.Main.ThemeName = null;
             this.Main.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.Main.UseAnimation = false;
             // 
             // Admin
             // 
@@ -384,7 +383,7 @@
             this.AdminAdminPage.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.AdminAdminPage.Controls.Add(this.AddAdmin);
             this.AdminAdminPage.Controls.Add(this.EditAdmin);
-            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdminAdminPage.Cursor = System.Windows.Forms.Cursors.Default;
             this.AdminAdminPage.IsDerivedStyle = false;
             this.AdminAdminPage.ItemSize = new System.Drawing.Size(100, 40);
             this.AdminAdminPage.Location = new System.Drawing.Point(-4, 0);
@@ -401,7 +400,6 @@
             this.AdminAdminPage.ThemeAuthor = null;
             this.AdminAdminPage.ThemeName = null;
             this.AdminAdminPage.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.AdminAdminPage.UseAnimation = false;
             // 
             // AddAdmin
             // 
@@ -1267,7 +1265,6 @@
             this.AdminInstructorPage.ThemeAuthor = null;
             this.AdminInstructorPage.ThemeName = null;
             this.AdminInstructorPage.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.AdminInstructorPage.UseAnimation = false;
             // 
             // AddInstructor
             // 
@@ -2203,7 +2200,7 @@
             this.Student.IsDerivedStyle = false;
             this.Student.Location = new System.Drawing.Point(4, 64);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(1199, 584);
+            this.Student.Size = new System.Drawing.Size(1202, 584);
             this.Student.Style = MetroSet_UI.Enums.Style.Light;
             this.Student.StyleManager = this.styleManager1;
             this.Student.TabIndex = 2;
@@ -2237,7 +2234,6 @@
             this.AdminStudentPage.ThemeAuthor = null;
             this.AdminStudentPage.ThemeName = null;
             this.AdminStudentPage.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.AdminStudentPage.UseAnimation = false;
             // 
             // AdminAddStudent
             // 
@@ -3166,7 +3162,7 @@
             this.History2.IsDerivedStyle = false;
             this.History2.Location = new System.Drawing.Point(4, 64);
             this.History2.Name = "History2";
-            this.History2.Size = new System.Drawing.Size(1199, 584);
+            this.History2.Size = new System.Drawing.Size(1202, 584);
             this.History2.Style = MetroSet_UI.Enums.Style.Light;
             this.History2.StyleManager = this.styleManager1;
             this.History2.TabIndex = 5;
@@ -3200,7 +3196,6 @@
             this.metroSetTabControl1.ThemeAuthor = null;
             this.metroSetTabControl1.ThemeName = null;
             this.metroSetTabControl1.UnselectedTextColor = System.Drawing.Color.Gray;
-            this.metroSetTabControl1.UseAnimation = false;
             // 
             // AdminAddCourse
             // 
@@ -3727,7 +3722,7 @@
             this.AdminHistoryPage.IsDerivedStyle = false;
             this.AdminHistoryPage.Location = new System.Drawing.Point(4, 64);
             this.AdminHistoryPage.Name = "AdminHistoryPage";
-            this.AdminHistoryPage.Size = new System.Drawing.Size(1199, 584);
+            this.AdminHistoryPage.Size = new System.Drawing.Size(1202, 584);
             this.AdminHistoryPage.Style = MetroSet_UI.Enums.Style.Light;
             this.AdminHistoryPage.StyleManager = this.styleManager1;
             this.AdminHistoryPage.TabIndex = 4;
@@ -4129,79 +4124,6 @@
             this.HistoryButton_Search.Values.Text = "Search";
             this.HistoryButton_Search.Click += new System.EventHandler(this.HistoryButton_Search_Click);
             // 
-            // AdminName_Label
-            // 
-            this.AdminName_Label.AutoSize = true;
-            this.AdminName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminName_Label.Location = new System.Drawing.Point(3, 12);
-            this.AdminName_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.AdminName_Label.Name = "AdminName_Label";
-            this.AdminName_Label.Size = new System.Drawing.Size(61, 22);
-            this.AdminName_Label.TabIndex = 33;
-            this.AdminName_Label.Text = "Name";
-            // 
-            // Admin_LogOutButton
-            // 
-            this.Admin_LogOutButton.Location = new System.Drawing.Point(1117, 12);
-            this.Admin_LogOutButton.Name = "Admin_LogOutButton";
-            this.Admin_LogOutButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Admin_LogOutButton.OverrideDefault.Back.ColorAngle = 45F;
-            this.Admin_LogOutButton.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Admin_LogOutButton.OverrideDefault.Border.ColorAngle = 45F;
-            this.Admin_LogOutButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Admin_LogOutButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Admin_LogOutButton.OverrideDefault.Border.Rounding = 20;
-            this.Admin_LogOutButton.OverrideDefault.Border.Width = 1;
-            this.Admin_LogOutButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Admin_LogOutButton.Size = new System.Drawing.Size(87, 29);
-            this.Admin_LogOutButton.StateCommon.Back.Color1 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.StateCommon.Back.Color2 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.StateCommon.Back.ColorAngle = 45F;
-            this.Admin_LogOutButton.StateCommon.Border.Color1 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.StateCommon.Border.Color2 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.StateCommon.Border.ColorAngle = 45F;
-            this.Admin_LogOutButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Admin_LogOutButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Admin_LogOutButton.StateCommon.Border.Rounding = 20;
-            this.Admin_LogOutButton.StateCommon.Border.Width = 1;
-            this.Admin_LogOutButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-7, -7, -8, -8);
-            this.Admin_LogOutButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.Admin_LogOutButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.Admin_LogOutButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin_LogOutButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.Admin_LogOutButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
-            this.Admin_LogOutButton.StatePressed.Back.ColorAngle = 135F;
-            this.Admin_LogOutButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.Admin_LogOutButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
-            this.Admin_LogOutButton.StatePressed.Border.ColorAngle = 135F;
-            this.Admin_LogOutButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Admin_LogOutButton.StatePressed.Border.Rounding = 20;
-            this.Admin_LogOutButton.StatePressed.Border.Width = 1;
-            this.Admin_LogOutButton.StateTracking.Back.Color1 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Admin_LogOutButton.StateTracking.Back.ColorAngle = 45F;
-            this.Admin_LogOutButton.StateTracking.Border.Color1 = System.Drawing.Color.Red;
-            this.Admin_LogOutButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Admin_LogOutButton.StateTracking.Border.ColorAngle = 45F;
-            this.Admin_LogOutButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Admin_LogOutButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Admin_LogOutButton.StateTracking.Border.Rounding = 20;
-            this.Admin_LogOutButton.StateTracking.Border.Width = 1;
-            this.Admin_LogOutButton.TabIndex = 34;
-            this.Admin_LogOutButton.TabStop = false;
-            this.Admin_LogOutButton.Values.Text = "Log Out";
-            this.Admin_LogOutButton.Click += new System.EventHandler(this.Admin_LogOutButton_Click);
-            // 
             // Requests
             // 
             this.Requests.BaseColor = System.Drawing.SystemColors.Control;
@@ -4229,7 +4151,7 @@
             this.metroSetTabControl2.Controls.Add(this.AdminRequests);
             this.metroSetTabControl2.Controls.Add(this.InstructorRequests);
             this.metroSetTabControl2.Controls.Add(this.StudentRequests);
-            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetTabControl2.IsDerivedStyle = false;
             this.metroSetTabControl2.ItemSize = new System.Drawing.Size(100, 40);
             this.metroSetTabControl2.Location = new System.Drawing.Point(3, 0);
@@ -4277,72 +4199,6 @@
             this.AdminRequests.ThemeAuthor = "Narwin";
             this.AdminRequests.ThemeName = "MetroLite";
             this.AdminRequests.ToolTipText = null;
-            // 
-            // InstructorRequests
-            // 
-            this.InstructorRequests.BaseColor = System.Drawing.SystemColors.Control;
-            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_Title);
-            this.InstructorRequests.Controls.Add(this.label28);
-            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_Email);
-            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_LastName);
-            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_FirstName);
-            this.InstructorRequests.Controls.Add(this.label35);
-            this.InstructorRequests.Controls.Add(this.label36);
-            this.InstructorRequests.Controls.Add(this.label37);
-            this.InstructorRequests.Controls.Add(this.label38);
-            this.InstructorRequests.Controls.Add(this.InstructorRComboBox_Username);
-            this.InstructorRequests.Controls.Add(this.InstructorRButton_Activate);
-            this.InstructorRequests.Controls.Add(this.label39);
-            this.InstructorRequests.Controls.Add(this.label40);
-            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_ID);
-            this.InstructorRequests.Controls.Add(this.InstructorRButton_Search);
-            this.InstructorRequests.Font = null;
-            this.InstructorRequests.ImageIndex = 0;
-            this.InstructorRequests.ImageKey = null;
-            this.InstructorRequests.IsDerivedStyle = false;
-            this.InstructorRequests.Location = new System.Drawing.Point(4, 44);
-            this.InstructorRequests.Name = "InstructorRequests";
-            this.InstructorRequests.Size = new System.Drawing.Size(1195, 540);
-            this.InstructorRequests.Style = MetroSet_UI.Enums.Style.Light;
-            this.InstructorRequests.StyleManager = null;
-            this.InstructorRequests.TabIndex = 1;
-            this.InstructorRequests.Text = "Instructor Requests";
-            this.InstructorRequests.ThemeAuthor = "Narwin";
-            this.InstructorRequests.ThemeName = "MetroLite";
-            this.InstructorRequests.ToolTipText = null;
-            // 
-            // StudentRequests
-            // 
-            this.StudentRequests.BaseColor = System.Drawing.SystemColors.Control;
-            this.StudentRequests.Controls.Add(this.label33);
-            this.StudentRequests.Controls.Add(this.StudentRTextBox_Level);
-            this.StudentRequests.Controls.Add(this.label34);
-            this.StudentRequests.Controls.Add(this.StudentRTextBox_Email);
-            this.StudentRequests.Controls.Add(this.StudentRTextBox_LastName);
-            this.StudentRequests.Controls.Add(this.StudentRTextBox_FirstName);
-            this.StudentRequests.Controls.Add(this.label42);
-            this.StudentRequests.Controls.Add(this.label43);
-            this.StudentRequests.Controls.Add(this.label44);
-            this.StudentRequests.Controls.Add(this.StudentRComboBox_Username);
-            this.StudentRequests.Controls.Add(this.StudentRButton_Activate);
-            this.StudentRequests.Controls.Add(this.label45);
-            this.StudentRequests.Controls.Add(this.label46);
-            this.StudentRequests.Controls.Add(this.StudentRTextBox_ID);
-            this.StudentRequests.Controls.Add(this.StudentRButton_Search);
-            this.StudentRequests.Font = null;
-            this.StudentRequests.ImageIndex = 0;
-            this.StudentRequests.ImageKey = null;
-            this.StudentRequests.IsDerivedStyle = false;
-            this.StudentRequests.Location = new System.Drawing.Point(4, 44);
-            this.StudentRequests.Name = "StudentRequests";
-            this.StudentRequests.Size = new System.Drawing.Size(1195, 540);
-            this.StudentRequests.Style = MetroSet_UI.Enums.Style.Light;
-            this.StudentRequests.StyleManager = null;
-            this.StudentRequests.TabIndex = 2;
-            this.StudentRequests.Text = "Student Requests";
-            this.StudentRequests.ThemeAuthor = "Narwin";
-            this.StudentRequests.ThemeName = "MetroLite";
-            this.StudentRequests.ToolTipText = null;
             // 
             // label26
             // 
@@ -4650,6 +4506,60 @@
             this.label32.Size = new System.Drawing.Size(107, 22);
             this.label32.TabIndex = 53;
             this.label32.Text = "First Name";
+            // 
+            // InstructorRequests
+            // 
+            this.InstructorRequests.BaseColor = System.Drawing.SystemColors.Control;
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_Title);
+            this.InstructorRequests.Controls.Add(this.label28);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_Email);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_LastName);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_FirstName);
+            this.InstructorRequests.Controls.Add(this.label35);
+            this.InstructorRequests.Controls.Add(this.label36);
+            this.InstructorRequests.Controls.Add(this.label37);
+            this.InstructorRequests.Controls.Add(this.label38);
+            this.InstructorRequests.Controls.Add(this.InstructorRComboBox_Username);
+            this.InstructorRequests.Controls.Add(this.InstructorRButton_Activate);
+            this.InstructorRequests.Controls.Add(this.label39);
+            this.InstructorRequests.Controls.Add(this.label40);
+            this.InstructorRequests.Controls.Add(this.InstructorRTextBox_ID);
+            this.InstructorRequests.Controls.Add(this.InstructorRButton_Search);
+            this.InstructorRequests.Font = null;
+            this.InstructorRequests.ImageIndex = 0;
+            this.InstructorRequests.ImageKey = null;
+            this.InstructorRequests.IsDerivedStyle = false;
+            this.InstructorRequests.Location = new System.Drawing.Point(4, 44);
+            this.InstructorRequests.Name = "InstructorRequests";
+            this.InstructorRequests.Size = new System.Drawing.Size(1195, 540);
+            this.InstructorRequests.Style = MetroSet_UI.Enums.Style.Light;
+            this.InstructorRequests.StyleManager = null;
+            this.InstructorRequests.TabIndex = 1;
+            this.InstructorRequests.Text = "Instructor Requests";
+            this.InstructorRequests.ThemeAuthor = "Narwin";
+            this.InstructorRequests.ThemeName = "MetroLite";
+            this.InstructorRequests.ToolTipText = null;
+            // 
+            // InstructorRTextBox_Title
+            // 
+            this.InstructorRTextBox_Title.Location = new System.Drawing.Point(176, 350);
+            this.InstructorRTextBox_Title.Margin = new System.Windows.Forms.Padding(4);
+            this.InstructorRTextBox_Title.Name = "InstructorRTextBox_Title";
+            this.InstructorRTextBox_Title.ReadOnly = true;
+            this.InstructorRTextBox_Title.Size = new System.Drawing.Size(478, 43);
+            this.InstructorRTextBox_Title.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.InstructorRTextBox_Title.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_Title.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InstructorRTextBox_Title.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.InstructorRTextBox_Title.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.InstructorRTextBox_Title.StateCommon.Border.Rounding = 20;
+            this.InstructorRTextBox_Title.StateCommon.Border.Width = 2;
+            this.InstructorRTextBox_Title.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.InstructorRTextBox_Title.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructorRTextBox_Title.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.InstructorRTextBox_Title.TabIndex = 99;
             // 
             // label28
             // 
@@ -4969,26 +4879,38 @@
             this.InstructorRButton_Search.Values.Text = "Search";
             this.InstructorRButton_Search.Click += new System.EventHandler(this.InstructorRButton_Search_Click);
             // 
-            // InstructorRTextBox_Title
+            // StudentRequests
             // 
-            this.InstructorRTextBox_Title.Location = new System.Drawing.Point(176, 350);
-            this.InstructorRTextBox_Title.Margin = new System.Windows.Forms.Padding(4);
-            this.InstructorRTextBox_Title.Name = "InstructorRTextBox_Title";
-            this.InstructorRTextBox_Title.ReadOnly = true;
-            this.InstructorRTextBox_Title.Size = new System.Drawing.Size(478, 43);
-            this.InstructorRTextBox_Title.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.InstructorRTextBox_Title.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InstructorRTextBox_Title.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InstructorRTextBox_Title.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.InstructorRTextBox_Title.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.InstructorRTextBox_Title.StateCommon.Border.Rounding = 20;
-            this.InstructorRTextBox_Title.StateCommon.Border.Width = 2;
-            this.InstructorRTextBox_Title.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.InstructorRTextBox_Title.StateCommon.Content.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InstructorRTextBox_Title.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.InstructorRTextBox_Title.TabIndex = 99;
+            this.StudentRequests.BaseColor = System.Drawing.SystemColors.Control;
+            this.StudentRequests.Controls.Add(this.label33);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_Level);
+            this.StudentRequests.Controls.Add(this.label34);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_Email);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_LastName);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_FirstName);
+            this.StudentRequests.Controls.Add(this.label42);
+            this.StudentRequests.Controls.Add(this.label43);
+            this.StudentRequests.Controls.Add(this.label44);
+            this.StudentRequests.Controls.Add(this.StudentRComboBox_Username);
+            this.StudentRequests.Controls.Add(this.StudentRButton_Activate);
+            this.StudentRequests.Controls.Add(this.label45);
+            this.StudentRequests.Controls.Add(this.label46);
+            this.StudentRequests.Controls.Add(this.StudentRTextBox_ID);
+            this.StudentRequests.Controls.Add(this.StudentRButton_Search);
+            this.StudentRequests.Font = null;
+            this.StudentRequests.ImageIndex = 0;
+            this.StudentRequests.ImageKey = null;
+            this.StudentRequests.IsDerivedStyle = false;
+            this.StudentRequests.Location = new System.Drawing.Point(4, 44);
+            this.StudentRequests.Name = "StudentRequests";
+            this.StudentRequests.Size = new System.Drawing.Size(1195, 540);
+            this.StudentRequests.Style = MetroSet_UI.Enums.Style.Light;
+            this.StudentRequests.StyleManager = null;
+            this.StudentRequests.TabIndex = 2;
+            this.StudentRequests.Text = "Student Requests";
+            this.StudentRequests.ThemeAuthor = "Narwin";
+            this.StudentRequests.ThemeName = "MetroLite";
+            this.StudentRequests.ToolTipText = null;
             // 
             // label33
             // 
@@ -5326,6 +5248,79 @@
             this.StudentRButton_Search.Values.Text = "Search";
             this.StudentRButton_Search.Click += new System.EventHandler(this.StudentRButton_Search_Click);
             // 
+            // AdminName_Label
+            // 
+            this.AdminName_Label.AutoSize = true;
+            this.AdminName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminName_Label.Location = new System.Drawing.Point(3, 12);
+            this.AdminName_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AdminName_Label.Name = "AdminName_Label";
+            this.AdminName_Label.Size = new System.Drawing.Size(61, 22);
+            this.AdminName_Label.TabIndex = 33;
+            this.AdminName_Label.Text = "Name";
+            // 
+            // Admin_LogOutButton
+            // 
+            this.Admin_LogOutButton.Location = new System.Drawing.Point(1117, 12);
+            this.Admin_LogOutButton.Name = "Admin_LogOutButton";
+            this.Admin_LogOutButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.OverrideDefault.Back.ColorAngle = 45F;
+            this.Admin_LogOutButton.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.OverrideDefault.Border.ColorAngle = 45F;
+            this.Admin_LogOutButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Admin_LogOutButton.OverrideDefault.Border.Rounding = 20;
+            this.Admin_LogOutButton.OverrideDefault.Border.Width = 1;
+            this.Admin_LogOutButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.Admin_LogOutButton.Size = new System.Drawing.Size(87, 29);
+            this.Admin_LogOutButton.StateCommon.Back.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Back.Color2 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Back.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateCommon.Border.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Border.Color2 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateCommon.Border.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Admin_LogOutButton.StateCommon.Border.Rounding = 20;
+            this.Admin_LogOutButton.StateCommon.Border.Width = 1;
+            this.Admin_LogOutButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-7, -7, -8, -8);
+            this.Admin_LogOutButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.Admin_LogOutButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.Admin_LogOutButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin_LogOutButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Admin_LogOutButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
+            this.Admin_LogOutButton.StatePressed.Back.ColorAngle = 135F;
+            this.Admin_LogOutButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Admin_LogOutButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
+            this.Admin_LogOutButton.StatePressed.Border.ColorAngle = 135F;
+            this.Admin_LogOutButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.StatePressed.Border.Rounding = 20;
+            this.Admin_LogOutButton.StatePressed.Border.Width = 1;
+            this.Admin_LogOutButton.StateTracking.Back.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.StateTracking.Back.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateTracking.Border.Color1 = System.Drawing.Color.Red;
+            this.Admin_LogOutButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Admin_LogOutButton.StateTracking.Border.ColorAngle = 45F;
+            this.Admin_LogOutButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Admin_LogOutButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Admin_LogOutButton.StateTracking.Border.Rounding = 20;
+            this.Admin_LogOutButton.StateTracking.Border.Width = 1;
+            this.Admin_LogOutButton.TabIndex = 34;
+            this.Admin_LogOutButton.TabStop = false;
+            this.Admin_LogOutButton.Values.Text = "Log Out";
+            this.Admin_LogOutButton.Click += new System.EventHandler(this.Admin_LogOutButton_Click);
+            // 
             // AdminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -5390,12 +5385,12 @@
             this.metroSetTabControl2.ResumeLayout(false);
             this.AdminRequests.ResumeLayout(false);
             this.AdminRequests.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminRComboBox_Username)).EndInit();
             this.InstructorRequests.ResumeLayout(false);
             this.InstructorRequests.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorRComboBox_Username)).EndInit();
             this.StudentRequests.ResumeLayout(false);
             this.StudentRequests.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminRComboBox_Username)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InstructorRComboBox_Username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentRComboBox_Username)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

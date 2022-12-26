@@ -54,6 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.SignUp_LogOutButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.Sign_UpComboBox_Title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sign_UpComboBox_UserType)).BeginInit();
             this.SuspendLayout();
@@ -520,11 +521,74 @@
             this.kryptonLabel1.TabIndex = 97;
             this.kryptonLabel1.Values.Text = "Hello!";
             // 
+            // SignUp_LogOutButton
+            // 
+            this.SignUp_LogOutButton.Location = new System.Drawing.Point(1172, 12);
+            this.SignUp_LogOutButton.Name = "SignUp_LogOutButton";
+            this.SignUp_LogOutButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SignUp_LogOutButton.OverrideDefault.Back.ColorAngle = 45F;
+            this.SignUp_LogOutButton.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SignUp_LogOutButton.OverrideDefault.Border.ColorAngle = 45F;
+            this.SignUp_LogOutButton.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.SignUp_LogOutButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.SignUp_LogOutButton.OverrideDefault.Border.Rounding = 20;
+            this.SignUp_LogOutButton.OverrideDefault.Border.Width = 1;
+            this.SignUp_LogOutButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.SignUp_LogOutButton.Size = new System.Drawing.Size(98, 39);
+            this.SignUp_LogOutButton.StateCommon.Back.Color1 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.StateCommon.Back.Color2 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.StateCommon.Back.ColorAngle = 45F;
+            this.SignUp_LogOutButton.StateCommon.Border.Color1 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.StateCommon.Border.Color2 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.StateCommon.Border.ColorAngle = 45F;
+            this.SignUp_LogOutButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.SignUp_LogOutButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.SignUp_LogOutButton.StateCommon.Border.Rounding = 20;
+            this.SignUp_LogOutButton.StateCommon.Border.Width = 1;
+            this.SignUp_LogOutButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-7, -7, -8, -8);
+            this.SignUp_LogOutButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.SignUp_LogOutButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.SignUp_LogOutButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUp_LogOutButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.SignUp_LogOutButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
+            this.SignUp_LogOutButton.StatePressed.Back.ColorAngle = 135F;
+            this.SignUp_LogOutButton.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.SignUp_LogOutButton.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
+            this.SignUp_LogOutButton.StatePressed.Border.ColorAngle = 135F;
+            this.SignUp_LogOutButton.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.SignUp_LogOutButton.StatePressed.Border.Rounding = 20;
+            this.SignUp_LogOutButton.StatePressed.Border.Width = 1;
+            this.SignUp_LogOutButton.StateTracking.Back.Color1 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SignUp_LogOutButton.StateTracking.Back.ColorAngle = 45F;
+            this.SignUp_LogOutButton.StateTracking.Border.Color1 = System.Drawing.Color.Red;
+            this.SignUp_LogOutButton.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SignUp_LogOutButton.StateTracking.Border.ColorAngle = 45F;
+            this.SignUp_LogOutButton.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.SignUp_LogOutButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.SignUp_LogOutButton.StateTracking.Border.Rounding = 20;
+            this.SignUp_LogOutButton.StateTracking.Border.Width = 1;
+            this.SignUp_LogOutButton.TabIndex = 98;
+            this.SignUp_LogOutButton.TabStop = false;
+            this.SignUp_LogOutButton.Values.Text = "Log Out";
+            this.SignUp_LogOutButton.Click += new System.EventHandler(this.SignUp_LogOutButton_Click);
+            // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1282, 723);
+            this.Controls.Add(this.SignUp_LogOutButton);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -590,5 +654,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton SignUp_LogOutButton;
     }
 }

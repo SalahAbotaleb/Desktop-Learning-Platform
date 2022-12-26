@@ -9,6 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace DbHandler
 {
@@ -382,12 +383,12 @@ namespace DbHandler
         }
         public DataTable SelectInstructorToBeActivated()
         {
-            string Query = "Select * From Instructor Where Instructor_ID IN (Select Instructor_ID From Manage_Instructor Where  Admin_ID = 20 And Operation = 'Deactivate')";
+            string Query = "Select * From Instructor Where Instructor_ID IN (Select Instructor_ID From Manage_Instructor Where  Admin_ID = 20 And Activated = 0)";
             return dbMan.ExecuteReader(Query);
         }
         public DataTable SelectStudentToBeActivated()
         {
-            string Query = "Select * From Student Where StudentID IN (Select Student_ID From Manage_Student Where  Admin_ID = 20 And Operation = 'Deactivate')";
+            string Query = "Select * From Student Where StudentID IN(Select Student_ID From Manage_Student Where Admin_ID = 20 And Activated = 0)";
             return dbMan.ExecuteReader(Query);
         }
         public DataTable SelectLastAdmin()
