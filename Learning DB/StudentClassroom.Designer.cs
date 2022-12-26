@@ -973,10 +973,10 @@
             // 
             this.DeadLineLabel.Location = new System.Drawing.Point(206, 288);
             this.DeadLineLabel.Name = "DeadLineLabel";
-            this.DeadLineLabel.Size = new System.Drawing.Size(153, 47);
+            this.DeadLineLabel.Size = new System.Drawing.Size(144, 40);
             this.DeadLineLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
             this.DeadLineLabel.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
-            this.DeadLineLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeadLineLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeadLineLabel.TabIndex = 98;
             this.DeadLineLabel.Values.Text = "Deadline";
             // 
@@ -984,10 +984,10 @@
             // 
             this.DeadlineDateLabel.Location = new System.Drawing.Point(419, 288);
             this.DeadlineDateLabel.Name = "DeadlineDateLabel";
-            this.DeadlineDateLabel.Size = new System.Drawing.Size(148, 47);
+            this.DeadlineDateLabel.Size = new System.Drawing.Size(142, 40);
             this.DeadlineDateLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
             this.DeadlineDateLabel.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
-            this.DeadlineDateLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeadlineDateLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeadlineDateLabel.TabIndex = 97;
             this.DeadlineDateLabel.Values.Text = "1/1/2022";
             // 
@@ -1054,8 +1054,8 @@
             // 
             this.AssignmentTitlelabel.Location = new System.Drawing.Point(524, 16);
             this.AssignmentTitlelabel.Name = "AssignmentTitlelabel";
-            this.AssignmentTitlelabel.Size = new System.Drawing.Size(159, 47);
-            this.AssignmentTitlelabel.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssignmentTitlelabel.Size = new System.Drawing.Size(146, 40);
+            this.AssignmentTitlelabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssignmentTitlelabel.TabIndex = 92;
             this.AssignmentTitlelabel.Values.Text = "blablabla";
             // 

@@ -19,6 +19,7 @@ namespace Learning_DB
         DataTable d1;
         DataTable d3;
         DataTable dtQuestbyTopic;
+        DataTable AssignmentDataTable;
         int totalexampoints;
         int scalingfactor;
         int TodeleteQuestionID;
@@ -64,6 +65,14 @@ namespace Learning_DB
             deleteQuestionTopic.ValueMember = "Topic";
 
 
+            /// Assignment ComboBox
+            AssignmentDataTable = c.SelectAssignmentForClass(Classroom_ID);
+            assignmentcombobox.DataSource = AssignmentDataTable;
+            assignmentcombobox.DisplayMember = "Title";
+            assignmentcombobox.DisplayMember = "Assignment_ID";
+            studentnameComboBox.DataSource = c.SelectStudentbyClassroom(Classroom_ID);
+            studentnameComboBox.DisplayMember= "Student_ID";
+            
 
         }
 
@@ -339,6 +348,26 @@ namespace Learning_DB
                 True_RadioButton.Hide();
                 false_radiobutton.Hide();
             }
+        }
+
+        private void gradeAssignemnt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void assignmentcombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentnameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //kryptonComboBox1.
+        }
+
+        private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

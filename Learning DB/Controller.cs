@@ -649,11 +649,15 @@ namespace DbHandler
         }
         public int getLastQuestion()
         {
-            string Query = "SELECT IDENT_CURRENT('Question_Options');";
+            string Query = "SELECT IDENT_CURRENT('Question_Options')";
             return dbMan.ExecuteNonQuery(Query);
         }
 
-
+        public DataTable SelectStudentbyClassroom(int C_ID)
+        {
+            string Query = "SELECT * FROM STUDENT WHERE StudentID in ( SELECT Student_ID FROM Student_Enrolled_In Where Class_ID="+C_ID+");";
+            return dbMan.ExecuteReader(Query);
+        }
 
     }
 }
