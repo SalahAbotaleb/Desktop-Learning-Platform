@@ -8,10 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
+
 
 namespace Learning_DB
 {
-    public partial class CreateExam : Form
+    public partial class CreateExam : KryptonForm
     {
         DataTable d1;
         DataTable dtQuestbyTopic;
