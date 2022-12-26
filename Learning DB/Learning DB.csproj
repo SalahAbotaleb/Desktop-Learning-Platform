@@ -88,6 +88,12 @@
     <Compile Include="AddAssignment .Designer.cs">
       <DependentUpon>AddAssignment .cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,10 @@
     </Compile>
     <EmbeddedResource Include="AddAssignment .resx">
       <DependentUpon>AddAssignment .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClassList.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Classroom.resx">
       <DependentUpon>Classroom.cs</DependentUpon>

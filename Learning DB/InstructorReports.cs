@@ -26,11 +26,11 @@ namespace Learning_DB
             class_id = Class_ID;
             InitializeComponent();
             InstructorStatistics.SelectedIndex = 0;
-            ExamStatistics1.SetDatabaseLogon("adminS", "Salah123");
+            ClassList1.SetDatabaseLogon("adminS", "Salah123");
 
             ParameterFields p = new ParameterFields();
             ParameterField pid = new ParameterField();
-            pid.Name = "ClassID";
+            pid.Name = "Class_ID";
             ParameterDiscreteValue val = new ParameterDiscreteValue();
             val.Value = class_id.ToString();
             pid.CurrentValues.Add(val);
@@ -41,15 +41,14 @@ namespace Learning_DB
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             InstructorStatistics.SelectedIndex = 1;
-            Student_Progress1.SetDatabaseLogon("adminS", "Salah123");
+            //Student_Progress1.SetDatabaseLogon("adminS", "Salah123");
             Student_Progress2.SetDatabaseLogon("adminS", "Salah123");
             
-            //CrystalReport31.SetParameterValue("@Uname", "50002");
             ParameterFields p = new ParameterFields();
             ParameterField pid = new ParameterField();
             pid.Name = "StudentID";
             ParameterDiscreteValue val = new ParameterDiscreteValue();
-            val.Value = "50002";
+            val.Value = s_id.ToString();
             pid.CurrentValues.Add(val);
             p.Add(pid);
             /******/
@@ -61,6 +60,7 @@ namespace Learning_DB
             p.Add(pid2);
             /******/
             crystalReportViewer1.ParameterFieldInfo = p;
+            crystalReportViewer1.RefreshReport();
 
         }
 
@@ -131,7 +131,7 @@ namespace Learning_DB
                 {
                     IRTextBox_FName.Text = dt.Rows[0]["FName"].ToString();
                     IRTextBox_LName.Text = dt.Rows[0]["LName"].ToString();
-                    s_id = Convert.ToInt32(IRTextBox_StudentID);
+                    s_id = Convert.ToInt32(IRTextBox_StudentID.Text);
                 }
                 else
                 {
