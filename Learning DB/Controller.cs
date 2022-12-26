@@ -353,11 +353,7 @@ namespace DbHandler
             string Query = "SELECT * FROM Course";
             return dbMan.ExecuteReader(Query);
         }
-        //public DataTable SelectCourses(int )
-        //{
-        //    string Query = "SELECT Course_Name FROM Course";
-        //    return dbMan.ExecuteReader(Query);
-        //}
+    
 
         public DataTable SelectClassrooms()
         {
@@ -650,7 +646,7 @@ namespace DbHandler
         }
         public int getLastQuestion()
         {
-            string Query = "SELECT IDENT_CURRENT('Question_Options')";
+            string Query = "Select top 1 Question_ID from Question order by Question_ID desc";
             return dbMan.ExecuteNonQuery(Query);
         }
 
@@ -659,6 +655,31 @@ namespace DbHandler
             string Query = "SELECT * FROM STUDENT WHERE StudentID in ( SELECT Student_ID FROM Student_Enrolled_In Where Class_ID="+C_ID+");";
             return dbMan.ExecuteReader(Query);
         }
+
+        public int SelectMaxGradeinExam(int EID)
+        {
+            string Query = "Select Max(Marks) from Exam Where Exam_ID=" + EID + ";"; 
+            return dbMan.ExecuteNonQuery(Query);
+        }
+
+        public int SelectMinGradeinExam(int EID)
+        {
+            string Query = "Select Min(Marks) from Exam Where Exam_ID=" + EID + ";";
+            return dbMan.ExecuteNonQuery(Query);
+        }
+        public Tuple<int, string> AddAssignment(DateTime Deadline, string Description, int Class_ID, string Title,int Total_Grade)
+        {
+            string StoredProcedureName = StoredProcedures.AddAssignment;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Deadline", Deadline);
+            Parameters.Add("@Description", Description);
+            Parameters.Add("@Class_ID", Class_ID);
+            Parameters.Add("@Title", Title);
+            Parameters.Add("@Total_Grade", Total_Grade);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        
 
     }
 }
