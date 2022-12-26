@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using CrystalDecisions.Shared;
 using DbHandler;
 
 namespace Learning_DB
@@ -18,16 +19,47 @@ namespace Learning_DB
         
         int Student_ID;
         int check = 0;
-        //TODO ya zahar
-        public InstructorReports()
+        int class_id;
+        public InstructorReports(int Class_ID)
         {
+            class_id = Class_ID;
             InitializeComponent();
             InstructorStatistics.SelectedIndex = 0;
+            ExamStatistics1.SetDatabaseLogon("adminS", "Salah123");
+
+            ParameterFields p = new ParameterFields();
+            ParameterField pid = new ParameterField();
+            pid.Name = "ClassID";
+            ParameterDiscreteValue val = new ParameterDiscreteValue();
+            val.Value = class_id.ToString();
+            pid.CurrentValues.Add(val);
+            p.Add(pid);
+            crystalReportViewer2.ParameterFieldInfo = p;
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             InstructorStatistics.SelectedIndex = 1;
+            Student_Progress1.SetDatabaseLogon("adminS", "Salah123");
+            Student_Progress2.SetDatabaseLogon("adminS", "Salah123");
+            
+            //CrystalReport31.SetParameterValue("@Uname", "50002");
+            ParameterFields p = new ParameterFields();
+            ParameterField pid = new ParameterField();
+            pid.Name = "StudentID";
+            ParameterDiscreteValue val = new ParameterDiscreteValue();
+            val.Value = class_id.ToString();
+            pid.CurrentValues.Add(val);
+            p.Add(pid);
+            /******/
+            ParameterField pid2 = new ParameterField();
+            pid2.Name = "ClassID";
+            ParameterDiscreteValue val2 = new ParameterDiscreteValue();
+            val2.Value = "8";
+            pid2.CurrentValues.Add(val2);
+            p.Add(pid2);
+            /******/
+            crystalReportViewer1.ParameterFieldInfo = p;
 
         }
 
