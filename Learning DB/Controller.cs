@@ -376,6 +376,16 @@ namespace DbHandler
             string Query = "SELECT * FROM Classroom WHERE Class_ID = " + CID + ";";
             return dbMan.ExecuteReader(Query);
         }
+        public DataTable SelectStudent_UsernameByClassroomID(int CID)
+        {
+            string Query = "Select * From Student Where StudentID IN(Select Student_ID From Student_Enrolled_In Where Class_ID = " + CID + ");";
+            return dbMan.ExecuteReader(Query);
+        }
+        public DataTable SelectStudentByClassroomID(int CID , int SID)
+        {
+            string Query = "Select * From Student Where StudentID IN(Select Student_ID From Student_Enrolled_In Where Class_ID = "+CID+" And Student_ID = "+SID+");";
+            return dbMan.ExecuteReader(Query);
+        }
         public DataTable SelectAdminToBeActivated()
         {
             string Query = "Select * From Admin Where Super_ID = 20 And Activated = 0 ";
