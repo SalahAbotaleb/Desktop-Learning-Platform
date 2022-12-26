@@ -16,14 +16,14 @@ namespace Learning_DB {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Student_Progress : ReportClass {
+    public class CrystalReport5 : ReportClass {
         
-        public Student_Progress() {
+        public CrystalReport5() {
         }
         
         public override string ResourceName {
             get {
-                return "Student_Progress.rpt";
+                return "CrystalReport5.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Learning_DB {
         
         public override string FullResourceName {
             get {
-                return "Learning_DB.Student_Progress.rpt";
+                return "Learning_DB.CrystalReport5.rpt";
             }
             set {
                 // Do nothing
@@ -87,28 +87,12 @@ namespace Learning_DB {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_StudentID {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_ClassID {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedStudent_Progress : Component, ICachedReport {
+    public class CachedCrystalReport5 : Component, ICachedReport {
         
-        public CachedStudent_Progress() {
+        public CachedCrystalReport5() {
         }
         
         [Browsable(false)]
@@ -145,7 +129,7 @@ namespace Learning_DB {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Student_Progress rpt = new Student_Progress();
+            CrystalReport5 rpt = new CrystalReport5();
             rpt.Site = this.Site;
             return rpt;
         }
