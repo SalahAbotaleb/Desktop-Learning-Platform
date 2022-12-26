@@ -59,6 +59,7 @@ namespace Learning_DB
             ComboBoxSelectExam.ValueMember = "Exam_ID";
             ComboBoxSelectExam.DataSource = Exam_dt;
             ComboBoxSelectExam.DisplayMember = "Title";
+            ComboBoxSelectExam.SelectedIndex = -1;
             UpdateAssignmentPage();
             kryptonRichQuestionDescription.Hide();
             kryptonLabelQuestionNumber.Hide();
