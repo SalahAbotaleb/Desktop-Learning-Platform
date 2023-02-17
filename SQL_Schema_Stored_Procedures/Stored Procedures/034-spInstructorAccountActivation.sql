@@ -1,0 +1,18 @@
+CREATE procedure spInstructorAccountActivation @ID int,@Status BIT,@Done_By int
+AS
+update Instructor
+set Activated=@Status
+where Instructor_ID=@ID
+DECLARE @StatusF varchar(50)
+if @status=1
+begin
+    set @StatusF='Activate'
+end
+if @status=0
+begin
+    set @StatusF='Deactivate'
+end
+insert into Manage_Instructor(Admin_ID, Instructor_ID, Operation,Date)
+values (@Done_By,@ID,@StatusF,sysdatetime())
+go
+
